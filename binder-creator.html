@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binder Creator</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #101413; --panel: #1A201E; --line: #2E3834; --text: #ECF1EE; --muted: #A3B2AB;
+    --accent: #D9B45A; --theme: #17301F;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: 'DM Sans', system-ui, sans-serif; }
+  h1, h2 { font-family: 'Bricolage Grotesque', sans-serif; margin: 0; }
+  button, input, select { font: inherit; }
+  button { cursor: pointer; border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 14px; min-height: 44px; }
+  button:hover { border-color: var(--muted); }
+  button.primary { background: var(--accent); color: #1E1A0E; border-color: var(--accent); font-weight: 600; }
+  input, select { background: #0C0F0E; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-height: 44px; width: 100%; }
+  label { font-size: 13px; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
+  .app { max-width: 1280px; margin: 0 auto; padding: 20px 16px 48px; display: flex; flex-wrap: wrap; gap: 24px; }
+  .binder-col { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+  .search-col { flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .bar .grow { flex: 1 1 200px; }
+  .page { background: var(--theme); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+  .page-title { background: transparent; border: none; border-bottom: 1px dashed rgba(255,255,255,.25); border-radius: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 30px; font-weight: 700; padding: 4px 0; min-height: 0; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .slot { position: relative; aspect-ratio: 63 / 88; border-radius: 10px; border: 1.5px dashed rgba(255,255,255,.3); background: rgba(0,0,0,.18); display: flex; align-items: center; justify-content: center; text-align: center; padding: 0; color: rgba(255,255,255,.6); font-size: 13px; overflow: hidden; min-height: 0; }
+  .slot.filled { border-style: solid; border-color: transparent; background: rgba(0,0,0,.25); }
+  .slot.selected { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .slot .rm { position: absolute; top: 6px; right: 6px; width: 32px; height: 32px; min-height: 0; padding: 0; border-radius: 999px; background: rgba(0,0,0,.65); border: none; font-size: 16px; line-height: 1; }
+  .slot.drag-over { outline: 3px dashed var(--accent); }
+  .hint { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0; }
+  .results { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; }
+  .result { padding: 0; border: none; background: none; text-align: left; display: flex; flex-direction: column; gap: 4px; min-height: 0; }
+  .result img { width: 100%; aspect-ratio: 63 / 88; object-fit: cover; border-radius: 6px; background: #0C0F0E; }
+  .result span { font-size: 12px; color: var(--muted); }
+  .status { font-size: 13px; color: var(--muted); min-height: 18px; }
+  details { border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
+  summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+  .pager { font-size: 14px; color: var(--muted); }
+  .ai { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 6px; display: flex; flex-direction: column; gap: 12px; }
+  button:disabled { opacity: .5; cursor: default; }
+</style>
+</head>
+<body>
+<div class="app">
+  <section class="binder-col" aria-label="Binder">
+    <div class="bar">
+      <h1 style="font-size:22px; margin-right:auto">Binder Creator</h1>
+      <button id="prevPage" aria-label="Page précédente">‹</button>
+      <span class="pager" id="pager">Page 1 / 1</span>
+      <button id="nextPage" aria-label="Page suivante">›</button>
+      <button id="addPage">+ Page</button>
+      <button id="delPage">Supprimer la page</button>
+    </div>
+    <div class="page" id="page">
+      <input class="page-title" id="pageTitle" aria-label="Titre de la page" placeholder="Titre de la page">
+      <div class="grid" id="grid"></div>
+    </div>
+    <div class="bar">
+      <label class="grow">Couleur de la page
+        <input type="color" id="pageColor" style="padding:4px; height:44px">
+      </label>
+      <label class="grow">Disposition
+        <select id="layout">
+          <option value="3">3×3 (9 cartes)</option>
+          <option value="4">4×3 (12 cartes)</option>
+          <option value="2">2×2 (4 cartes)</option>
+        </select>
+      </label>
+    </div>
+    <p class="hint">Touche une case pour la sélectionner, puis une carte dans les résultats pour la placer. Sur ordinateur, glisse une carte d'une case à l'autre pour les échanger.</p>
+    <div class="bar">
+      <button id="exportBtn">Exporter (JSON)</button>
+      <button id="importBtn">Importer</button>
+      <input type="file" id="importFile" accept="application/json" hidden>
+    </div>
+  </section>
+
+  <section class="search-col" aria-label="Recherche de cartes">
+    <h2 style="font-size:20px">Ajouter des cartes</h2>
+    <label>Extension
+      <select id="setId"><option value="">Chargement des extensions…</option></select>
+    </label>
+    <form id="searchForm" class="bar">
+      <label class="grow">Numéro ou nom (français ou anglais)
+        <input id="query" list="frNames" autocomplete="off" placeholder="ex. 198, Florizarre ou Venusaur">
+      </label>
+      <datalist id="frNames"></datalist>
+      <button class="primary" type="submit" style="align-self:flex-end">Chercher</button>
+    </form>
+    <div class="status" id="status" role="status"></div>
+    <div class="results" id="results"></div>
+    <p class="hint">Cartes et images : base TCGdex (gratuite, sans clé).</p>
+
+    <div class="ai">
+      <h2 style="font-size:20px">Page à thème par IA</h2>
+      <details id="aiSettings">
+        <summary>Réglages IA (Gemini ou Claude)</summary>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px">
+          <p class="hint">Ta clé reste dans ce navigateur et part uniquement vers le fournisseur choisi. Ne mets pas ce fichier en ligne avec ta clé : pour une app publique, il faudra un petit serveur.</p>
+          <label>Fournisseur
+            <select id="aiProvider">
+              <option value="gemini">Google Gemini (offre gratuite possible)</option>
+              <option value="claude">Anthropic Claude (payant à l'usage)</option>
+            </select>
+          </label>
+          <div id="geminiBox" style="display:flex; flex-direction:column; gap:10px">
+            <label>Clé API Gemini (aistudio.google.com)
+              <input id="geminiKey" type="password" placeholder="AIza…" autocomplete="off">
+            </label>
+            <label>Modèle Gemini
+              <select id="geminiModel"><option value="gemini-2.5-flash">gemini-2.5-flash</option></select>
+            </label>
+            <p class="hint">Après avoir collé ta clé, la liste des modèles se met à jour. Prends un modèle « flash » pour rester dans l'offre gratuite.</p>
+          </div>
+          <div id="claudeBox" style="display:flex; flex-direction:column; gap:10px">
+            <label>Clé API Anthropic
+              <input id="aiKey" type="password" placeholder="sk-ant-…" autocomplete="off">
+            </label>
+            <label>Modèle Claude
+              <select id="aiModel">
+                <option value="claude-haiku-5-5">Claude Haiku (rapide, économique)</option>
+                <option value="claude-sonnet-5-5">Claude Sonnet (choix plus fins)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </details>
+
+      <label>1. Extension à analyser
+        <select id="aiSet"><option value="">Chargement des extensions…</option></select>
+      </label>
+      <div class="bar">
+        <button id="aiTagBtn" type="button">Analyser les illustrations</button>
+        <span class="status" id="aiTagStatus"></span>
+      </div>
+      <p class="hint" id="aiSetsDone"></p>
+
+      <label>2. Thème de la page
+        <input id="aiTheme" placeholder="ex. coucher de soleil, créatures de la nuit, bord de mer…">
+      </label>
+      <button class="primary" id="aiGenBtn" type="button">Générer la page</button>
+      <div class="status" id="aiGenStatus" role="status"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  var STORE = 'binderCreator.v1';
+
+  function blankPage(n) {
+    return { title: 'Nouvelle page', color: '#17301F', cols: 3, rows: 3, slots: new Array(n || 9).fill(null) };
+  }
+
+  var state = load() || {
+    current: 0,
+    selected: 0,
+    pages: [{ title: 'La forêt enchantée', color: '#17301F', cols: 3, rows: 3, slots: new Array(9).fill(null) }]
+  };
+
+  function load() {
+    try { var raw = localStorage.getItem(STORE); return raw ? JSON.parse(raw) : null; } catch (e) { return null; }
+  }
+  function save() {
+    try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) {}
+  }
+
+  var el = function (id) { return document.getElementById(id); };
+  var grid = el('grid');
+
+  function page() { return state.pages[state.current]; }
+
+  function render() {
+    var p = page();
+    el('pager').textContent = 'Page ' + (state.current + 1) + ' / ' + state.pages.length;
+    el('pageTitle').value = p.title;
+    el('pageColor').value = p.color;
+    el('page').style.setProperty('--theme', p.color);
+    el('layout').value = String(p.cols === 4 ? 4 : p.cols === 2 ? 2 : 3);
+    grid.style.gridTemplateColumns = 'repeat(' + p.cols + ', minmax(0, 1fr))';
+    grid.innerHTML = '';
+    p.slots.forEach(function (card, i) {
+      var slot = document.createElement('div');
+      slot.className = 'slot' + (card ? ' filled' : '') + (i === state.selected ? ' selected' : '');
+      slot.tabIndex = 0;
+      slot.setAttribute('role', 'button');
+      slot.setAttribute('aria-label', card ? ('Case ' + (i + 1) + ' : ' + card.name + ' ' + card.number) : ('Case ' + (i + 1) + ' vide'));
+      slot.dataset.index = i;
+      if (card) {
+        var img = document.createElement('img');
+        img.src = card.small; img.alt = card.name + ' ' + card.number; img.draggable = false;
+        slot.appendChild(img);
+        slot.draggable = true;
+        var rm = document.createElement('button');
+        rm.className = 'rm'; rm.textContent = '×'; rm.setAttribute('aria-label', 'Retirer ' + card.name);
+        rm.addEventListener('click', function (e) { e.stopPropagation(); p.slots[i] = null; save(); render(); });
+        slot.appendChild(rm);
+      } else {
+        slot.textContent = 'Case ' + (i + 1);
+      }
+      slot.addEventListener('click', function () { state.selected = i; save(); render(); });
+      slot.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); state.selected = i; save(); render(); } });
+      slot.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', String(i)); });
+      slot.addEventListener('dragover', function (e) { e.preventDefault(); slot.classList.add('drag-over'); });
+      slot.addEventListener('dragleave', function () { slot.classList.remove('drag-over'); });
+      slot.addEventListener('drop', function (e) {
+        e.preventDefault();
+        var from = parseInt(e.dataTransfer.getData('text/plain'), 10);
+        if (isNaN(from) || from === i) return render();
+        var tmp = p.slots[i]; p.slots[i] = p.slots[from]; p.slots[from] = tmp;
+        state.selected = i; save(); render();
+      });
+      grid.appendChild(slot);
+    });
+  }
+
+  function place(card) {
+    var p = page();
+    p.slots[state.selected] = card;
+    var next = p.slots.indexOf(null, state.selected + 1);
+    if (next === -1) next = p.slots.indexOf(null);
+    if (next !== -1) state.selected = next;
+    save(); render();
+  }
+
+  // Page controls
+  el('pageTitle').addEventListener('input', function (e) { page().title = e.target.value; save(); });
+  el('pageColor').addEventListener('input', function (e) { page().color = e.target.value; el('page').style.setProperty('--theme', e.target.value); save(); });
+  el('layout').addEventListener('change', function (e) {
+    var p = page(), v = parseInt(e.target.value, 10);
+    var cols = v, rows = v === 4 ? 3 : v;
+    var n = cols * rows;
+    var kept = p.slots.slice(0, n);
+    while (kept.length < n) kept.push(null);
+    var dropped = p.slots.slice(n).filter(Boolean).length;
+    if (dropped && !confirm(dropped + ' carte(s) seront retirées de la page. Continuer ?')) { render(); return; }
+    p.cols = cols; p.rows = rows; p.slots = kept;
+    if (state.selected >= n) state.selected = 0;
+    save(); render();
+  });
+  el('prevPage').addEventListener('click', function () { if (state.current > 0) { state.current--; state.selected = 0; save(); render(); } });
+  el('nextPage').addEventListener('click', function () { if (state.current < state.pages.length - 1) { state.current++; state.selected = 0; save(); render(); } });
+  el('addPage').addEventListener('click', function () { state.pages.push(blankPage(9)); state.current = state.pages.length - 1; state.selected = 0; save(); render(); });
+  el('delPage').addEventListener('click', function () {
+    if (state.pages.length === 1) { alert('Le binder doit garder au moins une page.'); return; }
+    if (!confirm('Supprimer « ' + page().title + ' » ?')) return;
+    state.pages.splice(state.current, 1);
+    state.current = Math.max(0, state.current - 1); state.selected = 0; save(); render();
+  });
+
+  // Export / import
+  el('exportBtn').addEventListener('click', function () {
+    var blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = 'binder.json'; a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  });
+  el('importBtn').addEventListener('click', function () { el('importFile').click(); });
+  el('importFile').addEventListener('change', function (e) {
+    var f = e.target.files[0]; if (!f) return;
+    f.text().then(function (txt) {
+      try {
+        var data = JSON.parse(txt);
+        if (!data || !Array.isArray(data.pages) || !data.pages.length) throw new Error();
+        state = data; state.current = 0; state.selected = 0; save(); render();
+      } catch (err) { alert('Fichier invalide.'); }
+    });
+    e.target.value = '';
+  });
+
+  // French <-> English Pokémon names (PokéAPI species names, cached locally)
+  var NAMES_URL = 'https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv';
+  var NAMES_KEY = STORE + '.names';
+  var frToEn = {}, enToFr = {};
+
+  function norm(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9♀♂]/g, '');
+  }
+  function parseCsvLine(line) {
+    var out = [], cur = '', q = false;
+    for (var i = 0; i < line.length; i++) {
+      var ch = line[i];
+      if (q) {
+        if (ch === '"' && line[i + 1] === '"') { cur += '"'; i++; }
+        else if (ch === '"') q = false;
+        else cur += ch;
+      } else if (ch === '"') q = true;
+      else if (ch === ',') { out.push(cur); cur = ''; }
+      else cur += ch;
+    }
+    out.push(cur);
+    return out;
+  }
+  function useNames(pairs) {
+    var list = el('frNames'); list.innerHTML = '';
+    pairs.forEach(function (p) {
+      frToEn[norm(p[0])] = p[1];
+      enToFr[norm(p[1])] = p[0];
+      var o = document.createElement('option'); o.value = p[0]; list.appendChild(o);
+    });
+  }
+  function loadNames() {
+    try {
+      var cached = localStorage.getItem(NAMES_KEY);
+      if (cached) { useNames(JSON.parse(cached)); return; }
+    } catch (e) {}
+    fetch(NAMES_URL)
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function (txt) {
+        var fr = {}, en = {};
+        txt.split(/\r?\n/).slice(1).forEach(function (line) {
+          if (!line) return;
+          var c = parseCsvLine(line);
+          if (c[1] === '5') fr[c[0]] = c[2];      // 5 = français
+          else if (c[1] === '9') en[c[0]] = c[2]; // 9 = anglais
+        });
+        var pairs = Object.keys(fr).filter(function (id) { return en[id]; })
+          .sort(function (a, b) { return a - b; })
+          .map(function (id) { return [fr[id], en[id]]; });
+        useNames(pairs);
+        try { localStorage.setItem(NAMES_KEY, JSON.stringify(pairs)); } catch (e) {}
+      })
+      .catch(function () { el('status').textContent = 'Noms français indisponibles pour le moment : la recherche en anglais fonctionne toujours.'; });
+  }
+  // "Florizarre-ex" -> "Venusaur ex" ; "Venusaur ex" -> "Florizarre-ex"
+  function toEnglish(q) {
+    var m = q.match(/^(.*?)(?:[\s-]+(ex|gx|v|vmax|vstar))?$/i);
+    var base = m[1], suffix = m[2];
+    var en = frToEn[norm(base)];
+    return en ? en + (suffix ? ' ' + suffix : '') : q;
+  }
+  function toFrench(name) {
+    var m = name.match(/^(.*?)(?:\s+(ex|GX|V|VMAX|VSTAR))?$/);
+    var fr = enToFr[norm(m[1])];
+    return fr ? fr + (m[2] ? '-' + m[2] : '') : name;
+  }
+  loadNames();
+
+  // ===== Cartes : base TCGdex (gratuite, sans clé, en français) =====
+  var TCG = 'https://api.tcgdex.net/v2/fr';
+  var setNames = {}, setCache = {};
+  function getJson(url) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+  }
+  function getSet(id) {
+    if (!setCache[id]) setCache[id] = getJson(TCG + '/sets/' + encodeURIComponent(id)).catch(function (e) { delete setCache[id]; throw e; });
+    return setCache[id];
+  }
+  function setIdOf(cardId) { return cardId.slice(0, cardId.lastIndexOf('-')); }
+  function toCard(b, set) {
+    if (!b || !b.image) return null; // certaines cartes n'ont pas encore d'image
+    var official = set && set.cardCount && set.cardCount.official;
+    return {
+      id: b.id, name: b.name, number: b.localId + (official ? '/' + official : ''),
+      rarity: b.rarity || '', small: b.image + '/low.webp', large: b.image + '/high.webp', aiImage: b.image + '/low.png'
+    };
+  }
+
+  // Liste des extensions (les plus récentes d'abord)
+  getJson(TCG + '/sets').then(function (sets) {
+    sets = sets.slice().reverse();
+    var search = el('setId'), ai = el('aiSet');
+    search.innerHTML = '<option value="">Toutes les extensions</option>';
+    ai.innerHTML = '';
+    sets.forEach(function (s) {
+      setNames[s.id] = s.name;
+      var label = s.name + (s.cardCount && s.cardCount.total ? ' · ' + s.cardCount.total + ' cartes' : '');
+      [search, ai].forEach(function (sel) {
+        var o = document.createElement('option'); o.value = s.id; o.textContent = label; sel.appendChild(o);
+      });
+    });
+    var def = setNames['sv03.5'] ? 'sv03.5' : (sets[0] && sets[0].id) || '';
+    search.value = def; ai.value = def;
+    refreshDone();
+  }).catch(function () {
+    el('setId').innerHTML = '<option value="">Extensions indisponibles</option>';
+    el('aiSet').innerHTML = '<option value="">Extensions indisponibles, recharge la page</option>';
+    el('status').textContent = 'Impossible de joindre la base de cartes TCGdex. Vérifie ta connexion puis recharge la page.';
+  });
+
+  function showResults(cards) {
+    el('results').innerHTML = '';
+    el('status').textContent = cards.length ? (cards.length + ' carte(s) — touche pour placer en case ' + (state.selected + 1)) : 'Aucune carte trouvée.';
+    cards.forEach(function (card) {
+      var b = document.createElement('button');
+      b.className = 'result'; b.type = 'button';
+      b.setAttribute('aria-label', 'Placer ' + card.name + ' ' + card.number);
+      var img = document.createElement('img'); img.src = card.small; img.alt = ''; img.loading = 'lazy';
+      var s = document.createElement('span'); s.textContent = card.name + ' · ' + card.number;
+      b.appendChild(img); b.appendChild(s);
+      b.addEventListener('click', function () { place(card); el('status').textContent = card.name + ' placé. Case suivante : ' + (state.selected + 1); });
+      el('results').appendChild(b);
+    });
+  }
+
+  // Recherche : numéro ou nom (français, ou anglais traduit)
+  el('searchForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var q = el('query').value.trim();
+    var setId = el('setId').value;
+    if (!q) return;
+    var m = q.match(/^(.*?)(?:[\s-]+(ex|gx|v|vmax|vstar))?$/i);
+    if (m && enToFr[norm(m[1])]) q = enToFr[norm(m[1])] + (m[2] ? '-' + m[2] : '');
+    el('status').textContent = 'Recherche…';
+    el('results').innerHTML = '';
+
+    var job;
+    if (setId) {
+      job = getSet(setId).then(function (set) {
+        var list = set.cards || [];
+        if (/^\d+$/.test(q)) list = list.filter(function (c) { return parseInt(c.localId, 10) === parseInt(q, 10); });
+        else list = list.filter(function (c) { return norm(c.name).indexOf(norm(q)) !== -1; });
+        return list.map(function (c) { return toCard(c, set); }).filter(Boolean);
+      });
+    } else if (/^\d+$/.test(q)) {
+      job = Promise.reject(new Error('choisis une extension pour chercher par numéro'));
+    } else {
+      job = getJson(TCG + '/cards?name=' + encodeURIComponent(q) + '&pagination:page=1&pagination:itemsPerPage=60')
+        .then(function (list) { return (list || []).map(function (c) { return toCard(c, null); }).filter(Boolean); });
+    }
+    job.then(showResults).catch(function (err) { el('status').textContent = 'Erreur de recherche : ' + err.message + '.'; });
+  });
+
+  // ================= IA =================
+  var AI_KEY = STORE + '.aiKey', AI_MODEL = STORE + '.aiModel', TAGS = STORE + '.tcgdex.tags.';
+
+  var AI_PROVIDER = STORE + '.aiProvider', G_KEY = STORE + '.geminiKey', G_MODEL = STORE + '.geminiModel';
+  function lsGet(k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function provider() { return el('aiProvider').value; }
+  function showProvider() {
+    el('geminiBox').style.display = provider() === 'gemini' ? 'flex' : 'none';
+    el('claudeBox').style.display = provider() === 'claude' ? 'flex' : 'none';
+  }
+  el('aiProvider').value = lsGet(AI_PROVIDER, 'gemini');
+  el('aiKey').value = lsGet(AI_KEY, '');
+  el('aiModel').value = lsGet(AI_MODEL, 'claude-haiku-5-5');
+  el('geminiKey').value = lsGet(G_KEY, '');
+  showProvider();
+  if (!(provider() === 'gemini' ? el('geminiKey').value : el('aiKey').value)) el('aiSettings').open = true;
+
+  el('aiProvider').addEventListener('change', function (e) { lsSet(AI_PROVIDER, e.target.value); showProvider(); });
+  el('aiKey').addEventListener('change', function (e) { lsSet(AI_KEY, e.target.value.trim()); });
+  el('aiModel').addEventListener('change', function (e) { lsSet(AI_MODEL, e.target.value); });
+  el('geminiKey').addEventListener('change', function (e) { lsSet(G_KEY, e.target.value.trim()); loadGeminiModels(); });
+  el('geminiModel').addEventListener('change', function (e) { lsSet(G_MODEL, e.target.value); });
+
+  // Fill the Gemini model list from the API (names change over time)
+  function loadGeminiModels() {
+    var key = el('geminiKey').value.trim();
+    var sel = el('geminiModel'), saved = lsGet(G_MODEL, '');
+    if (!key) return;
+    fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200', { headers: { 'x-goog-api-key': key } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (j) {
+        var models = (j.models || []).filter(function (m) {
+          return (m.supportedGenerationMethods || []).indexOf('generateContent') !== -1 && /gemini/.test(m.name) && !/tts|image-generation|embedding|live|audio/.test(m.name);
+        }).map(function (m) { return m.name.replace('models/', ''); });
+        if (!models.length) return;
+        models.sort(function (a, b) { return (/flash/.test(b) - /flash/.test(a)) || b.localeCompare(a); });
+        sel.innerHTML = '';
+        models.forEach(function (m) { var o = document.createElement('option'); o.value = m; o.textContent = m; sel.appendChild(o); });
+        var pick = models.indexOf(saved) !== -1 ? saved : (models.filter(function (m) { return /flash/.test(m) && !/lite|preview|exp/.test(m); })[0] || models[0]);
+        sel.value = pick; lsSet(G_MODEL, pick);
+      })
+      .catch(function () { el('aiTagStatus').textContent = 'Clé Gemini refusée ou liste des modèles indisponible.'; });
+  }
+  (function () { var s = lsGet(G_MODEL, ''); if (s) { var o = document.createElement('option'); o.value = s; o.textContent = s; el('geminiModel').appendChild(o); el('geminiModel').value = s; } })();
+  loadGeminiModels();
+
+  function getTags(setId) { try { return JSON.parse(localStorage.getItem(TAGS + setId) || 'null'); } catch (e) { return null; } }
+  function setTags(setId, data) {
+    try { localStorage.setItem(TAGS + setId, JSON.stringify(data)); }
+    catch (e) { el('aiTagStatus').textContent = 'Stockage du navigateur plein : exporte ou supprime des données.'; }
+  }
+  function taggedSets() {
+    var out = [];
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k.indexOf(TAGS) === 0) out.push(k.slice(TAGS.length));
+      }
+    } catch (e) {}
+    return out;
+  }
+  function refreshDone() {
+    var done = taggedSets().map(function (id) {
+      var t = getTags(id); var n = t ? Object.keys(t.cards).length : 0;
+      return (setNames[id] || id) + ' (' + n + (t && t.total ? '/' + t.total : '') + ')';
+    });
+    el('aiSetsDone').textContent = done.length ? 'Analysées : ' + done.join(', ') : 'Aucune extension analysée pour l\'instant.';
+  }
+
+
+  function sleep(ms) { return new Promise(function (res) { setTimeout(res, ms); }); }
+  function RateLimit(msg) { this.message = msg; this.rate = true; }
+
+  function callClaude(text, imageUrls, maxTokens) {
+    var key = el('aiKey').value.trim();
+    if (!key) { el('aiSettings').open = true; return Promise.reject(new Error('Ajoute ta clé API Anthropic dans les réglages IA.')); }
+    var content = [{ type: 'text', text: text }];
+    (imageUrls || []).forEach(function (u) { content.push({ type: 'image', source: { type: 'url', url: u } }); });
+    return fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-api-key': key,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({ model: el('aiModel').value, max_tokens: maxTokens || 2000, messages: [{ role: 'user', content: content }] })
+    }).then(function (r) {
+      return r.json().then(function (j) {
+        if (r.status === 429 || r.status === 529) throw new RateLimit('limite de requêtes');
+        if (!r.ok) throw new Error((j.error && j.error.message) || ('HTTP ' + r.status));
+        return (j.content || []).filter(function (b) { return b.type === 'text'; }).map(function (b) { return b.text; }).join('');
+      });
+    });
+  }
+
+  // Gemini needs the image bytes; fall back to the URL if the browser can't read them
+  function imagePart(url) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error(); return r.blob(); })
+      .then(function (blob) {
+        return new Promise(function (res, rej) {
+          var fr = new FileReader();
+          fr.onload = function () { res({ inline_data: { mime_type: blob.type || 'image/png', data: String(fr.result).split(',')[1] } }); };
+          fr.onerror = rej; fr.readAsDataURL(blob);
+        });
+      })
+      .catch(function () { return { file_data: { mime_type: 'image/png', file_uri: url } }; });
+  }
+  function callGemini(text, imageUrls, maxTokens) {
+    var key = el('geminiKey').value.trim();
+    if (!key) { el('aiSettings').open = true; return Promise.reject(new Error('Ajoute ta clé API Gemini dans les réglages IA.')); }
+    var model = el('geminiModel').value || 'gemini-2.5-flash';
+    return Promise.all((imageUrls || []).map(imagePart)).then(function (imgs) {
+      return fetch('https://generativelanguage.googleapis.com/v1beta/models/' + encodeURIComponent(model) + ':generateContent', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-goog-api-key': key },
+        body: JSON.stringify({
+          contents: [{ role: 'user', parts: [{ text: text }].concat(imgs) }],
+          generationConfig: { responseMimeType: 'application/json', maxOutputTokens: (maxTokens || 2000) * 4, temperature: 0.4 }
+        })
+      });
+    }).then(function (r) {
+      return r.json().then(function (j) {
+        if (r.status === 429) throw new RateLimit('limite gratuite atteinte');
+        if (!r.ok) throw new Error((j.error && j.error.message) || ('HTTP ' + r.status));
+        var parts = (j.candidates && j.candidates[0] && j.candidates[0].content && j.candidates[0].content.parts) || [];
+        var out = parts.filter(function (p) { return p.text && !p.thought; }).map(function (p) { return p.text; }).join('');
+        if (!out) throw new Error('réponse vide de Gemini');
+        return out;
+      });
+    });
+  }
+  // Unified call with automatic waits on rate limits
+  function callAI(text, imageUrls, maxTokens, onWait, tries) {
+    tries = tries || 0;
+    var fn = provider() === 'gemini' ? callGemini : callClaude;
+    return fn(text, imageUrls, maxTokens).catch(function (err) {
+      if (err && err.rate && tries < 6) {
+        var wait = 20000 * (tries + 1);
+        if (onWait) onWait(Math.round(wait / 1000));
+        return sleep(wait).then(function () { return callAI(text, imageUrls, maxTokens, onWait, tries + 1); });
+      }
+      if (err && err.rate) throw new Error(err.message + ' : réessaie plus tard (quota du jour peut-être épuisé)');
+      throw err;
+    });
+  }
+  function extractJson(text) {
+    var start = text.search(/[\[{]/);
+    if (start === -1) throw new Error('Réponse IA illisible.');
+    var open = text[start], close = open === '[' ? ']' : '}';
+    var end = text.lastIndexOf(close);
+    return JSON.parse(text.slice(start, end + 1));
+  }
+
+  // 1. Tag a set's illustrations (vision), 6 cards per request, resumable
+  var tagging = false;
+  el('aiTagBtn').addEventListener('click', function () {
+    var setId = el('aiSet').value;
+    if (!setId || tagging) return;
+    var status = el('aiTagStatus');
+    tagging = true; el('aiTagBtn').disabled = true;
+    status.textContent = 'Récupération des cartes…';
+    var data = getTags(setId) || { set: setId, name: setNames[setId] || setId, total: 0, cards: {} };
+
+    var all = [];
+    getSet(setId).then(function (set) {
+      all = (set.cards || []).map(function (c) { return toCard(c, set); }).filter(Boolean);
+      data.total = all.length;
+      var todo = all.filter(function (c) { return !data.cards[c.id]; });
+      var batches = [];
+      for (var i = 0; i < todo.length; i += 6) batches.push(todo.slice(i, i + 6));
+      var doneCount = all.length - todo.length;
+      status.textContent = doneCount + '/' + all.length + ' analysées';
+
+      function tagBatch(batch) {
+        var prompt = (
+          'Voici ' + batch.length + ' cartes Pokémon, dans l\'ordre. Pour chacune, décris l\'ILLUSTRATION (pas le texte de la carte). ' +
+          'Réponds uniquement avec un tableau JSON de ' + batch.length + ' objets, dans le même ordre : ' +
+          '{"decor": "décor en quelques mots (forêt, océan, ville, grotte, ciel, intérieur, fond uni…)", ' +
+          '"moment": "jour|nuit|coucher de soleil|aube|indéfini", "couleurs": ["2 à 3 couleurs dominantes"], ' +
+          '"ambiance": "2 à 4 mots", "tags": ["5 à 8 mots-clés en français : éléments visibles, saison, météo, style"]}');
+        var urls = batch.map(function (c) { return c.aiImage; });
+        // rareté + catégorie : fiche détaillée de chaque carte
+        var details = Promise.all(batch.map(function (c) {
+          return getJson(TCG + '/cards/' + encodeURIComponent(c.id)).catch(function () { return {}; });
+        }));
+        return details.then(function (d) { batch.forEach(function (c, k) { c.rarity = d[k].rarity || ''; c.category = d[k].category || ''; }); })
+          .then(function () { return callAI(prompt, urls, 1500, function (s) { status.textContent = doneCount + '/' + all.length + ' analysées · pause ' + s + ' s (limite de requêtes)'; }).then(function (txt) {
+          var arr = extractJson(txt);
+          batch.forEach(function (c, k) {
+            var t = arr[k] || {};
+            data.cards[c.id] = {
+              id: c.id, name: c.name, number: c.number,
+              rarity: c.rarity || '', category: c.category || '',
+              small: c.small, large: c.large,
+              decor: t.decor || '', moment: t.moment || '', couleurs: t.couleurs || [], ambiance: t.ambiance || '', tags: t.tags || []
+            };
+          });
+          setTags(setId, data);
+          doneCount += batch.length;
+          status.textContent = doneCount + '/' + all.length + ' analysées';
+        }); });
+      }
+      // Claude: 3 requests in parallel. Gemini free tier: one at a time with a short pause.
+      var gemini = provider() === 'gemini';
+      var idx = 0;
+      function worker() {
+        if (idx >= batches.length) return Promise.resolve();
+        var b = batches[idx++];
+        return tagBatch(b).then(function () { return gemini ? sleep(6000) : null; }).then(worker);
+      }
+      var workers = gemini ? [worker()] : [worker(), worker(), worker()];
+      return Promise.all(workers).then(function () {
+        status.textContent = 'Terminé : ' + all.length + ' cartes analysées.';
+      });
+    }).catch(function (err) {
+      status.textContent = 'Arrêt : ' + err.message + ' (relance pour reprendre là où ça s\'est arrêté)';
+    }).then(function () {
+      tagging = false; el('aiTagBtn').disabled = false; refreshDone();
+    });
+  });
+
+  // 2. Generate a themed page from all tagged cards
+  el('aiGenBtn').addEventListener('click', function () {
+    var theme = el('aiTheme').value.trim();
+    var status = el('aiGenStatus');
+    if (!theme) { status.textContent = 'Écris un thème d\'abord.'; return; }
+    var pool = {};
+    taggedSets().forEach(function (id) { var t = getTags(id); if (t) Object.keys(t.cards).forEach(function (k) { pool[k] = t.cards[k]; }); });
+    var ids = Object.keys(pool).filter(function (k) { return !/dresseur|trainer|[ée]nergie|energy/i.test(pool[k].category || ''); });
+    if (!ids.length) { status.textContent = 'Analyse au moins une extension avant de générer une page.'; return; }
+
+    var cur = page();
+    var n = cur.cols * cur.rows;
+    var lines = ids.map(function (k) {
+      var c = pool[k];
+      return [c.id, c.name, c.rarity, c.decor, c.moment, (c.couleurs || []).join('/'), c.ambiance, (c.tags || []).join(',')].join(' | ');
+    });
+    var prompt =
+      'Tu composes une page de classeur (binder) de cartes Pokémon, grille de ' + cur.cols + ' colonnes × ' + cur.rows + ' lignes (' + n + ' cases, lues de gauche à droite puis de haut en bas).\n' +
+      'Thème demandé : « ' + theme + ' ».\n\n' +
+      'Règles :\n' +
+      '- Choisis exactement ' + n + ' cartes DIFFÉRENTES dans la liste, uniquement par leur id.\n' +
+      '- Priorité à la cohérence avec le thème (décor, moment, couleurs, ambiance).\n' +
+      '- Ordonne-les pour que les décors et couleurs s\'enchaînent d\'une case voisine à l\'autre.\n' +
+      '- Mets la carte la plus rare ou la plus spectaculaire au centre de la grille si la grille a un centre.\n' +
+      '- Préfère les illustrations immersives (Illustration Rare, Special Illustration Rare) quand elles collent au thème.\n\n' +
+      'Réponds uniquement en JSON : {"titre": "titre court et évocateur en français", "sousTitre": "une ligne d\'ambiance", ' +
+      '"couleur": "#hex sombre assortie au thème, lisible sous du texte blanc", "cartes": ["id1", "id2", …]}\n\n' +
+      'Cartes disponibles (id | nom | rareté | décor | moment | couleurs | ambiance | tags) :\n' + lines.join('\n');
+
+    el('aiGenBtn').disabled = true;
+    status.textContent = 'L\'IA compose la page…';
+    callAI(prompt, [], 1200, function (s) { status.textContent = 'Limite de requêtes : nouvel essai dans ' + s + ' s…'; }).then(function (txt) {
+      var res = extractJson(txt);
+      var seen = {};
+      var chosen = (res.cartes || []).filter(function (id) { var ok = pool[id] && !seen[id]; seen[id] = true; return ok; }).slice(0, n);
+      if (!chosen.length) throw new Error('aucune carte valide dans la réponse');
+      var slots = chosen.map(function (id) {
+        var c = pool[id];
+        return { id: c.id, name: c.name, number: c.number, rarity: c.rarity, small: c.small, large: c.large };
+      });
+      while (slots.length < n) slots.push(null);
+      var color = /^#[0-9a-f]{6}$/i.test(res.couleur || '') ? res.couleur : '#17301F';
+      state.pages.push({ title: res.titre || theme, subtitle: res.sousTitre || '', color: color, cols: cur.cols, rows: cur.rows, slots: slots });
+      state.current = state.pages.length - 1; state.selected = 0;
+      save(); render();
+      status.textContent = 'Page « ' + (res.titre || theme) + ' » créée' + (res.sousTitre ? ' : ' + res.sousTitre : '') +
+        (chosen.length < n ? ' (' + chosen.length + '/' + n + ' cases remplies, analyse plus d\'extensions pour en avoir plus)' : '');
+    }).catch(function (err) {
+      status.textContent = 'Erreur : ' + err.message;
+    }).then(function () { el('aiGenBtn').disabled = false; });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
