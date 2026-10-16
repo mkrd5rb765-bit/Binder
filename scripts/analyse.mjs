@@ -10,7 +10,7 @@
 //   MAX_REQUESTS        nombre max de requêtes IA par lancement (défaut 200)
 //   TIME_LIMIT_MIN      durée max en minutes (défaut 300)
 //   CARDS_PER_REQUEST   cartes analysées par requête (défaut 4)
-//   ONLY_PRIORITY       "1" = ne jamais analyser les cartes non prioritaires
+//   ONLY_PRIORITY       "1" = illustrations rares + cartes vitrine seulement ; "illus" = illustrations rares seulement
 //   TCGDEX_BASE         défaut https://api.tcgdex.net/v2/fr
 
 import fs from 'node:fs/promises';
@@ -28,10 +28,17 @@ const CLAUDE_MODEL = process.env.CLAUDE_MODEL || 'claude-haiku-5-5';
 const MAX_REQUESTS = parseInt(process.env.MAX_REQUESTS || '200', 10);
 const TIME_LIMIT = parseInt(process.env.TIME_LIMIT_MIN || '300', 10) * 60000;
 const PER_REQUEST = Math.max(1, parseInt(process.env.CARDS_PER_REQUEST || '4', 10));
-const ONLY_PRIORITY = process.env.ONLY_PRIORITY === '1';
+const ONLY_PRIORITY = process.env.ONLY_PRIORITY || '0';
+const LEVELS = ONLY_PRIORITY === 'illus' ? [3] : ONLY_PRIORITY === '1' ? [3, 2] : [3, 2, 1];
 const START = Date.now();
 
-const log = (...a) => console.log(new Date().toISOString().slice(11, 19), ...a);
+const JOURNAL = [];
+const log = (...a) => {
+  const line = new Date().toISOString().slice(11, 19) + ' ' + a.join(' ');
+  console.log(line);
+  JOURNAL.push(line);
+  if (JOURNAL.length > 300) JOURNAL.splice(50, 1); // garde le début et la fin
+};
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const today = () => new Date().toISOString().slice(0, 10);
 const timeLeft = () => TIME_LIMIT - (Date.now() - START);
@@ -77,14 +84,21 @@ const EPOQUES = {
 };
 const EXCLUDED_SERIES = /^(tcgp)$/; // Pokémon TCG Pocket : pas de cartes physiques
 
-// Cartes « vitrine » à analyser en premier : illustrations pleines, secrètes, galeries…
-const RARE_RX = /illustration|sp[ée]cial|secr|hyper|ultra|magnifique|chromatique|full|art\b|galerie|gallery|radieu|radiant|amazing|rainbow|arc-en-ciel|gold|dor[ée]e|shiny|brillant/i;
+// Priorités d'analyse :
+//   3 = illustrations rares (Illustration rare, Illustration spéciale rare, AR/CHR/SAR, Galerie de dresseurs TG/GG)
+//   2 = autres cartes « vitrine » (secrètes, hyper, ultra, dorées, chromatiques…)
+//   1 = autres cartes Pokémon
+//   0 = jamais (Énergies, Dresseurs classiques)
+const ILLUS_RX = /illustration|art rare|character|\b(ar|sar|chr|csr)\b/i;
+const RARE_RX = /sp[ée]cial|secr|hyper|ultra|magnifique|chromatique|full|galerie|gallery|radieu|radiant|amazing|rainbow|arc-en-ciel|gold|dor[ée]e|shiny|brillant/i;
 function priority(card, official) {
   if (/[ée]nergie|energy/i.test(card.category || '')) return 0;
+  const rarity = card.rarity || '';
+  const gallery = /^(TG|GG)\d/i.test(String(card.localId));
+  if (ILLUS_RX.test(rarity) || gallery) return 3;
   const num = parseInt(card.localId, 10);
   const secret = official && !isNaN(num) && num > official;
-  const gallery = /^(TG|GG|SV|RC)\d/i.test(String(card.localId));
-  if (secret || gallery || RARE_RX.test(card.rarity || '')) return 2;
+  if (secret || /^(SV|RC)\d/i.test(String(card.localId)) || RARE_RX.test(rarity)) return 2;
   if (/dresseur|trainer/i.test(card.category || '')) return 0; // dresseurs classiques : pas décoratifs
   return 1;
 }
@@ -198,6 +212,9 @@ Réponds UNIQUEMENT avec un tableau JSON de ${cards.length} objets, dans le mêm
  "tags": ["6 à 10 mots-clés en français : éléments visibles, matières, ambiance"]
 }`;
 
+class RateLimit extends Error {}
+class Fatal extends Error {}
+
 let geminiModel = process.env.GEMINI_MODEL || '';
 const deadModels = new Set();
 async function pickGeminiModel() {
@@ -207,15 +224,15 @@ async function pickGeminiModel() {
   const models = (j.models || [])
     .filter((m) => (m.supportedGenerationMethods || []).includes('generateContent'))
     .map((m) => m.name.replace('models/', ''))
-    .filter((m) => /^gemini/.test(m) && /flash/.test(m) && !/lite|tts|image|audio|live|embedding|exp/.test(m) && !deadModels.has(m));
+    .filter((m) => /^gemini/.test(m) && /flash/.test(m) && !/tts|image|audio|live|embedding|exp/.test(m) && !deadModels.has(m));
   const ver = (m) => parseFloat((m.match(/gemini-(\d+(?:\.\d+)?)/) || [0, 0])[1]);
-  models.sort((a, b) => (/preview/.test(a) - /preview/.test(b)) || ver(b) - ver(a));
-  if (!models.length) throw new Error('Aucun modèle Gemini flash disponible');
+  // flash stables d'abord, puis préversions, puis « lite » en dernier recours ; version la plus récente d'abord
+  const rank = (m) => (/lite/.test(m) ? 2 : 0) + (/preview/.test(m) ? 1 : 0);
+  models.sort((a, b) => rank(a) - rank(b) || ver(b) - ver(a));
+  if (!models.length) throw new Fatal('Plus aucun modèle Gemini utilisable avec cette clé aujourd\'hui (quota gratuit épuisé ou inexistant)');
+  log('Modèles Gemini possibles : ' + models.join(', '));
   return models[0];
 }
-
-class RateLimit extends Error {}
-class Fatal extends Error {}
 
 async function imageBytes(url) {
   for (let t = 0; t < 3; t++) {
@@ -241,14 +258,19 @@ async function callGemini(text, images) {
   });
   const j = await r.json().catch(() => ({}));
   const msg = (j.error && j.error.message) || '';
+  if (r.status === 429 && /limit: 0\b|free.?tier.*\b0\b|billing|per.?day|PerDay|daily/i.test(msg)) {
+    log('Modèle ' + geminiModel + ' : quota gratuit inexistant ou épuisé pour aujourd\'hui (' + msg.slice(0, 160) + ')');
+    deadModels.add(geminiModel); geminiModel = '';
+    return callGemini(text, images);
+  }
   if (r.status === 429 || r.status === 503) throw new RateLimit(msg || 'HTTP ' + r.status);
   if (!r.ok && (r.status === 404 || /no longer available|not found|not supported|deprecated/i.test(msg))) {
     log('Modèle ' + geminiModel + ' indisponible, changement de modèle');
     deadModels.add(geminiModel); geminiModel = '';
     return callGemini(text, images);
   }
-  if (r.status === 400 && /api key/i.test(msg)) throw new Fatal('Clé Gemini invalide');
-  if (!r.ok) throw new Error(msg || 'HTTP ' + r.status);
+  if ((r.status === 400 || r.status === 403) && /api key|permission|denied/i.test(msg)) throw new Fatal('Clé Gemini refusée : ' + msg.slice(0, 160));
+  if (!r.ok) throw new Error((msg || 'HTTP ' + r.status).slice(0, 200));
   const cand = j.candidates && j.candidates[0];
   const out = ((cand && cand.content && cand.content.parts) || []).filter((p) => p.text && !p.thought).map((p) => p.text).join('');
   if (!out) throw new Error('réponse vide (' + ((cand && cand.finishReason) || '?') + ')');
@@ -294,13 +316,18 @@ async function analyseBatch(cards) {
       if (e instanceof RateLimit) {
         consecutiveRate++;
         // limite par minute : on attend ; si ça persiste, c'est le quota du jour
-        if (consecutiveRate > 5 || /per day|daily|PerDay/i.test(e.message)) throw new Fatal('Quota du jour atteint : la suite au prochain lancement');
+        if (consecutiveRate > 4) {
+          if (PROVIDER !== 'gemini') throw new Fatal('Limite de requêtes persistante : la suite au prochain lancement');
+          log('Limite persistante sur ' + geminiModel + ', essai d\'un autre modèle (' + e.message.slice(0, 120) + ')');
+          deadModels.add(geminiModel); geminiModel = ''; consecutiveRate = 0;
+          continue;
+        }
         const wait = 30000 * consecutiveRate;
         log('Limite de requêtes, pause ' + wait / 1000 + ' s');
         await sleep(wait);
         continue;
       }
-      if (attempt < 2) { log('Erreur (' + e.message + '), nouvel essai'); await sleep(5000); continue; }
+      if (attempt < 2) { log('Erreur (' + String(e.message).slice(0, 200) + '), nouvel essai'); await sleep(5000); continue; }
       throw e;
     }
   }
@@ -362,9 +389,11 @@ async function main() {
   }
   const order = index.extensions.filter((e) => !e.exclue).map((e) => e.id);
 
-  // File d'attente : prioritaires d'abord (toutes extensions, plus récentes d'abord), puis le reste
+  // File d'attente : illustrations rares d'abord (toutes extensions, plus récentes d'abord), puis le reste
+  // (les priorités sont recalculées à chaque lancement, au cas où la règle change)
+  for (const d of sets.values()) for (const c of d.cartes) c.priorite = priority({ category: c.categorie, rarity: c.rarete, localId: c.numero.split('/')[0] }, parseInt(c.numero.split('/')[1], 10) || 0);
   const queue = [];
-  for (const level of ONLY_PRIORITY ? [2] : [2, 1]) {
+  for (const level of LEVELS) {
     for (const id of order) {
       const d = sets.get(id);
       if (!d) continue;
@@ -412,7 +441,9 @@ async function main() {
     const d = sets.get(e.id);
     if (!d) continue;
     e.cartes = d.cartes.length;
-    e.prioritaires = d.cartes.filter((c) => c.priorite === 2).length;
+    e.illustrations = d.cartes.filter((c) => c.priorite === 3).length;
+    e.illustrations_analysees = d.cartes.filter((c) => c.priorite === 3 && c.analyse).length;
+    e.prioritaires = d.cartes.filter((c) => c.priorite >= 2).length;
     e.analysees = d.cartes.filter((c) => c.analyse).length;
   }
   const analysed = all.filter((c) => c.analyse);
@@ -421,12 +452,18 @@ async function main() {
   index.total = {
     extensions: sets.size,
     cartes: all.length,
-    prioritaires: all.filter((c) => c.priorite === 2).length,
-    prioritaires_analysees: all.filter((c) => c.priorite === 2 && c.analyse).length,
+    illustrations: all.filter((c) => c.priorite === 3).length,
+    illustrations_analysees: all.filter((c) => c.priorite === 3 && c.analyse).length,
+    prioritaires: all.filter((c) => c.priorite >= 2).length,
+    prioritaires_analysees: all.filter((c) => c.priorite >= 2 && c.analyse).length,
     analysees: analysed.length
   };
   await writeJson(path.join(DATA, 'index.json'), index);
   await writeJson(path.join(DATA, 'analysees.json'), { maj: today(), cartes: analysed.map(compact) }, false);
+  await writeJson(path.join(DATA, 'journal.json'), {
+    date: new Date().toISOString(), fournisseur: PROVIDER, modele: PROVIDER === 'claude' ? CLAUDE_MODEL : geminiModel,
+    modeles_ecartes: [...deadModels], requetes: requests, cartes_analysees: done, total_analysees: analysed.length, journal: JOURNAL
+  });
   log('Terminé : ' + done + ' cartes analysées ce lancement, ' + analysed.length + ' au total.');
 }
 
