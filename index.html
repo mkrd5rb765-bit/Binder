@@ -4,154 +4,235 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Binder Creator</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #101413; --panel: #1A201E; --line: #2E3834; --text: #ECF1EE; --muted: #A3B2AB;
-    --accent: #D9B45A; --theme: #17301F;
+    --bg: #1B1F27; --panel: #232833; --panel-2: #2A303C; --line: #343B49;
+    --text: #EEF0F4; --muted: #9AA3B5; --accent: #F6C945; --on-accent: #241C05;
+    --danger: #F08A7E; --theme: #17301F; --radius: 14px;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font-family: 'DM Sans', system-ui, sans-serif; }
-  h1, h2 { font-family: 'Bricolage Grotesque', sans-serif; margin: 0; }
-  button, input, select { font: inherit; }
-  button { cursor: pointer; border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 14px; min-height: 44px; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 'DM Sans', system-ui, sans-serif; }
+  h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; margin: 0; line-height: 1.15; }
+  button, input, select { font: inherit; color: inherit; }
+  button { cursor: pointer; border: 1px solid var(--line); background: var(--panel-2); border-radius: 10px; padding: 9px 14px; min-height: 40px; }
   button:hover { border-color: var(--muted); }
-  button.primary { background: var(--accent); color: #1E1A0E; border-color: var(--accent); font-weight: 600; }
-  input, select { background: #0C0F0E; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-height: 44px; width: 100%; }
-  label { font-size: 13px; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
-  .app { max-width: 1280px; margin: 0 auto; padding: 20px 16px 48px; display: flex; flex-wrap: wrap; gap: 24px; }
-  .binder-col { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
-  .search-col { flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
-  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-  .bar .grow { flex: 1 1 200px; }
-  .page { background: var(--theme); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 16px; }
-  .page-title { background: transparent; border: none; border-bottom: 1px dashed rgba(255,255,255,.25); border-radius: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 30px; font-weight: 700; padding: 4px 0; min-height: 0; }
-  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-  .slot { position: relative; aspect-ratio: 63 / 88; border-radius: 10px; border: 1.5px dashed rgba(255,255,255,.3); background: rgba(0,0,0,.18); display: flex; align-items: center; justify-content: center; text-align: center; padding: 0; color: rgba(255,255,255,.6); font-size: 13px; overflow: hidden; min-height: 0; }
-  .slot.filled { border-style: solid; border-color: transparent; background: rgba(0,0,0,.25); }
-  .slot.selected { outline: 3px solid var(--accent); outline-offset: 2px; }
-  .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .slot .rm { position: absolute; top: 6px; right: 6px; width: 32px; height: 32px; min-height: 0; padding: 0; border-radius: 999px; background: rgba(0,0,0,.65); border: none; font-size: 16px; line-height: 1; }
-  .slot.drag-over { outline: 3px dashed var(--accent); }
-  .hint { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0; }
-  .results { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; }
-  .result { padding: 0; border: none; background: none; text-align: left; display: flex; flex-direction: column; gap: 4px; min-height: 0; }
-  .result img { width: 100%; aspect-ratio: 63 / 88; object-fit: cover; border-radius: 6px; background: #0C0F0E; }
-  .result span { font-size: 12px; color: var(--muted); }
-  .status { font-size: 13px; color: var(--muted); min-height: 18px; }
-  details { border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
-  summary { cursor: pointer; color: var(--muted); font-size: 14px; }
-  .pager { font-size: 14px; color: var(--muted); }
-  .ai { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 6px; display: flex; flex-direction: column; gap: 12px; }
   button:disabled { opacity: .5; cursor: default; }
-  label.check { flex-direction: row; align-items: center; gap: 10px; color: var(--text); font-size: 14px; }
-  label.check input { width: auto; min-height: 0; margin: 0; }
+  button.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); font-weight: 600; }
+  button.primary:hover { filter: brightness(1.06); }
+  button.ghost { background: transparent; }
+  button.danger { color: var(--danger); }
+  input, select { background: #171A21; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-height: 42px; width: 100%; }
+  input:focus, select:focus { outline: none; border-color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--muted); }
+  label.check { flex-direction: row; align-items: center; gap: 10px; color: var(--text); }
+  label.check input { width: 18px; height: 18px; min-height: 0; margin: 0; accent-color: var(--accent); }
+  details { border: 1px solid var(--line); border-radius: 12px; padding: 0 14px; }
+  details[open] { padding-bottom: 14px; }
+  summary { cursor: pointer; padding: 11px 0; color: var(--text); font-weight: 500; }
+  .hint { font-size: 13.5px; color: var(--muted); margin: 0; }
+  .status { font-size: 14px; color: var(--muted); }
+  .status:empty, #results:empty, #setBar:empty, #browser:empty { display: none; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+  /* ---------- en-tête + bande de pages ---------- */
+  .top { position: sticky; top: 0; z-index: 20; background: rgba(27,31,39,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top-inner { max-width: 1440px; margin: 0 auto; padding: 6px 20px; display: flex; align-items: center; gap: 16px; }
+  .brand { font-size: 20px; font-weight: 800; white-space: nowrap; }
+  .strip { flex: 1; min-width: 0; display: flex; gap: 10px; overflow-x: auto; padding: 4px 2px; scrollbar-width: thin; }
+  .thumb { flex: 0 0 auto; display: flex; flex-direction: column; gap: 3px; align-items: center; padding: 4px 6px; min-height: 0; border-radius: 10px; background: transparent; border: 2px solid transparent; width: 76px; }
+  .thumb.current { border-color: var(--accent); background: var(--panel); }
+  .thumb .mini { width: 40px; aspect-ratio: 5 / 6; border-radius: 5px; padding: 3px; display: grid; gap: 2px; }
+  .thumb .mini span { background: rgba(255,255,255,.14); border-radius: 1px; background-size: cover; background-position: center; }
+  .thumb small { font-size: 11.5px; color: var(--muted); max-width: 72px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .thumb.add { justify-content: center; color: var(--muted); border: 2px dashed var(--line); width: 70px; align-self: stretch; }
+  .top-actions { display: flex; gap: 8px; }
+
+  /* ---------- disposition ---------- */
+  .app { max-width: 1440px; margin: 0 auto; padding: 16px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 28px; align-items: start; }
+  @media (max-width: 1080px) { .app { grid-template-columns: minmax(0, 1fr); } .side { position: static; max-height: none; } }
+
+  /* ---------- la feuille du classeur ---------- */
+  .sheet-tools { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-bottom: 12px; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; background: transparent; min-height: 38px; padding: 6px 12px; color: var(--muted); }
+  .seg button[aria-pressed="true"] { background: var(--panel-2); color: var(--text); font-weight: 600; }
+  .swatches { display: flex; gap: 6px; align-items: center; }
+  .swatch { width: 26px; height: 26px; min-height: 0; padding: 0; border-radius: 50%; border: 2px solid rgba(255,255,255,.15); }
+  .swatch[aria-pressed="true"] { border-color: var(--text); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }
+  .swatch-custom { position: relative; overflow: hidden; background: conic-gradient(#e66, #ec6, #6c6, #6ce, #66e, #c6e, #e66); }
+  .swatch-custom input { position: absolute; inset: 0; opacity: 0; cursor: pointer; padding: 0; min-height: 0; }
+  .spacer { flex: 1; }
+
+  .sheet { position: relative; background: var(--theme); border-radius: 6px 18px 18px 6px; padding: 18px 24px 24px 56px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), 0 24px 50px -24px rgba(0,0,0,.7); transition: background .25s; }
+  /* anneaux du classeur */
+  .sheet::before { content: ""; position: absolute; left: 18px; top: 0; bottom: 0; width: 18px;
+    background: radial-gradient(circle at 9px 50%, #0f1116 0 6px, rgba(255,255,255,.18) 6.5px 7.5px, transparent 8px) 0 0 / 18px 33.33% repeat-y; opacity: .9; }
+  .page-title { background: transparent; border: 0; border-bottom: 1px dashed rgba(255,255,255,.22); border-radius: 0; padding: 2px 0 8px; min-height: 0;
+    font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(22px, 2.4vw, 30px); font-weight: 800; margin-bottom: 14px; }
+  .page-title:focus { border-bottom-color: var(--accent); }
+  .grid { display: grid; gap: 14px; max-width: 760px; margin: 0 auto; }
+  /* pochettes */
+  .slot { position: relative; aspect-ratio: 63 / 88; border-radius: 9px; padding: 0; min-height: 0; overflow: hidden;
+    background: rgba(0,0,0,.2); border: 1.5px dashed rgba(255,255,255,.28); color: rgba(255,255,255,.7);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 13px; cursor: pointer; }
+  .slot .plus { font-size: 26px; line-height: 1; opacity: .7; }
+  .slot.filled { border: 0; background: #0d0f13; box-shadow: 0 6px 14px -6px rgba(0,0,0,.6); }
+  .slot.filled::after { content: ""; position: absolute; inset: 0; border-radius: 9px; pointer-events: none;
+    background: linear-gradient(125deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 32%, rgba(255,255,255,0) 70%, rgba(255,255,255,.07) 100%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); }
+  .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .slot.selected { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .slot.selected:not(.filled) { border-color: var(--accent); color: var(--text); background: rgba(246,201,69,.08); }
+  .slot.drag-over { outline: 3px dashed var(--accent); outline-offset: 3px; }
+  .slot-actions { position: absolute; top: 6px; right: 6px; display: flex; gap: 5px; z-index: 2; opacity: 0; transition: opacity .15s; }
+  .slot:hover .slot-actions, .slot:focus-within .slot-actions, .slot.selected .slot-actions { opacity: 1; }
+  @media (hover: none) { .slot-actions { opacity: 1; } }
+  .slot-actions button { width: 32px; height: 32px; min-height: 0; padding: 0; border-radius: 999px; border: 0; background: rgba(10,12,16,.78); color: #fff; font-size: 15px; line-height: 1; }
+  .sheet-hint { margin-top: 14px; }
+
+  /* ---------- panneau latéral ---------- */
+  .side { position: sticky; top: 84px; max-height: calc(100vh - 100px); display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+  .tabs { display: flex; border-bottom: 1px solid var(--line); }
+  .tabs button { flex: 1; border: 0; border-radius: 0; background: transparent; min-height: 52px; color: var(--muted); font-weight: 600; font-size: 15px; border-bottom: 3px solid transparent; }
+  .tabs button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+  .tab { padding: 16px; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; }
+  .tab[hidden] { display: none; }
+  .target { font-size: 14px; color: var(--muted); }
+  .target b { color: var(--accent); font-weight: 600; }
+
+  .search { display: flex; gap: 8px; }
+  .search input { flex: 1; }
+  .current-set { display: flex; align-items: center; gap: 12px; padding: 10px 12px; background: var(--panel-2); border-radius: 12px; }
+  .current-set img { height: 34px; max-width: 110px; object-fit: contain; }
+  .current-set .name { flex: 1; min-width: 0; font-weight: 600; line-height: 1.3; }
+  .current-set .name small { display: block; font-weight: 400; color: var(--muted); }
+  .chips { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: thin; }
+  .chip { flex: 0 0 auto; min-height: 34px; padding: 5px 12px; border-radius: 999px; font-size: 13.5px; background: transparent; color: var(--muted); }
+  .chip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 600; }
+
+  .bloc { display: flex; flex-direction: column; gap: 10px; }
+  .bloc-head { display: flex; align-items: center; gap: 10px; padding-top: 6px; }
+  .bloc-head img { height: 26px; max-width: 90px; object-fit: contain; }
+  .bloc-head h3 { font-size: 17px; }
+  .bloc-head span { color: var(--muted); font-size: 13px; }
+  .sets { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; }
+  .set-tile { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 8px; min-height: 0; text-align: center; background: var(--panel-2); border-color: transparent; }
+  .set-tile:hover { border-color: var(--muted); }
+  .set-tile .logo { height: 46px; width: 100%; display: flex; align-items: center; justify-content: center; }
+  .set-tile .logo img { max-height: 46px; max-width: 100%; object-fit: contain; }
+  .set-tile .logo .fallback { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 13px; color: var(--muted); }
+  .set-tile .nm { font-size: 12.5px; line-height: 1.25; }
+  .set-tile .meta { font-size: 11.5px; color: var(--muted); }
+
+  .results { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 12px; }
+  .result { position: relative; padding: 0; border: 0; background: none; min-height: 0; text-align: left; display: flex; flex-direction: column; gap: 5px; border-radius: 8px; }
+  .result img { width: 100%; aspect-ratio: 63 / 88; object-fit: cover; border-radius: 7px; background: #15181e; transition: transform .12s; }
+  .result:hover img { transform: translateY(-2px); }
+  .result span { font-size: 12.5px; color: var(--muted); line-height: 1.3; }
+  .result .on-page { position: absolute; top: 6px; left: 6px; background: var(--accent); color: var(--on-accent); font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 999px; }
+  .result .zoom { position: absolute; top: 6px; right: 6px; width: 30px; height: 30px; min-height: 0; padding: 0; border: 0; border-radius: 999px; background: rgba(10,12,16,.75); color: #fff; font-size: 14px; }
+  .empty { text-align: center; padding: 24px 10px; color: var(--muted); }
+
+  .suggest { display: flex; flex-wrap: wrap; gap: 6px; }
+  .db-badge { padding: 10px 12px; border-radius: 12px; background: var(--panel-2); }
+
+  /* ---------- zoom + message ---------- */
+  .zoom-view { position: fixed; inset: 0; z-index: 50; background: rgba(8,9,12,.86); display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .zoom-view[hidden] { display: none; }
+  .zoom-view img { max-height: 88vh; max-width: 92vw; border-radius: 16px; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+  .zoom-view button { position: absolute; top: 18px; right: 18px; }
+  .toast { position: fixed; left: 50%; bottom: 22px; transform: translate(-50%, 20px); z-index: 60; background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 12px; font-weight: 500; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; max-width: calc(100vw - 32px); }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+  @media (max-width: 640px) {
+    .top { position: static; }
+    .top-inner { padding: 8px 12px; gap: 10px; flex-wrap: wrap; }
+    .brand { font-size: 17px; }
+    .strip { order: 3; flex-basis: 100%; }
+    .app { padding: 16px 12px 50px; }
+    .sheet { padding: 18px 14px 22px 40px; }
+    .sheet::before { left: 10px; }
+    .grid { gap: 8px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
-<div class="app">
-  <section class="binder-col" aria-label="Binder">
-    <div class="bar">
-      <h1 style="font-size:22px; margin-right:auto">Binder Creator</h1>
-      <button id="prevPage" aria-label="Page précédente">‹</button>
-      <span class="pager" id="pager">Page 1 / 1</span>
-      <button id="nextPage" aria-label="Page suivante">›</button>
-      <button id="addPage">+ Page</button>
-      <button id="delPage">Supprimer la page</button>
-    </div>
-    <div class="page" id="page">
-      <input class="page-title" id="pageTitle" aria-label="Titre de la page" placeholder="Titre de la page">
-      <div class="grid" id="grid"></div>
-    </div>
-    <div class="bar">
-      <label class="grow">Couleur de la page
-        <input type="color" id="pageColor" style="padding:4px; height:44px">
-      </label>
-      <label class="grow">Disposition
-        <select id="layout">
-          <option value="3">3×3 (9 cartes)</option>
-          <option value="4">4×3 (12 cartes)</option>
-          <option value="2">2×2 (4 cartes)</option>
-        </select>
-      </label>
-    </div>
-    <p class="hint">Touche une case pour la sélectionner, puis une carte dans les résultats pour la placer. Sur ordinateur, glisse une carte d'une case à l'autre pour les échanger.</p>
-    <div class="bar">
-      <button id="exportBtn">Exporter (JSON)</button>
-      <button id="importBtn">Importer</button>
+<header class="top">
+  <div class="top-inner">
+    <h1 class="brand">Binder Creator</h1>
+    <nav class="strip" id="strip" aria-label="Pages du classeur"></nav>
+    <div class="top-actions">
+      <button class="ghost" id="exportBtn" title="Télécharger une sauvegarde du classeur">Sauvegarder</button>
+      <button class="ghost" id="importBtn" title="Ouvrir une sauvegarde">Ouvrir</button>
       <input type="file" id="importFile" accept="application/json" hidden>
     </div>
+  </div>
+</header>
+
+<main class="app">
+  <section aria-label="Page du classeur">
+    <div class="sheet-tools">
+      <div class="seg" role="group" aria-label="Disposition">
+        <button type="button" data-layout="2">2×2</button>
+        <button type="button" data-layout="3">3×3</button>
+        <button type="button" data-layout="4">4×3</button>
+      </div>
+      <div class="swatches" id="swatches" role="group" aria-label="Couleur de la page"></div>
+      <span class="spacer"></span>
+      <button class="ghost" id="clearPage" type="button">Vider la page</button>
+      <button class="ghost danger" id="delPage" type="button">Supprimer la page</button>
+    </div>
+    <div class="sheet" id="page">
+      <input class="page-title" id="pageTitle" aria-label="Titre de la page" placeholder="Donne un titre à cette page">
+      <div class="grid" id="grid"></div>
+    </div>
+    <p class="hint sheet-hint">Choisis une case, puis une carte dans le panneau. Glisse une carte sur une autre case pour les échanger, double-clique pour l'agrandir.</p>
   </section>
 
-  <section class="search-col" aria-label="Recherche de cartes">
-    <h2 style="font-size:20px">Ajouter des cartes</h2>
-    <label>Extension
-      <select id="setId"><option value="">Chargement des extensions…</option></select>
-    </label>
-    <form id="searchForm" class="bar">
-      <label class="grow">Numéro ou nom (français ou anglais)
-        <input id="query" list="frNames" autocomplete="off" placeholder="ex. 198, Florizarre ou Venusaur">
-      </label>
-      <datalist id="frNames"></datalist>
-      <button class="primary" type="submit" style="align-self:flex-end">Chercher</button>
-    </form>
-    <div class="status" id="status" role="status"></div>
-    <div class="results" id="results"></div>
-    <p class="hint">Cartes et images : base TCGdex (gratuite, sans clé).</p>
+  <aside class="side" aria-label="Outils">
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tabCardsBtn" aria-selected="true" aria-controls="tabCards" type="button">Cartes</button>
+      <button role="tab" id="tabThemeBtn" aria-selected="false" aria-controls="tabTheme" type="button">Page à thème</button>
+    </div>
 
-    <div class="ai">
-      <h2 style="font-size:20px">Page à thème</h2>
-      <details id="aiSettings">
-        <summary>Réglages IA (facultatif)</summary>
-        <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px">
-          <p class="hint">Facultatif, seulement pour « Composer avec l'IA ». Ta clé reste dans ce navigateur et part uniquement vers le fournisseur choisi.</p>
-          <label>Fournisseur
-            <select id="aiProvider">
-              <option value="gemini">Google Gemini (offre gratuite possible)</option>
-              <option value="claude">Anthropic Claude (payant à l'usage)</option>
-            </select>
-          </label>
-          <div id="geminiBox" style="display:flex; flex-direction:column; gap:10px">
-            <label>Clé API Gemini (aistudio.google.com)
-              <input id="geminiKey" type="password" placeholder="AIza…" autocomplete="off">
-            </label>
-            <label>Modèle Gemini
-              <select id="geminiModel"><option value="gemini-2.5-flash">gemini-2.5-flash</option></select>
-            </label>
-            <p class="hint">Après avoir collé ta clé, la liste des modèles se met à jour. Prends un modèle « flash » pour rester dans l'offre gratuite.</p>
-          </div>
-          <div id="claudeBox" style="display:flex; flex-direction:column; gap:10px">
-            <label>Clé API Anthropic
-              <input id="aiKey" type="password" placeholder="sk-ant-…" autocomplete="off">
-            </label>
-            <label>Modèle Claude
-              <select id="aiModel">
-                <option value="claude-haiku-5-5">Claude Haiku (rapide, économique)</option>
-                <option value="claude-sonnet-5-5">Claude Sonnet (choix plus fins)</option>
-              </select>
-            </label>
-          </div>
-        </div>
-      </details>
+    <div class="tab" id="tabCards" role="tabpanel">
+      <p class="target" id="target"></p>
+      <form class="search" id="searchForm">
+        <input id="query" list="frNames" autocomplete="off" placeholder="Nom (fr ou en) ou numéro" aria-label="Rechercher une carte">
+        <datalist id="frNames"></datalist>
+        <button class="primary" type="submit">Chercher</button>
+      </form>
+      <div id="setBar"></div>
+      <div class="status" id="status" role="status"></div>
+      <div class="results" id="results"></div>
+      <div id="browser"></div>
+    </div>
 
-      <p class="hint" id="dbStatus">Chargement de la base de cartes analysées…</p>
-
-      <label>Mots-clés (facultatif si des cartes sont déjà sur la page)
-        <input id="aiTheme" placeholder="ex. bord de mer, forêt au soleil, intérieur cosy, nuit étoilée…">
+    <div class="tab" id="tabTheme" role="tabpanel" hidden>
+      <p class="hint db-badge" id="dbStatus">Chargement de la base de cartes analysées…</p>
+      <label>Ce que tu veux voir sur la page
+        <input id="aiTheme" placeholder="ex. bord de mer au soleil, forêt, nuit étoilée">
       </label>
-      <label class="check">
-        <input id="aiUsePage" type="checkbox" checked>
-        S'inspirer des cartes déjà placées sur la page (et compléter les cases vides)
-      </label>
+      <div class="suggest" id="suggest"></div>
+      <label class="check"><input id="aiUsePage" type="checkbox" checked> S'inspirer des cartes déjà placées et compléter les cases vides</label>
+      <div class="row">
+        <button class="primary" id="localGenBtn" type="button">Composer la page</button>
+        <button id="aiGenBtn" type="button">Composer avec l'IA</button>
+      </div>
+      <div class="status" id="aiGenStatus" role="status"></div>
       <details>
         <summary>Règles de composition</summary>
-        <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px">
+        <div style="display:flex; flex-direction:column; gap:12px">
           <label class="check"><input id="ruleFull" type="checkbox" checked> Illustrations pleines uniquement</label>
           <label class="check"><input id="ruleClean" type="checkbox" checked> Éviter les bandeaux V / ex, logos et textes chargés</label>
           <label class="check"><input id="ruleEra" type="checkbox" checked> Même époque que les cartes déjà placées</label>
           <label>Couleur des bordures
             <select id="ruleBorder">
-              <option value="auto">Automatique (comme les cartes placées, sinon argent)</option>
+              <option value="auto">Comme les cartes placées (sinon argent)</option>
               <option value="argent">Argent (cartes récentes)</option>
               <option value="jaune">Jaune (cartes plus anciennes)</option>
               <option value="toutes">Peu importe</option>
@@ -159,72 +240,161 @@
           </label>
         </div>
       </details>
-      <div class="bar">
-        <button class="primary" id="aiGenBtn" type="button">Composer avec l'IA</button>
-        <button id="localGenBtn" type="button">Composer sans IA</button>
-      </div>
-      <p class="hint">« Sans IA » fonctionne sans clé, à partir de la base. « Avec l'IA » demande une clé (réglages ci-dessus) mais compose plus finement.</p>
-      <div class="status" id="aiGenStatus" role="status"></div>
+      <details id="aiSettings">
+        <summary>Clé IA (pour « Composer avec l'IA »)</summary>
+        <div style="display:flex; flex-direction:column; gap:12px">
+          <p class="hint">Ta clé reste dans ce navigateur et part uniquement vers le fournisseur choisi.</p>
+          <label>Fournisseur
+            <select id="aiProvider">
+              <option value="gemini">Google Gemini (offre gratuite)</option>
+              <option value="claude">Anthropic Claude (payant)</option>
+            </select>
+          </label>
+          <div id="geminiBox" style="display:flex; flex-direction:column; gap:12px">
+            <label>Clé Gemini (aistudio.google.com)
+              <input id="geminiKey" type="password" placeholder="AIza…" autocomplete="off">
+            </label>
+            <label>Modèle
+              <select id="geminiModel"><option value="gemini-2.5-flash">gemini-2.5-flash</option></select>
+            </label>
+          </div>
+          <div id="claudeBox" style="display:flex; flex-direction:column; gap:12px">
+            <label>Clé Anthropic
+              <input id="aiKey" type="password" placeholder="sk-ant-…" autocomplete="off">
+            </label>
+            <label>Modèle
+              <select id="aiModel">
+                <option value="claude-haiku-5-5">Claude Haiku (rapide)</option>
+                <option value="claude-sonnet-5-5">Claude Sonnet (plus fin)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </details>
     </div>
-  </section>
+  </aside>
+</main>
+
+<div class="zoom-view" id="zoomView" hidden role="dialog" aria-label="Carte agrandie">
+  <img id="zoomImg" alt="">
+  <button type="button" id="zoomClose">Fermer</button>
 </div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function () {
   var STORE = 'binderCreator.v1';
+  var COLORS = ['#17301F', '#12324A', '#0F3B3A', '#2F1F4A', '#4A1F33', '#4A2A12', '#3A2A1C', '#2A2E33'];
 
-  function blankPage(n) {
-    return { title: 'Nouvelle page', color: '#17301F', cols: 3, rows: 3, slots: new Array(n || 9).fill(null) };
+  function blankPage(cols, rows) {
+    cols = cols || 3; rows = rows || 3;
+    return { title: 'Nouvelle page', color: '#17301F', cols: cols, rows: rows, slots: new Array(cols * rows).fill(null) };
   }
-
-  var state = load() || {
-    current: 0,
-    selected: 0,
-    pages: [{ title: 'La forêt enchantée', color: '#17301F', cols: 3, rows: 3, slots: new Array(9).fill(null) }]
-  };
-
-  function load() {
-    try { var raw = localStorage.getItem(STORE); return raw ? JSON.parse(raw) : null; } catch (e) { return null; }
-  }
-  function save() {
-    try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) {}
-  }
+  var state = load() || { current: 0, selected: 0, pages: [blankPage()] };
+  function load() { try { var raw = localStorage.getItem(STORE); return raw ? JSON.parse(raw) : null; } catch (e) { return null; } }
+  function save() { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) {} }
 
   var el = function (id) { return document.getElementById(id); };
   var grid = el('grid');
-
   function page() { return state.pages[state.current]; }
+  function mk(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+
+  var toastTimer;
+  function toast(msg) {
+    var t = el('toast'); t.textContent = msg; t.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2200);
+  }
+  function zoom(src) { if (!src) return; el('zoomImg').src = src; el('zoomView').hidden = false; el('zoomClose').focus(); }
+  el('zoomClose').addEventListener('click', function () { el('zoomView').hidden = true; });
+  el('zoomView').addEventListener('click', function (e) { if (e.target === el('zoomView')) el('zoomView').hidden = true; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') el('zoomView').hidden = true; });
+
+  // ---------- rendu ----------
+  function renderStrip() {
+    var strip = el('strip'); strip.innerHTML = '';
+    state.pages.forEach(function (p, k) {
+      var b = mk('button', 'thumb' + (k === state.current ? ' current' : ''));
+      b.type = 'button'; b.title = p.title || ('Page ' + (k + 1));
+      b.setAttribute('aria-label', 'Page ' + (k + 1) + ' : ' + (p.title || 'sans titre'));
+      if (k === state.current) b.setAttribute('aria-current', 'page');
+      var mini = mk('div', 'mini');
+      mini.style.background = p.color; mini.style.gridTemplateColumns = 'repeat(' + p.cols + ', 1fr)';
+      p.slots.forEach(function (c) { var s = mk('span'); if (c && c.small) s.style.backgroundImage = 'url("' + c.small + '")'; mini.appendChild(s); });
+      b.appendChild(mini); b.appendChild(mk('small', null, (k + 1) + '. ' + (p.title || 'Sans titre')));
+      b.addEventListener('click', function () { state.current = k; state.selected = firstEmpty(); save(); render(); });
+      strip.appendChild(b);
+    });
+    var add = mk('button', 'thumb add', '+ Page'); add.type = 'button';
+    add.addEventListener('click', function () {
+      var cur = page(); state.pages.push(blankPage(cur.cols, cur.rows)); state.current = state.pages.length - 1; state.selected = 0; save(); render();
+      el('pageTitle').focus(); el('pageTitle').select();
+    });
+    strip.appendChild(add);
+    var current = strip.querySelector('.current'); if (current) current.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }
+  function renderSwatches() {
+    var box = el('swatches'), p = page(); box.innerHTML = '';
+    COLORS.forEach(function (c) {
+      var b = mk('button', 'swatch'); b.type = 'button'; b.style.background = c; b.title = 'Couleur ' + c;
+      b.setAttribute('aria-pressed', String(p.color.toLowerCase() === c.toLowerCase()));
+      b.addEventListener('click', function () { page().color = c; save(); render(); });
+      box.appendChild(b);
+    });
+    var custom = mk('label', 'swatch swatch-custom'); custom.title = 'Autre couleur';
+    custom.setAttribute('aria-pressed', String(COLORS.map(function (c) { return c.toLowerCase(); }).indexOf(p.color.toLowerCase()) === -1));
+    var inp = mk('input'); inp.type = 'color'; inp.value = p.color; inp.setAttribute('aria-label', 'Choisir une autre couleur');
+    inp.addEventListener('input', function (e) { page().color = e.target.value; el('page').style.setProperty('--theme', e.target.value); save(); renderStrip(); });
+    inp.addEventListener('change', render);
+    custom.appendChild(inp); box.appendChild(custom);
+  }
+  function firstEmpty() { var i = page().slots.indexOf(null); return i === -1 ? 0 : i; }
+  function renderTarget() {
+    var p = page(), c = p.slots[state.selected];
+    el('target').innerHTML = '';
+    el('target').append('Prochaine carte dans la ', mk('b', null, 'case ' + (state.selected + 1)), c ? ' (remplace ' + c.name + ')' : '');
+  }
 
   function render() {
     var p = page();
-    el('pager').textContent = 'Page ' + (state.current + 1) + ' / ' + state.pages.length;
+    if (state.selected >= p.slots.length) state.selected = 0;
+    renderStrip(); renderSwatches(); renderTarget();
     el('pageTitle').value = p.title;
-    el('pageColor').value = p.color;
     el('page').style.setProperty('--theme', p.color);
-    el('layout').value = String(p.cols === 4 ? 4 : p.cols === 2 ? 2 : 3);
+    document.querySelectorAll('[data-layout]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(parseInt(b.dataset.layout, 10) === p.cols));
+    });
     grid.style.gridTemplateColumns = 'repeat(' + p.cols + ', minmax(0, 1fr))';
+    // la page entière tient à l'écran : largeur limitée par la hauteur disponible
+    var gap = window.innerWidth <= 640 ? 8 : 14;
+    var ratio = (p.cols * 63) / (p.rows * 88);
+    var cap = p.cols === 2 ? 520 : p.cols === 4 ? 900 : 720;
+    grid.style.maxWidth = window.innerWidth <= 1080 ? cap + 'px'
+      : 'min(' + cap + 'px, calc((100vh - 268px - ' + ((p.rows - 1) * gap) + 'px) * ' + ratio.toFixed(4) + ' + ' + ((p.cols - 1) * gap) + 'px))';
     grid.innerHTML = '';
     p.slots.forEach(function (card, i) {
-      var slot = document.createElement('div');
-      slot.className = 'slot' + (card ? ' filled' : '') + (i === state.selected ? ' selected' : '');
-      slot.tabIndex = 0;
-      slot.setAttribute('role', 'button');
+      var slot = mk('div', 'slot' + (card ? ' filled' : '') + (i === state.selected ? ' selected' : ''));
+      slot.tabIndex = 0; slot.setAttribute('role', 'button');
       slot.setAttribute('aria-label', card ? ('Case ' + (i + 1) + ' : ' + card.name + ' ' + card.number) : ('Case ' + (i + 1) + ' vide'));
-      slot.dataset.index = i;
       if (card) {
-        var img = document.createElement('img');
-        img.src = card.small; img.alt = card.name + ' ' + card.number; img.draggable = false;
-        slot.appendChild(img);
-        slot.draggable = true;
-        var rm = document.createElement('button');
-        rm.className = 'rm'; rm.textContent = '×'; rm.setAttribute('aria-label', 'Retirer ' + card.name);
-        rm.addEventListener('click', function (e) { e.stopPropagation(); p.slots[i] = null; save(); render(); });
-        slot.appendChild(rm);
+        var img = mk('img'); img.src = card.small; img.alt = card.name + ' ' + card.number; img.draggable = false;
+        slot.appendChild(img); slot.draggable = true;
+        var acts = mk('div', 'slot-actions');
+        var z = mk('button', null, '⤢'); z.type = 'button'; z.title = 'Agrandir'; z.setAttribute('aria-label', 'Agrandir ' + card.name);
+        z.addEventListener('click', function (e) { e.stopPropagation(); zoom(card.large || card.small); });
+        var rm = mk('button', null, '×'); rm.type = 'button'; rm.title = 'Retirer'; rm.setAttribute('aria-label', 'Retirer ' + card.name);
+        rm.addEventListener('click', function (e) { e.stopPropagation(); p.slots[i] = null; state.selected = i; save(); render(); toast(card.name + ' retiré'); });
+        acts.appendChild(z); acts.appendChild(rm); slot.appendChild(acts);
+        slot.addEventListener('dblclick', function () { zoom(card.large || card.small); });
       } else {
-        slot.textContent = 'Case ' + (i + 1);
+        slot.appendChild(mk('span', 'plus', '+'));
+        slot.appendChild(mk('span', null, 'Case ' + (i + 1)));
       }
-      slot.addEventListener('click', function () { state.selected = i; save(); render(); });
-      slot.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); state.selected = i; save(); render(); } });
+      var select = function () { state.selected = i; save(); render(); if (window.innerWidth <= 1080 && !card) el('tabCards').scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+      slot.addEventListener('click', select);
+      slot.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); }
+        if ((e.key === 'Delete' || e.key === 'Backspace') && card) { p.slots[i] = null; save(); render(); }
+      });
       slot.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', String(i)); });
       slot.addEventListener('dragover', function (e) { e.preventDefault(); slot.classList.add('drag-over'); });
       slot.addEventListener('dragleave', function () { slot.classList.remove('drag-over'); });
@@ -237,48 +407,59 @@
       });
       grid.appendChild(slot);
     });
+    markOnPage();
   }
 
   function place(card) {
     var p = page();
     p.slots[state.selected] = card;
+    var placedAt = state.selected;
     var next = p.slots.indexOf(null, state.selected + 1);
     if (next === -1) next = p.slots.indexOf(null);
     if (next !== -1) state.selected = next;
     save(); render();
+    toast(card.name + ' placé en case ' + (placedAt + 1));
   }
 
-  // Page controls
-  el('pageTitle').addEventListener('input', function (e) { page().title = e.target.value; save(); });
-  el('pageColor').addEventListener('input', function (e) { page().color = e.target.value; el('page').style.setProperty('--theme', e.target.value); save(); });
-  el('layout').addEventListener('change', function (e) {
-    var p = page(), v = parseInt(e.target.value, 10);
-    var cols = v, rows = v === 4 ? 3 : v;
-    var n = cols * rows;
-    var kept = p.slots.slice(0, n);
-    while (kept.length < n) kept.push(null);
-    var dropped = p.slots.slice(n).filter(Boolean).length;
-    if (dropped && !confirm(dropped + ' carte(s) seront retirées de la page. Continuer ?')) { render(); return; }
-    p.cols = cols; p.rows = rows; p.slots = kept;
-    if (state.selected >= n) state.selected = 0;
-    save(); render();
+  // ---------- contrôles de la page ----------
+  el('pageTitle').addEventListener('input', function (e) { page().title = e.target.value; save(); renderStrip(); });
+  document.querySelectorAll('[data-layout]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var p = page(), v = parseInt(b.dataset.layout, 10);
+      var cols = v, rows = v === 4 ? 3 : v, n = cols * rows;
+      if (cols === p.cols && rows === p.rows) return;
+      var cards = p.slots.filter(Boolean);
+      var dropped = Math.max(0, cards.length - n);
+      if (dropped && !confirm(dropped + ' carte(s) ne tiendront plus sur la page et seront retirées. Continuer ?')) return;
+      var kept = p.slots.slice(0, n);
+      // garde d'abord les cartes, dans l'ordre, si la nouvelle grille est plus petite
+      if (p.slots.length > n) kept = cards.slice(0, n);
+      while (kept.length < n) kept.push(null);
+      p.cols = cols; p.rows = rows; p.slots = kept;
+      if (state.selected >= n) state.selected = firstEmpty();
+      save(); render();
+    });
   });
-  el('prevPage').addEventListener('click', function () { if (state.current > 0) { state.current--; state.selected = 0; save(); render(); } });
-  el('nextPage').addEventListener('click', function () { if (state.current < state.pages.length - 1) { state.current++; state.selected = 0; save(); render(); } });
-  el('addPage').addEventListener('click', function () { state.pages.push(blankPage(9)); state.current = state.pages.length - 1; state.selected = 0; save(); render(); });
+  el('clearPage').addEventListener('click', function () {
+    var p = page(), n = p.slots.filter(Boolean).length;
+    if (!n) return;
+    if (!confirm('Retirer les ' + n + ' carte(s) de cette page ?')) return;
+    p.slots = p.slots.map(function () { return null; }); state.selected = 0; save(); render(); toast('Page vidée');
+  });
   el('delPage').addEventListener('click', function () {
-    if (state.pages.length === 1) { alert('Le binder doit garder au moins une page.'); return; }
-    if (!confirm('Supprimer « ' + page().title + ' » ?')) return;
+    if (state.pages.length === 1) { toast('Le classeur doit garder au moins une page'); return; }
+    if (!confirm('Supprimer la page « ' + (page().title || 'sans titre') + ' » ?')) return;
     state.pages.splice(state.current, 1);
-    state.current = Math.max(0, state.current - 1); state.selected = 0; save(); render();
+    state.current = Math.max(0, state.current - 1); state.selected = firstEmpty(); save(); render(); toast('Page supprimée');
   });
 
-  // Export / import
+  // ---------- sauvegarde ----------
   el('exportBtn').addEventListener('click', function () {
     var blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob); a.download = 'binder.json'; a.click();
     setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    toast('Sauvegarde téléchargée');
   });
   el('importBtn').addEventListener('click', function () { el('importFile').click(); });
   el('importFile').addEventListener('change', function (e) {
@@ -287,86 +468,65 @@
       try {
         var data = JSON.parse(txt);
         if (!data || !Array.isArray(data.pages) || !data.pages.length) throw new Error();
-        state = data; state.current = 0; state.selected = 0; save(); render();
-      } catch (err) { alert('Fichier invalide.'); }
+        state = data; state.current = 0; state.selected = 0; save(); render(); toast('Classeur ouvert');
+      } catch (err) { toast('Ce fichier n\'est pas une sauvegarde de classeur'); }
     });
     e.target.value = '';
   });
 
-  // French <-> English Pokémon names (PokéAPI species names, cached locally)
+  // ---------- onglets ----------
+  function showTab(name) {
+    var cards = name === 'cards';
+    el('tabCardsBtn').setAttribute('aria-selected', String(cards));
+    el('tabThemeBtn').setAttribute('aria-selected', String(!cards));
+    el('tabCards').hidden = !cards; el('tabTheme').hidden = cards;
+  }
+  el('tabCardsBtn').addEventListener('click', function () { showTab('cards'); });
+  el('tabThemeBtn').addEventListener('click', function () { showTab('theme'); });
+
+  // ---------- noms français <-> anglais (PokéAPI) ----------
   var NAMES_URL = 'https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv';
   var NAMES_KEY = STORE + '.names';
   var frToEn = {}, enToFr = {};
-
-  function norm(s) {
-    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9♀♂]/g, '');
-  }
+  function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9♀♂]/g, ''); }
   function parseCsvLine(line) {
     var out = [], cur = '', q = false;
     for (var i = 0; i < line.length; i++) {
       var ch = line[i];
-      if (q) {
-        if (ch === '"' && line[i + 1] === '"') { cur += '"'; i++; }
-        else if (ch === '"') q = false;
-        else cur += ch;
-      } else if (ch === '"') q = true;
-      else if (ch === ',') { out.push(cur); cur = ''; }
-      else cur += ch;
+      if (q) { if (ch === '"' && line[i + 1] === '"') { cur += '"'; i++; } else if (ch === '"') q = false; else cur += ch; }
+      else if (ch === '"') q = true; else if (ch === ',') { out.push(cur); cur = ''; } else cur += ch;
     }
-    out.push(cur);
-    return out;
+    out.push(cur); return out;
   }
   function useNames(pairs) {
     var list = el('frNames'); list.innerHTML = '';
     pairs.forEach(function (p) {
-      frToEn[norm(p[0])] = p[1];
-      enToFr[norm(p[1])] = p[0];
+      frToEn[norm(p[0])] = p[1]; enToFr[norm(p[1])] = p[0];
       var o = document.createElement('option'); o.value = p[0]; list.appendChild(o);
     });
   }
-  function loadNames() {
-    try {
-      var cached = localStorage.getItem(NAMES_KEY);
-      if (cached) { useNames(JSON.parse(cached)); return; }
-    } catch (e) {}
-    fetch(NAMES_URL)
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
-      .then(function (txt) {
-        var fr = {}, en = {};
-        txt.split(/\r?\n/).slice(1).forEach(function (line) {
-          if (!line) return;
-          var c = parseCsvLine(line);
-          if (c[1] === '5') fr[c[0]] = c[2];      // 5 = français
-          else if (c[1] === '9') en[c[0]] = c[2]; // 9 = anglais
-        });
-        var pairs = Object.keys(fr).filter(function (id) { return en[id]; })
-          .sort(function (a, b) { return a - b; })
-          .map(function (id) { return [fr[id], en[id]]; });
-        useNames(pairs);
-        try { localStorage.setItem(NAMES_KEY, JSON.stringify(pairs)); } catch (e) {}
-      })
-      .catch(function () { el('status').textContent = 'Noms français indisponibles pour le moment : la recherche en anglais fonctionne toujours.'; });
-  }
-  // "Florizarre-ex" -> "Venusaur ex" ; "Venusaur ex" -> "Florizarre-ex"
-  function toEnglish(q) {
+  (function loadNames() {
+    try { var cached = localStorage.getItem(NAMES_KEY); if (cached) { useNames(JSON.parse(cached)); return; } } catch (e) {}
+    fetch(NAMES_URL).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (txt) {
+      var fr = {}, en = {};
+      txt.split(/\r?\n/).slice(1).forEach(function (line) {
+        if (!line) return; var c = parseCsvLine(line);
+        if (c[1] === '5') fr[c[0]] = c[2]; else if (c[1] === '9') en[c[0]] = c[2];
+      });
+      var pairs = Object.keys(fr).filter(function (id) { return en[id]; }).sort(function (a, b) { return a - b; }).map(function (id) { return [fr[id], en[id]]; });
+      useNames(pairs);
+      try { localStorage.setItem(NAMES_KEY, JSON.stringify(pairs)); } catch (e) {}
+    }).catch(function () {});
+  })();
+  function frenchQuery(q) {
     var m = q.match(/^(.*?)(?:[\s-]+(ex|gx|v|vmax|vstar))?$/i);
-    var base = m[1], suffix = m[2];
-    var en = frToEn[norm(base)];
-    return en ? en + (suffix ? ' ' + suffix : '') : q;
+    return (m && enToFr[norm(m[1])]) ? enToFr[norm(m[1])] + (m[2] ? '-' + m[2] : '') : q;
   }
-  function toFrench(name) {
-    var m = name.match(/^(.*?)(?:\s+(ex|GX|V|VMAX|VSTAR))?$/);
-    var fr = enToFr[norm(m[1])];
-    return fr ? fr + (m[2] ? '-' + m[2] : '') : name;
-  }
-  loadNames();
 
-  // ===== Cartes : base TCGdex (gratuite, sans clé, en français) =====
+  // ---------- cartes : base TCGdex ----------
   var TCG = 'https://api.tcgdex.net/v2/fr';
-  var setNames = {}, setCache = {}, setOrder = [];
-  function getJson(url) {
-    return fetch(url).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
-  }
+  var setNames = {}, setCache = {}, setOrder = [], setInfo = {};
+  function getJson(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }); }
   function getSet(id) {
     if (!setCache[id]) setCache[id] = getJson(TCG + '/sets/' + encodeURIComponent(id)).catch(function (e) { delete setCache[id]; throw e; });
     return setCache[id];
@@ -375,70 +535,204 @@
   function toCard(b, set) {
     if (!b || !b.image) return null; // certaines cartes n'ont pas encore d'image
     var official = set && set.cardCount && set.cardCount.official;
-    return {
-      id: b.id, name: b.name, number: b.localId + (official ? '/' + official : ''),
-      rarity: b.rarity || '', small: b.image + '/low.webp', large: b.image + '/high.webp', aiImage: b.image + '/low.png'
-    };
+    return { id: b.id, name: b.name, number: b.localId + (official ? '/' + official : ''), rarity: b.rarity || '',
+      small: b.image + '/low.webp', large: b.image + '/high.webp', aiImage: b.image + '/low.png' };
+  }
+  function logoImg(url, alt) {
+    var img = mk('img'); img.alt = alt || ''; img.loading = 'lazy'; img.decoding = 'async';
+    var tries = url ? [url + '.webp', url.replace('/fr/', '/en/') + '.webp'] : [];
+    var k = 0;
+    img.onerror = function () { k++; if (k < tries.length) img.src = tries[k]; else img.replaceWith(mk('span', 'fallback', alt || '')); };
+    if (tries.length) img.src = tries[0]; else setTimeout(img.onerror, 0);
+    return img;
   }
 
-  // Liste des extensions (les plus récentes d'abord)
-  getJson(TCG + '/sets').then(function (sets) {
-    sets = sets.slice().reverse();
-    var search = el('setId');
-    search.innerHTML = '<option value="">Toutes les extensions</option>';
-    sets.forEach(function (s) {
-      setNames[s.id] = s.name; setOrder.push(s.id);
-      var o = document.createElement('option'); o.value = s.id;
-      o.textContent = s.name + (s.cardCount && s.cardCount.total ? ' · ' + s.cardCount.total + ' cartes' : '');
-      search.appendChild(o);
+  // Collections rangées par bloc (série), les plus récentes d'abord
+  var blocs = [], blocFilter = 'all', currentSet = null, currentCards = [], rarityFilter = 'all', rarityById = {};
+  function loadCollections() {
+    el('browser').innerHTML = ''; el('browser').appendChild(mk('p', 'empty', 'Chargement des collections…'));
+    Promise.all([
+      getJson(TCG + '/sets'),
+      getJson(TCG + '/series').catch(function () { return []; }),
+      fetch('data/index.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+    ]).then(function (res) {
+      var sets = res[0], series = res[1], ix = res[2];
+      var serieOf = {}, dateOf = {};
+      if (ix && ix.extensions) ix.extensions.forEach(function (e) { serieOf[e.id] = e.serie; dateOf[e.id] = e.date; });
+      var missing = sets.some(function (s) { return !serieOf[s.id]; });
+      // sans base locale complète : on demande la composition de chaque série à TCGdex
+      var job = missing && series.length
+        ? Promise.all(series.map(function (sr) {
+            return getJson(TCG + '/series/' + encodeURIComponent(sr.id)).then(function (d) {
+              (d.sets || []).forEach(function (s) { if (!serieOf[s.id]) serieOf[s.id] = sr.id; });
+              if (d.releaseDate) sr.date = d.releaseDate;
+            }).catch(function () {});
+          }))
+        : Promise.resolve();
+      return job.then(function () {
+        var bySerie = {};
+        series.forEach(function (sr) { bySerie[sr.id] = { id: sr.id, name: sr.name, logo: sr.logo, sets: [] }; });
+        sets.forEach(function (s, k) {
+          setNames[s.id] = s.name;
+          var sid = serieOf[s.id] || 'autres';
+          if (sid === 'tcgp') return; // Pokémon TCG Pocket : pas de cartes physiques
+          if (!bySerie[sid]) bySerie[sid] = { id: sid, name: sid === 'autres' ? 'Autres' : sid, sets: [] };
+          var info = { id: s.id, name: s.name, logo: s.logo, total: s.cardCount && (s.cardCount.total || s.cardCount.official), date: dateOf[s.id] || '', order: k, serie: bySerie[sid].name };
+          setInfo[s.id] = info;
+          bySerie[sid].sets.push(info);
+        });
+        blocs = Object.keys(bySerie).map(function (k) { return bySerie[k]; }).filter(function (b) { return b.sets.length; });
+        blocs.forEach(function (b) {
+          b.sets.sort(function (x, y) { return (y.date || '').localeCompare(x.date || '') || y.order - x.order; });
+          b.latest = b.sets.reduce(function (m, s) { return Math.max(m, s.order); }, 0);
+        });
+        blocs.sort(function (x, y) { return y.latest - x.latest; });
+        blocs.forEach(function (b) { b.sets.forEach(function (s) { setOrder.push(s.id); }); });
+        renderBrowser();
+      });
+    }).catch(function () {
+      el('browser').innerHTML = '';
+      el('browser').appendChild(mk('p', 'empty', 'La base de cartes TCGdex ne répond pas. Vérifie ta connexion puis recharge la page.'));
     });
-    search.value = setNames['sv03.5'] ? 'sv03.5' : (sets[0] && sets[0].id) || '';
-  }).catch(function () {
-    el('setId').innerHTML = '<option value="">Extensions indisponibles</option>';
-    el('status').textContent = 'Impossible de joindre la base de cartes TCGdex. Vérifie ta connexion puis recharge la page.';
-  });
+  }
 
-  function showResults(cards) {
-    el('results').innerHTML = '';
-    el('status').textContent = cards.length ? (cards.length + ' carte(s) — touche pour placer en case ' + (state.selected + 1)) : 'Aucune carte trouvée.';
+  function renderBrowser() {
+    var box = el('browser'); box.innerHTML = '';
+    if (currentSet) return;
+    var chips = mk('div', 'chips'); chips.setAttribute('role', 'group'); chips.setAttribute('aria-label', 'Blocs');
+    [{ id: 'all', name: 'Tous les blocs' }].concat(blocs).forEach(function (b) {
+      var c = mk('button', 'chip', b.name); c.type = 'button';
+      c.setAttribute('aria-pressed', String(blocFilter === b.id));
+      c.addEventListener('click', function () { blocFilter = b.id; renderBrowser(); });
+      chips.appendChild(c);
+    });
+    box.appendChild(chips);
+    blocs.filter(function (b) { return blocFilter === 'all' || blocFilter === b.id; }).forEach(function (b) {
+      var sec = mk('section', 'bloc');
+      var head = mk('div', 'bloc-head');
+      if (b.logo) head.appendChild(logoImg(b.logo, ''));
+      head.appendChild(mk('h3', null, b.name));
+      head.appendChild(mk('span', null, b.sets.length + ' collections'));
+      sec.appendChild(head);
+      var grid = mk('div', 'sets');
+      b.sets.forEach(function (s) {
+        var t = mk('button', 'set-tile'); t.type = 'button'; t.title = s.name;
+        var lg = mk('div', 'logo'); lg.appendChild(logoImg(s.logo, s.name)); t.appendChild(lg);
+        t.appendChild(mk('span', 'nm', s.name));
+        var meta = [s.date ? s.date.slice(0, 4) : '', s.total ? s.total + ' cartes' : ''].filter(Boolean).join(', ');
+        if (meta) t.appendChild(mk('span', 'meta', meta));
+        t.addEventListener('click', function () { openSet(s.id); });
+        grid.appendChild(t);
+      });
+      sec.appendChild(grid);
+      box.appendChild(sec);
+    });
+  }
+
+  function renderSetBar() {
+    var bar = el('setBar'); bar.innerHTML = '';
+    if (!currentSet) return;
+    var s = setInfo[currentSet] || { name: setNames[currentSet] || currentSet };
+    var box = mk('div', 'current-set');
+    box.appendChild(logoImg(s.logo, ''));
+    var nm = mk('div', 'name', s.name); nm.appendChild(mk('small', null, (s.serie || '') + (s.total ? ', ' + s.total + ' cartes' : ''))); box.appendChild(nm);
+    var back = mk('button', 'ghost', 'Changer'); back.type = 'button';
+    back.addEventListener('click', function () { currentSet = null; currentCards = []; el('query').value = ''; el('results').innerHTML = ''; el('status').textContent = ''; renderSetBar(); renderBrowser(); });
+    box.appendChild(back);
+    bar.appendChild(box);
+    var chips = mk('div', 'chips'); chips.style.marginTop = '10px';
+    [['all', 'Toutes'], ['illus', 'Illustrations rares'], ['rare', 'Rares et secrètes']].forEach(function (r) {
+      var c = mk('button', 'chip', r[1]); c.type = 'button';
+      c.setAttribute('aria-pressed', String(rarityFilter === r[0]));
+      c.addEventListener('click', function () { rarityFilter = r[0]; renderSetBar(); filterSet(); });
+      chips.appendChild(c);
+    });
+    bar.appendChild(chips);
+  }
+
+  function openSet(id) {
+    currentSet = id; rarityFilter = 'all'; el('query').value = '';
+    renderSetBar(); renderBrowser();
+    el('results').innerHTML = ''; el('status').textContent = 'Chargement des cartes…';
+    // raretés connues grâce à la base du site (si l'analyse automatique a déjà tourné)
+    fetch('data/sets/' + encodeURIComponent(id) + '.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (d && d.cartes) d.cartes.forEach(function (c) { rarityById[c.id] = { rarete: c.rarete, priorite: c.priorite }; }); if (currentSet === id) filterSet(); })
+      .catch(function () {});
+    getSet(id).then(function (set) {
+      if (currentSet !== id) return;
+      currentCards = (set.cards || []).map(function (c) { return toCard(c, set); }).filter(Boolean);
+      filterSet();
+    }).catch(function () { el('status').textContent = 'Impossible de charger cette collection. Réessaie dans un instant.'; });
+  }
+
+  function filterSet() {
+    if (!currentSet) return;
+    var q = frenchQuery(el('query').value.trim());
+    var list = currentCards;
+    if (q) list = /^\d+$/.test(q) ? list.filter(function (c) { return parseInt(c.number, 10) === parseInt(q, 10); })
+      : list.filter(function (c) { return norm(c.name).indexOf(norm(q)) !== -1; });
+    if (rarityFilter !== 'all') {
+      var known = currentCards.some(function (c) { return rarityById[c.id]; });
+      if (!known) { showResults([], 'Les raretés de cette collection ne sont pas encore dans la base du site.'); return; }
+      list = list.filter(function (c) { var r = rarityById[c.id]; return r && (rarityFilter === 'illus' ? r.priorite === 3 : r.priorite >= 2); });
+    }
+    showResults(list);
+  }
+
+  function markOnPage() {
+    var ids = {};
+    page().slots.forEach(function (c) { if (c) ids[c.id] = true; });
+    document.querySelectorAll('.result').forEach(function (b) {
+      var badge = b.querySelector('.on-page');
+      if (ids[b.dataset.id] && !badge) b.appendChild(mk('span', 'on-page', 'Sur la page'));
+      if (!ids[b.dataset.id] && badge) badge.remove();
+    });
+  }
+
+  function showResults(cards, emptyMsg) {
+    var box = el('results'); box.innerHTML = '';
+    el('status').textContent = cards.length ? cards.length + ' carte(s)' : '';
+    if (!cards.length) { box.appendChild(mk('p', 'empty', emptyMsg || 'Aucune carte ne correspond. Essaie un autre nom ou un numéro.')); box.firstChild.style.gridColumn = '1 / -1'; return; }
     cards.forEach(function (card) {
-      var b = document.createElement('button');
-      b.className = 'result'; b.type = 'button';
-      b.setAttribute('aria-label', 'Placer ' + card.name + ' ' + card.number);
-      var img = document.createElement('img'); img.src = card.small; img.alt = ''; img.loading = 'lazy';
-      var s = document.createElement('span'); s.textContent = card.name + ' · ' + card.number;
-      b.appendChild(img); b.appendChild(s);
-      b.addEventListener('click', function () { place(card); el('status').textContent = card.name + ' placé. Case suivante : ' + (state.selected + 1); });
-      el('results').appendChild(b);
+      var b = mk('button', 'result'); b.type = 'button'; b.dataset.id = card.id;
+      b.setAttribute('aria-label', 'Placer ' + card.name + ' ' + card.number + ' en case ' + (state.selected + 1));
+      var img = mk('img'); img.src = card.small; img.alt = ''; img.loading = 'lazy';
+      b.appendChild(img);
+      b.appendChild(mk('span', null, card.name + ' ' + card.number));
+      var z = mk('span', 'zoom', '⤢'); z.setAttribute('role', 'button'); z.setAttribute('aria-label', 'Agrandir ' + card.name); z.title = 'Agrandir';
+      z.addEventListener('click', function (e) { e.stopPropagation(); zoom(card.large); });
+      b.appendChild(z);
+      b.addEventListener('click', function () { place(card); });
+      box.appendChild(b);
     });
+    markOnPage();
   }
 
-  // Recherche : numéro ou nom (français, ou anglais traduit)
+  // Recherche : dans la collection ouverte, sinon dans toutes les cartes
+  el('query').addEventListener('input', function () { if (currentSet) filterSet(); });
   el('searchForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    var q = el('query').value.trim();
-    var setId = el('setId').value;
-    if (!q) return;
-    var m = q.match(/^(.*?)(?:[\s-]+(ex|gx|v|vmax|vstar))?$/i);
-    if (m && enToFr[norm(m[1])]) q = enToFr[norm(m[1])] + (m[2] ? '-' + m[2] : '');
-    el('status').textContent = 'Recherche…';
-    el('results').innerHTML = '';
+    var q = frenchQuery(el('query').value.trim());
+    if (currentSet) { filterSet(); return; }
+    if (!q) { toast('Écris un nom de Pokémon, ou choisis une collection'); return; }
+    if (/^\d+$/.test(q)) { toast('Pour chercher par numéro, choisis d\'abord une collection'); return; }
+    el('status').textContent = 'Recherche…'; el('results').innerHTML = '';
+    getJson(TCG + '/cards?name=' + encodeURIComponent(q) + '&pagination:page=1&pagination:itemsPerPage=80')
+      .then(function (list) {
+        var cards = (list || []).map(function (c) { return toCard(c, null); }).filter(Boolean);
+        cards.sort(function (a, b) { return setOrder.indexOf(setIdOf(a.id)) - setOrder.indexOf(setIdOf(b.id)); });
+        showResults(cards);
+        if (cards.length) el('status').textContent = cards.length + ' carte(s) dans toutes les collections';
+      })
+      .catch(function () { el('status').textContent = 'La recherche n\'a pas abouti. Vérifie ta connexion et réessaie.'; });
+  });
+  loadCollections();
 
-    var job;
-    if (setId) {
-      job = getSet(setId).then(function (set) {
-        var list = set.cards || [];
-        if (/^\d+$/.test(q)) list = list.filter(function (c) { return parseInt(c.localId, 10) === parseInt(q, 10); });
-        else list = list.filter(function (c) { return norm(c.name).indexOf(norm(q)) !== -1; });
-        return list.map(function (c) { return toCard(c, set); }).filter(Boolean);
-      });
-    } else if (/^\d+$/.test(q)) {
-      job = Promise.reject(new Error('choisis une extension pour chercher par numéro'));
-    } else {
-      job = getJson(TCG + '/cards?name=' + encodeURIComponent(q) + '&pagination:page=1&pagination:itemsPerPage=60')
-        .then(function (list) { return (list || []).map(function (c) { return toCard(c, null); }).filter(Boolean); });
-    }
-    job.then(showResults).catch(function (err) { el('status').textContent = 'Erreur de recherche : ' + err.message + '.'; });
+  // Suggestions de thèmes
+  ['bord de mer', 'sous-marin', 'forêt au soleil', 'nuit étoilée', 'intérieur cosy', 'coucher de soleil', 'neige', 'ville', 'fleurs et printemps'].forEach(function (t) {
+    var c = mk('button', 'chip', t); c.type = 'button';
+    c.addEventListener('click', function () { el('aiTheme').value = t; el('aiTheme').focus(); });
+    el('suggest').appendChild(c);
   });
 
   // ================= IA =================
@@ -905,6 +1199,7 @@
     }).then(function () { el('aiGenBtn').disabled = false; });
   });
 
+  var resizeT; window.addEventListener('resize', function () { clearTimeout(resizeT); resizeT = setTimeout(render, 150); });
   render();
 })();
 </script>
