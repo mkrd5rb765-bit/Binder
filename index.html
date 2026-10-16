@@ -141,8 +141,12 @@
       </div>
       <p class="hint" id="aiSetsDone"></p>
 
-      <label>2. Thème de la page
+      <label>2. Mots-clés (facultatif si des cartes sont déjà sur la page)
         <input id="aiTheme" placeholder="ex. coucher de soleil, créatures de la nuit, bord de mer…">
+      </label>
+      <label style="flex-direction:row; align-items:center; gap:10px; color:var(--text)">
+        <input id="aiUsePage" type="checkbox" checked style="width:auto; min-height:0; margin:0">
+        S'inspirer des cartes déjà placées sur la page (et compléter les cases vides)
       </label>
       <button class="primary" id="aiGenBtn" type="button">Générer la page</button>
       <div class="status" id="aiGenStatus" role="status"></div>
@@ -546,15 +550,21 @@
         headers: { 'content-type': 'application/json', 'x-goog-api-key': key },
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: text }].concat(imgs) }],
-          generationConfig: { responseMimeType: 'application/json', maxOutputTokens: (maxTokens || 2000) * 4, temperature: 0.4 }
+          // Les modèles Gemini « réfléchissent » avant de répondre et ça consomme ce budget :
+          // trop petit, la réponse était coupée ou vide (bug du bouton « Générer la page »).
+          generationConfig: { responseMimeType: 'application/json', maxOutputTokens: Math.max(16384, (maxTokens || 2000) * 4), temperature: 0.4 }
         })
       });
     }).then(function (r) {
       return r.json().then(function (j) {
         if (r.status === 429) throw new RateLimit('limite gratuite atteinte');
+        if (r.status === 503) throw new RateLimit('Gemini surchargé');
         if (!r.ok) throw new Error((j.error && j.error.message) || ('HTTP ' + r.status));
-        var parts = (j.candidates && j.candidates[0] && j.candidates[0].content && j.candidates[0].content.parts) || [];
+        var cand = j.candidates && j.candidates[0];
+        var parts = (cand && cand.content && cand.content.parts) || [];
         var out = parts.filter(function (p) { return p.text && !p.thought; }).map(function (p) { return p.text; }).join('');
+        if (!out && cand && cand.finishReason === 'MAX_TOKENS') throw new Error('réponse de Gemini coupée (trop longue), réessaie');
+        if (!out && j.promptFeedback && j.promptFeedback.blockReason) throw new Error('demande bloquée par Gemini (' + j.promptFeedback.blockReason + ')');
         if (!out) throw new Error('réponse vide de Gemini');
         return out;
       });
@@ -575,11 +585,13 @@
     });
   }
   function extractJson(text) {
+    text = String(text || '').replace(/```(?:json)?/gi, '');
     var start = text.search(/[\[{]/);
     if (start === -1) throw new Error('Réponse IA illisible.');
     var open = text[start], close = open === '[' ? ']' : '}';
     var end = text.lastIndexOf(close);
-    return JSON.parse(text.slice(start, end + 1));
+    try { return JSON.parse(text.slice(start, end + 1)); }
+    catch (e) { throw new Error('réponse IA incomplète ou mal formée, réessaie'); }
   }
 
   // 1. Tag a set's illustrations (vision), 6 cards per request, resumable
@@ -650,53 +662,130 @@
     });
   });
 
-  // 2. Generate a themed page from all tagged cards
+  // 2. Generate a page from keywords and/or the cards already on the current page
+  function isPokemon(c) { return !/dresseur|trainer|[ée]nergie|energy/i.test(c.category || ''); }
+  function describe(c) {
+    return [c.id, c.name, c.rarity || '', c.decor || '', c.moment || '', (c.couleurs || []).join('/'), c.ambiance || '', (c.tags || []).join(',')].join(' | ');
+  }
   el('aiGenBtn').addEventListener('click', function () {
     var theme = el('aiTheme').value.trim();
     var status = el('aiGenStatus');
-    if (!theme) { status.textContent = 'Écris un thème d\'abord.'; return; }
-    var pool = {};
-    taggedSets().forEach(function (id) { var t = getTags(id); if (t) Object.keys(t.cards).forEach(function (k) { pool[k] = t.cards[k]; }); });
-    var ids = Object.keys(pool).filter(function (k) { return !/dresseur|trainer|[ée]nergie|energy/i.test(pool[k].category || ''); });
-    if (!ids.length) { status.textContent = 'Analyse au moins une extension avant de générer une page.'; return; }
-
     var cur = page();
     var n = cur.cols * cur.rows;
-    var lines = ids.map(function (k) {
-      var c = pool[k];
-      return [c.id, c.name, c.rarity, c.decor, c.moment, (c.couleurs || []).join('/'), c.ambiance, (c.tags || []).join(',')].join(' | ');
-    });
-    var prompt =
-      'Tu composes une page de classeur (binder) de cartes Pokémon, grille de ' + cur.cols + ' colonnes × ' + cur.rows + ' lignes (' + n + ' cases, lues de gauche à droite puis de haut en bas).\n' +
-      'Thème demandé : « ' + theme + ' ».\n\n' +
-      'Règles :\n' +
-      '- Choisis exactement ' + n + ' cartes DIFFÉRENTES dans la liste, uniquement par leur id.\n' +
-      '- Priorité à la cohérence avec le thème (décor, moment, couleurs, ambiance).\n' +
-      '- Ordonne-les pour que les décors et couleurs s\'enchaînent d\'une case voisine à l\'autre.\n' +
-      '- Mets la carte la plus rare ou la plus spectaculaire au centre de la grille si la grille a un centre.\n' +
-      '- Préfère les illustrations immersives (Illustration Rare, Special Illustration Rare) quand elles collent au thème.\n\n' +
-      'Réponds uniquement en JSON : {"titre": "titre court et évocateur en français", "sousTitre": "une ligne d\'ambiance", ' +
-      '"couleur": "#hex sombre assortie au thème, lisible sous du texte blanc", "cartes": ["id1", "id2", …]}\n\n' +
-      'Cartes disponibles (id | nom | rareté | décor | moment | couleurs | ambiance | tags) :\n' + lines.join('\n');
+    var useCur = el('aiUsePage').checked;
+    var placed = [];
+    if (useCur) cur.slots.forEach(function (c, i) { if (c && c.id) placed.push({ card: c, i: i }); });
+    if (!theme && !placed.length) {
+      status.textContent = 'Écris des mots-clés ou place au moins une carte sur la page.';
+      return;
+    }
+
+    // Cartes analysées (avec description des illustrations)
+    var tagged = {};
+    taggedSets().forEach(function (id) { var t = getTags(id); if (t) Object.keys(t.cards).forEach(function (k) { tagged[k] = t.cards[k]; }); });
+    var placedIds = {};
+    placed.forEach(function (p) { placedIds[p.card.id] = true; });
+
+    var empty = [];
+    cur.slots.forEach(function (c, i) { if (!c) empty.push(i); });
+    var fillCurrent = placed.length > 0 && empty.length > 0; // compléter la page actuelle
+    var target = fillCurrent ? empty.length : n;
 
     el('aiGenBtn').disabled = true;
-    status.textContent = 'L\'IA compose la page…';
-    callAI(prompt, [], 1200, function (s) { status.textContent = 'Limite de requêtes : nouvel essai dans ' + s + ' s…'; }).then(function (txt) {
+    status.textContent = 'Préparation des cartes…';
+
+    var pool = {};
+    Object.keys(tagged).forEach(function (k) { if (isPokemon(tagged[k]) && !placedIds[k]) pool[k] = tagged[k]; });
+    // Sans extension analysée : on pioche dans les extensions des cartes déjà placées
+    var poolJob = Promise.resolve();
+    if (Object.keys(pool).length < target && placed.length) {
+      var sets = {};
+      placed.forEach(function (p) { sets[setIdOf(p.card.id)] = true; });
+      poolJob = Promise.all(Object.keys(sets).map(function (sid) {
+        return getSet(sid).then(function (set) {
+          (set.cards || []).forEach(function (b) {
+            var c = toCard(b, set);
+            if (c && !placedIds[c.id] && !pool[c.id]) pool[c.id] = c;
+          });
+        }).catch(function () {});
+      }));
+    }
+
+    poolJob.then(function () {
+      var ids = Object.keys(pool);
+      if (!ids.length) throw new Error('aucune carte disponible : analyse au moins une extension (étape 1), ou place des cartes sur la page');
+
+      // Cartes déjà sur la page : description si analysée, sinon on envoie l'image à l'IA
+      var images = [], imageNames = [];
+      var placedLines = placed.map(function (p) {
+        var t = tagged[p.card.id];
+        if (!t && images.length < 9 && p.card.small) {
+          images.push(p.card.small.replace(/\/low\.webp$/, '/low.png'));
+          imageNames.push(p.card.name);
+        }
+        return 'case ' + (p.i + 1) + ' : ' + (t ? describe(t) : p.card.id + ' | ' + p.card.name + ' | ' + (p.card.rarity || ''));
+      });
+
+      var prompt =
+        'Tu composes une page de classeur (binder) de cartes Pokémon, grille de ' + cur.cols + ' colonnes × ' + cur.rows + ' lignes (' + n + ' cases, numérotées de 1 à ' + n + ', de gauche à droite puis de haut en bas).\n';
+      if (theme) prompt += 'Mots-clés / thème demandés : « ' + theme + ' ».\n';
+      if (placed.length) {
+        prompt += '\nCartes déjà placées sur la page (case : id | nom | rareté | décor | moment | couleurs | ambiance | tags) :\n' + placedLines.join('\n') + '\n';
+        if (images.length) prompt += 'Les images jointes sont, dans l\'ordre, les illustrations de : ' + imageNames.join(', ') + '.\n';
+        prompt += 'Inspire-toi fortement de ces cartes : décors, couleurs, ambiance, mais aussi les Pokémon eux-mêmes (types, familles d\'évolution, région, espèces proches).' +
+          (theme ? ' Combine cette inspiration avec les mots-clés.' : '') + '\n';
+      }
+      if (fillCurrent) {
+        prompt += '\nLes cartes déjà placées restent à leur place. Choisis exactement ' + target + ' cartes pour remplir les cases vides, dans cet ordre de cases : ' +
+          empty.map(function (i) { return i + 1; }).join(', ') + '. Tiens compte des cartes voisines de chaque case.\n';
+      } else {
+        prompt += '\nChoisis exactement ' + n + ' cartes pour une nouvelle page, dans l\'ordre des cases.\n';
+      }
+      prompt +=
+        '\nRègles :\n' +
+        '- Uniquement des cartes DIFFÉRENTES de la liste ci-dessous, désignées par leur id exact.\n' +
+        '- Uniquement des cartes Pokémon (pas de cartes Dresseur ni Énergie).\n' +
+        '- Priorité à la cohérence avec ' + (theme && placed.length ? 'les mots-clés et les cartes déjà placées' : theme ? 'le thème' : 'les cartes déjà placées') + '.\n' +
+        '- Ordonne-les pour que les décors et couleurs s\'enchaînent d\'une case voisine à l\'autre.\n' +
+        (fillCurrent ? '' : '- Mets la carte la plus rare ou la plus spectaculaire au centre de la grille si la grille a un centre.\n') +
+        '- Préfère les illustrations immersives (Illustration Rare, Special Illustration Rare) quand elles collent.\n\n' +
+        'Réponds uniquement en JSON : {"titre": "titre court et évocateur en français", "sousTitre": "une ligne d\'ambiance", ' +
+        '"couleur": "#hex sombre assortie, lisible sous du texte blanc", "cartes": ["id1", "id2", …]}\n\n' +
+        'Cartes disponibles (id | nom | rareté | décor | moment | couleurs | ambiance | tags) :\n' +
+        ids.map(function (k) { return describe(pool[k]); }).join('\n');
+
+      status.textContent = 'L\'IA compose la page…';
+      return callAI(prompt, images, 2000, function (s) { status.textContent = 'Limite de requêtes : nouvel essai dans ' + s + ' s…'; });
+    }).then(function (txt) {
       var res = extractJson(txt);
       var seen = {};
-      var chosen = (res.cartes || []).filter(function (id) { var ok = pool[id] && !seen[id]; seen[id] = true; return ok; }).slice(0, n);
-      if (!chosen.length) throw new Error('aucune carte valide dans la réponse');
-      var slots = chosen.map(function (id) {
+      var chosen = (res.cartes || []).map(function (id) { return String(id).trim(); })
+        .filter(function (id) { var ok = pool[id] && !seen[id]; seen[id] = true; return ok; }).slice(0, target);
+      if (!chosen.length) throw new Error('aucune carte valide dans la réponse, réessaie');
+      var toSlot = function (id) {
         var c = pool[id];
-        return { id: c.id, name: c.name, number: c.number, rarity: c.rarity, small: c.small, large: c.large };
-      });
-      while (slots.length < n) slots.push(null);
-      var color = /^#[0-9a-f]{6}$/i.test(res.couleur || '') ? res.couleur : '#17301F';
-      state.pages.push({ title: res.titre || theme, subtitle: res.sousTitre || '', color: color, cols: cur.cols, rows: cur.rows, slots: slots });
-      state.current = state.pages.length - 1; state.selected = 0;
-      save(); render();
-      status.textContent = 'Page « ' + (res.titre || theme) + ' » créée' + (res.sousTitre ? ' : ' + res.sousTitre : '') +
-        (chosen.length < n ? ' (' + chosen.length + '/' + n + ' cases remplies, analyse plus d\'extensions pour en avoir plus)' : '');
+        return { id: c.id, name: c.name, number: c.number, rarity: c.rarity || '', small: c.small, large: c.large };
+      };
+      var color = /^#[0-9a-f]{6}$/i.test(res.couleur || '') ? res.couleur : null;
+
+      if (fillCurrent) {
+        chosen.forEach(function (id, k) { cur.slots[empty[k]] = toSlot(id); });
+        if (!cur.title || cur.title === 'Nouvelle page') cur.title = res.titre || cur.title;
+        if (color && cur.color === '#17301F') cur.color = color;
+        if (res.sousTitre && !cur.subtitle) cur.subtitle = res.sousTitre;
+        state.selected = 0;
+        save(); render();
+        status.textContent = chosen.length + ' carte(s) ajoutée(s) sur la page' + (res.sousTitre ? ' : ' + res.sousTitre : '') +
+          (chosen.length < target ? ' (' + chosen.length + '/' + target + ' cases remplies, analyse plus d\'extensions pour en avoir plus)' : '');
+      } else {
+        var slots = chosen.map(toSlot);
+        while (slots.length < n) slots.push(null);
+        state.pages.push({ title: res.titre || theme || 'Nouvelle page', subtitle: res.sousTitre || '', color: color || '#17301F', cols: cur.cols, rows: cur.rows, slots: slots });
+        state.current = state.pages.length - 1; state.selected = 0;
+        save(); render();
+        status.textContent = 'Page « ' + (res.titre || theme) + ' » créée' + (res.sousTitre ? ' : ' + res.sousTitre : '') +
+          (chosen.length < n ? ' (' + chosen.length + '/' + n + ' cases remplies, analyse plus d\'extensions pour en avoir plus)' : '');
+      }
     }).catch(function (err) {
       status.textContent = 'Erreur : ' + err.message;
     }).then(function () { el('aiGenBtn').disabled = false; });
