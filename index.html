@@ -136,9 +136,12 @@
         <select id="aiSet"><option value="">Chargement des extensions…</option></select>
       </label>
       <div class="bar">
-        <button id="aiTagBtn" type="button">Analyser les illustrations</button>
+        <button id="aiTagBtn" type="button">Analyser cette extension</button>
+        <button id="aiTagAllBtn" type="button">Analyser toutes les extensions</button>
+        <button id="aiStopBtn" type="button" style="display:none">Stop</button>
         <span class="status" id="aiTagStatus"></span>
       </div>
+      <p class="hint">« Toutes les extensions » peut prendre des heures et dépasser le quota gratuit du jour de Gemini : tu peux arrêter avec Stop et relancer plus tard, ça reprend où ça s'était arrêté.</p>
       <p class="hint" id="aiSetsDone"></p>
 
       <label>2. Mots-clés (facultatif si des cartes sont déjà sur la page)
@@ -348,7 +351,7 @@
 
   // ===== Cartes : base TCGdex (gratuite, sans clé, en français) =====
   var TCG = 'https://api.tcgdex.net/v2/fr';
-  var setNames = {}, setCache = {};
+  var setNames = {}, setCache = {}, setOrder = [];
   function getJson(url) {
     return fetch(url).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
   }
@@ -373,7 +376,7 @@
     search.innerHTML = '<option value="">Toutes les extensions</option>';
     ai.innerHTML = '';
     sets.forEach(function (s) {
-      setNames[s.id] = s.name;
+      setNames[s.id] = s.name; setOrder.push(s.id);
       var label = s.name + (s.cardCount && s.cardCount.total ? ' · ' + s.cardCount.total + ' cartes' : '');
       [search, ai].forEach(function (sel) {
         var o = document.createElement('option'); o.value = s.id; o.textContent = label; sel.appendChild(o);
@@ -470,7 +473,8 @@
         models.sort(function (a, b) { return (/flash/.test(b) - /flash/.test(a)) || b.localeCompare(a); });
         sel.innerHTML = '';
         models.forEach(function (m) { var o = document.createElement('option'); o.value = m; o.textContent = m; sel.appendChild(o); });
-        var pick = models.indexOf(saved) !== -1 ? saved : (models.filter(function (m) { return /flash/.test(m) && !/lite|preview|exp/.test(m); })[0] || models[0]);
+        var flash = models.filter(function (m) { return /flash/.test(m) && !/lite|exp/.test(m); });
+        var pick = models.indexOf(saved) !== -1 ? saved : (flash.filter(function (m) { return !/preview/.test(m); })[0] || flash[0] || models[0]);
         sel.value = pick; lsSet(G_MODEL, pick);
       })
       .catch(function () { el('aiTagStatus').textContent = 'Clé Gemini refusée ou liste des modèles indisponible.'; });
@@ -481,7 +485,7 @@
   function getTags(setId) { try { return JSON.parse(localStorage.getItem(TAGS + setId) || 'null'); } catch (e) { return null; } }
   function setTags(setId, data) {
     try { localStorage.setItem(TAGS + setId, JSON.stringify(data)); }
-    catch (e) { el('aiTagStatus').textContent = 'Stockage du navigateur plein : exporte ou supprime des données.'; }
+    catch (e) { throw new Error('stockage du navigateur plein, impossible d\'enregistrer plus d\'analyses'); }
   }
   function taggedSets() {
     var out = [];
@@ -498,6 +502,12 @@
       var t = getTags(id); var n = t ? Object.keys(t.cards).length : 0;
       return (setNames[id] || id) + ' (' + n + (t && t.total ? '/' + t.total : '') + ')';
     });
+    if (done.length > 8) {
+      var cardsN = taggedSets().reduce(function (a, id) { var t = getTags(id); return a + (t ? Object.keys(t.cards).length : 0); }, 0);
+      var full = taggedSets().filter(isDone).length;
+      el('aiSetsDone').textContent = 'Analysées : ' + full + ' extension(s) complètes sur ' + (setOrder.length || '?') + ', ' + cardsN + ' cartes au total.';
+      return;
+    }
     el('aiSetsDone').textContent = done.length ? 'Analysées : ' + done.join(', ') : 'Aucune extension analysée pour l\'instant.';
   }
 
@@ -540,7 +550,28 @@
       })
       .catch(function () { return { file_data: { mime_type: 'image/png', file_uri: url } }; });
   }
-  function callGemini(text, imageUrls, maxTokens) {
+  // Modèle retiré par Google : on l'enlève de la liste et on passe au suivant
+  function ModelGone(msg) { this.message = msg; this.gone = true; }
+  function dropModel(model) {
+    var sel = el('geminiModel');
+    Array.prototype.slice.call(sel.options).forEach(function (o) { if (o.value === model) sel.removeChild(o); });
+    var next = Array.prototype.map.call(sel.options, function (o) { return o.value; })
+      .filter(function (m) { return /flash/.test(m) && !/lite/.test(m); })[0] || (sel.options[0] && sel.options[0].value);
+    if (next) { sel.value = next; lsSet(G_MODEL, next); }
+    return next;
+  }
+  function callGemini(text, imageUrls, maxTokens, tries) {
+    tries = tries || 0;
+    return callGeminiOnce(text, imageUrls, maxTokens).catch(function (err) {
+      if (err && err.gone && tries < 4) {
+        var next = dropModel(err.model);
+        if (next && next !== err.model) return callGemini(text, imageUrls, maxTokens, tries + 1);
+        throw new Error('aucun modèle Gemini disponible : recharge la page');
+      }
+      throw err;
+    });
+  }
+  function callGeminiOnce(text, imageUrls, maxTokens) {
     var key = el('geminiKey').value.trim();
     if (!key) { el('aiSettings').open = true; return Promise.reject(new Error('Ajoute ta clé API Gemini dans les réglages IA.')); }
     var model = el('geminiModel').value || 'gemini-2.5-flash';
@@ -559,6 +590,10 @@
       return r.json().then(function (j) {
         if (r.status === 429) throw new RateLimit('limite gratuite atteinte');
         if (r.status === 503) throw new RateLimit('Gemini surchargé');
+        var msg = (j.error && j.error.message) || '';
+        if (!r.ok && (r.status === 404 || /no longer available|not found|not supported|deprecated/i.test(msg))) {
+          var g = new ModelGone(msg || ('modèle ' + model + ' indisponible')); g.model = model; throw g;
+        }
         if (!r.ok) throw new Error((j.error && j.error.message) || ('HTTP ' + r.status));
         var cand = j.candidates && j.candidates[0];
         var parts = (cand && cand.content && cand.content.parts) || [];
@@ -595,26 +630,28 @@
   }
 
   // 1. Tag a set's illustrations (vision), 6 cards per request, resumable
-  var tagging = false;
-  el('aiTagBtn').addEventListener('click', function () {
-    var setId = el('aiSet').value;
-    if (!setId || tagging) return;
-    var status = el('aiTagStatus');
-    tagging = true; el('aiTagBtn').disabled = true;
-    status.textContent = 'Récupération des cartes…';
-    var data = getTags(setId) || { set: setId, name: setNames[setId] || setId, total: 0, cards: {} };
+  var tagging = false, stopAsked = false;
+  function StopErr() { this.message = 'arrêté'; this.stopped = true; }
 
+  // Analyse une extension ; prefix = texte affiché devant la progression
+  function tagSet(setId, prefix) {
+    var status = el('aiTagStatus');
+    prefix = prefix || '';
+    var data = getTags(setId) || { set: setId, name: setNames[setId] || setId, total: 0, cards: {} };
+    status.textContent = prefix + 'Récupération des cartes…';
     var all = [];
-    getSet(setId).then(function (set) {
+    return getSet(setId).then(function (set) {
       all = (set.cards || []).map(function (c) { return toCard(c, set); }).filter(Boolean);
       data.total = all.length;
       var todo = all.filter(function (c) { return !data.cards[c.id]; });
       var batches = [];
       for (var i = 0; i < todo.length; i += 6) batches.push(todo.slice(i, i + 6));
       var doneCount = all.length - todo.length;
-      status.textContent = doneCount + '/' + all.length + ' analysées';
+      if (!todo.length) { setTags(setId, data); return; }
+      status.textContent = prefix + doneCount + '/' + all.length + ' analysées';
 
       function tagBatch(batch) {
+        if (stopAsked) return Promise.reject(new StopErr());
         var prompt = (
           'Voici ' + batch.length + ' cartes Pokémon, dans l\'ordre. Pour chacune, décris l\'ILLUSTRATION (pas le texte de la carte). ' +
           'Réponds uniquement avec un tableau JSON de ' + batch.length + ' objets, dans le même ordre : ' +
@@ -622,12 +659,11 @@
           '"moment": "jour|nuit|coucher de soleil|aube|indéfini", "couleurs": ["2 à 3 couleurs dominantes"], ' +
           '"ambiance": "2 à 4 mots", "tags": ["5 à 8 mots-clés en français : éléments visibles, saison, météo, style"]}');
         var urls = batch.map(function (c) { return c.aiImage; });
-        // rareté + catégorie : fiche détaillée de chaque carte
         var details = Promise.all(batch.map(function (c) {
           return getJson(TCG + '/cards/' + encodeURIComponent(c.id)).catch(function () { return {}; });
         }));
         return details.then(function (d) { batch.forEach(function (c, k) { c.rarity = d[k].rarity || ''; c.category = d[k].category || ''; }); })
-          .then(function () { return callAI(prompt, urls, 1500, function (s) { status.textContent = doneCount + '/' + all.length + ' analysées · pause ' + s + ' s (limite de requêtes)'; }).then(function (txt) {
+          .then(function () { return callAI(prompt, urls, 1500, function (s) { status.textContent = prefix + doneCount + '/' + all.length + ' analysées · pause ' + s + ' s (limite de requêtes)'; }).then(function (txt) {
           var arr = extractJson(txt);
           batch.forEach(function (c, k) {
             var t = arr[k] || {};
@@ -640,10 +676,10 @@
           });
           setTags(setId, data);
           doneCount += batch.length;
-          status.textContent = doneCount + '/' + all.length + ' analysées';
+          status.textContent = prefix + doneCount + '/' + all.length + ' analysées';
         }); });
       }
-      // Claude: 3 requests in parallel. Gemini free tier: one at a time with a short pause.
+      // Claude : 3 requêtes en parallèle. Gemini gratuit : une à la fois avec une courte pause.
       var gemini = provider() === 'gemini';
       var idx = 0;
       function worker() {
@@ -651,15 +687,60 @@
         var b = batches[idx++];
         return tagBatch(b).then(function () { return gemini ? sleep(6000) : null; }).then(worker);
       }
-      var workers = gemini ? [worker()] : [worker(), worker(), worker()];
-      return Promise.all(workers).then(function () {
-        status.textContent = 'Terminé : ' + all.length + ' cartes analysées.';
-      });
-    }).catch(function (err) {
-      status.textContent = 'Arrêt : ' + err.message + ' (relance pour reprendre là où ça s\'est arrêté)';
-    }).then(function () {
-      tagging = false; el('aiTagBtn').disabled = false; refreshDone();
+      return Promise.all(gemini ? [worker()] : [worker(), worker(), worker()]);
     });
+  }
+  function isDone(setId) { var t = getTags(setId); return !!(t && t.total && Object.keys(t.cards).length >= t.total); }
+
+  function startTagging() {
+    tagging = true; stopAsked = false;
+    el('aiTagBtn').disabled = true; el('aiTagAllBtn').disabled = true;
+    el('aiStopBtn').style.display = ''; el('aiStopBtn').disabled = false;
+  }
+  function endTagging() {
+    tagging = false;
+    el('aiTagBtn').disabled = false; el('aiTagAllBtn').disabled = false;
+    el('aiStopBtn').style.display = 'none';
+    refreshDone();
+  }
+  el('aiStopBtn').addEventListener('click', function () {
+    stopAsked = true; el('aiStopBtn').disabled = true;
+    el('aiTagStatus').textContent = 'Arrêt après la requête en cours…';
+  });
+
+  // 1a. Une seule extension
+  el('aiTagBtn').addEventListener('click', function () {
+    var setId = el('aiSet').value;
+    if (!setId || tagging) return;
+    startTagging();
+    tagSet(setId).then(function () {
+      var t = getTags(setId);
+      el('aiTagStatus').textContent = 'Terminé : ' + (t ? Object.keys(t.cards).length : 0) + ' cartes analysées.';
+    }).catch(function (err) {
+      el('aiTagStatus').textContent = (err.stopped ? 'Arrêté' : 'Arrêt : ' + err.message) + ' (relance pour reprendre là où ça s\'est arrêté)';
+    }).then(endTagging);
+  });
+
+  // 1b. Toutes les extensions, les plus récentes d'abord, en sautant celles déjà finies
+  el('aiTagAllBtn').addEventListener('click', function () {
+    if (tagging) return;
+    if (!setOrder.length) { el('aiTagStatus').textContent = 'Liste des extensions pas encore chargée.'; return; }
+    var todo = setOrder.filter(function (id) { return !isDone(id); });
+    if (!todo.length) { el('aiTagStatus').textContent = 'Toutes les extensions sont déjà analysées.'; return; }
+    startTagging();
+    var k = 0;
+    function next() {
+      if (stopAsked) return Promise.reject(new StopErr());
+      if (k >= todo.length) return Promise.resolve();
+      var id = todo[k++];
+      var prefix = 'Extension ' + k + '/' + todo.length + ' · ' + (setNames[id] || id) + ' : ';
+      return tagSet(id, prefix).then(function () { refreshDone(); return next(); });
+    }
+    next().then(function () {
+      el('aiTagStatus').textContent = 'Terminé : toutes les extensions sont analysées.';
+    }).catch(function (err) {
+      el('aiTagStatus').textContent = (err.stopped ? 'Arrêté' : 'Arrêt : ' + err.message) + ' (relance « Toutes les extensions » pour reprendre)';
+    }).then(endTagging);
   });
 
   // 2. Generate a page from keywords and/or the cards already on the current page
@@ -714,6 +795,34 @@
     poolJob.then(function () {
       var ids = Object.keys(pool);
       if (!ids.length) throw new Error('aucune carte disponible : analyse au moins une extension (étape 1), ou place des cartes sur la page');
+
+      // Beaucoup d'extensions analysées : on garde seulement les cartes les plus proches
+      // des mots-clés et des cartes déjà placées, sinon la demande serait trop grosse pour l'IA.
+      var MAX = 350;
+      if (ids.length > MAX) {
+        var tokens = function (txt) {
+          return String(txt || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z0-9]+/);
+        };
+        var words = {};
+        var addWords = function (txt, w) {
+          tokens(txt).forEach(function (x) { if (x.length > 2) words[x] = Math.max(words[x] || 0, w); });
+        };
+        addWords(theme, 3);
+        placed.forEach(function (p) {
+          var t = tagged[p.card.id];
+          addWords(p.card.name, 2);
+          if (t) addWords([t.decor, t.moment, t.ambiance, (t.couleurs || []).join(' '), (t.tags || []).join(' ')].join(' '), 1);
+        });
+        var score = function (c) {
+          var sc = 0;
+          tokens([c.name, c.decor, c.moment, c.ambiance, (c.couleurs || []).join(' '), (c.tags || []).join(' ')].join(' '))
+            .forEach(function (x) { if (words[x]) sc += words[x]; });
+          if (/illustration|special|speciale|spéciale/i.test(c.rarity || '')) sc += 0.5;
+          return sc + Math.random() * 0.3; // un peu de hasard pour varier les pages
+        };
+        var scored = ids.map(function (k) { return [k, score(pool[k])]; }).sort(function (a, b) { return b[1] - a[1]; });
+        ids = scored.slice(0, MAX).map(function (x) { return x[0]; });
+      }
 
       // Cartes déjà sur la page : description si analysée, sinon on envoie l'image à l'IA
       var images = [], imageNames = [];
