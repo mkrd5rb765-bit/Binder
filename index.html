@@ -628,8 +628,9 @@
     .then(function (ix) {
       if (!ix || !ix.total) { el('dbStatus').textContent = 'La base est en cours de création : la première analyse automatique n\'a pas encore tourné.'; return; }
       var t = ix.total;
-      el('dbStatus').textContent = 'Base : ' + t.analysees + ' cartes analysées, dont ' + t.prioritaires_analysees + '/' + t.prioritaires +
-        ' cartes rares. Mise à jour du ' + String(ix.maj).split('-').reverse().join('/') + '.';
+      el('dbStatus').textContent = 'Base : ' + (t.illustrations != null ? t.illustrations_analysees + '/' + t.illustrations + ' illustrations rares analysées' : t.analysees + ' cartes analysées') +
+        (t.analysees > (t.illustrations_analysees || 0) ? ' (+ ' + (t.analysees - (t.illustrations_analysees || 0)) + ' autres cartes)' : '') +
+        '. Mise à jour du ' + String(ix.maj).split('-').reverse().join('/') + '.';
     })
     .catch(function () { el('dbStatus').textContent = 'Base indisponible pour le moment.'; });
   loadDb().catch(function () {});
