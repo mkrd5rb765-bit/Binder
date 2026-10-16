@@ -1,0 +1,56 @@
+name: Analyse des cartes
+
+on:
+  schedule:
+    - cron: "17 1 * * *"   # chaque nuit vers 3 h (heure de Paris)
+  workflow_dispatch:
+    inputs:
+      max_requests:
+        description: "Nombre max de requêtes IA pour ce lancement"
+        default: "200"
+      only_priority:
+        description: "1 = seulement les cartes rares / illustrations pleines"
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analyse
+  cancel-in-progress: false
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Analyser
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          MAX_REQUESTS: ${{ github.event.inputs.max_requests || vars.MAX_REQUESTS || '200' }}
+          ONLY_PRIORITY: ${{ github.event.inputs.only_priority || vars.ONLY_PRIORITY || '0' }}
+          TIME_LIMIT_MIN: "300"
+        run: node scripts/analyse.mjs
+
+      - name: Enregistrer les résultats
+        if: always()
+        run: |
+          git config user.name "analyse-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Rien de nouveau"
+          else
+            git commit -m "Analyse des cartes du $(date +%Y-%m-%d)"
+            git pull --rebase
+            git push
+          fi
