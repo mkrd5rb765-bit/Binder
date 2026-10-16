@@ -44,6 +44,8 @@
   .pager { font-size: 14px; color: var(--muted); }
   .ai { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 6px; display: flex; flex-direction: column; gap: 12px; }
   button:disabled { opacity: .5; cursor: default; }
+  label.check { flex-direction: row; align-items: center; gap: 10px; color: var(--text); font-size: 14px; }
+  label.check input { width: auto; min-height: 0; margin: 0; }
 </style>
 </head>
 <body>
@@ -98,11 +100,11 @@
     <p class="hint">Cartes et images : base TCGdex (gratuite, sans clé).</p>
 
     <div class="ai">
-      <h2 style="font-size:20px">Page à thème par IA</h2>
+      <h2 style="font-size:20px">Page à thème</h2>
       <details id="aiSettings">
-        <summary>Réglages IA (Gemini ou Claude)</summary>
+        <summary>Réglages IA (facultatif)</summary>
         <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px">
-          <p class="hint">Ta clé reste dans ce navigateur et part uniquement vers le fournisseur choisi. Ne mets pas ce fichier en ligne avec ta clé : pour une app publique, il faudra un petit serveur.</p>
+          <p class="hint">Facultatif, seulement pour « Composer avec l'IA ». Ta clé reste dans ce navigateur et part uniquement vers le fournisseur choisi.</p>
           <label>Fournisseur
             <select id="aiProvider">
               <option value="gemini">Google Gemini (offre gratuite possible)</option>
@@ -132,26 +134,36 @@
         </div>
       </details>
 
-      <label>1. Extension à analyser
-        <select id="aiSet"><option value="">Chargement des extensions…</option></select>
-      </label>
-      <div class="bar">
-        <button id="aiTagBtn" type="button">Analyser cette extension</button>
-        <button id="aiTagAllBtn" type="button">Analyser toutes les extensions</button>
-        <button id="aiStopBtn" type="button" style="display:none">Stop</button>
-        <span class="status" id="aiTagStatus"></span>
-      </div>
-      <p class="hint">« Toutes les extensions » peut prendre des heures et dépasser le quota gratuit du jour de Gemini : tu peux arrêter avec Stop et relancer plus tard, ça reprend où ça s'était arrêté.</p>
-      <p class="hint" id="aiSetsDone"></p>
+      <p class="hint" id="dbStatus">Chargement de la base de cartes analysées…</p>
 
-      <label>2. Mots-clés (facultatif si des cartes sont déjà sur la page)
-        <input id="aiTheme" placeholder="ex. coucher de soleil, créatures de la nuit, bord de mer…">
+      <label>Mots-clés (facultatif si des cartes sont déjà sur la page)
+        <input id="aiTheme" placeholder="ex. bord de mer, forêt au soleil, intérieur cosy, nuit étoilée…">
       </label>
-      <label style="flex-direction:row; align-items:center; gap:10px; color:var(--text)">
-        <input id="aiUsePage" type="checkbox" checked style="width:auto; min-height:0; margin:0">
+      <label class="check">
+        <input id="aiUsePage" type="checkbox" checked>
         S'inspirer des cartes déjà placées sur la page (et compléter les cases vides)
       </label>
-      <button class="primary" id="aiGenBtn" type="button">Générer la page</button>
+      <details>
+        <summary>Règles de composition</summary>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px">
+          <label class="check"><input id="ruleFull" type="checkbox" checked> Illustrations pleines uniquement</label>
+          <label class="check"><input id="ruleClean" type="checkbox" checked> Éviter les bandeaux V / ex, logos et textes chargés</label>
+          <label class="check"><input id="ruleEra" type="checkbox" checked> Même époque que les cartes déjà placées</label>
+          <label>Couleur des bordures
+            <select id="ruleBorder">
+              <option value="auto">Automatique (comme les cartes placées, sinon argent)</option>
+              <option value="argent">Argent (cartes récentes)</option>
+              <option value="jaune">Jaune (cartes plus anciennes)</option>
+              <option value="toutes">Peu importe</option>
+            </select>
+          </label>
+        </div>
+      </details>
+      <div class="bar">
+        <button class="primary" id="aiGenBtn" type="button">Composer avec l'IA</button>
+        <button id="localGenBtn" type="button">Composer sans IA</button>
+      </div>
+      <p class="hint">« Sans IA » fonctionne sans clé, à partir de la base. « Avec l'IA » demande une clé (réglages ci-dessus) mais compose plus finement.</p>
       <div class="status" id="aiGenStatus" role="status"></div>
     </div>
   </section>
@@ -372,22 +384,17 @@
   // Liste des extensions (les plus récentes d'abord)
   getJson(TCG + '/sets').then(function (sets) {
     sets = sets.slice().reverse();
-    var search = el('setId'), ai = el('aiSet');
+    var search = el('setId');
     search.innerHTML = '<option value="">Toutes les extensions</option>';
-    ai.innerHTML = '';
     sets.forEach(function (s) {
       setNames[s.id] = s.name; setOrder.push(s.id);
-      var label = s.name + (s.cardCount && s.cardCount.total ? ' · ' + s.cardCount.total + ' cartes' : '');
-      [search, ai].forEach(function (sel) {
-        var o = document.createElement('option'); o.value = s.id; o.textContent = label; sel.appendChild(o);
-      });
+      var o = document.createElement('option'); o.value = s.id;
+      o.textContent = s.name + (s.cardCount && s.cardCount.total ? ' · ' + s.cardCount.total + ' cartes' : '');
+      search.appendChild(o);
     });
-    var def = setNames['sv03.5'] ? 'sv03.5' : (sets[0] && sets[0].id) || '';
-    search.value = def; ai.value = def;
-    refreshDone();
+    search.value = setNames['sv03.5'] ? 'sv03.5' : (sets[0] && sets[0].id) || '';
   }).catch(function () {
     el('setId').innerHTML = '<option value="">Extensions indisponibles</option>';
-    el('aiSet').innerHTML = '<option value="">Extensions indisponibles, recharge la page</option>';
     el('status').textContent = 'Impossible de joindre la base de cartes TCGdex. Vérifie ta connexion puis recharge la page.';
   });
 
@@ -435,7 +442,7 @@
   });
 
   // ================= IA =================
-  var AI_KEY = STORE + '.aiKey', AI_MODEL = STORE + '.aiModel', TAGS = STORE + '.tcgdex.tags.';
+  var AI_KEY = STORE + '.aiKey', AI_MODEL = STORE + '.aiModel';
 
   var AI_PROVIDER = STORE + '.aiProvider', G_KEY = STORE + '.geminiKey', G_MODEL = STORE + '.geminiModel';
   function lsGet(k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } }
@@ -450,7 +457,6 @@
   el('aiModel').value = lsGet(AI_MODEL, 'claude-haiku-5-5');
   el('geminiKey').value = lsGet(G_KEY, '');
   showProvider();
-  if (!(provider() === 'gemini' ? el('geminiKey').value : el('aiKey').value)) el('aiSettings').open = true;
 
   el('aiProvider').addEventListener('change', function (e) { lsSet(AI_PROVIDER, e.target.value); showProvider(); });
   el('aiKey').addEventListener('change', function (e) { lsSet(AI_KEY, e.target.value.trim()); });
@@ -477,40 +483,10 @@
         var pick = models.indexOf(saved) !== -1 ? saved : (flash.filter(function (m) { return !/preview/.test(m); })[0] || flash[0] || models[0]);
         sel.value = pick; lsSet(G_MODEL, pick);
       })
-      .catch(function () { el('aiTagStatus').textContent = 'Clé Gemini refusée ou liste des modèles indisponible.'; });
+      .catch(function () { el('aiGenStatus').textContent = 'Clé Gemini refusée ou liste des modèles indisponible.'; });
   }
   (function () { var s = lsGet(G_MODEL, ''); if (s) { var o = document.createElement('option'); o.value = s; o.textContent = s; el('geminiModel').appendChild(o); el('geminiModel').value = s; } })();
   loadGeminiModels();
-
-  function getTags(setId) { try { return JSON.parse(localStorage.getItem(TAGS + setId) || 'null'); } catch (e) { return null; } }
-  function setTags(setId, data) {
-    try { localStorage.setItem(TAGS + setId, JSON.stringify(data)); }
-    catch (e) { throw new Error('stockage du navigateur plein, impossible d\'enregistrer plus d\'analyses'); }
-  }
-  function taggedSets() {
-    var out = [];
-    try {
-      for (var i = 0; i < localStorage.length; i++) {
-        var k = localStorage.key(i);
-        if (k.indexOf(TAGS) === 0) out.push(k.slice(TAGS.length));
-      }
-    } catch (e) {}
-    return out;
-  }
-  function refreshDone() {
-    var done = taggedSets().map(function (id) {
-      var t = getTags(id); var n = t ? Object.keys(t.cards).length : 0;
-      return (setNames[id] || id) + ' (' + n + (t && t.total ? '/' + t.total : '') + ')';
-    });
-    if (done.length > 8) {
-      var cardsN = taggedSets().reduce(function (a, id) { var t = getTags(id); return a + (t ? Object.keys(t.cards).length : 0); }, 0);
-      var full = taggedSets().filter(isDone).length;
-      el('aiSetsDone').textContent = 'Analysées : ' + full + ' extension(s) complètes sur ' + (setOrder.length || '?') + ', ' + cardsN + ' cartes au total.';
-      return;
-    }
-    el('aiSetsDone').textContent = done.length ? 'Analysées : ' + done.join(', ') : 'Aucune extension analysée pour l\'instant.';
-  }
-
 
   function sleep(ms) { return new Promise(function (res) { setTimeout(res, ms); }); }
   function RateLimit(msg) { this.message = msg; this.rate = true; }
@@ -630,271 +606,299 @@
   }
 
   // 1. Tag a set's illustrations (vision), 6 cards per request, resumable
-  var tagging = false, stopAsked = false;
-  function StopErr() { this.message = 'arrêté'; this.stopped = true; }
-
-  // Analyse une extension ; prefix = texte affiché devant la progression
-  function tagSet(setId, prefix) {
-    var status = el('aiTagStatus');
-    prefix = prefix || '';
-    var data = getTags(setId) || { set: setId, name: setNames[setId] || setId, total: 0, cards: {} };
-    status.textContent = prefix + 'Récupération des cartes…';
-    var all = [];
-    return getSet(setId).then(function (set) {
-      all = (set.cards || []).map(function (c) { return toCard(c, set); }).filter(Boolean);
-      data.total = all.length;
-      var todo = all.filter(function (c) { return !data.cards[c.id]; });
-      var batches = [];
-      for (var i = 0; i < todo.length; i += 6) batches.push(todo.slice(i, i + 6));
-      var doneCount = all.length - todo.length;
-      if (!todo.length) { setTags(setId, data); return; }
-      status.textContent = prefix + doneCount + '/' + all.length + ' analysées';
-
-      function tagBatch(batch) {
-        if (stopAsked) return Promise.reject(new StopErr());
-        var prompt = (
-          'Voici ' + batch.length + ' cartes Pokémon, dans l\'ordre. Pour chacune, décris l\'ILLUSTRATION (pas le texte de la carte). ' +
-          'Réponds uniquement avec un tableau JSON de ' + batch.length + ' objets, dans le même ordre : ' +
-          '{"decor": "décor en quelques mots (forêt, océan, ville, grotte, ciel, intérieur, fond uni…)", ' +
-          '"moment": "jour|nuit|coucher de soleil|aube|indéfini", "couleurs": ["2 à 3 couleurs dominantes"], ' +
-          '"ambiance": "2 à 4 mots", "tags": ["5 à 8 mots-clés en français : éléments visibles, saison, météo, style"]}');
-        var urls = batch.map(function (c) { return c.aiImage; });
-        var details = Promise.all(batch.map(function (c) {
-          return getJson(TCG + '/cards/' + encodeURIComponent(c.id)).catch(function () { return {}; });
-        }));
-        return details.then(function (d) { batch.forEach(function (c, k) { c.rarity = d[k].rarity || ''; c.category = d[k].category || ''; }); })
-          .then(function () { return callAI(prompt, urls, 1500, function (s) { status.textContent = prefix + doneCount + '/' + all.length + ' analysées · pause ' + s + ' s (limite de requêtes)'; }).then(function (txt) {
-          var arr = extractJson(txt);
-          batch.forEach(function (c, k) {
-            var t = arr[k] || {};
-            data.cards[c.id] = {
-              id: c.id, name: c.name, number: c.number,
-              rarity: c.rarity || '', category: c.category || '',
-              small: c.small, large: c.large,
-              decor: t.decor || '', moment: t.moment || '', couleurs: t.couleurs || [], ambiance: t.ambiance || '', tags: t.tags || []
-            };
-          });
-          setTags(setId, data);
-          doneCount += batch.length;
-          status.textContent = prefix + doneCount + '/' + all.length + ' analysées';
-        }); });
-      }
-      // Claude : 3 requêtes en parallèle. Gemini gratuit : une à la fois avec une courte pause.
-      var gemini = provider() === 'gemini';
-      var idx = 0;
-      function worker() {
-        if (idx >= batches.length) return Promise.resolve();
-        var b = batches[idx++];
-        return tagBatch(b).then(function () { return gemini ? sleep(6000) : null; }).then(worker);
-      }
-      return Promise.all(gemini ? [worker()] : [worker(), worker(), worker()]);
-    });
-  }
-  function isDone(setId) { var t = getTags(setId); return !!(t && t.total && Object.keys(t.cards).length >= t.total); }
-
-  function startTagging() {
-    tagging = true; stopAsked = false;
-    el('aiTagBtn').disabled = true; el('aiTagAllBtn').disabled = true;
-    el('aiStopBtn').style.display = ''; el('aiStopBtn').disabled = false;
-  }
-  function endTagging() {
-    tagging = false;
-    el('aiTagBtn').disabled = false; el('aiTagAllBtn').disabled = false;
-    el('aiStopBtn').style.display = 'none';
-    refreshDone();
-  }
-  el('aiStopBtn').addEventListener('click', function () {
-    stopAsked = true; el('aiStopBtn').disabled = true;
-    el('aiTagStatus').textContent = 'Arrêt après la requête en cours…';
-  });
-
-  // 1a. Une seule extension
-  el('aiTagBtn').addEventListener('click', function () {
-    var setId = el('aiSet').value;
-    if (!setId || tagging) return;
-    startTagging();
-    tagSet(setId).then(function () {
-      var t = getTags(setId);
-      el('aiTagStatus').textContent = 'Terminé : ' + (t ? Object.keys(t.cards).length : 0) + ' cartes analysées.';
-    }).catch(function (err) {
-      el('aiTagStatus').textContent = (err.stopped ? 'Arrêté' : 'Arrêt : ' + err.message) + ' (relance pour reprendre là où ça s\'est arrêté)';
-    }).then(endTagging);
-  });
-
-  // 1b. Toutes les extensions, les plus récentes d'abord, en sautant celles déjà finies
-  el('aiTagAllBtn').addEventListener('click', function () {
-    if (tagging) return;
-    if (!setOrder.length) { el('aiTagStatus').textContent = 'Liste des extensions pas encore chargée.'; return; }
-    var todo = setOrder.filter(function (id) { return !isDone(id); });
-    if (!todo.length) { el('aiTagStatus').textContent = 'Toutes les extensions sont déjà analysées.'; return; }
-    startTagging();
-    var k = 0;
-    function next() {
-      if (stopAsked) return Promise.reject(new StopErr());
-      if (k >= todo.length) return Promise.resolve();
-      var id = todo[k++];
-      var prefix = 'Extension ' + k + '/' + todo.length + ' · ' + (setNames[id] || id) + ' : ';
-      return tagSet(id, prefix).then(function () { refreshDone(); return next(); });
+  // ================= Base de cartes analysées =================
+  // data/analysees.json est rempli chaque nuit par l'analyse automatique sur GitHub.
+  var DB = null, dbById = {}, dbJob = null;
+  function loadDb() {
+    if (DB) return Promise.resolve(DB);
+    if (!dbJob) {
+      dbJob = fetch('data/analysees.json', { cache: 'no-cache' })
+        .then(function (r) { if (!r.ok) throw new Error('base introuvable'); return r.json(); })
+        .then(function (j) {
+          DB = (j.cartes || []).filter(function (c) { return c.image; });
+          DB.forEach(function (c) { c.small = c.image + '/low.webp'; c.large = c.image + '/high.webp'; dbById[c.id] = c; });
+          return DB;
+        })
+        .catch(function (e) { dbJob = null; throw e; });
     }
-    next().then(function () {
-      el('aiTagStatus').textContent = 'Terminé : toutes les extensions sont analysées.';
-    }).catch(function (err) {
-      el('aiTagStatus').textContent = (err.stopped ? 'Arrêté' : 'Arrêt : ' + err.message) + ' (relance « Toutes les extensions » pour reprendre)';
-    }).then(endTagging);
-  });
-
-  // 2. Generate a page from keywords and/or the cards already on the current page
-  function isPokemon(c) { return !/dresseur|trainer|[ée]nergie|energy/i.test(c.category || ''); }
-  function describe(c) {
-    return [c.id, c.name, c.rarity || '', c.decor || '', c.moment || '', (c.couleurs || []).join('/'), c.ambiance || '', (c.tags || []).join(',')].join(' | ');
+    return dbJob;
   }
-  el('aiGenBtn').addEventListener('click', function () {
+  fetch('data/index.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (ix) {
+      if (!ix || !ix.total) { el('dbStatus').textContent = 'La base est en cours de création : la première analyse automatique n\'a pas encore tourné.'; return; }
+      var t = ix.total;
+      el('dbStatus').textContent = 'Base : ' + t.analysees + ' cartes analysées, dont ' + t.prioritaires_analysees + '/' + t.prioritaires +
+        ' cartes rares. Mise à jour du ' + String(ix.maj).split('-').reverse().join('/') + '.';
+    })
+    .catch(function () { el('dbStatus').textContent = 'Base indisponible pour le moment.'; });
+  loadDb().catch(function () {});
+
+  // ----- outils
+  function tokens(txt) {
+    return String(txt || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(/[^a-z0-9]+/).filter(function (x) { return x.length > 2; });
+  }
+  function get(c, p) { return p.split('.').reduce(function (o, k) { return o == null ? o : o[k]; }, c); }
+  function names(c) { return (c.personnages || []).map(function (p) { return p && p.nom; }).filter(function (n) { return n && n !== 'inconnu'; }); }
+  function cardWords(c) {
+    return tokens([c.nom, c.univers, c.lieu, c.milieu, c.profondeur, get(c, 'palette.dominante'), (get(c, 'palette.secondaires') || []).join(' '),
+      get(c, 'palette.temperature'), get(c, 'lumiere.type'), c.style, c.rendu, c.moment, c.meteo, c.saison, c.action, c.emotion,
+      (c.tags || []).join(' '), names(c).join(' '), (c.types || []).join(' '), c.zones && [c.zones.haut, c.zones.milieu, c.zones.bas].join(' ')].join(' '));
+  }
+  // Critères visuels qui doivent rester homogènes sur une page (poids)
+  var FEATURES = [['palette.dominante', 3], ['palette.temperature', 2], ['luminosite', 2], ['style', 2], ['univers', 2], ['lumiere.type', 1], ['milieu', 1], ['saturation', 1]];
+  function profileOf(cards) {
+    var prof = {};
+    FEATURES.forEach(function (f) {
+      var count = {}, best = null;
+      cards.forEach(function (c) { var v = get(c, f[0]); if (v) { count[v] = (count[v] || 0) + 1; if (!best || count[v] > count[best]) best = v; } });
+      if (best) prof[f[0]] = best;
+    });
+    return prof;
+  }
+  function mode(values) {
+    var count = {}, best = null;
+    values.forEach(function (v) { if (v) { count[v] = (count[v] || 0) + 1; if (!best || count[v] > count[best]) best = v; } });
+    return best;
+  }
+  var STAR_RX = /sp[ée]cial|secr|hyper|magnifique|illustration|ultra|gold|dor/i;
+  function starScore(c) {
+    return (STAR_RX.test(c.rarete || '') ? 2 : 0) + (names(c).length ? 1.5 : 0) + (c.luminosite === 'clair' ? 0.5 : 0) + (c.cadrage === 'plan moyen' ? 0.5 : 0);
+  }
+  var DEPTH = { 'ciel': 0, 'en hauteur': 1, 'sol': 3, 'surface': 3, "sous l'eau": 4, 'profondeurs': 5 };
+  var PAGE_COLORS = { bleu: '#12324A', turquoise: '#0F3B3A', vert: '#17301F', jaune: '#45391A', orange: '#4A2A12', rouge: '#4A1616', rose: '#4A1F33',
+    violet: '#2F1F4A', marron: '#3A2A1C', beige: '#3F3628', gris: '#2A2E33', noir: '#141414', blanc: '#34393F', multicolore: '#2A2440' };
+  function toSlot(c) { return { id: c.id, name: c.nom, number: c.numero, rarity: c.rarete || '', small: c.small, large: c.large }; }
+  function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
+
+  // ----- préparation commune aux deux modes
+  function prepare() {
     var theme = el('aiTheme').value.trim();
-    var status = el('aiGenStatus');
     var cur = page();
     var n = cur.cols * cur.rows;
-    var useCur = el('aiUsePage').checked;
     var placed = [];
-    if (useCur) cur.slots.forEach(function (c, i) { if (c && c.id) placed.push({ card: c, i: i }); });
-    if (!theme && !placed.length) {
-      status.textContent = 'Écris des mots-clés ou place au moins une carte sur la page.';
-      return;
-    }
-
-    // Cartes analysées (avec description des illustrations)
-    var tagged = {};
-    taggedSets().forEach(function (id) { var t = getTags(id); if (t) Object.keys(t.cards).forEach(function (k) { tagged[k] = t.cards[k]; }); });
-    var placedIds = {};
-    placed.forEach(function (p) { placedIds[p.card.id] = true; });
+    if (el('aiUsePage').checked) cur.slots.forEach(function (c, i) { if (c && c.id) placed.push({ card: c, i: i, db: dbById[c.id] || null }); });
+    if (!theme && !placed.length) throw new Error('écris des mots-clés ou place au moins une carte sur la page');
+    if (!DB || !DB.length) throw new Error('la base de cartes analysées est encore vide, reviens après la prochaine analyse automatique');
 
     var empty = [];
     cur.slots.forEach(function (c, i) { if (!c) empty.push(i); });
-    var fillCurrent = placed.length > 0 && empty.length > 0; // compléter la page actuelle
-    var target = fillCurrent ? empty.length : n;
+    var fill = placed.length > 0 && empty.length > 0;
+    var target = fill ? empty.length : n;
+    var placedDb = placed.map(function (p) { return p.db; }).filter(Boolean);
+    var placedIds = {};
+    placed.forEach(function (p) { placedIds[p.card.id] = true; });
 
-    el('aiGenBtn').disabled = true;
-    status.textContent = 'Préparation des cartes…';
-
-    var pool = {};
-    Object.keys(tagged).forEach(function (k) { if (isPokemon(tagged[k]) && !placedIds[k]) pool[k] = tagged[k]; });
-    // Sans extension analysée : on pioche dans les extensions des cartes déjà placées
-    var poolJob = Promise.resolve();
-    if (Object.keys(pool).length < target && placed.length) {
-      var sets = {};
-      placed.forEach(function (p) { sets[setIdOf(p.card.id)] = true; });
-      poolJob = Promise.all(Object.keys(sets).map(function (sid) {
-        return getSet(sid).then(function (set) {
-          (set.cards || []).forEach(function (b) {
-            var c = toCard(b, set);
-            if (c && !placedIds[c.id] && !pool[c.id]) pool[c.id] = c;
-          });
-        }).catch(function () {});
-      }));
+    // Règles strictes
+    var border = el('ruleBorder').value;
+    if (border === 'auto') border = mode(placedDb.map(function (c) { return c.bordure; })) || 'argent';
+    var eras = null;
+    if (el('ruleEra').checked && placedDb.length) { eras = {}; placedDb.forEach(function (c) { eras[c.epoque] = true; }); }
+    var full = el('ruleFull').checked, clean = el('ruleClean').checked;
+    function allowed(c) {
+      if (placedIds[c.id]) return false;
+      if (/[ée]nergie|energy/i.test(c.cat || '')) return false;
+      if (full && c.part !== 'totale') return false;
+      if (border !== 'toutes' && c.bordure && c.bordure !== border) return false;
+      if (eras && !eras[c.epoque]) return false;
+      if (clean && c.habillage && (c.habillage.bandeau || c.habillage.logo || c.habillage.texte_charge)) return false;
+      return true;
     }
+    var cands = DB.filter(allowed);
+    if (!cands.length) throw new Error('aucune carte ne respecte les règles choisies : assouplis-les dans « Règles de composition »');
 
-    poolJob.then(function () {
-      var ids = Object.keys(pool);
-      if (!ids.length) throw new Error('aucune carte disponible : analyse au moins une extension (étape 1), ou place des cartes sur la page');
+    // Règles souples : mots-clés, puis profil visuel (cartes placées, sinon les meilleures pour les mots-clés)
+    var themeWords = {};
+    tokens(theme).forEach(function (w) { themeWords[w] = 3; });
+    placedDb.forEach(function (c) { tokens([c.univers, c.lieu, (c.tags || []).join(' ')].join(' ')).forEach(function (w) { if (!themeWords[w]) themeWords[w] = 1; }); });
+    function wordScore(c) { var s = 0; cardWords(c).forEach(function (w) { if (themeWords[w]) s += themeWords[w]; }); return s; }
+    cands.forEach(function (c) { c._w = wordScore(c); });
+    var prof = placedDb.length ? profileOf(placedDb)
+      : profileOf(cands.slice().sort(function (a, b) { return b._w - a._w; }).slice(0, 15).filter(function (c) { return c._w > 0; }));
+    var families = {};
+    placedDb.forEach(function (c) { if (c.famille) families[c.famille] = true; });
+    cands.forEach(function (c) {
+      var s = c._w;
+      FEATURES.forEach(function (f) { if (prof[f[0]] && get(c, f[0]) === prof[f[0]]) s += f[1]; });
+      if (c.famille && families[c.famille]) s += 1.5;
+      s += Math.random() * 0.6; // un peu de variété d'une génération à l'autre
+      c._s = s;
+    });
+    cands.sort(function (a, b) { return b._s - a._s; });
+    return { theme: theme, cur: cur, n: n, placed: placed, placedDb: placedDb, empty: empty, fill: fill, target: target, cands: cands, prof: prof };
+  }
 
-      // Beaucoup d'extensions analysées : on garde seulement les cartes les plus proches
-      // des mots-clés et des cartes déjà placées, sinon la demande serait trop grosse pour l'IA.
-      var MAX = 350;
-      if (ids.length > MAX) {
-        var tokens = function (txt) {
-          return String(txt || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z0-9]+/);
-        };
-        var words = {};
-        var addWords = function (txt, w) {
-          tokens(txt).forEach(function (x) { if (x.length > 2) words[x] = Math.max(words[x] || 0, w); });
-        };
-        addWords(theme, 3);
-        placed.forEach(function (p) {
-          var t = tagged[p.card.id];
-          addWords(p.card.name, 2);
-          if (t) addWords([t.decor, t.moment, t.ambiance, (t.couleurs || []).join(' '), (t.tags || []).join(' ')].join(' '), 1);
+  // ----- contrôle des intrus : une carte qui détonne sur 3 critères sur 4 est remplacée
+  var CHECK = ['palette.dominante', 'palette.temperature', 'luminosite', 'style'];
+  function fixOutliers(ctx, chosen) {
+    var all = ctx.placedDb.concat(chosen);
+    var ref = {};
+    CHECK.forEach(function (f) { ref[f] = mode(all.map(function (c) { return get(c, f); })); });
+    var miss = function (c) { return CHECK.filter(function (f) { return ref[f] && get(c, f) && get(c, f) !== ref[f]; }).length; };
+    var used = {};
+    chosen.forEach(function (c) { used[c.id] = true; });
+    var replaced = 0;
+    var out = chosen.map(function (c) {
+      if (miss(c) < 3) return c;
+      var alt = ctx.cands.filter(function (x) { return !used[x.id] && miss(x) === 0; })[0];
+      if (!alt) return c;
+      used[alt.id] = true; replaced++;
+      return alt;
+    });
+    return { cards: out, replaced: replaced };
+  }
+
+  // ----- placement sans IA
+  function similarity(a, b) {
+    var s = 0;
+    FEATURES.forEach(function (f) { if (get(a, f[0]) && get(a, f[0]) === get(b, f[0])) s += f[1]; });
+    if (a.bords && b.bords) ['haut', 'bas', 'gauche', 'droite'].forEach(function (k) { if (a.bords[k] && a.bords[k] === b.bords[k]) s += 0.5; });
+    return s;
+  }
+  function arrange(ctx, chosen) {
+    var cols = ctx.cur.cols, rows = ctx.cur.rows;
+    if (ctx.fill) {
+      // chaque case vide reçoit la carte qui ressemble le plus à ses voisines
+      var grid = ctx.cur.slots.map(function (s) { return s ? (dbById[s.id] || null) : null; });
+      var left = chosen.slice(), res = {};
+      ctx.empty.forEach(function (i) {
+        var r = Math.floor(i / cols), col = i % cols;
+        var neigh = [[r - 1, col], [r + 1, col], [r, col - 1], [r, col + 1]].filter(function (p) { return p[0] >= 0 && p[0] < rows && p[1] >= 0 && p[1] < cols; })
+          .map(function (p) { return grid[p[0] * cols + p[1]]; }).filter(Boolean);
+        var best = 0, bestS = -1;
+        left.forEach(function (c, k) {
+          var s = neigh.reduce(function (a, nb) { return a + similarity(c, nb); }, 0) + (DEPTH[c.profondeur] != null ? -Math.abs(DEPTH[c.profondeur] - r * 5 / Math.max(1, rows - 1)) * 0.3 : 0);
+          if (s > bestS) { bestS = s; best = k; }
         });
-        var score = function (c) {
-          var sc = 0;
-          tokens([c.name, c.decor, c.moment, c.ambiance, (c.couleurs || []).join(' '), (c.tags || []).join(' ')].join(' '))
-            .forEach(function (x) { if (words[x]) sc += words[x]; });
-          if (/illustration|special|speciale|spéciale/i.test(c.rarity || '')) sc += 0.5;
-          return sc + Math.random() * 0.3; // un peu de hasard pour varier les pages
-        };
-        var scored = ids.map(function (k) { return [k, score(pool[k])]; }).sort(function (a, b) { return b[1] - a[1]; });
-        ids = scored.slice(0, MAX).map(function (x) { return x[0]; });
-      }
-
-      // Cartes déjà sur la page : description si analysée, sinon on envoie l'image à l'IA
-      var images = [], imageNames = [];
-      var placedLines = placed.map(function (p) {
-        var t = tagged[p.card.id];
-        if (!t && images.length < 9 && p.card.small) {
-          images.push(p.card.small.replace(/\/low\.webp$/, '/low.png'));
-          imageNames.push(p.card.name);
-        }
-        return 'case ' + (p.i + 1) + ' : ' + (t ? describe(t) : p.card.id + ' | ' + p.card.name + ' | ' + (p.card.rarity || ''));
+        res[i] = left.splice(best, 1)[0];
+        grid[i] = res[i];
       });
+      return ctx.empty.map(function (i) { return res[i]; });
+    }
+    // nouvelle page : progression verticale (ciel en haut, profondeurs en bas), carte vedette au centre, paires en miroir
+    var order = chosen.slice().sort(function (a, b) {
+      var da = DEPTH[a.profondeur] != null ? DEPTH[a.profondeur] : 2.5, db = DEPTH[b.profondeur] != null ? DEPTH[b.profondeur] : 2.5;
+      var la = a.luminosite === 'clair' ? 0 : a.luminosite === 'sombre' ? 1 : 0.5, lb = b.luminosite === 'clair' ? 0 : b.luminosite === 'sombre' ? 1 : 0.5;
+      return (da - db) || (la - lb);
+    });
+    var slots = order.slice();
+    if (cols % 2 === 1 && rows % 2 === 1 && slots.length === cols * rows) {
+      var center = Math.floor(rows / 2) * cols + Math.floor(cols / 2);
+      var starI = 0, starV = -1;
+      slots.forEach(function (c, k) { var v = starScore(c); if (v > starV) { starV = v; starI = k; } });
+      var tmp = slots[center]; slots[center] = slots[starI]; slots[starI] = tmp;
+    }
+    // paire (Posipi/Négapi…) : sur la même rangée, aux deux bords
+    var centerI = (cols % 2 === 1 && rows % 2 === 1) ? Math.floor(rows / 2) * cols + Math.floor(cols / 2) : -1;
+    var swap = function (a, b) { var t = slots[a]; slots[a] = slots[b]; slots[b] = t; };
+    for (var i = 0; i < slots.length; i++) {
+      var a = slots[i];
+      if (!a || !a.paire || i === centerI) continue;
+      var j = slots.findIndex(function (x, k) { return k !== centerI && x && x.dex && x.dex[0] === a.paire; });
+      if (j < 0 || cols < 3) continue;
+      var b = slots[j];
+      var row = Math.floor(i / cols), L = row * cols, R = L + cols - 1;
+      if (L === centerI || R === centerI) continue;
+      swap(slots.indexOf(a), L);
+      swap(slots.indexOf(b), R);
+      break; // une paire suffit
+    }
+    return slots;
+  }
 
+  function apply(ctx, cards, title, subtitle, color, replaced) {
+    var status = el('aiGenStatus');
+    var cur = ctx.cur;
+    if (ctx.fill) {
+      cards.forEach(function (c, k) { if (c) cur.slots[ctx.empty[k]] = toSlot(c); });
+      if (!cur.title || cur.title === 'Nouvelle page') cur.title = title || cur.title;
+      if (color && cur.color === '#17301F') cur.color = color;
+      state.selected = 0; save(); render();
+      status.textContent = cards.filter(Boolean).length + ' carte(s) ajoutée(s)' + (subtitle ? ' : ' + subtitle : '') + '.';
+    } else {
+      var slots = cards.map(function (c) { return c ? toSlot(c) : null; });
+      while (slots.length < ctx.n) slots.push(null);
+      state.pages.push({ title: title || 'Nouvelle page', subtitle: subtitle || '', color: color || '#17301F', cols: cur.cols, rows: cur.rows, slots: slots });
+      state.current = state.pages.length - 1; state.selected = 0; save(); render();
+      status.textContent = 'Page « ' + (title || 'Nouvelle page') + ' » créée' + (subtitle ? ' : ' + subtitle : '') + '.';
+    }
+    if (replaced) status.textContent += ' ' + replaced + ' carte(s) qui détonnaient ont été remplacées.';
+    if (cards.filter(Boolean).length < ctx.target) status.textContent += ' Pas assez de cartes compatibles pour tout remplir : assouplis les règles ou attends que la base grandisse.';
+  }
+
+  // ----- Composer sans IA
+  el('localGenBtn').addEventListener('click', function () {
+    var status = el('aiGenStatus');
+    status.textContent = 'Chargement de la base…';
+    loadDb().then(function () {
+      var ctx = prepare();
+      var chosen = ctx.cands.slice(0, ctx.target);
+      var fixed = fixOutliers(ctx, chosen);
+      var cards = arrange(ctx, fixed.cards);
+      var dom = ctx.prof['palette.dominante'] || mode(cards.map(function (c) { return c && get(c, 'palette.dominante'); }));
+      var title = ctx.theme ? cap(ctx.theme) : cap(ctx.prof.univers || (cards[0] && cards[0].univers) || 'Nouvelle page');
+      apply(ctx, cards, title, '', PAGE_COLORS[dom] || null, fixed.replaced);
+    }).catch(function (err) { status.textContent = 'Erreur : ' + err.message; });
+  });
+
+  // ----- Composer avec l'IA
+  function line(c) {
+    var b = c.bords || {};
+    return [c.id, c.nom, (c.types || []).join('/'), c.famille ? 'famille ' + c.famille : '', c.paire ? 'paire ' + c.paire : '',
+      names(c).join('+'), c.univers, c.lieu, c.milieu + '/' + c.profondeur,
+      get(c, 'palette.dominante') + ' ' + (get(c, 'palette.temperature') || '') + ' ' + (c.luminosite || '') + ' ' + (c.saturation || ''),
+      'lumière ' + (get(c, 'lumiere.type') || '') + ' ' + (get(c, 'lumiere.direction') || ''), c.style + ', ' + c.rendu + ', ' + c.cadrage,
+      'regarde ' + (c.orientation || ''), 'bords ' + [b.haut, b.bas, b.gauche, b.droite].join('/'), (c.tags || []).slice(0, 6).join(',')].join(' | ');
+  }
+  el('aiGenBtn').addEventListener('click', function () {
+    var status = el('aiGenStatus');
+    var ctx;
+    el('aiGenBtn').disabled = true;
+    status.textContent = 'Chargement de la base…';
+    loadDb().then(function () {
+      ctx = prepare();
+      ctx.pool = ctx.cands.slice(0, 250);
+      var cols = ctx.cur.cols, rows = ctx.cur.rows;
+      var images = [], imageNames = [];
+      var placedLines = ctx.placed.map(function (p) {
+        if (!p.db && images.length < 6 && p.card.small) { images.push(p.card.small.replace(/\/low\.webp$/, '/low.png')); imageNames.push(p.card.name); }
+        return 'case ' + (p.i + 1) + ' : ' + (p.db ? line(p.db) : p.card.id + ' | ' + p.card.name);
+      });
       var prompt =
-        'Tu composes une page de classeur (binder) de cartes Pokémon, grille de ' + cur.cols + ' colonnes × ' + cur.rows + ' lignes (' + n + ' cases, numérotées de 1 à ' + n + ', de gauche à droite puis de haut en bas).\n';
-      if (theme) prompt += 'Mots-clés / thème demandés : « ' + theme + ' ».\n';
-      if (placed.length) {
-        prompt += '\nCartes déjà placées sur la page (case : id | nom | rareté | décor | moment | couleurs | ambiance | tags) :\n' + placedLines.join('\n') + '\n';
-        if (images.length) prompt += 'Les images jointes sont, dans l\'ordre, les illustrations de : ' + imageNames.join(', ') + '.\n';
-        prompt += 'Inspire-toi fortement de ces cartes : décors, couleurs, ambiance, mais aussi les Pokémon eux-mêmes (types, familles d\'évolution, région, espèces proches).' +
-          (theme ? ' Combine cette inspiration avec les mots-clés.' : '') + '\n';
-      }
-      if (fillCurrent) {
-        prompt += '\nLes cartes déjà placées restent à leur place. Choisis exactement ' + target + ' cartes pour remplir les cases vides, dans cet ordre de cases : ' +
-          empty.map(function (i) { return i + 1; }).join(', ') + '. Tiens compte des cartes voisines de chaque case.\n';
-      } else {
-        prompt += '\nChoisis exactement ' + n + ' cartes pour une nouvelle page, dans l\'ordre des cases.\n';
-      }
-      prompt +=
-        '\nRègles :\n' +
-        '- Uniquement des cartes DIFFÉRENTES de la liste ci-dessous, désignées par leur id exact.\n' +
-        '- Uniquement des cartes Pokémon (pas de cartes Dresseur ni Énergie).\n' +
-        '- Priorité à la cohérence avec ' + (theme && placed.length ? 'les mots-clés et les cartes déjà placées' : theme ? 'le thème' : 'les cartes déjà placées') + '.\n' +
-        '- Ordonne-les pour que les décors et couleurs s\'enchaînent d\'une case voisine à l\'autre.\n' +
-        (fillCurrent ? '' : '- Mets la carte la plus rare ou la plus spectaculaire au centre de la grille si la grille a un centre.\n') +
-        '- Préfère les illustrations immersives (Illustration Rare, Special Illustration Rare) quand elles collent.\n\n' +
-        'Réponds uniquement en JSON : {"titre": "titre court et évocateur en français", "sousTitre": "une ligne d\'ambiance", ' +
-        '"couleur": "#hex sombre assortie, lisible sous du texte blanc", "cartes": ["id1", "id2", …]}\n\n' +
-        'Cartes disponibles (id | nom | rareté | décor | moment | couleurs | ambiance | tags) :\n' +
-        ids.map(function (k) { return describe(pool[k]); }).join('\n');
-
+        'Tu es un expert qui compose de très belles pages de classeur de cartes Pokémon. Grille de ' + cols + ' colonnes × ' + rows + ' lignes, cases numérotées de 1 à ' + ctx.n + ' (gauche à droite, puis haut en bas).\n' +
+        (ctx.theme ? 'Mots-clés demandés : « ' + ctx.theme + ' ». Traduis-les en critères VISUELS (couleur, lumière, lieu, style) avant de choisir.\n' : '') +
+        (ctx.placed.length ? '\nCartes déjà placées :\n' + placedLines.join('\n') + '\n' +
+          (images.length ? 'Les images jointes sont, dans l\'ordre, les illustrations de : ' + imageNames.join(', ') + '.\n' : '') +
+          'Inspire-toi fortement de leur univers, palette, lumière, style, et des Pokémon eux-mêmes (familles, paires).\n' : '') +
+        (ctx.fill
+          ? '\nCes cartes restent en place. Choisis exactement ' + ctx.target + ' cartes pour les cases vides, dans cet ordre de cases : ' + ctx.empty.map(function (i) { return i + 1; }).join(', ') + '.\n'
+          : '\nChoisis exactement ' + ctx.n + ' cartes pour une nouvelle page, dans l\'ordre des cases.\n') +
+        '\nCe qui fait une page RÉUSSIE (tiré de vrais exemples) :\n' +
+        '- Le thème se voit d\'un coup d\'œil : une palette, une lumière, un lieu ou un style d\'image communs (ex. tout en bleu sous-marin ; tout en vert luxuriant ; intérieur chaleureux ; gros plans flous façon photo).\n' +
+        '- Unité : même style de dessin, même température de couleur, luminosités proches. Les types des Pokémon comptent peu.\n' +
+        '- Progression verticale quand le décor s\'y prête : ciel et surface en haut, sol ou profondeurs en bas ; la lumière vient du haut.\n' +
+        '- Les bords de cartes voisines se raccordent (mêmes couleurs aux bords qui se touchent), comme un seul grand paysage.\n' +
+        (ctx.fill ? '' : '- Le centre accueille la carte la plus forte : un dresseur important, un Pokémon iconique ou la carte la plus lumineuse.\n') +
+        '- Équilibre : une paire (même numéro dans « paire ») se place en miroir sur une même rangée ; une famille d\'évolution s\'aligne sur une rangée dans l\'ordre ; les cartes avec personnages sont réparties, jamais côte à côte.\n' +
+        '- Le même Pokémon peut revenir si les illustrations sont différentes, mais varie les espèces.\n' +
+        'Ce qui fait une page RATÉE : palettes qui se battent (vert vif, orange feu, multicolore), styles mélangés (3D, dessin plat, peinture), une carte sombre et chargée au centre, un thème seulement conceptuel qu\'on ne voit pas.\n\n' +
+        'Réponds uniquement en JSON : {"titre": "titre court et évocateur en français", "sousTitre": "une ligne d\'ambiance", "cartes": ["id", …]}\n\n' +
+        'Cartes disponibles (id | nom | types | famille | paire | personnages | univers | lieu | milieu/profondeur | palette | lumière | style | orientation | bords haut/bas/gauche/droite | tags) :\n' +
+        ctx.pool.map(line).join('\n');
       status.textContent = 'L\'IA compose la page…';
       return callAI(prompt, images, 2000, function (s) { status.textContent = 'Limite de requêtes : nouvel essai dans ' + s + ' s…'; });
     }).then(function (txt) {
       var res = extractJson(txt);
       var seen = {};
-      var chosen = (res.cartes || []).map(function (id) { return String(id).trim(); })
-        .filter(function (id) { var ok = pool[id] && !seen[id]; seen[id] = true; return ok; }).slice(0, target);
+      var chosen = (res.cartes || []).map(function (id) { return dbById[String(id).trim()]; })
+        .filter(function (c) { var ok = c && ctx.pool.indexOf(c) !== -1 && !seen[c.id]; if (c) seen[c.id] = true; return ok; })
+        .slice(0, ctx.target);
       if (!chosen.length) throw new Error('aucune carte valide dans la réponse, réessaie');
-      var toSlot = function (id) {
-        var c = pool[id];
-        return { id: c.id, name: c.name, number: c.number, rarity: c.rarity || '', small: c.small, large: c.large };
-      };
-      var color = /^#[0-9a-f]{6}$/i.test(res.couleur || '') ? res.couleur : null;
-
-      if (fillCurrent) {
-        chosen.forEach(function (id, k) { cur.slots[empty[k]] = toSlot(id); });
-        if (!cur.title || cur.title === 'Nouvelle page') cur.title = res.titre || cur.title;
-        if (color && cur.color === '#17301F') cur.color = color;
-        if (res.sousTitre && !cur.subtitle) cur.subtitle = res.sousTitre;
-        state.selected = 0;
-        save(); render();
-        status.textContent = chosen.length + ' carte(s) ajoutée(s) sur la page' + (res.sousTitre ? ' : ' + res.sousTitre : '') +
-          (chosen.length < target ? ' (' + chosen.length + '/' + target + ' cases remplies, analyse plus d\'extensions pour en avoir plus)' : '');
-      } else {
-        var slots = chosen.map(toSlot);
-        while (slots.length < n) slots.push(null);
-        state.pages.push({ title: res.titre || theme || 'Nouvelle page', subtitle: res.sousTitre || '', color: color || '#17301F', cols: cur.cols, rows: cur.rows, slots: slots });
-        state.current = state.pages.length - 1; state.selected = 0;
-        save(); render();
-        status.textContent = 'Page « ' + (res.titre || theme) + ' » créée' + (res.sousTitre ? ' : ' + res.sousTitre : '') +
-          (chosen.length < n ? ' (' + chosen.length + '/' + n + ' cases remplies, analyse plus d\'extensions pour en avoir plus)' : '');
-      }
+      // compléter si l'IA en a donné trop peu
+      for (var k = 0; chosen.length < ctx.target && k < ctx.cands.length; k++) if (!seen[ctx.cands[k].id]) { seen[ctx.cands[k].id] = true; chosen.push(ctx.cands[k]); }
+      var fixed = fixOutliers(ctx, chosen);
+      var dom = mode(ctx.placedDb.concat(fixed.cards).map(function (c) { return get(c, 'palette.dominante'); }));
+      apply(ctx, fixed.cards, res.titre || cap(ctx.theme), res.sousTitre || '', PAGE_COLORS[dom] || null, fixed.replaced);
     }).catch(function (err) {
       status.textContent = 'Erreur : ' + err.message;
     }).then(function () { el('aiGenBtn').disabled = false; });
