@@ -3519,8 +3519,71 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "maison, cuisine, plantes",
+    "lieu": "rebord de fenêtre de cuisine",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fenêtre et Pijako en vol",
+     "milieu": "Bulbizarre dormant sur le rebord",
+     "bas": "évier et plantes en pot"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "marron",
+     "gauche": "blanc",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "gauche"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "dort",
+    "emotion": "paisible",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Bulbizarre fait la sieste paisiblement parmi les plantes d'une cuisine ensoleillée.",
+    "tags": [
+     "Bulbizarre",
+     "sommeil",
+     "plantes",
+     "cuisine",
+     "fenêtre",
+     "Pijako",
+     "soleil",
+     "paisible"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 1,
    "paire": null
   },
@@ -3544,8 +3607,71 @@
    ],
    "stade": "Niveau 1",
    "evolue_de": "Coxy",
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "campagne, bord de mer, nuit",
+    "lieu": "champ de fleurs lumineuses au crépuscule",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel sombre et collines lointaines",
+     "milieu": "Coxyclaque volant au-dessus des fleurs",
+     "bas": "champ de fleurs scintillantes"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "vert",
+     "gauche": "bleu",
+     "droite": "vert"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "vole",
+    "emotion": "magique",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Coxyclaque s'envole dans la nuit au-dessus d'un champ de fleurs magiques aux lueurs dorées.",
+    "tags": [
+     "Coxyclaque",
+     "vol",
+     "nuit",
+     "fleurs",
+     "lumineux",
+     "campagne",
+     "magie",
+     "étoiles"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 165,
    "paire": null
   },
@@ -3569,8 +3695,76 @@
    ],
    "stade": "Niveau 1",
    "evolue_de": "Fossile Racine Ancien",
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "chambre maison",
+    "lieu": "chambre avec grand aquarium",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "éclairage suspendu et haut de l'aquarium",
+     "milieu": "personne assise et Lilia dans l'aquarium",
+     "panneau": "meubles et plantes au premier plan"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "rose",
+     "gauche": "rose",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "violet",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "regarde",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "habitant"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "aquarium",
+     "chambre",
+     "lecture",
+     "rose",
+     "meubles",
+     "plantes",
+     "livre",
+     "fauteuil"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 345,
    "paire": null
   },
@@ -3594,8 +3788,70 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "montagne forêt",
+    "lieu": "entrée de grotte rocheuse",
+    "interieur": false,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel et rochers supérieurs",
+     "milieu": "Boumata dans l'ouverture de la grotte",
+     "bas": "rivière et végétation"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "vert",
+     "gauche": "marron",
+     "droite": "bleu"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "attend",
+    "emotion": "sérieux",
+    "moment": "jour",
+    "meteo": "pluie",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "grotte",
+     "rochers",
+     "rivière",
+     "pluie",
+     "montagne",
+     "feuillage",
+     "rayons"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 776,
    "paire": null
   },
@@ -3619,8 +3875,70 @@
    ],
    "stade": "Niveau 1",
    "evolue_de": "Flambino",
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt enneigée",
+    "lieu": "clairière en hiver",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel lumineux et branches enneigées",
+     "milieu": "Lapyro jonglant avec une sphère de neige",
+     "bas": "sol enneigé et buissons"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "jaune",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "orange"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "gauche"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "joue",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "neige",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "neige",
+     "hiver",
+     "forêt",
+     "jongle",
+     "boule de neige",
+     "arbres",
+     "froid"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 813,
    "paire": null
   },
@@ -3644,8 +3962,71 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "balcon maison",
+    "lieu": "balcon ensoleillé avec piscine gonflable",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "plantes en pot et mobilier de balcon",
+     "milieu": "Carapuce dans la petite piscine bleue",
+     "bas": "oiseaux sur la rambarde et eau qui éclabousse"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "marron",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "marron",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "joue",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "piscine",
+     "eau",
+     "balcon",
+     "oiseaux",
+     "été",
+     "soleil",
+     "éclaboussure",
+     "plantes"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 7,
    "paire": null
   },
@@ -3669,8 +4050,71 @@
    ],
    "stade": "Niveau 1",
    "evolue_de": "Crabagarre",
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "montagne enneigée",
+    "lieu": "versant enneigé en tempête",
+    "interieur": false,
+    "milieu": "neige",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel blanc et tourbillon de neige",
+     "milieu": "silhouette massive de Crabominable sous la tempête",
+     "bas": "neige poudreuse et texte de la carte"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "bleu glacier",
+     "gauche": "blanc",
+     "droite": "bleu glacier"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "blanc",
+     "secondaires": [
+      "bleu",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "attend, observe",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": "neige",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "neige",
+     "tempête",
+     "froid",
+     "glace",
+     "montagne",
+     "hiver",
+     "fourrure",
+     "blanc"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 739,
    "paire": null
   },
@@ -3694,8 +4138,71 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace électrique",
+    "lieu": "dimension saturée d'électricité",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "éclairs jaunes et formes violettes",
+     "milieu": "Statitik flottant au centre d'un cercle d'énergie",
+     "bas": "lignes électriques obliques et texte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "blanc",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "violet",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "flotte, charge",
+    "emotion": "dynamique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "électricité",
+     "éclairs",
+     "jaune",
+     "violet",
+     "énergie",
+     "lumière",
+     "abstrait",
+     "vif"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 595,
    "paire": null
   },
@@ -3719,8 +4226,72 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "cyberespace électrique",
+    "lieu": " vortex de vitesse",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "lignes de vitesse multicolores et bras du Pokémon",
+     "milieu": "Zeraora en plein mouvement avec des éclairs bleus",
+     "bas": "lignes de fuite et texte de la carte"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "rose",
+     "gauche": "jaune",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "jaune",
+      "bleu",
+      "violet"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque, court",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "vitesse",
+     "éclair",
+     "combat",
+     "action",
+     "multicolore",
+     "griffes",
+     "énergie",
+     "dynamisme"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 807,
    "paire": null
   },
@@ -3744,8 +4315,72 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "cuisine de pâtisserie",
+    "lieu": "plan de travail rempli de sucreries",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "étagères de cuisine et ustensiles flous",
+     "milieu": "Crèmy flottant au-dessus d'une table pleine de bonbons",
+     "bas": "façade de meuble rose et texte de la carte"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "rose",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "beige",
+      "jaune",
+      "bleu pastel"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "flotte, sourit",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "pâtisserie",
+     "bonbons",
+     "sucre",
+     "rose",
+     "cuisine",
+     "gourmandise",
+     "douceur",
+     "pastel"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 868,
    "paire": null
   },
@@ -3769,8 +4404,72 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "jungle tropicale cascade",
+    "lieu": "jungle tropicale",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel, cascade et lianes",
+     "milieu": "arbre et Pokémon Méditikka",
+     "bas": "feuillage tropical et fleurs"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "marron",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "médite sur liane",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Méditikka profite d'un moment de calme suspendu dans les lianes d'une forêt luxuriante.",
+    "tags": [
+     "Méditikka",
+     "jungle",
+     "cascade",
+     "lianes",
+     "oiseau",
+     "feuillage",
+     "nature",
+     "serein"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 307,
    "paire": null
   },
@@ -3794,8 +4493,72 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "intérieur coloré",
+    "lieu": "table avec gâteau",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fond rose",
+     "milieu": "Gloupti mangeant un gâteau",
+     "bas": "assiette et fond turquoise"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "rose",
+      "vert",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "dévore un gâteau",
+    "emotion": "gourmand",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Gloupti s'empiffre d'un grand gâteau à étages avec une gourmandise insatiable.",
+    "tags": [
+     "Gloupti",
+     "gâteau",
+     "pâtisserie",
+     "gourmandise",
+     "rose",
+     "turquoise",
+     "minimaliste",
+     "food"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 316,
    "paire": null
   },
@@ -3819,8 +4582,77 @@
    ],
    "stade": "Niveau 1",
    "evolue_de": "Duralugon",
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "village japonais traditionnel",
+    "lieu": "marché de rue",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "étals de marché et villageois",
+     "milieu": "tête du grand Pondralugon",
+     "bas": "enfants émerveillés"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "jaune",
+      "rouge",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "salue les habitants",
+    "emotion": "amical",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "habitant"
+     }
+    ],
+    "histoire": "Pondralugon visite un village animé et interagit paisiblement avec les villageois et les enfants.",
+    "tags": [
+     "Pondralugon",
+     "village",
+     "marché",
+     "enfants",
+     "habitants",
+     "métal",
+     "rue",
+     "Japon"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 884,
    "paire": null
   },
@@ -4103,8 +4935,72 @@
    ],
    "stade": "Niveau 2",
    "evolue_de": "Pomdramour",
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond texturé artistique",
+    "lieu": "espace décoratif",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "petites pommes et motifs géométriques",
+     "milieu": "grand Pomdorochi ex central",
+     "bas": "base du corps et texture"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "vert",
+      "marron",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "peinture texturée",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose majestueusement",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Pomdorochi ex déploie ses multiples têtes de dragon sur un fond texturé aux allures de fresque ancienne.",
+    "tags": [
+     "Pomdorochi-ex",
+     "dragon",
+     "pommes",
+     "fresque",
+     "texture",
+     "rouge",
+     "vert",
+     "ex"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 840,
    "paire": null
   },
@@ -4128,8 +5024,71 @@
    ],
    "stade": "Niveau 1",
    "evolue_de": "Statitik",
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "cristaux et électricité",
+    "lieu": "dimension cristalline étincelante",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cristaux géants et éclairs",
+     "milieu": "Mygavolt-ex au centre",
+     "cand": "sol abstrait cristallin"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "rose",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "charge de l'énergie",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mygavolt",
+     "cristal",
+     "électricité",
+     "éclair",
+     "multicolore",
+     "brillant",
+     "puissance"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 595,
    "paire": null
   },
@@ -4153,8 +5112,71 @@
    ],
    "stade": "Niveau 1",
    "evolue_de": "Pâtachiot",
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "pâtisserie et gourmandise",
+    "lieu": "table garnie de douceurs",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "panier de fruits et brioche allongée",
+     "milieu": "Briochien-ex et tarte tressée",
+     "bas": "pâtisseries variées et bonbons"
+    },
+    "bords": {
+     "haut": "orange",
+     "bas": "orange",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "marron",
+      "jaune",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "se repose",
+    "emotion": "gourmandise",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Briochien",
+     "pâtisserie",
+     "brioche",
+     "tarte",
+     "gourmandise",
+     "chaleureux",
+     "nourriture"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 926,
    "paire": null
   },
@@ -4178,8 +5200,71 @@
    ],
    "stade": "Base",
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "temple cristallin ancien",
+    "lieu": "sanctuaire souterrain mystique",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "voûte en stക്കുvitrail et mécanisme",
+     "milieu": "Terapagos-ex sur un dôme de cristal",
+     "bas": "eaux cristallines et énergie"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "violet",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "observe le sanctuaire",
+    "emotion": "mystère",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Terapagos",
+     "cristal",
+     "sanctuaire",
+     "vitrail",
+     "magie",
+     "bleu",
+     "légende"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 1024,
    "paire": null
   },
@@ -4199,8 +5284,76 @@
    "pokedex": [],
    "stade": null,
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "laboratoire ou bibliothèque",
+    "lieu": "bureau rempli de livres et de minéraux",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "étagères avec livres et cristaux",
+     "milieu": "Bria examinant un cristal lumineux",
+     "bas": "vêtements et mobilier de bureau"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "jaune",
+      "violet",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "examine un cristal",
+    "emotion": "concentration",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Bria",
+      "role": "autre"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Bria",
+     "chercheuse",
+     "cristal",
+     "laboratoire",
+     "livres",
+     "analyse",
+     "recherche"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -4220,8 +5373,78 @@
    "pokedex": [],
    "stade": null,
    "evolue_de": null,
-   "priorite": 2,
-   "analyse": null,
+   "priorite": 3,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "intérieur maison école",
+    "lieu": "chambre ou dortoir encombré",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "plafond et étagères de la pièce",
+     "milieu": "personnages et repas sur la table",
+     "bas": "documents et dossiers au premier plan"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "orange",
+     "gauche": "violet",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "bleu",
+      "rouge",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "discute et mange",
+    "emotion": "surprise",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Taro",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Taro",
+     "dresseur",
+     "chambre",
+     "repas",
+     "nourriture",
+     "désordre",
+     "amis",
+     "manga",
+     "animation"
+    ],
+    "le": "2026-10-16",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
