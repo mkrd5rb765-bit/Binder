@@ -142,7 +142,7 @@
   .pick { display: flex; flex-direction: column; gap: 6px; }
   .pick-label { font-size: 14px; color: var(--muted); }
   .seg-wide { display: flex; }
-  .seg-wide button { flex: 1; }
+  .seg-wide button { flex: 1; padding: 6px 6px; font-size: 14px; white-space: nowrap; }
   .chip small { color: var(--muted); margin-left: 4px; }
   .chip[aria-pressed="true"] small { color: inherit; opacity: .7; }
   .color-chip { display: inline-flex; align-items: center; gap: 6px; padding-left: 8px; }
@@ -230,6 +230,7 @@
           <button type="button" data-ptype="theme">Thème</button>
           <button type="button" data-ptype="vedette">Carte vedette</button>
           <button type="button" data-ptype="illus">Illustrateur</button>
+          <button type="button" data-ptype="dresseur">Dresseur</button>
         </div>
         <p class="hint" id="ptypeHint"></p>
       </div>
@@ -239,6 +240,18 @@
         </label>
         <datalist id="illusList"></datalist>
         <div class="suggest" id="illusTop"></div>
+      </div>
+      <div class="pick" id="trainerBox" hidden>
+        <label>Dresseur
+          <input id="trainerInput" list="trainerList" autocomplete="off" placeholder="Tape un nom ou choisis ci-dessous">
+        </label>
+        <datalist id="trainerList"></datalist>
+        <div class="suggest" id="trainerTop"></div>
+        <div class="seg seg-wide" role="group" aria-label="Composition">
+          <button type="button" data-tmode="duo">Avec ses Pokémon</button>
+          <button type="button" data-tmode="centre">Dresseur au centre</button>
+        </div>
+        <p class="hint" id="tmodeHint"></p>
       </div>
       <label><span id="themeLabel">Ce que tu veux voir sur la page</span>
         <input id="aiTheme" placeholder="ex. ville, bord de mer, forêt au soleil, nuit étoilée">
@@ -1319,13 +1332,15 @@
   var PTYPE_HINTS = {
     theme: 'Une page unie autour d\'un lieu, d\'une ambiance ou d\'une couleur.',
     vedette: 'Place ta carte la plus rare au centre (onglet Cartes) : le reste de la page la met en valeur avec des cartes plus discrètes, dans ses couleurs.',
-    illus: 'Une page entière de cartes dessinées par le même illustrateur. Les mots-clés et couleurs sont facultatifs pour affiner.'
+    illus: 'Une page entière de cartes dessinées par le même illustrateur. Les mots-clés et couleurs sont facultatifs pour affiner.',
+    dresseur: 'Une page consacrée à un dresseur et à ses Pokémon. Les mots-clés et couleurs sont facultatifs pour affiner.'
   };
   function showPageType() {
     document.querySelectorAll('[data-ptype]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.ptype === pageType)); });
     el('ptypeHint').textContent = PTYPE_HINTS[pageType];
     el('illusBox').hidden = pageType !== 'illus';
-    el('aiUsePage').closest('label').hidden = pageType === 'vedette'; // la vedette s'appuie toujours sur la page
+    el('trainerBox').hidden = pageType !== 'dresseur';
+    el('aiUsePage').closest('label').hidden = pageType === 'vedette' || pageType === 'dresseur'; // ces modes ont leur propre logique
     el('themeLabel').textContent = pageType === 'theme' ? 'Ce que tu veux voir sur la page' : 'Mots-clés (facultatif)';
   }
   document.querySelectorAll('[data-ptype]').forEach(function (b) {
@@ -1366,9 +1381,190 @@
   }
   loadDb().then(buildIllustrators).catch(function () {});
 
+  // ----- Dresseurs : qui apparaît sur quelle carte, et quels Pokémon lui appartiennent
+  // Sources : les personnages reconnus par l'analyse, et les cartes « Pokémon de dresseur » (« Carchacrok de Cynthia »).
+  var TRAINERS = {}, trainerMode = lsGet(STORE + '.trainerMode', 'duo');
+  var NOT_TRAINER = /^(hisui|alola|galar|paldea|kanto|johto|hoenn|sinnoh|unys|kalos|kitakami|inconnu)$/i;
+  function trainerKey(n) { return illusKey(String(n || '').replace(/^(la|le|les)\s+/i, '')); }
+  function namedPeople(c) {
+    return (c.personnages || []).map(function (p) { return p && p.nom; }).filter(function (n) { return n && !NOT_TRAINER.test(n); });
+  }
+  function ownerOf(c) {
+    if (!/pok[ée]mon/i.test(c.cat || '')) return null;
+    var m = String(c.nom || '').match(/^(.+?) (?:de |d['’])(.+?)(?:[- ](?:ex|EX|V|VMAX|VSTAR|GX))?$/);
+    if (!m) return null;
+    var o = m[2].replace(/^(la|le|les)\s+/i, '');
+    return NOT_TRAINER.test(o) ? null : o;
+  }
+  function isPokemon(c) { return /pok[ée]mon/i.test(c.cat || ''); }
+  function buildTrainers() {
+    TRAINERS = {};
+    DB.forEach(function (c) {
+      if (c.part !== 'totale') return;
+      var people = namedPeople(c), owner = ownerOf(c), all = people.slice();
+      if (owner && all.map(trainerKey).indexOf(trainerKey(owner)) === -1) all.push(owner);
+      all.forEach(function (name) {
+        var k = trainerKey(name);
+        if (!k) return;
+        var t = TRAINERS[k] || (TRAINERS[k] = { name: name.replace(/^(la|le|les)\s+/i, ''), key: k, cards: [], species: {} });
+        t.cards.push(c);
+        if (isPokemon(c) && c.dex && c.dex[0]) t.species[c.dex[0]] = true;
+      });
+    });
+    var list = Object.keys(TRAINERS).map(function (k) { return TRAINERS[k]; })
+      .filter(function (t) { return t.cards.length >= 3; })
+      .sort(function (a, b) { return b.cards.length - a.cards.length || a.name.localeCompare(b.name); });
+    var dl = el('trainerList'); dl.innerHTML = '';
+    list.forEach(function (t) { var o = document.createElement('option'); o.value = t.name; o.label = t.cards.length + ' cartes'; dl.appendChild(o); });
+    var top = el('trainerTop'); top.innerHTML = '';
+    list.slice(0, 12).forEach(function (t) {
+      var c = mk('button', 'chip'); c.type = 'button';
+      c.appendChild(document.createTextNode(t.name)); c.appendChild(mk('small', null, t.cards.length));
+      c.addEventListener('click', function () { el('trainerInput').value = t.name; markTrainer(); });
+      top.appendChild(c);
+    });
+    markTrainer();
+  }
+  function markTrainer() {
+    var v = el('trainerInput').value;
+    Array.prototype.forEach.call(el('trainerTop').children, function (c) { c.setAttribute('aria-pressed', String(c.firstChild.textContent === v)); });
+  }
+  el('trainerInput').addEventListener('input', markTrainer);
+  function findTrainer(q) {
+    var k = trainerKey(q);
+    if (!k) return null;
+    if (TRAINERS[k]) return TRAINERS[k];
+    var part = Object.keys(TRAINERS).filter(function (x) { return x.indexOf(k) !== -1; })
+      .sort(function (a, b) { return TRAINERS[b].cards.length - TRAINERS[a].cards.length; });
+    return part.length ? TRAINERS[part[0]] : null;
+  }
+  function showTrainerMode() {
+    document.querySelectorAll('[data-tmode]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.tmode === trainerMode)); });
+    el('tmodeHint').textContent = trainerMode === 'duo'
+      ? 'Toutes les cartes montrent le dresseur avec un de ses Pokémon.'
+      : 'Le dresseur seul au centre, entouré de ses Pokémon, seuls ou avec lui. Disposition 3×3.';
+  }
+  document.querySelectorAll('[data-tmode]').forEach(function (b) {
+    b.addEventListener('click', function () { trainerMode = b.dataset.tmode; lsSet(STORE + '.trainerMode', trainerMode); showTrainerMode(); });
+  });
+  showTrainerMode();
+  loadDb().then(buildTrainers).catch(function () {});
+
+  // Préparation d'une page « Dresseur » (même format que prepare())
+  function prepareTrainer(onlySlot) {
+    var theme = el('aiTheme').value.trim();
+    var cur = page();
+    var n = cur.cols * cur.rows;
+    if (!DB || !DB.length) throw new Error('la base de cartes analysées est encore vide');
+    var q = el('trainerInput').value.trim();
+    if (!q) throw new Error('choisis un dresseur');
+    var t = findTrainer(q);
+    if (!t) throw new Error('aucun dresseur « ' + q + ' » reconnu dans la base pour l\'instant');
+    el('trainerInput').value = t.name; markTrainer();
+    var spec = Engine.parse(theme, pickedColors);
+    var center = (cur.cols % 2 && cur.rows % 2) ? Math.floor(cur.rows / 2) * cur.cols + Math.floor(cur.cols / 2) : -1;
+    var mode2 = trainerMode;
+    if (mode2 === 'centre' && center === -1) throw new Error('le dresseur au centre a besoin d\'une case centrale : choisis la disposition 3×3');
+
+    var rejected = state.rejected || {};
+    var full = el('ruleFull').checked, clean = el('ruleClean').checked;
+    var ok = function (c) {
+      if (rejected[c.id]) return false;
+      if (full && c.part !== 'totale') return false;
+      if (clean && c.habillage && BIG_BANNER.test(String(c.habillage.bandeau || ''))) return false;
+      return !/[ée]nergie|energy/i.test(c.cat || '');
+    };
+    var withT = function (c) { return namedPeople(c).map(trainerKey).indexOf(t.key) !== -1; };
+    var owned = function (c) { var o = ownerOf(c); return o && trainerKey(o) === t.key; };
+    var others = function (c) { return namedPeople(c).some(function (p) { return trainerKey(p) !== t.key; }); };
+    var ctx = { theme: theme, spec: spec, cur: cur, n: n, kind: 'dresseur', trainer: t, trainerMode: mode2, center: center, clearFirst: false };
+
+    // Cartes de la page actuelle (pour ↻ ou pour compléter)
+    var placed = [];
+    cur.slots.forEach(function (c, i) { if (c && c.id && i !== onlySlot) placed.push({ card: c, i: i, db: dbById[c.id] || null }); });
+    var usedIds = {}; placed.forEach(function (p) { usedIds[p.card.id] = true; });
+
+    var cands, bonus;
+    var centreSlot = mode2 === 'centre' && onlySlot === center;
+    if (mode2 === 'duo' || centreSlot) {
+      // le dresseur et ses Pokémon ensemble ; à défaut, ses cartes Dresseur
+      cands = t.cards.filter(function (c) { return ok(c) && !usedIds[c.id] && (centreSlot ? withT(c) : true); });
+      bonus = function (c) { return (isPokemon(c) && withT(c) ? 6 : withT(c) ? 3 : 1) + (others(c) ? -4 : 0); };
+    } else {
+      // ses Pokémon : « Pokémon de [dresseur] », cartes avec lui, puis ses espèces seules (sans autre dresseur)
+      cands = DB.filter(function (c) {
+        if (!ok(c) || usedIds[c.id] || !isPokemon(c)) return false;
+        if (owned(c) || withT(c)) return true;
+        return c.dex && t.species[c.dex[0]] && !namedPeople(c).length;
+      });
+      bonus = function (c) { return (owned(c) ? 5 : 0) + (withT(c) ? 4 : 0) + (others(c) ? -6 : 0); };
+    }
+    if (!cands.length) throw new Error(onlySlot != null ? 'toutes les cartes de ' + t.name + ' de la base sont déjà sur la page' : 'pas assez de cartes de ' + t.name + ' dans la base pour l\'instant');
+
+    ctx.bonus = bonus; ctx.cands = cands; ctx.placed = placed;
+    if (onlySlot != null) {
+      // ↻ : remplacer une seule case en gardant le reste de la page
+      ctx.fill = true; ctx.empty = [onlySlot]; ctx.target = 1;
+      ctx.seeds = placed.map(function (p) { return p.db; }).filter(Boolean);
+      ctx.fixed = cur.slots.map(function (s, i) { return s && i !== onlySlot ? (dbById[s.id] || null) : null; });
+      return ctx;
+    }
+    if (mode2 === 'centre') {
+      // la carte du dresseur seul au centre : une carte Dresseur à son effigie, sinon sa plus belle carte
+      var portraits = t.cards.filter(function (c) { return ok(c) && withT(c) && !others(c); });
+      portraits.sort(function (a, b) { return ((isPokemon(b) ? 0 : 3) + Engine.starScore(b) + Math.random()) - ((isPokemon(a) ? 0 : 3) + Engine.starScore(a) + Math.random()); });
+      var star = portraits[0];
+      if (!star) throw new Error('aucune carte de ' + t.name + ' seul dans la base pour l\'instant');
+      ctx.cands = cands.filter(function (c) { return c.id !== star.id; });
+      ctx.star = { id: star.id, name: star.nom }; ctx.starDb = star; ctx.fixedCenter = star;
+      ctx.seeds = [star]; ctx.fill = false; ctx.target = n - 1; ctx.empty = [];
+    } else {
+      ctx.seeds = []; ctx.fill = false; ctx.target = n; ctx.empty = [];
+    }
+    return ctx;
+  }
+
   // ----- carte vedette : ce qui rend une carte « discrète »
   var FLASHY_RX = /sp[ée]cial|hyper|secr|gold|dor[ée]|shiny|chromatique|magnifique|ultra|radieu|noir blanc|futurist/i;
   var LUM = { clair: 2, moyen: 1, sombre: 0 };
+  // Ambiance d'une carte : ses mots (décor, lieu, tags, lumière), tronqués pour comparer « sombre » et « sombres »
+  function moodWords(c) {
+    var z = c.zones || {}, out = {};
+    Engine.strip([c.univers, c.lieu, c.emotion, c.moment, c.milieu, (c.tags || []).join(' '), z.haut, z.milieu, z.bas, c.lumiere && c.lumiere.type].join(' '))
+      .split(/[^a-z0-9]+/).forEach(function (w) { if (w.length >= 5 && !/^(pokemon|carte|petit|grand|avec|fond)/.test(w)) out[w.slice(0, 5)] = true; });
+    return out;
+  }
+  var DARK_RX = /obscur|sombre|ombre|nuit|nocturn|tenebr|spectr|abysse|fantom|hant/;
+  function isDarkCard(c) {
+    return c.luminosite === 'sombre' || c.moment === 'nuit' || DARK_RX.test(Engine.strip([c.univers, c.lieu, (c.tags || []).join(' '), c.emotion].join(' ')));
+  }
+  function starRef(sd, picked) {
+    var p = sd.palette || {}, fams = [p.dominante].concat(p.secondaires || []);
+    var dark = isDarkCard(sd), pal;
+    if (picked && picked.length) pal = { dominante: picked[0], secondaires: picked.slice(1), temperature: p.temperature };
+    else if (dark) pal = { dominante: 'noir', secondaires: fams.filter(function (f) { return Engine.family(f) !== 'noir'; }), temperature: p.temperature };
+    else pal = p;
+    return Object.assign({}, sd, { palette: pal, _cv: undefined, _dom: undefined, _txt: undefined,
+      luminosite: dark && sd.luminosite === 'clair' ? 'moyen' : sd.luminosite });
+  }
+  // Ce qui met une vedette en valeur : même palette, même ambiance, aussi sombre ou plus sombre, et plus calme
+  function supportScore(c, ref, sw, dark) {
+    var b = quietScore(c, ref) * 1.2;
+    Engine.colorVec(ref); Engine.colorVec(c);
+    b += Engine.colorSim(c, ref) * 14;
+    if (c._dom && c._dom === ref._dom) b += 3;
+    if (c._dom && (ref._cv[c._dom] || 0) >= 0.15) b += 2;
+    var lc = LUM[c.luminosite], ls = LUM[ref.luminosite];
+    if (lc != null && ls != null) b += lc > ls ? -3 * (lc - ls) : lc === ls ? 1 : 1;
+    var gs = Engine.styleGroup(ref), gc = Engine.styleGroup(c);
+    b += gs === gc ? 2 : (gs === '3d' || gc === '3d') ? -2 : 0;
+    if (c.lumiere && ref.lumiere && c.lumiere.type === ref.lumiere.type) b += 1;
+    var cw = moodWords(c), shared = 0;
+    for (var w in sw) if (cw[w]) shared++;
+    b += Math.min(shared, 4) * 1.2;
+    if (dark) { if (isDarkCard(c)) b += 5; if (c.luminosite === 'clair') b -= 3; }
+    return b;
+  }
   function quietScore(c, star) {
     var s = 0, sat = Engine.strip(c.saturation), den = Engine.strip(c.densite);
     s += sat === 'pastel' ? 2 : sat === 'douce' ? 1.2 : -0.8;
@@ -1381,6 +1577,7 @@
 
   // ----- préparation commune à tous les modes
   function prepare(onlySlot) {
+    if (pageType === 'dresseur') return prepareTrainer(onlySlot);
     var theme = el('aiTheme').value.trim();
     var cur = page();
     var n = cur.cols * cur.rows;
@@ -1474,12 +1671,17 @@
 
     if (kind === 'vedette') {
       var sd = ctx.starDb;
-      ctx.bonus = function (c) {
-        var b = quietScore(c, sd) * 3.2;
-        if (sd) { b += Engine.colorSim(c, sd) * 8; Engine.colorVec(sd); if (c._dom && c._dom === sd._dom) b += 2; }
-        return b;
-      };
       if (!sd && spec.empty) throw new Error('ta carte vedette n\'est pas encore analysée : ajoute des mots-clés ou une couleur pour guider la page');
+      if (sd) {
+        // Référence de couleur : celle de la vedette, ou les couleurs choisies (pour corriger une analyse imparfaite)
+        var ref = starRef(sd, pickedColors);
+        var sw = moodWords(sd), dark = isDarkCard(ref);
+        ctx.starRef = ref;
+        seeds = seeds.map(function (c) { return c === sd ? ref : c; });
+        ctx.bonus = function (c) { return supportScore(c, ref, sw, dark); };
+      } else {
+        ctx.bonus = function (c) { return quietScore(c, null) * 1.2; };
+      }
     }
     ctx.fixed = cur.slots.map(function (s, i) { return s && placed.some(function (p) { return p.i === i; }) ? (dbById[s.id] || null) : null; });
     ctx.placed = placed; ctx.seeds = seeds; ctx.empty = empty; ctx.fill = fill; ctx.target = target; ctx.cands = cands;
@@ -1494,6 +1696,12 @@
 
   function place3(ctx, chosen) {
     var cur = ctx.cur;
+    if (ctx.fixedCenter) {
+      var grid = new Array(ctx.n).fill(null), rest = [];
+      grid[ctx.center] = ctx.fixedCenter;
+      for (var j = 0; j < ctx.n; j++) if (j !== ctx.center) rest.push(j);
+      return Engine.arrange(chosen, cur.cols, cur.rows, grid, rest, false);
+    }
     if (ctx.fill) {
       var g = Engine.arrange(chosen, cur.cols, cur.rows, ctx.fixed, ctx.empty, false);
       return ctx.empty.map(function (i) { return g[i]; });
@@ -1515,7 +1723,9 @@
       if (color && (cur.color === '#17301F' || ctx.kind === 'vedette')) cur.color = color;
       state.selected = 0; save(); render();
       status.textContent = ctx.kind === 'vedette'
-        ? 'Page construite autour de ' + ctx.star.name + ' : ' + real.length + ' carte(s) plus discrètes dans ses couleurs.'
+        ? 'Page construite autour de ' + ctx.star.name + ' : ' + real.length + ' carte(s) plus discrètes' +
+          (ctx.starRef ? ', dans les tons ' + [ctx.starRef.palette.dominante].concat(ctx.starRef.palette.secondaires || []).filter(Boolean).slice(0, 3).join(', ') +
+            (pickedColors.length ? ' (tes couleurs).' : '. Si ces couleurs ne correspondent pas à ta carte, choisis les bonnes dans « Couleurs dominantes » et recompose.') : '.')
         : real.length + ' carte(s) ajoutée(s) en accord avec la page' + (subtitle ? ' : ' + subtitle : '') + '.';
     } else {
       var slots = cards.map(function (c) { return c ? toSlot(c) : null; });
@@ -1524,19 +1734,26 @@
       state.current = state.pages.length - 1; state.selected = 0; save(); render();
       status.textContent = 'Page « ' + (title || 'Nouvelle page') + ' » créée' + (subtitle ? ' : ' + subtitle : '') + '.';
     }
+    if (ctx.kind === 'dresseur' && !ctx.fill) {
+      var withHim = real.filter(function (c) { return namedPeople(c).map(trainerKey).indexOf(ctx.trainer.key) !== -1; }).length;
+      status.textContent += ' ' + withHim + ' carte(s) avec ' + ctx.trainer.name + (ctx.trainerMode === 'centre' ? ', les autres montrent ses Pokémon.' : '.');
+    }
     if (note) status.textContent += ' ' + note;
     if (ctx.kind === 'theme') {
       var strong = real.filter(function (c) { return (c._k || 0) >= 4; }).length;
       if (!ctx.spec.empty && strong < real.length) status.textContent += ' ' + (real.length - strong) + ' carte(s) collent moins au thème : la base n\'en contient pas encore assez.';
     }
     if (real.length < ctx.target) {
-      status.textContent += ctx.kind === 'illus'
+      status.textContent += ctx.kind === 'dresseur'
+        ? ' La base ne contient que ' + real.length + ' carte(s) de ' + ctx.trainer.name + ' compatibles pour l\'instant : essaie la disposition 2×2' + (ctx.trainerMode === 'duo' ? ', ou « Dresseur au centre » qui ajoute ses Pokémon seuls.' : '.')
+        : ctx.kind === 'illus'
         ? ' ' + ctx.artist + ' n\'a que ' + real.length + ' illustration(s) pleine(s) utilisable(s) dans la base pour l\'instant : essaie la disposition 2×2, ou reviens quand l\'analyse aura avancé.'
         : ' Pas assez de cartes compatibles pour tout remplir : assouplis les règles.';
     }
     toast(ctx.fill ? 'Page complétée' : 'Nouvelle page créée');
   }
   function titleFor(ctx) {
+    if (ctx.kind === 'dresseur') return ctx.trainerMode === 'centre' ? 'L\'équipe de ' + ctx.trainer.name : ctx.trainer.name + ' et ses Pokémon';
     if (ctx.kind === 'illus') return 'Illustrations de ' + ctx.artist;
     if (ctx.kind === 'vedette' && (!ctx.cur.title || ctx.cur.title === 'Nouvelle page')) return 'Autour de ' + ctx.star.name;
     if (ctx.theme) return cap(ctx.theme);
@@ -1589,14 +1806,17 @@
       var kindRule = ctx.kind === 'vedette'
         ? '0. La case ' + (ctx.center + 1) + ' contient la carte VEDETTE (' + (ctx.starDb ? describe(ctx.starDb) : ctx.star.name) + '). ' +
           'Toutes les autres cartes doivent la mettre en valeur : plus calmes, moins saturées, moins chargées, dans ses couleurs, et jamais plus spectaculaires qu\'elle.\n'
-        : ctx.kind === 'illus' ? '0. Toutes les cartes sont illustrées par ' + ctx.artist + ' : compose la plus belle page possible avec son travail.\n' : '';
+        : ctx.kind === 'illus' ? '0. Toutes les cartes sont illustrées par ' + ctx.artist + ' : compose la plus belle page possible avec son travail.\n'
+        : ctx.kind === 'dresseur' ? (ctx.trainerMode === 'centre'
+            ? '0. La case ' + (ctx.center + 1) + ' contient ' + ctx.trainer.name + ' seul (' + describe(ctx.starDb) + '). Choisis ses Pokémon pour l\'entourer, seuls ou avec lui, jamais avec un autre dresseur. Ne choisis pas de carte pour la case ' + (ctx.center + 1) + '.\n'
+            : '0. Page consacrée à ' + ctx.trainer.name + ' : privilégie les cartes où il apparaît avec un de ses Pokémon.\n') : '';
       var prompt =
         'Tu composes une très belle page de classeur de cartes Pokémon : grille de ' + cols + ' colonnes × ' + rows + ' lignes, cases numérotées de 1 à ' + ctx.n + ' (gauche à droite, puis haut en bas).\n' +
         (ctx.theme ? 'Thème demandé : « ' + ctx.theme + ' ». Il doit se voir au premier coup d\'œil.\n' : '') +
         (pickedColors.length ? 'Couleurs demandées : ' + pickedColors.join(' et ') + '. Elles doivent dominer la page.\n' : '') +
         (ctx.seeds.length && ctx.kind !== 'vedette' ? '\nCartes déjà sur la page (à prolonger) :\n' + ctx.placed.filter(function (p) { return p.db; }).map(function (p) { return 'case ' + (p.i + 1) + ' : ' + describe(p.db); }).join('\n') + '\n' : '') +
         (ctx.fill ? '\nChoisis exactement ' + ctx.target + ' cartes pour les cases ' + ctx.empty.map(function (i) { return i + 1; }).join(', ') + ', dans cet ordre.\n'
-          : '\nChoisis exactement ' + ctx.n + ' cartes, dans l\'ordre des cases.\n') +
+          : '\nChoisis exactement ' + ctx.target + ' cartes' + (ctx.fixedCenter ? '' : ', dans l\'ordre des cases') + '.\n') +
         '\nRègles, par ordre d\'importance :\n' + kindRule +
         '1. Unité de couleur : une palette commune et harmonieuse sur toute la page ; aucune carte ne doit trancher par sa couleur.\n' +
         (ctx.kind === 'theme' ? '2. Le thème se voit sur chaque carte (lieu, moment, ambiance).\n' : '') +
@@ -1617,8 +1837,8 @@
           .filter(function (c) { var ok = c && !seen[c.id]; if (c) seen[c.id] = true; return ok; }).slice(0, ctx.target);
         if (!chosen.length) throw new Error('réponse de l\'IA inutilisable');
         for (var k = 0; chosen.length < ctx.target && k < shortlist.length; k++) if (!seen[shortlist[k].id]) { seen[shortlist[k].id] = true; chosen.push(shortlist[k]); }
-        var cards = ctx.fill ? place3(ctx, chosen) : chosen;
-        apply(ctx, cards, ctx.kind === 'illus' ? titleFor(ctx) : (res.titre || titleFor(ctx)), res.sousTitre || '');
+        var cards = (ctx.fill || ctx.fixedCenter) ? place3(ctx, chosen) : chosen;
+        apply(ctx, cards, (ctx.kind === 'illus' || ctx.kind === 'dresseur') ? titleFor(ctx) : (res.titre || titleFor(ctx)), res.sousTitre || '');
       }, function (err) {
         apply(ctx, place3(ctx, shortlist.slice(0, ctx.target)), titleFor(ctx), '', '(IA indisponible : ' + err.message + '. Page composée sans IA.)');
       });
