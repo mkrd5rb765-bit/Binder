@@ -138,6 +138,11 @@
   .empty { text-align: center; padding: 24px 10px; color: var(--muted); }
 
   .suggest { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pick { display: flex; flex-direction: column; gap: 6px; }
+  .pick-label { font-size: 14px; color: var(--muted); }
+  .color-chip { display: inline-flex; align-items: center; gap: 6px; padding-left: 8px; }
+  .color-chip .dot { width: 14px; height: 14px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); }
+  .color-chip[aria-pressed="true"] .dot { box-shadow: 0 0 0 2px var(--bg); }
   .db-badge { padding: 10px 12px; border-radius: 12px; background: var(--panel-2); }
 
   /* ---------- zoom + message ---------- */
@@ -215,9 +220,13 @@
     <div class="tab" id="tabTheme" role="tabpanel" hidden>
       <p class="hint db-badge" id="dbStatus">Chargement de la base de cartes analysées…</p>
       <label>Ce que tu veux voir sur la page
-        <input id="aiTheme" placeholder="ex. bord de mer au soleil, forêt, nuit étoilée">
+        <input id="aiTheme" placeholder="ex. ville, bord de mer, forêt au soleil, nuit étoilée">
       </label>
       <div class="suggest" id="suggest"></div>
+      <div class="pick">
+        <span class="pick-label">Couleurs dominantes (2 au plus)</span>
+        <div class="suggest" id="colorPick" role="group" aria-label="Couleurs dominantes"></div>
+      </div>
       <label class="check"><input id="aiUsePage" type="checkbox" checked> S'inspirer des cartes déjà placées et compléter les cases vides</label>
       <div class="row">
         <button class="primary" id="localGenBtn" type="button">Composer la page</button>
@@ -228,7 +237,8 @@
         <summary>Règles de composition</summary>
         <div style="display:flex; flex-direction:column; gap:12px">
           <label class="check"><input id="ruleFull" type="checkbox" checked> Illustrations pleines uniquement</label>
-          <label class="check"><input id="ruleClean" type="checkbox" checked> Éviter les bandeaux V / ex, logos et textes chargés</label>
+          <label class="check"><input id="ruleIllus" type="checkbox" checked> Illustrations rares uniquement (IR et ISR)</label>
+          <label class="check"><input id="ruleClean" type="checkbox" checked> Éviter les gros bandeaux V, VMAX, VSTAR et GX</label>
           <label class="check"><input id="ruleEra" type="checkbox" checked> Même époque que les cartes déjà placées</label>
           <label>Couleur des bordures
             <select id="ruleBorder">
@@ -758,26 +768,54 @@
   el('geminiKey').addEventListener('change', function (e) { lsSet(G_KEY, e.target.value.trim()); loadGeminiModels(); });
   el('geminiModel').addEventListener('change', function (e) { lsSet(G_MODEL, e.target.value); });
 
-  // Fill the Gemini model list from the API (names change over time)
+  // ----- Modèles Gemini
+  // Chaque modèle a son propre quota gratuit, et beaucoup n'en ont aucun. On commence par le modèle
+  // qui a fonctionné lors de la dernière analyse automatique (data/journal.json), puis les « lite ».
+  var DEAD_KEY = STORE + '.geminiDead';
+  function deadModels() {
+    try { var d = JSON.parse(localStorage.getItem(DEAD_KEY) || '{}'); return d.day === new Date().toISOString().slice(0, 10) ? d.models : []; } catch (e) { return []; }
+  }
+  function markDead(model) {
+    var list = deadModels(); if (list.indexOf(model) === -1) list.push(model);
+    lsSet(DEAD_KEY, JSON.stringify({ day: new Date().toISOString().slice(0, 10), models: list }));
+  }
+  var workingModel = '';
+  var journalJob = fetch('data/journal.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) { if (j && j.fournisseur === 'gemini' && j.modele && j.cartes_analysees > 0) workingModel = j.modele; }).catch(function () {});
+  function rankModels(models) {
+    var dead = deadModels();
+    var ver = function (m) { var x = m.match(/gemini-(\d+(?:\.\d+)?)/); return x ? parseFloat(x[1]) : 0; };
+    var rank = function (m) {
+      if (m === workingModel) return -10;
+      if (dead.indexOf(m) !== -1) return 50;
+      if (!/flash/.test(m)) return 20;              // modèles « pro » : rarement gratuits
+      return (/lite/.test(m) ? 0 : 1) + (/preview|exp/.test(m) ? 2 : 0);
+    };
+    return models.slice().sort(function (a, b) { return rank(a) - rank(b) || ver(b) - ver(a); });
+  }
   function loadGeminiModels() {
     var key = el('geminiKey').value.trim();
-    var sel = el('geminiModel'), saved = lsGet(G_MODEL, '');
+    var sel = el('geminiModel');
     if (!key) return;
-    fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200', { headers: { 'x-goog-api-key': key } })
+    journalJob.then(function () {
+      return fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200', { headers: { 'x-goog-api-key': key } });
+    })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (j) {
         var models = (j.models || []).filter(function (m) {
-          return (m.supportedGenerationMethods || []).indexOf('generateContent') !== -1 && /gemini/.test(m.name) && !/tts|image-generation|embedding|live|audio/.test(m.name);
+          return (m.supportedGenerationMethods || []).indexOf('generateContent') !== -1 && /gemini/.test(m.name) && !/tts|image|embedding|live|audio|omni/.test(m.name);
         }).map(function (m) { return m.name.replace('models/', ''); });
         if (!models.length) return;
-        models.sort(function (a, b) { return (/flash/.test(b) - /flash/.test(a)) || b.localeCompare(a); });
+        models = rankModels(models);
         sel.innerHTML = '';
-        models.forEach(function (m) { var o = document.createElement('option'); o.value = m; o.textContent = m; sel.appendChild(o); });
-        var flash = models.filter(function (m) { return /flash/.test(m) && !/lite|exp/.test(m); });
-        var pick = models.indexOf(saved) !== -1 ? saved : (flash.filter(function (m) { return !/preview/.test(m); })[0] || flash[0] || models[0]);
-        sel.value = pick; lsSet(G_MODEL, pick);
+        models.forEach(function (m) {
+          var o = document.createElement('option'); o.value = m;
+          o.textContent = m + (m === workingModel ? ' (fonctionne avec ta clé)' : '');
+          sel.appendChild(o);
+        });
+        sel.value = models[0]; lsSet(G_MODEL, models[0]);
       })
-      .catch(function () { el('aiGenStatus').textContent = 'Clé Gemini refusée ou liste des modèles indisponible.'; });
+      .catch(function () { el('aiGenStatus').textContent = 'Ta clé Gemini est refusée. Vérifie-la dans « Clé IA ».'; });
   }
   (function () { var s = lsGet(G_MODEL, ''); if (s) { var o = document.createElement('option'); o.value = s; o.textContent = s; el('geminiModel').appendChild(o); el('geminiModel').value = s; } })();
   loadGeminiModels();
@@ -820,72 +858,78 @@
       })
       .catch(function () { return { file_data: { mime_type: 'image/png', file_uri: url } }; });
   }
-  // Modèle retiré par Google : on l'enlève de la liste et on passe au suivant
+  // Modèle sans quota (ou retiré) : on l'écarte pour la journée et on passe au suivant
   function ModelGone(msg) { this.message = msg; this.gone = true; }
   function dropModel(model) {
+    markDead(model);
     var sel = el('geminiModel');
     Array.prototype.slice.call(sel.options).forEach(function (o) { if (o.value === model) sel.removeChild(o); });
-    var next = Array.prototype.map.call(sel.options, function (o) { return o.value; })
-      .filter(function (m) { return /flash/.test(m) && !/lite/.test(m); })[0] || (sel.options[0] && sel.options[0].value);
-    if (next) { sel.value = next; lsSet(G_MODEL, next); }
-    return next;
+    var rest = rankModels(Array.prototype.map.call(sel.options, function (o) { return o.value; }))
+      .filter(function (m) { return deadModels().indexOf(m) === -1; });
+    if (rest[0]) { sel.value = rest[0]; lsSet(G_MODEL, rest[0]); }
+    return rest[0];
   }
-  function callGemini(text, imageUrls, maxTokens, tries) {
+  function callGemini(text, imageUrls, maxTokens, onWait, tries) {
     tries = tries || 0;
     return callGeminiOnce(text, imageUrls, maxTokens).catch(function (err) {
-      if (err && err.gone && tries < 4) {
-        var next = dropModel(err.model);
-        if (next && next !== err.model) return callGemini(text, imageUrls, maxTokens, tries + 1);
-        throw new Error('aucun modèle Gemini disponible : recharge la page');
+      if (err && err.rate && !err.gone && tries < 1) {
+        // limite par minute : une seule courte pause, puis on change de modèle
+        if (onWait) onWait(15);
+        return sleep(15000).then(function () { return callGemini(text, imageUrls, maxTokens, onWait, tries + 1); });
+      }
+      if (err && (err.gone || err.rate) && tries < 8) {
+        var model = err.model || el('geminiModel').value;
+        var next = dropModel(model);
+        if (onWait) onWait(0, next);
+        if (next && next !== model) return callGemini(text, imageUrls, maxTokens, onWait, tries + 1);
+        throw new Error('aucun modèle Gemini gratuit disponible avec ta clé aujourd\'hui. Utilise « Composer la page » (sans IA) ou réessaie demain');
       }
       throw err;
     });
   }
   function callGeminiOnce(text, imageUrls, maxTokens) {
     var key = el('geminiKey').value.trim();
-    if (!key) { el('aiSettings').open = true; return Promise.reject(new Error('Ajoute ta clé API Gemini dans les réglages IA.')); }
-    var model = el('geminiModel').value || 'gemini-2.5-flash';
+    if (!key) { el('aiSettings').open = true; return Promise.reject(new Error('ajoute ta clé Gemini dans « Clé IA »')); }
+    var model = el('geminiModel').value || workingModel || 'gemini-2.5-flash-lite';
     return Promise.all((imageUrls || []).map(imagePart)).then(function (imgs) {
       return fetch('https://generativelanguage.googleapis.com/v1beta/models/' + encodeURIComponent(model) + ':generateContent', {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'x-goog-api-key': key },
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: text }].concat(imgs) }],
-          // Les modèles Gemini « réfléchissent » avant de répondre et ça consomme ce budget :
-          // trop petit, la réponse était coupée ou vide (bug du bouton « Générer la page »).
           generationConfig: { responseMimeType: 'application/json', maxOutputTokens: Math.max(16384, (maxTokens || 2000) * 4), temperature: 0.4 }
         })
       });
     }).then(function (r) {
-      return r.json().then(function (j) {
-        if (r.status === 429) throw new RateLimit('limite gratuite atteinte');
-        if (r.status === 503) throw new RateLimit('Gemini surchargé');
+      return r.json().catch(function () { return {}; }).then(function (j) {
         var msg = (j.error && j.error.message) || '';
-        if (!r.ok && (r.status === 404 || /no longer available|not found|not supported|deprecated/i.test(msg))) {
-          var g = new ModelGone(msg || ('modèle ' + model + ' indisponible')); g.model = model; throw g;
+        var e;
+        // quota inexistant (« limit: 0 ») ou épuisé pour la journée : inutile d'attendre
+        if (r.status === 429 && /limit: ?0\b|per.?day|PerDay|daily|free.?tier|billing|exceeded your current quota/i.test(msg)) {
+          e = new ModelGone(msg); e.model = model; e.rate = true; throw e;
         }
-        if (!r.ok) throw new Error((j.error && j.error.message) || ('HTTP ' + r.status));
+        if (r.status === 429 || r.status === 503) { e = new RateLimit('limite de requêtes'); e.model = model; throw e; }
+        if (!r.ok && (r.status === 404 || /no longer available|not found|not supported|deprecated/i.test(msg))) {
+          e = new ModelGone(msg || ('modèle ' + model + ' indisponible')); e.model = model; throw e;
+        }
+        if (!r.ok) throw new Error(msg || ('HTTP ' + r.status));
         var cand = j.candidates && j.candidates[0];
         var parts = (cand && cand.content && cand.content.parts) || [];
         var out = parts.filter(function (p) { return p.text && !p.thought; }).map(function (p) { return p.text; }).join('');
-        if (!out && cand && cand.finishReason === 'MAX_TOKENS') throw new Error('réponse de Gemini coupée (trop longue), réessaie');
+        if (!out && cand && cand.finishReason === 'MAX_TOKENS') throw new Error('réponse de Gemini coupée, réessaie');
         if (!out && j.promptFeedback && j.promptFeedback.blockReason) throw new Error('demande bloquée par Gemini (' + j.promptFeedback.blockReason + ')');
-        if (!out) throw new Error('réponse vide de Gemini');
+        if (!out) throw new Error('réponse vide de Gemini, réessaie');
         return out;
       });
     });
   }
-  // Unified call with automatic waits on rate limits
-  function callAI(text, imageUrls, maxTokens, onWait, tries) {
-    tries = tries || 0;
-    var fn = provider() === 'gemini' ? callGemini : callClaude;
-    return fn(text, imageUrls, maxTokens).catch(function (err) {
-      if (err && err.rate && tries < 6) {
-        var wait = 20000 * (tries + 1);
-        if (onWait) onWait(Math.round(wait / 1000));
-        return sleep(wait).then(function () { return callAI(text, imageUrls, maxTokens, onWait, tries + 1); });
+  function callAI(text, imageUrls, maxTokens, onWait) {
+    if (provider() === 'gemini') return callGemini(text, imageUrls, maxTokens, onWait);
+    return callClaude(text, imageUrls, maxTokens).catch(function (err) {
+      if (err && err.rate) {
+        if (onWait) onWait(20);
+        return sleep(20000).then(function () { return callClaude(text, imageUrls, maxTokens); });
       }
-      if (err && err.rate) throw new Error(err.message + ' : réessaie plus tard (quota du jour peut-être épuisé)');
       throw err;
     });
   }
@@ -929,187 +973,375 @@
     .catch(function () { el('dbStatus').textContent = 'Base indisponible pour le moment.'; });
   loadDb().catch(function () {});
 
-  // ----- outils
-  function tokens(txt) {
-    return String(txt || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(/[^a-z0-9]+/).filter(function (x) { return x.length > 2; });
-  }
-  function get(c, p) { return p.split('.').reduce(function (o, k) { return o == null ? o : o[k]; }, c); }
-  function names(c) { return (c.personnages || []).map(function (p) { return p && p.nom; }).filter(function (n) { return n && n !== 'inconnu'; }); }
-  function cardWords(c) {
-    return tokens([c.nom, c.univers, c.lieu, c.milieu, c.profondeur, get(c, 'palette.dominante'), (get(c, 'palette.secondaires') || []).join(' '),
-      get(c, 'palette.temperature'), get(c, 'lumiere.type'), c.style, c.rendu, c.moment, c.meteo, c.saison, c.action, c.emotion,
-      (c.tags || []).join(' '), names(c).join(' '), (c.types || []).join(' '), c.zones && [c.zones.haut, c.zones.milieu, c.zones.bas].join(' ')].join(' '));
-  }
-  // Critères visuels qui doivent rester homogènes sur une page (poids)
-  var FEATURES = [['palette.dominante', 3], ['palette.temperature', 2], ['luminosite', 2], ['style', 2], ['univers', 2], ['lumiere.type', 1], ['milieu', 1], ['saturation', 1]];
-  function profileOf(cards) {
-    var prof = {};
-    FEATURES.forEach(function (f) {
-      var count = {}, best = null;
-      cards.forEach(function (c) { var v = get(c, f[0]); if (v) { count[v] = (count[v] || 0) + 1; if (!best || count[v] > count[best]) best = v; } });
-      if (best) prof[f[0]] = best;
+  // ================= Moteur de composition =================
+  //  1. Le mot-clé décide QUELLES cartes sont candidates (lieu, moment, saison, couleur…).
+  //  2. Parmi elles, on construit la page carte par carte en gardant la plus grande cohérence
+  //     visuelle : couleurs proches, même famille de style, luminosité et température voisines.
+  //  3. Placement : chaque case reçoit la carte qui ressemble le plus à ses voisines.
+  var Engine = (function () {
+    function strip(s) { return String(s == null ? '' : s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+    function get(c, p) { return p.split('.').reduce(function (o, k) { return o == null ? o : o[k]; }, c); }
+
+    // ---- couleurs : tous les noms ramenés à 14 familles
+    var FAMILIES = [
+      ['multicolore', /multicolore|arc.?en.?ciel|irise|chatoyant/],
+      ['turquoise', /turquoise|cyan|aqua|sarcelle|vert d.eau|lagon|menthe/],
+      ['rose', /rose|magenta|fuchsia|saumon|corail|framboise/],
+      ['violet', /violet|mauve|pourpre|lavande|lilas|indigo|prune|amethyste/],
+      ['rouge', /rouge|cramoisi|bordeaux|ecarlate|carmin|vermillon|grenat/],
+      ['orange', /orange|cuivre|abricot|ambre|rouille|mandarine/],
+      ['jaune', /jaune|dore|\bor\b|citron|moutarde|soleil/],
+      ['vert', /vert|emeraude|kaki|olive|jade|sapin|feuillage/],
+      ['bleu', /bleu|azur|marine|cobalt|saphir|ciel|ocean/],
+      ['marron', /marron|brun|chocolat|ocre|terre|bois|cafe|caramel|bronze/],
+      ['beige', /beige|sable|creme|ivoire|champagne|lin\b|ecru/],
+      ['gris', /gris|argent|anthracite|ardoise|acier|cendre/],
+      ['noir', /noir|obscur|ebene|nuit/],
+      ['blanc', /blanc|neige|nacre|perle|laiteux/]
+    ];
+    function family(name) {
+      var s = strip(name);
+      if (!s) return null;
+      for (var i = 0; i < FAMILIES.length; i++) if (FAMILIES[i][1].test(s)) return FAMILIES[i][0];
+      return null;
+    }
+    // ordre « arc-en-ciel » pour les dégradés ; les neutres se placent à côté de leurs voisins
+    var HUE = { rouge: 0, orange: 1, marron: 1.5, jaune: 2, beige: 2.3, vert: 3, turquoise: 4, bleu: 5, violet: 6, rose: 7, blanc: 4.5, gris: 5.2, noir: 5.8, multicolore: 3.5 };
+    var PAGE_COLORS = { bleu: '#12324A', turquoise: '#0F3B3A', vert: '#17301F', jaune: '#45391A', orange: '#4A2A12', rouge: '#4A1616', rose: '#4A1F33',
+      violet: '#2F1F4A', marron: '#3A2A1C', beige: '#3F3628', gris: '#2A2E33', noir: '#141414', blanc: '#34393F', multicolore: '#2A2440' };
+
+    function colorVec(c) {
+      if (c._cv) return c._cv;
+      var v = {}, add = function (name, w) { var f = family(name); if (f) v[f] = (v[f] || 0) + w; };
+      add(get(c, 'palette.dominante'), 3);
+      (get(c, 'palette.secondaires') || []).slice(0, 3).forEach(function (s, k) { add(s, k === 0 ? 1.5 : 1); });
+      var b = c.bords || {};
+      ['haut', 'bas', 'gauche', 'droite'].forEach(function (k) { add(b[k], 0.4); });
+      var sum = 0; for (var f in v) sum += v[f];
+      if (sum) for (var g in v) v[g] /= sum;
+      c._cv = v; c._dom = family(get(c, 'palette.dominante'));
+      return v;
+    }
+    function colorSim(a, b) {
+      var va = colorVec(a), vb = colorVec(b), s = 0;
+      for (var f in va) if (vb[f]) s += Math.min(va[f], vb[f]);
+      return s; // 0 = rien en commun, 1 = palettes identiques
+    }
+    function styleGroup(c) {
+      var s = strip(c.style);
+      if (/3d/.test(s)) return '3d';
+      if (/peinture|aquarelle|crayon|pastel/.test(s)) return 'peint';
+      return 'anime';
+    }
+    function temp(c) { var t = strip(get(c, 'palette.temperature')); return /chau/.test(t) ? 'chaude' : /froi|frai/.test(t) ? 'froide' : 'neutre'; }
+    function text(c) {
+      if (c._txt != null) return c._txt;
+      var z = c.zones || {};
+      c._txt = ' ' + strip([c.univers, c.lieu, c.milieu, c.profondeur, c.moment, c.meteo, c.saison, c.action, c.emotion,
+        (c.tags || []).join(' '), z.haut, z.milieu, z.bas, get(c, 'lumiere.type')].join(' ')).replace(/[^a-z0-9]+/g, ' ') + ' ';
+      return c._txt;
+    }
+
+    // ---- thèmes connus : synonymes + critères visuels
+    var THEMES = [
+      { rx: /ville|urbain|cite|metropole|rue\b|quartier|building/, words: ['ville', 'urbain', 'rue', 'ruelle', 'immeuble', 'gratte', 'toit', 'neon', 'metropole', 'facade', 'balcon', 'quartier', 'batiment', 'enseigne', 'trottoir', 'fenetre', 'boutique', 'marche', 'pont', 'gare', 'cite'], milieu: ['ville'] },
+      { rx: /bord de mer|plage|cote|littoral|ocean|\bmer\b|vague|tropic/, words: ['plage', 'mer', 'ocean', 'vague', 'rivage', 'sable', 'cote', 'littoral', 'tropical', 'palmier', 'ecume', 'coquillage', 'lagon', 'marin'], milieu: ['rivage', 'surface de l eau'] },
+      { rx: /sous.?marin|sous l.eau|fond.? marin|abysse|corail|aquatique/, words: ['sous', 'marin', 'corail', 'bulle', 'abysse', 'algue', 'poisson', 'recif', 'aquatique', 'profond'], milieu: ['sous marin'], profondeur: ['sous l eau', 'profondeurs'] },
+      { rx: /foret|bois\b|jungle|arbre|sous.?bois/, words: ['foret', 'arbre', 'bois', 'feuillage', 'jungle', 'mousse', 'feuille', 'tronc', 'branche', 'clairiere', 'fougere', 'sous bois'], milieu: ['foret', 'jardin'] },
+      { rx: /nuit|etoil|lune|nocturne/, words: ['nuit', 'etoile', 'etoiles', 'lune', 'nocturne', 'clair de lune', 'ciel etoile'], moment: ['nuit'] },
+      { rx: /coucher|crepuscule|couchant|soir/, words: ['coucher', 'crepuscule', 'couchant', 'soir'], moment: ['coucher de soleil'], colors: ['orange', 'rose'] },
+      { rx: /aube|lever du soleil|matin/, words: ['aube', 'matin', 'lever'], moment: ['aube'] },
+      { rx: /neige|hiver|glace|givre|flocon|enneig/, words: ['neige', 'hiver', 'glace', 'flocon', 'givre', 'enneige', 'banquise', 'glacier', 'froid'], milieu: ['neige'], saison: ['hiver'] },
+      { rx: /interieur|maison|cosy|chambre|salon|cuisine|foyer/, words: ['maison', 'chambre', 'salon', 'canape', 'cuisine', 'cosy', 'lit', 'table', 'tapis', 'coussin', 'etagere', 'interieur'], milieu: ['interieur'], interieur: true },
+      { rx: /fleur|printemps|floral|cerisier|petale/, words: ['fleur', 'fleurs', 'printemps', 'petale', 'floral', 'cerisier', 'bouquet', 'prairie fleurie'], saison: ['printemps'] },
+      { rx: /automne|feuilles mortes/, words: ['automne', 'feuilles mortes', 'citrouille', 'champignon'], saison: ['automne'], colors: ['orange', 'marron'] },
+      { rx: /\bete\b|estival/, words: ['ete', 'soleil', 'chaleur', 'estival'], saison: ['ete'] },
+      { rx: /espace|cosmos|galax|planete|etoile filante/, words: ['espace', 'cosmos', 'galaxie', 'planete', 'astre', 'meteore', 'nebuleuse'], milieu: ['espace'] },
+      { rx: /montagne|sommet|falaise|rocheu/, words: ['montagne', 'sommet', 'falaise', 'rocher', 'pic', 'col', 'alpin'], milieu: ['montagne'] },
+      { rx: /desert|dune|aride/, words: ['desert', 'dune', 'sable', 'aride', 'cactus', 'canyon'], milieu: ['desert'] },
+      { rx: /volcan|lave|feu|flamme|braise/, words: ['volcan', 'lave', 'feu', 'flamme', 'braise', 'magma', 'incendie'], milieu: ['volcan'], colors: ['rouge', 'orange'] },
+      { rx: /grotte|caverne|souterrain|mine/, words: ['grotte', 'caverne', 'souterrain', 'mine', 'cristal', 'stalactite'], milieu: ['grotte'] },
+      { rx: /ciel|nuage|vol\b|voler|envol/, words: ['ciel', 'nuage', 'nuages', 'vol', 'envol', 'vent'], milieu: ['ciel'], profondeur: ['ciel', 'en hauteur'] },
+      { rx: /pluie|orage|tempete|eclair/, words: ['pluie', 'orage', 'tempete', 'eclair', 'goutte', 'flaque'], meteo: ['pluie', 'orage'] },
+      { rx: /prairie|campagne|champ|herbe|colline/, words: ['prairie', 'campagne', 'champ', 'herbe', 'colline', 'pre'], milieu: ['prairie'] },
+      { rx: /jardin|potager|parc/, words: ['jardin', 'potager', 'parc', 'massif', 'pelouse'], milieu: ['jardin'] },
+      { rx: /riviere|lac|etang|ruisseau|cascade|mare/, words: ['riviere', 'lac', 'etang', 'ruisseau', 'cascade', 'mare', 'berge', 'nenuphar'], milieu: ['surface de l eau'] },
+      { rx: /sombre|obscur|tenebre|inquietant|fantome|hant/, words: ['sombre', 'ombre', 'fantome', 'hante', 'brume', 'mysterieux'], luminosite: ['sombre'] },
+      { rx: /lumineux|ensoleill|radieux/, words: ['soleil', 'lumineux', 'ensoleille', 'rayons'], luminosite: ['clair'] },
+      { rx: /pastel|doux|douceur/, words: [], saturation: ['pastel', 'douce'] }
+    ];
+    var STOP = /^(de|des|du|la|le|les|un|une|et|en|au|aux|a|avec|sur|dans|par|pour|tres|bien|style|page|theme|carte|cartes|pokemon)$/;
+
+    function parse(query, extraColors) {
+      var q = strip(query);
+      var spec = { words: [], milieu: [], moment: [], saison: [], meteo: [], profondeur: [], luminosite: [], saturation: [], colors: (extraColors || []).slice(), interieur: false, free: [], empty: true };
+      THEMES.forEach(function (t) {
+        if (!t.rx.test(q)) return;
+        ['words', 'milieu', 'moment', 'saison', 'meteo', 'profondeur', 'luminosite', 'saturation'].forEach(function (k) { if (t[k]) spec[k] = spec[k].concat(t[k]); });
+        if (t.interieur) spec.interieur = true;
+        if (t.colors && !extraColors.length) spec.themeColors = (spec.themeColors || []).concat(t.colors);
+      });
+      q.split(/[^a-z0-9]+/).forEach(function (w) {
+        if (w.length < 3 || STOP.test(w)) return;
+        var f = family(w);
+        if (f && w.length >= 3 && FAMILIES.some(function (x) { return x[0] === f && x[1].test(w); }) && !/ciel|ocean|soleil|nuit|neige|bois|terre|feuillage/.test(w)) {
+          if (spec.colors.indexOf(f) === -1) spec.colors.push(f);
+          return;
+        }
+        if (spec.words.indexOf(w) === -1) spec.free.push(w);
+      });
+      spec.empty = !q.trim() && !spec.colors.length;
+      return spec;
+    }
+    function has(t, w) { return t.indexOf(' ' + w) !== -1; } // début de mot : « arbre » trouve « arbres »
+
+    function keywordScore(c, spec) {
+      if (spec.empty) return 0;
+      var t = text(c), s = 0, hits = 0;
+      spec.words.forEach(function (w) { if (has(t, w)) hits++; });
+      s += Math.min(hits, 4) * 2.5;
+      var who = ' ' + strip([c.nom, (c.types || []).join(' ')].join(' ')).replace(/[^a-z0-9]+/g, ' ') + ' ';
+      spec.free.forEach(function (w) {
+        var stem = w.slice(0, Math.max(4, w.length - 2));
+        if (has(t, stem)) s += 4;
+        if (has(who, stem)) s += 6;
+      });
+      var mil = ' ' + strip(c.milieu).replace(/[^a-z0-9]+/g, ' ') + ' ';
+      if (spec.milieu.some(function (m) { return mil.indexOf(' ' + m + ' ') !== -1 || mil.trim() === m; })) s += 7;
+      if (spec.moment.length && spec.moment.indexOf(strip(c.moment)) !== -1) s += 6;
+      if (spec.saison.length && spec.saison.indexOf(strip(c.saison)) !== -1) s += 4;
+      if (spec.meteo.length && spec.meteo.indexOf(strip(c.meteo)) !== -1) s += 4;
+      var prof = strip(c.profondeur).replace(/[^a-z0-9]+/g, ' ');
+      if (spec.profondeur.length && spec.profondeur.indexOf(prof) !== -1) s += 4;
+      if (spec.luminosite.length && spec.luminosite.indexOf(strip(c.luminosite)) !== -1) s += 3;
+      if (spec.saturation.length && spec.saturation.indexOf(strip(c.saturation)) !== -1) s += 3;
+      if (spec.interieur && (c.interieur === true || c.interieur === 'true')) s += 7;
+      var cols = spec.colors.length ? spec.colors : (spec.themeColors || []);
+      if (cols.length) {
+        var v = colorVec(c), share = 0;
+        cols.forEach(function (f) { share += v[f] || 0; });
+        // couleurs demandées explicitement : critère majeur
+        s += share * (spec.colors.length ? 18 : 6);
+        if (spec.colors.length && cols.indexOf(c._dom) !== -1) s += 4;
+      }
+      return s;
+    }
+
+    var WARM = { rouge: 1, orange: 1, jaune: 1, marron: 1, beige: 1, rose: 1 };
+    function hueClass(f) { return !f ? null : f === 'multicolore' ? 'multi' : WARM[f] ? 'chaud' : /blanc|gris|noir/.test(f) ? 'neutre' : 'froid'; }
+    function coherence(c, group) {
+      if (!group.length) return 0;
+      var cs = 0, st = 0, lum = 0, tp = 0, sat = 0, era = 0, fam = 0, dup = 0, sameDom = 0, sameClass = 0;
+      colorVec(c);
+      var g = styleGroup(c);
+      group.forEach(function (o) {
+        cs += colorSim(c, o);
+        var og = styleGroup(o);
+        st += g === og ? 1 : (g === '3d' || og === '3d') ? -1.5 : -0.3;
+        if (c.luminosite && c.luminosite === o.luminosite) lum++;
+        if (temp(c) === temp(o)) tp++;
+        if (c.saturation && c.saturation === o.saturation) sat++;
+        if (c.epoque === o.epoque) era++;
+        if (c.famille && c.famille === o.famille) fam++;
+        if (c.dex && o.dex && c.dex[0] && c.dex[0] === o.dex[0]) dup++;
+        colorVec(o);
+        if (c._dom && c._dom === o._dom) sameDom++;
+        if (hueClass(c._dom) && hueClass(c._dom) === hueClass(o._dom)) sameClass++;
+      });
+      var n = group.length;
+      return (cs / n) * 14 + (sameDom / n) * 6 + (sameClass / n) * 5 + (st / n) * 4 + (lum / n) * 2 + (tp / n) * 2 + (sat / n) * 1.2 + (era / n) * 0.6 + Math.min(fam, 2) * 0.8 - dup * 2.5;
+    }
+
+    // Choisit `count` cartes : pertinentes pour le mot-clé, puis les plus cohérentes entre elles
+    function select(cands, spec, seeds, count, rnd) {
+      rnd = rnd || Math.random;
+      cands.forEach(function (c) { c._k = keywordScore(c, spec); });
+      var pool = cands;
+      if (!spec.empty) {
+        var sorted = cands.slice().sort(function (a, b) { return b._k - a._k; });
+        var best = sorted.length ? sorted[0]._k : 0;
+        var bar = Math.max(4, best * 0.45);
+        pool = sorted.filter(function (c) { return c._k >= bar; });
+        if (pool.length < count * 2) pool = sorted.slice(0, Math.max(count * 3, pool.length));
+      }
+      var maxK = pool.reduce(function (m, c) { return Math.max(m, c._k || 0); }, 0) || 1;
+      var chosen = [];
+      var group = seeds.slice();
+      if (!group.length && pool.length) {
+        // première carte : la plus pertinente parmi les plus belles
+        var first = pool.slice().sort(function (a, b) { return (b._k / maxK * 10 + starScore(b) + rnd()) - (a._k / maxK * 10 + starScore(a) + rnd()); })[0];
+        chosen.push(first); group.push(first);
+      }
+      var used = {};
+      chosen.concat(seeds).forEach(function (c) { used[c.id] = true; });
+      while (chosen.length < count) {
+        var bestC = null, bestS = -1e9;
+        for (var i = 0; i < pool.length; i++) {
+          var c = pool[i];
+          if (used[c.id]) continue;
+          var s = (c._k / maxK) * (spec.empty ? 0 : 9) + coherence(c, group) + rnd() * 1.2;
+          if (s > bestS) { bestS = s; bestC = c; }
+        }
+        if (!bestC) break;
+        used[bestC.id] = true; chosen.push(bestC); group.push(bestC);
+      }
+      return chosen;
+    }
+
+    var STAR_RX = /sp[ée]cial|secr|hyper|magnifique|ultra|gold|dor/i;
+    function starScore(c) {
+      return (STAR_RX.test(c.rarete || '') ? 2 : /illustration/i.test(c.rarete || '') ? 1 : 0) +
+        ((c.personnages || []).some(function (p) { return p && p.nom && p.nom !== 'inconnu'; }) ? 1.5 : 0) +
+        (c.luminosite === 'clair' ? 0.5 : 0) + (c.densite === 'épurée' ? 0.3 : 0);
+    }
+    var DEPTH = { 'ciel': 0, 'en hauteur': 1, 'sol': 3, 'surface': 3, "sous l'eau": 4, 'profondeurs': 5 };
+    function pairScore(a, b) {
+      var s = colorSim(a, b) * 6 + (styleGroup(a) === styleGroup(b) ? 1.5 : 0) + (a.luminosite === b.luminosite ? 1 : 0);
+      var ba = a.bords || {}, bb = b.bords || {};
+      if (family(ba.droite) && family(ba.droite) === family(bb.gauche)) s += 0.8;
+      if (family(ba.bas) && family(ba.bas) === family(bb.haut)) s += 0.8;
+      return s;
+    }
+
+    // Place les cartes : la vedette au centre, puis chaque case reçoit la carte qui va le mieux avec ses voisines
+    function arrange(cards, cols, rows, fixed, slotsToFill, withCenter) {
+      var grid = fixed.slice();
+      var left = cards.slice();
+      var order = slotsToFill.slice();
+      var center = (cols % 2 && rows % 2) ? Math.floor(rows / 2) * cols + Math.floor(cols / 2) : -1;
+      if (withCenter && order.indexOf(center) !== -1) {
+        var si = 0, sv = -1;
+        left.forEach(function (c, k) { var v = starScore(c) + (c._k || 0) * 0.05; if (v > sv) { sv = v; si = k; } });
+        grid[center] = left.splice(si, 1)[0];
+        order.splice(order.indexOf(center), 1);
+      }
+      // cases voisines de cartes déjà posées d'abord, pour que les raccords soient soignés
+      var neigh = function (i) {
+        var r = Math.floor(i / cols), c = i % cols, out = [];
+        [[r - 1, c], [r + 1, c], [r, c - 1], [r, c + 1]].forEach(function (p) { if (p[0] >= 0 && p[0] < rows && p[1] >= 0 && p[1] < cols) out.push(p[0] * cols + p[1]); });
+        return out;
+      };
+      while (order.length && left.length) {
+        order.sort(function (a, b) {
+          var na = neigh(a).filter(function (k) { return grid[k]; }).length, nb = neigh(b).filter(function (k) { return grid[k]; }).length;
+          return nb - na || a - b;
+        });
+        var slot = order.shift();
+        var row = Math.floor(slot / cols);
+        var nb = neigh(slot).map(function (k) { return grid[k]; }).filter(Boolean);
+        var bi = 0, bs = -1e9;
+        left.forEach(function (c, k) {
+          var s = nb.reduce(function (a, o) { return a + pairScore(c, o); }, 0);
+          var d = DEPTH[c.profondeur];
+          if (d != null && rows > 1) s -= Math.abs(d / 5 - row / (rows - 1)) * 1.5; // ciel en haut, profondeurs en bas
+          if (s > bs) { bs = s; bi = k; }
+        });
+        grid[slot] = left.splice(bi, 1)[0];
+      }
+      return grid;
+    }
+    function dominantFamily(cards) {
+      var v = {};
+      cards.forEach(function (c) { var cv = colorVec(c); for (var f in cv) v[f] = (v[f] || 0) + cv[f]; });
+      var best = null; for (var f in v) if (!best || v[f] > v[best]) best = f;
+      return best;
+    }
+    return { parse: parse, select: select, arrange: arrange, keywordScore: keywordScore, colorVec: colorVec, colorSim: colorSim,
+      styleGroup: styleGroup, family: family, dominantFamily: dominantFamily, starScore: starScore, PAGE_COLORS: PAGE_COLORS, HUE: HUE, strip: strip, get: get };
+  })();
+
+  // ----- choix des couleurs (en plus du mot-clé)
+  var pickedColors = [];
+  var COLOR_CHIPS = [['bleu', '#3B82C4'], ['turquoise', '#2BB3A8'], ['vert', '#4E9A4A'], ['jaune', '#E2B93B'], ['orange', '#E07B39'],
+    ['rouge', '#C9443C'], ['rose', '#E07AA8'], ['violet', '#8A62C9'], ['marron', '#8B5E3C'], ['blanc', '#E9ECEF'], ['noir', '#1E2026']];
+  (function () {
+    var box = el('colorPick');
+    COLOR_CHIPS.forEach(function (cc) {
+      var b = mk('button', 'chip color-chip'); b.type = 'button';
+      var dot = mk('span', 'dot'); dot.style.background = cc[1]; b.appendChild(dot); b.appendChild(document.createTextNode(cc[0]));
+      b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', function () {
+        var k = pickedColors.indexOf(cc[0]);
+        if (k !== -1) pickedColors.splice(k, 1);
+        else { pickedColors.push(cc[0]); if (pickedColors.length > 2) pickedColors.shift(); }
+        Array.prototype.forEach.call(box.children, function (x) { x.setAttribute('aria-pressed', String(pickedColors.indexOf(x.textContent) !== -1)); });
+      });
+      box.appendChild(b);
     });
-    return prof;
-  }
-  function mode(values) {
-    var count = {}, best = null;
-    values.forEach(function (v) { if (v) { count[v] = (count[v] || 0) + 1; if (!best || count[v] > count[best]) best = v; } });
-    return best;
-  }
-  var STAR_RX = /sp[ée]cial|secr|hyper|magnifique|illustration|ultra|gold|dor/i;
-  function starScore(c) {
-    return (STAR_RX.test(c.rarete || '') ? 2 : 0) + (names(c).length ? 1.5 : 0) + (c.luminosite === 'clair' ? 0.5 : 0) + (c.cadrage === 'plan moyen' ? 0.5 : 0);
-  }
-  var DEPTH = { 'ciel': 0, 'en hauteur': 1, 'sol': 3, 'surface': 3, "sous l'eau": 4, 'profondeurs': 5 };
-  var PAGE_COLORS = { bleu: '#12324A', turquoise: '#0F3B3A', vert: '#17301F', jaune: '#45391A', orange: '#4A2A12', rouge: '#4A1616', rose: '#4A1F33',
-    violet: '#2F1F4A', marron: '#3A2A1C', beige: '#3F3628', gris: '#2A2E33', noir: '#141414', blanc: '#34393F', multicolore: '#2A2440' };
+  })();
+
   function toSlot(c) { return { id: c.id, name: c.nom, number: c.numero, rarity: c.rarete || '', small: c.small, large: c.large }; }
   function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
+  var BIG_BANNER = /^(v|vmax|vstar|v-union|gx|turbo|autre)$/i;
 
   // ----- préparation commune aux deux modes
   function prepare() {
     var theme = el('aiTheme').value.trim();
     var cur = page();
     var n = cur.cols * cur.rows;
-    var placed = [];
-    if (el('aiUsePage').checked) cur.slots.forEach(function (c, i) { if (c && c.id) placed.push({ card: c, i: i, db: dbById[c.id] || null }); });
-    if (!theme && !placed.length) throw new Error('écris des mots-clés ou place au moins une carte sur la page');
     if (!DB || !DB.length) throw new Error('la base de cartes analysées est encore vide, reviens après la prochaine analyse automatique');
+    var spec = Engine.parse(theme, pickedColors);
 
     var empty = [];
     cur.slots.forEach(function (c, i) { if (!c) empty.push(i); });
-    var fill = placed.length > 0 && empty.length > 0;
+    var placed = [];
+    cur.slots.forEach(function (c, i) { if (c && c.id) placed.push({ card: c, i: i, db: dbById[c.id] || null }); });
+    var usePage = el('aiUsePage').checked && placed.length > 0;
+    // Page à moitié remplie : on complète. Page pleine : nouvelle page (inspirée de celle-ci seulement sans mot-clé).
+    var fill = usePage && empty.length > 0;
+    var seeds = (fill || (usePage && spec.empty)) ? placed.map(function (p) { return p.db; }).filter(Boolean) : [];
+    if (spec.empty && !seeds.length) throw new Error('écris ce que tu veux voir, choisis une couleur, ou place quelques cartes sur la page');
     var target = fill ? empty.length : n;
-    var placedDb = placed.map(function (p) { return p.db; }).filter(Boolean);
-    var placedIds = {};
-    placed.forEach(function (p) { placedIds[p.card.id] = true; });
 
-    // Règles strictes
+    var exclude = {};
+    if (fill) placed.forEach(function (p) { exclude[p.card.id] = true; });
     var border = el('ruleBorder').value;
-    if (border === 'auto') border = mode(placedDb.map(function (c) { return c.bordure; })) || 'argent';
+    if (border === 'auto') border = mode(seeds.map(function (c) { return c.bordure; })) || 'argent';
     var eras = null;
-    if (el('ruleEra').checked && placedDb.length) { eras = {}; placedDb.forEach(function (c) { eras[c.epoque] = true; }); }
-    var full = el('ruleFull').checked, clean = el('ruleClean').checked;
-    function allowed(c) {
-      if (placedIds[c.id]) return false;
+    if (el('ruleEra').checked && seeds.length) { eras = {}; seeds.forEach(function (c) { eras[c.epoque] = true; }); }
+    var full = el('ruleFull').checked, clean = el('ruleClean').checked, illus = el('ruleIllus').checked;
+    var cands = DB.filter(function (c) {
+      if (exclude[c.id]) return false;
       if (/[ée]nergie|energy/i.test(c.cat || '')) return false;
       if (full && c.part !== 'totale') return false;
+      if (illus && !/illustration/i.test(c.rarete || '')) return false;
       if (border !== 'toutes' && c.bordure && c.bordure !== border) return false;
       if (eras && !eras[c.epoque]) return false;
-      if (clean && c.habillage && (c.habillage.bandeau || c.habillage.logo || c.habillage.texte_charge)) return false;
+      if (clean && c.habillage && BIG_BANNER.test(String(c.habillage.bandeau || ''))) return false;
       return true;
-    }
-    var cands = DB.filter(allowed);
+    });
     if (!cands.length) throw new Error('aucune carte ne respecte les règles choisies : assouplis-les dans « Règles de composition »');
-
-    // Règles souples : mots-clés, puis profil visuel (cartes placées, sinon les meilleures pour les mots-clés)
-    var themeWords = {};
-    tokens(theme).forEach(function (w) { themeWords[w] = 3; });
-    placedDb.forEach(function (c) { tokens([c.univers, c.lieu, (c.tags || []).join(' ')].join(' ')).forEach(function (w) { if (!themeWords[w]) themeWords[w] = 1; }); });
-    function wordScore(c) { var s = 0; cardWords(c).forEach(function (w) { if (themeWords[w]) s += themeWords[w]; }); return s; }
-    cands.forEach(function (c) { c._w = wordScore(c); });
-    var prof = placedDb.length ? profileOf(placedDb)
-      : profileOf(cands.slice().sort(function (a, b) { return b._w - a._w; }).slice(0, 15).filter(function (c) { return c._w > 0; }));
-    var families = {};
-    placedDb.forEach(function (c) { if (c.famille) families[c.famille] = true; });
-    cands.forEach(function (c) {
-      var s = c._w;
-      FEATURES.forEach(function (f) { if (prof[f[0]] && get(c, f[0]) === prof[f[0]]) s += f[1]; });
-      if (c.famille && families[c.famille]) s += 1.5;
-      s += Math.random() * 0.6; // un peu de variété d'une génération à l'autre
-      c._s = s;
-    });
-    cands.sort(function (a, b) { return b._s - a._s; });
-    return { theme: theme, cur: cur, n: n, placed: placed, placedDb: placedDb, empty: empty, fill: fill, target: target, cands: cands, prof: prof };
+    return { theme: theme, spec: spec, cur: cur, n: n, placed: placed, seeds: seeds, empty: empty, fill: fill, target: target, cands: cands };
+  }
+  function mode(values) {
+    var count = {}, best = null;
+    values.forEach(function (v) { if (v) { count[v] = (count[v] || 0) + 1; if (!best || count[v] > count[best]) best = v; } });
+    return best;
   }
 
-  // ----- contrôle des intrus : une carte qui détonne sur 3 critères sur 4 est remplacée
-  var CHECK = ['palette.dominante', 'palette.temperature', 'luminosite', 'style'];
-  function fixOutliers(ctx, chosen) {
-    var all = ctx.placedDb.concat(chosen);
-    var ref = {};
-    CHECK.forEach(function (f) { ref[f] = mode(all.map(function (c) { return get(c, f); })); });
-    var miss = function (c) { return CHECK.filter(function (f) { return ref[f] && get(c, f) && get(c, f) !== ref[f]; }).length; };
-    var used = {};
-    chosen.forEach(function (c) { used[c.id] = true; });
-    var replaced = 0;
-    var out = chosen.map(function (c) {
-      if (miss(c) < 3) return c;
-      var alt = ctx.cands.filter(function (x) { return !used[x.id] && miss(x) === 0; })[0];
-      if (!alt) return c;
-      used[alt.id] = true; replaced++;
-      return alt;
-    });
-    return { cards: out, replaced: replaced };
-  }
-
-  // ----- placement sans IA
-  function similarity(a, b) {
-    var s = 0;
-    FEATURES.forEach(function (f) { if (get(a, f[0]) && get(a, f[0]) === get(b, f[0])) s += f[1]; });
-    if (a.bords && b.bords) ['haut', 'bas', 'gauche', 'droite'].forEach(function (k) { if (a.bords[k] && a.bords[k] === b.bords[k]) s += 0.5; });
-    return s;
-  }
-  function arrange(ctx, chosen) {
-    var cols = ctx.cur.cols, rows = ctx.cur.rows;
+  function place3(ctx, chosen) {
+    var cur = ctx.cur;
     if (ctx.fill) {
-      // chaque case vide reçoit la carte qui ressemble le plus à ses voisines
-      var grid = ctx.cur.slots.map(function (s) { return s ? (dbById[s.id] || null) : null; });
-      var left = chosen.slice(), res = {};
-      ctx.empty.forEach(function (i) {
-        var r = Math.floor(i / cols), col = i % cols;
-        var neigh = [[r - 1, col], [r + 1, col], [r, col - 1], [r, col + 1]].filter(function (p) { return p[0] >= 0 && p[0] < rows && p[1] >= 0 && p[1] < cols; })
-          .map(function (p) { return grid[p[0] * cols + p[1]]; }).filter(Boolean);
-        var best = 0, bestS = -1;
-        left.forEach(function (c, k) {
-          var s = neigh.reduce(function (a, nb) { return a + similarity(c, nb); }, 0) + (DEPTH[c.profondeur] != null ? -Math.abs(DEPTH[c.profondeur] - r * 5 / Math.max(1, rows - 1)) * 0.3 : 0);
-          if (s > bestS) { bestS = s; best = k; }
-        });
-        res[i] = left.splice(best, 1)[0];
-        grid[i] = res[i];
-      });
-      return ctx.empty.map(function (i) { return res[i]; });
+      var fixed = cur.slots.map(function (s) { return s ? (dbById[s.id] || null) : null; });
+      var g = Engine.arrange(chosen, cur.cols, cur.rows, fixed, ctx.empty, false);
+      return ctx.empty.map(function (i) { return g[i]; });
     }
-    // nouvelle page : progression verticale (ciel en haut, profondeurs en bas), carte vedette au centre, paires en miroir
-    var order = chosen.slice().sort(function (a, b) {
-      var da = DEPTH[a.profondeur] != null ? DEPTH[a.profondeur] : 2.5, db = DEPTH[b.profondeur] != null ? DEPTH[b.profondeur] : 2.5;
-      var la = a.luminosite === 'clair' ? 0 : a.luminosite === 'sombre' ? 1 : 0.5, lb = b.luminosite === 'clair' ? 0 : b.luminosite === 'sombre' ? 1 : 0.5;
-      return (da - db) || (la - lb);
-    });
-    var slots = order.slice();
-    if (cols % 2 === 1 && rows % 2 === 1 && slots.length === cols * rows) {
-      var center = Math.floor(rows / 2) * cols + Math.floor(cols / 2);
-      var starI = 0, starV = -1;
-      slots.forEach(function (c, k) { var v = starScore(c); if (v > starV) { starV = v; starI = k; } });
-      var tmp = slots[center]; slots[center] = slots[starI]; slots[starI] = tmp;
-    }
-    // paire (Posipi/Négapi…) : sur la même rangée, aux deux bords
-    var centerI = (cols % 2 === 1 && rows % 2 === 1) ? Math.floor(rows / 2) * cols + Math.floor(cols / 2) : -1;
-    var swap = function (a, b) { var t = slots[a]; slots[a] = slots[b]; slots[b] = t; };
-    for (var i = 0; i < slots.length; i++) {
-      var a = slots[i];
-      if (!a || !a.paire || i === centerI) continue;
-      var j = slots.findIndex(function (x, k) { return k !== centerI && x && x.dex && x.dex[0] === a.paire; });
-      if (j < 0 || cols < 3) continue;
-      var b = slots[j];
-      var row = Math.floor(i / cols), L = row * cols, R = L + cols - 1;
-      if (L === centerI || R === centerI) continue;
-      swap(slots.indexOf(a), L);
-      swap(slots.indexOf(b), R);
-      break; // une paire suffit
-    }
-    return slots;
+    var all = []; for (var i = 0; i < ctx.n; i++) all.push(i);
+    return Engine.arrange(chosen, cur.cols, cur.rows, new Array(ctx.n).fill(null), all, true);
   }
 
-  function apply(ctx, cards, title, subtitle, color, replaced) {
+  function apply(ctx, cards, title, subtitle, note) {
     var status = el('aiGenStatus');
     var cur = ctx.cur;
+    var real = cards.filter(Boolean);
+    var dom = Engine.dominantFamily(ctx.seeds.concat(real));
+    var color = Engine.PAGE_COLORS[dom] || null;
     if (ctx.fill) {
       cards.forEach(function (c, k) { if (c) cur.slots[ctx.empty[k]] = toSlot(c); });
       if (!cur.title || cur.title === 'Nouvelle page') cur.title = title || cur.title;
       if (color && cur.color === '#17301F') cur.color = color;
       state.selected = 0; save(); render();
-      status.textContent = cards.filter(Boolean).length + ' carte(s) ajoutée(s)' + (subtitle ? ' : ' + subtitle : '') + '.';
+      status.textContent = real.length + ' carte(s) ajoutée(s) en accord avec la page' + (subtitle ? ' : ' + subtitle : '') + '.';
     } else {
       var slots = cards.map(function (c) { return c ? toSlot(c) : null; });
       while (slots.length < ctx.n) slots.push(null);
@@ -1117,8 +1349,16 @@
       state.current = state.pages.length - 1; state.selected = 0; save(); render();
       status.textContent = 'Page « ' + (title || 'Nouvelle page') + ' » créée' + (subtitle ? ' : ' + subtitle : '') + '.';
     }
-    if (replaced) status.textContent += ' ' + replaced + ' carte(s) qui détonnaient ont été remplacées.';
-    if (cards.filter(Boolean).length < ctx.target) status.textContent += ' Pas assez de cartes compatibles pour tout remplir : assouplis les règles ou attends que la base grandisse.';
+    if (note) status.textContent += ' ' + note;
+    var strong = real.filter(function (c) { return (c._k || 0) >= 4; }).length;
+    if (!ctx.spec.empty && strong < real.length) status.textContent += ' ' + (real.length - strong) + ' carte(s) collent moins au thème : la base n\'en contient pas encore assez.';
+    if (real.length < ctx.target) status.textContent += ' Pas assez de cartes compatibles pour tout remplir : assouplis les règles.';
+    toast(ctx.fill ? 'Page complétée' : 'Nouvelle page créée');
+  }
+  function titleFor(ctx) {
+    if (ctx.theme) return cap(ctx.theme);
+    if (pickedColors.length) return cap(pickedColors.join(' et '));
+    return page().title && page().title !== 'Nouvelle page' ? page().title + ' (suite)' : 'Nouvelle page';
   }
 
   // ----- Composer sans IA
@@ -1127,73 +1367,62 @@
     status.textContent = 'Chargement de la base…';
     loadDb().then(function () {
       var ctx = prepare();
-      var chosen = ctx.cands.slice(0, ctx.target);
-      var fixed = fixOutliers(ctx, chosen);
-      var cards = arrange(ctx, fixed.cards);
-      var dom = ctx.prof['palette.dominante'] || mode(cards.map(function (c) { return c && get(c, 'palette.dominante'); }));
-      var title = ctx.theme ? cap(ctx.theme) : cap(ctx.prof.univers || (cards[0] && cards[0].univers) || 'Nouvelle page');
-      apply(ctx, cards, title, '', PAGE_COLORS[dom] || null, fixed.replaced);
+      var chosen = Engine.select(ctx.cands, ctx.spec, ctx.seeds, ctx.target);
+      apply(ctx, place3(ctx, chosen), titleFor(ctx), '');
     }).catch(function (err) { status.textContent = 'Erreur : ' + err.message; });
   });
 
-  // ----- Composer avec l'IA
-  function line(c) {
-    var b = c.bords || {};
-    return [c.id, c.nom, (c.types || []).join('/'), c.famille ? 'famille ' + c.famille : '', c.paire ? 'paire ' + c.paire : '',
-      names(c).join('+'), c.univers, c.lieu, c.milieu + '/' + c.profondeur,
-      get(c, 'palette.dominante') + ' ' + (get(c, 'palette.temperature') || '') + ' ' + (c.luminosite || '') + ' ' + (c.saturation || ''),
-      'lumière ' + (get(c, 'lumiere.type') || '') + ' ' + (get(c, 'lumiere.direction') || ''), c.style + ', ' + c.rendu + ', ' + c.cadrage,
-      'regarde ' + (c.orientation || ''), 'bords ' + [b.haut, b.bas, b.gauche, b.droite].join('/'), (c.tags || []).slice(0, 6).join(',')].join(' | ');
+  // ----- Composer avec l'IA : l'IA choisit et ordonne parmi une présélection cohérente
+  function describe(c) {
+    var b = c.bords || {}, p = c.palette || {};
+    return [c.id, c.nom, c.univers, c.lieu, c.milieu + '/' + c.profondeur, c.moment,
+      'couleurs ' + [p.dominante].concat(p.secondaires || []).join('+') + ' (' + (p.temperature || '') + ', ' + (c.luminosite || '') + ', ' + (c.saturation || '') + ')',
+      'style ' + c.style, 'bords ' + [b.haut, b.bas, b.gauche, b.droite].join('/'), (c.tags || []).slice(0, 6).join(',')].join(' | ');
   }
   el('aiGenBtn').addEventListener('click', function () {
     var status = el('aiGenStatus');
-    var ctx;
+    var ctx, shortlist;
     el('aiGenBtn').disabled = true;
     status.textContent = 'Chargement de la base…';
     loadDb().then(function () {
       ctx = prepare();
-      ctx.pool = ctx.cands.slice(0, 250);
+      shortlist = Engine.select(ctx.cands, ctx.spec, ctx.seeds, Math.min(ctx.target * 4, 48));
       var cols = ctx.cur.cols, rows = ctx.cur.rows;
-      var images = [], imageNames = [];
-      var placedLines = ctx.placed.map(function (p) {
-        if (!p.db && images.length < 6 && p.card.small) { images.push(p.card.small.replace(/\/low\.webp$/, '/low.png')); imageNames.push(p.card.name); }
-        return 'case ' + (p.i + 1) + ' : ' + (p.db ? line(p.db) : p.card.id + ' | ' + p.card.name);
-      });
       var prompt =
-        'Tu es un expert qui compose de très belles pages de classeur de cartes Pokémon. Grille de ' + cols + ' colonnes × ' + rows + ' lignes, cases numérotées de 1 à ' + ctx.n + ' (gauche à droite, puis haut en bas).\n' +
-        (ctx.theme ? 'Mots-clés demandés : « ' + ctx.theme + ' ». Traduis-les en critères VISUELS (couleur, lumière, lieu, style) avant de choisir.\n' : '') +
-        (ctx.placed.length ? '\nCartes déjà placées :\n' + placedLines.join('\n') + '\n' +
-          (images.length ? 'Les images jointes sont, dans l\'ordre, les illustrations de : ' + imageNames.join(', ') + '.\n' : '') +
-          'Inspire-toi fortement de leur univers, palette, lumière, style, et des Pokémon eux-mêmes (familles, paires).\n' : '') +
-        (ctx.fill
-          ? '\nCes cartes restent en place. Choisis exactement ' + ctx.target + ' cartes pour les cases vides, dans cet ordre de cases : ' + ctx.empty.map(function (i) { return i + 1; }).join(', ') + '.\n'
-          : '\nChoisis exactement ' + ctx.n + ' cartes pour une nouvelle page, dans l\'ordre des cases.\n') +
-        '\nCe qui fait une page RÉUSSIE (tiré de vrais exemples) :\n' +
-        '- Le thème se voit d\'un coup d\'œil : une palette, une lumière, un lieu ou un style d\'image communs (ex. tout en bleu sous-marin ; tout en vert luxuriant ; intérieur chaleureux ; gros plans flous façon photo).\n' +
-        '- Unité : même style de dessin, même température de couleur, luminosités proches. Les types des Pokémon comptent peu.\n' +
-        '- Progression verticale quand le décor s\'y prête : ciel et surface en haut, sol ou profondeurs en bas ; la lumière vient du haut.\n' +
-        '- Les bords de cartes voisines se raccordent (mêmes couleurs aux bords qui se touchent), comme un seul grand paysage.\n' +
-        (ctx.fill ? '' : '- Le centre accueille la carte la plus forte : un dresseur important, un Pokémon iconique ou la carte la plus lumineuse.\n') +
-        '- Équilibre : une paire (même numéro dans « paire ») se place en miroir sur une même rangée ; une famille d\'évolution s\'aligne sur une rangée dans l\'ordre ; les cartes avec personnages sont réparties, jamais côte à côte.\n' +
-        '- Le même Pokémon peut revenir si les illustrations sont différentes, mais varie les espèces.\n' +
-        'Ce qui fait une page RATÉE : palettes qui se battent (vert vif, orange feu, multicolore), styles mélangés (3D, dessin plat, peinture), une carte sombre et chargée au centre, un thème seulement conceptuel qu\'on ne voit pas.\n\n' +
+        'Tu composes une très belle page de classeur de cartes Pokémon : grille de ' + cols + ' colonnes × ' + rows + ' lignes, cases numérotées de 1 à ' + ctx.n + ' (gauche à droite, puis haut en bas).\n' +
+        (ctx.theme ? 'Thème demandé : « ' + ctx.theme + ' ». Il doit se voir au premier coup d\'œil.\n' : '') +
+        (pickedColors.length ? 'Couleurs demandées : ' + pickedColors.join(' et ') + '. Elles doivent dominer la page.\n' : '') +
+        (ctx.seeds.length ? '\nCartes déjà sur la page (à prolonger) :\n' + ctx.placed.filter(function (p) { return p.db; }).map(function (p) { return 'case ' + (p.i + 1) + ' : ' + describe(p.db); }).join('\n') + '\n' : '') +
+        (ctx.fill ? '\nChoisis exactement ' + ctx.target + ' cartes pour les cases vides, dans cet ordre de cases : ' + ctx.empty.map(function (i) { return i + 1; }).join(', ') + '.\n'
+          : '\nChoisis exactement ' + ctx.n + ' cartes, dans l\'ordre des cases.\n') +
+        '\nRègles, par ordre d\'importance :\n' +
+        '1. Unité de couleur : une palette commune et harmonieuse sur toute la page ; aucune carte ne doit trancher par sa couleur.\n' +
+        '2. Le thème se voit sur chaque carte (lieu, moment, ambiance).\n' +
+        '3. Même famille de style de dessin, luminosités proches.\n' +
+        '4. Les couleurs aux bords de cartes voisines se raccordent, comme un seul grand décor ; le ciel en haut, le sol ou les profondeurs en bas.\n' +
+        (ctx.fill ? '' : '5. La carte la plus spectaculaire au centre.\n') +
         'Réponds uniquement en JSON : {"titre": "titre court et évocateur en français", "sousTitre": "une ligne d\'ambiance", "cartes": ["id", …]}\n\n' +
-        'Cartes disponibles (id | nom | types | famille | paire | personnages | univers | lieu | milieu/profondeur | palette | lumière | style | orientation | bords haut/bas/gauche/droite | tags) :\n' +
-        ctx.pool.map(line).join('\n');
+        'Cartes présélectionnées (id | nom | univers | lieu | milieu/profondeur | moment | couleurs | style | bords haut/bas/gauche/droite | tags) :\n' +
+        shortlist.map(describe).join('\n');
       status.textContent = 'L\'IA compose la page…';
-      return callAI(prompt, images, 2000, function (s) { status.textContent = 'Limite de requêtes : nouvel essai dans ' + s + ' s…'; });
-    }).then(function (txt) {
-      var res = extractJson(txt);
-      var seen = {};
-      var chosen = (res.cartes || []).map(function (id) { return dbById[String(id).trim()]; })
-        .filter(function (c) { var ok = c && ctx.pool.indexOf(c) !== -1 && !seen[c.id]; if (c) seen[c.id] = true; return ok; })
-        .slice(0, ctx.target);
-      if (!chosen.length) throw new Error('aucune carte valide dans la réponse, réessaie');
-      // compléter si l'IA en a donné trop peu
-      for (var k = 0; chosen.length < ctx.target && k < ctx.cands.length; k++) if (!seen[ctx.cands[k].id]) { seen[ctx.cands[k].id] = true; chosen.push(ctx.cands[k]); }
-      var fixed = fixOutliers(ctx, chosen);
-      var dom = mode(ctx.placedDb.concat(fixed.cards).map(function (c) { return get(c, 'palette.dominante'); }));
-      apply(ctx, fixed.cards, res.titre || cap(ctx.theme), res.sousTitre || '', PAGE_COLORS[dom] || null, fixed.replaced);
+      return callAI(prompt, [], 2000, function (s, model) {
+        status.textContent = model ? 'Modèle sans quota gratuit aujourd\'hui, essai avec ' + model + '…' : 'Limite de requêtes : nouvel essai dans ' + s + ' s…';
+      }).then(function (txt) {
+        var res = extractJson(txt);
+        var byId = {}; shortlist.forEach(function (c) { byId[c.id] = c; });
+        var seen = {};
+        var chosen = (res.cartes || []).map(function (id) { return byId[String(id).trim()]; })
+          .filter(function (c) { var ok = c && !seen[c.id]; if (c) seen[c.id] = true; return ok; }).slice(0, ctx.target);
+        if (!chosen.length) throw new Error('réponse de l\'IA inutilisable');
+        for (var k = 0; chosen.length < ctx.target && k < shortlist.length; k++) if (!seen[shortlist[k].id]) { seen[shortlist[k].id] = true; chosen.push(shortlist[k]); }
+        var cards = chosen;
+        if (ctx.fill) cards = place3(ctx, chosen); // l'ordre des cases vides reste géré localement pour les raccords
+        apply(ctx, cards, res.titre || titleFor(ctx), res.sousTitre || '');
+      }, function (err) {
+        // IA indisponible (quota, clé…) : on compose quand même, sans IA
+        var chosen = shortlist.slice(0, ctx.target);
+        apply(ctx, place3(ctx, chosen), titleFor(ctx), '', '(IA indisponible : ' + err.message + '. Page composée sans IA.)');
+      });
     }).catch(function (err) {
       status.textContent = 'Erreur : ' + err.message;
     }).then(function () { el('aiGenBtn').disabled = false; });
