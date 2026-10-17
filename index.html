@@ -1625,6 +1625,8 @@
     var fill = usePage && empty.length > 0;
     var seeds = (fill || (usePage && spec.empty)) ? placed.map(function (p) { return p.db; }).filter(Boolean) : [];
     var target = fill ? empty.length : n;
+    // Couleurs choisies : elles priment sur celles (parfois mal analysées) des cartes déjà posées
+    if (pickedColors.length && kind !== 'vedette') seeds = seeds.map(function (c) { return starRef(c, pickedColors); });
 
     // --- illustrateur
     var artist = null;
@@ -1648,7 +1650,7 @@
     var border = el('ruleBorder').value;
     if (border === 'auto') border = mode(seeds.map(function (c) { return c.bordure; })) || 'argent';
     var eras = null;
-    if (el('ruleEra').checked && seeds.length && kind !== 'illus') { eras = {}; seeds.forEach(function (c) { eras[c.epoque] = true; }); }
+    if (el('ruleEra').checked && seeds.length && kind !== 'illus') { eras = {}; seeds.forEach(function (c) { eras[eraGroup(c.epoque)] = true; }); }
     var full = el('ruleFull').checked, clean = el('ruleClean').checked;
     var illus = el('ruleIllus').checked && kind !== 'illus'; // un illustrateur : toutes ses illustrations pleines
     var artistKey = artist && illusKey(artist);
@@ -1659,7 +1661,7 @@
       if (full && c.part !== 'totale') return false;
       if (illus && !/illustration/i.test(c.rarete || '')) return false;
       if (!artistKey && border !== 'toutes' && c.bordure && c.bordure !== border) return false;
-      if (eras && !eras[c.epoque]) return false;
+      if (eras && !eras[eraGroup(c.epoque)]) return false;
       if (clean && c.habillage && BIG_BANNER.test(String(c.habillage.bandeau || ''))) return false;
       if (kind === 'vedette') {
         if (FLASHY_RX.test(c.rarete || '') && !/^illustration rare$/i.test(c.rarete || '')) return false; // rien de plus rare que la vedette
@@ -1687,6 +1689,8 @@
     ctx.placed = placed; ctx.seeds = seeds; ctx.empty = empty; ctx.fill = fill; ctx.target = target; ctx.cands = cands;
     return ctx;
   }
+  // Époques au même design de carte (cadre, bordure) : on peut les mélanger sans que ça se voie
+  function eraGroup(e) { return /carlate|m[ée]ga/i.test(e || '') ? 'moderne' : (e || ''); }
   function mode(values) {
     var count = {}, best = null;
     values.forEach(function (v) { if (v) { count[v] = (count[v] || 0) + 1; if (!best || count[v] > count[best]) best = v; } });
@@ -1801,7 +1805,8 @@
     status.textContent = 'Chargement de la base…';
     loadDb().then(function () {
       ctx = prepare();
-      shortlist = selectFor(ctx, Math.min(ctx.target * 4, 48));
+      // l'IA choisit et ordonne seulement parmi les meilleures cartes du classement (sinon elle part vers les cartes célèbres hors thème)
+      shortlist = selectFor(ctx, Math.min(Math.ceil(ctx.target * 1.5) + 1, 20));
       var cols = ctx.cur.cols, rows = ctx.cur.rows;
       var kindRule = ctx.kind === 'vedette'
         ? '0. La case ' + (ctx.center + 1) + ' contient la carte VEDETTE (' + (ctx.starDb ? describe(ctx.starDb) : ctx.star.name) + '). ' +
@@ -1824,7 +1829,8 @@
         '4. Les couleurs aux bords de cartes voisines se raccordent, comme un seul grand décor ; le ciel en haut, le sol ou les profondeurs en bas.\n' +
         (ctx.fill ? '' : '5. La carte la plus spectaculaire au centre.\n') +
         'Réponds uniquement en JSON : {"titre": "titre court et évocateur en français", "sousTitre": "une ligne d\'ambiance", "cartes": ["id", …]}\n\n' +
-        'Cartes présélectionnées (id | nom | rareté | univers | lieu | milieu/profondeur | moment | couleurs | style | bords haut/bas/gauche/droite | tags) :\n' +
+        'Cartes présélectionnées, classées de la plus adaptée à la moins adaptée (id | nom | rareté | univers | lieu | milieu/profondeur | moment | couleurs | style | bords haut/bas/gauche/droite | tags).\n' +
+        'Ne choisis pas une carte parce qu\'elle est célèbre ou rare : seule compte l\'harmonie de la page.\n' +
         shortlist.map(describe).join('\n');
       status.textContent = 'L\'IA compose la page…';
       return callAI(prompt, [], 2000, function (s, model) {
