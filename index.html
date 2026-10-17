@@ -12,6 +12,7 @@
     --danger: #F08A7E; --theme: #17301F; --radius: 14px;
   }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   html { -webkit-text-size-adjust: 100%; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 'DM Sans', system-ui, sans-serif; }
   h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; margin: 0; line-height: 1.15; }
@@ -240,6 +241,10 @@
           <label class="check"><input id="ruleIllus" type="checkbox" checked> Illustrations rares uniquement (IR et ISR)</label>
           <label class="check"><input id="ruleClean" type="checkbox" checked> Éviter les gros bandeaux V, VMAX, VSTAR et GX</label>
           <label class="check"><input id="ruleEra" type="checkbox" checked> Même époque que les cartes déjà placées</label>
+          <div class="row" id="rejectedBox" hidden>
+            <span class="hint" id="rejectedCount"></span>
+            <button type="button" class="ghost" id="rejectedReset">Les rétablir</button>
+          </div>
           <label>Couleur des bordures
             <select id="ruleBorder">
               <option value="auto">Comme les cartes placées (sinon argent)</option>
@@ -357,6 +362,16 @@
     inp.addEventListener('change', render);
     custom.appendChild(inp); box.appendChild(custom);
   }
+  // Cartes retirées : le compositeur ne les propose plus (on peut les rétablir dans « Règles de composition »)
+  if (!state.rejected) state.rejected = {};
+  function reject(card) { if (!state.rejected) state.rejected = {}; if (card && card.id) { state.rejected[card.id] = card.name || true; renderRejected(); } }
+  function renderRejected() {
+    var n = Object.keys(state.rejected || {}).length;
+    var box = document.getElementById('rejectedBox');
+    if (!box) return;
+    box.hidden = !n;
+    document.getElementById('rejectedCount').textContent = n + ' carte(s) écartée(s) : le compositeur ne les propose plus.';
+  }
   function firstEmpty() { var i = page().slots.indexOf(null); return i === -1 ? 0 : i; }
   function renderTarget() {
     var p = page(), c = p.slots[state.selected];
@@ -367,7 +382,7 @@
   function render() {
     var p = page();
     if (state.selected >= p.slots.length) state.selected = 0;
-    renderStrip(); renderSwatches(); renderTarget();
+    renderStrip(); renderSwatches(); renderTarget(); renderRejected();
     el('pageTitle').value = p.title;
     el('page').style.setProperty('--theme', p.color);
     document.querySelectorAll('[data-layout]').forEach(function (b) {
@@ -391,9 +406,11 @@
         var acts = mk('div', 'slot-actions');
         var z = mk('button', null, '⤢'); z.type = 'button'; z.title = 'Agrandir'; z.setAttribute('aria-label', 'Agrandir ' + card.name);
         z.addEventListener('click', function (e) { e.stopPropagation(); zoom(card.large || card.small); });
-        var rm = mk('button', null, '×'); rm.type = 'button'; rm.title = 'Retirer'; rm.setAttribute('aria-label', 'Retirer ' + card.name);
-        rm.addEventListener('click', function (e) { e.stopPropagation(); p.slots[i] = null; state.selected = i; save(); render(); toast(card.name + ' retiré'); });
-        acts.appendChild(z); acts.appendChild(rm); slot.appendChild(acts);
+        var sw = mk('button', null, '↻'); sw.type = 'button'; sw.title = 'Remplacer par une autre carte'; sw.setAttribute('aria-label', 'Remplacer ' + card.name + ' par une autre carte');
+        sw.addEventListener('click', function (e) { e.stopPropagation(); replaceSlot(i); });
+        var rm = mk('button', null, '×'); rm.type = 'button'; rm.title = 'Retirer (ne sera plus proposée)'; rm.setAttribute('aria-label', 'Retirer ' + card.name);
+        rm.addEventListener('click', function (e) { e.stopPropagation(); reject(card); p.slots[i] = null; state.selected = i; save(); render(); toast(card.name + ' retiré, il ne sera plus proposé'); });
+        acts.appendChild(z); acts.appendChild(sw); acts.appendChild(rm); slot.appendChild(acts);
         slot.addEventListener('dblclick', function () { zoom(card.large || card.small); });
       } else {
         slot.appendChild(mk('span', 'plus', '+'));
@@ -1275,7 +1292,7 @@
   var BIG_BANNER = /^(v|vmax|vstar|v-union|gx|turbo|autre)$/i;
 
   // ----- préparation commune aux deux modes
-  function prepare() {
+  function prepare(onlySlot) {
     var theme = el('aiTheme').value.trim();
     var cur = page();
     var n = cur.cols * cur.rows;
@@ -1285,15 +1302,17 @@
     var empty = [];
     cur.slots.forEach(function (c, i) { if (!c) empty.push(i); });
     var placed = [];
-    cur.slots.forEach(function (c, i) { if (c && c.id) placed.push({ card: c, i: i, db: dbById[c.id] || null }); });
-    var usePage = el('aiUsePage').checked && placed.length > 0;
+    cur.slots.forEach(function (c, i) { if (c && c.id && i !== onlySlot) placed.push({ card: c, i: i, db: dbById[c.id] || null }); });
+    if (onlySlot != null) empty = [onlySlot];
+    var usePage = (onlySlot != null || el('aiUsePage').checked) && placed.length > 0;
     // Page à moitié remplie : on complète. Page pleine : nouvelle page (inspirée de celle-ci seulement sans mot-clé).
     var fill = usePage && empty.length > 0;
     var seeds = (fill || (usePage && spec.empty)) ? placed.map(function (p) { return p.db; }).filter(Boolean) : [];
-    if (spec.empty && !seeds.length) throw new Error('écris ce que tu veux voir, choisis une couleur, ou place quelques cartes sur la page');
+    if (spec.empty && !seeds.length) throw new Error(onlySlot != null ? 'écris un thème ou garde d\'autres cartes sur la page pour trouver une remplaçante' : 'écris ce que tu veux voir, choisis une couleur, ou place quelques cartes sur la page');
     var target = fill ? empty.length : n;
 
     var exclude = {};
+    Object.keys(state.rejected || {}).forEach(function (id) { exclude[id] = true; });
     if (fill) placed.forEach(function (p) { exclude[p.card.id] = true; });
     var border = el('ruleBorder').value;
     if (border === 'auto') border = mode(seeds.map(function (c) { return c.bordure; })) || 'argent';
@@ -1362,6 +1381,23 @@
   }
 
   // ----- Composer sans IA
+  // ↻ sur une carte : elle est écartée et remplacée par la meilleure autre carte pour cette case
+  function replaceSlot(i) {
+    var p = page(), old = p.slots[i];
+    loadDb().then(function () {
+      reject(old);
+      p.slots[i] = null;
+      var ctx = prepare(i);
+      var chosen = Engine.select(ctx.cands, ctx.spec, ctx.seeds, Math.min(6, ctx.cands.length));
+      // un peu de variété : on tire parmi les meilleures propositions
+      var pick = chosen[Math.floor(Math.random() * Math.min(3, chosen.length))];
+      if (!pick) { p.slots[i] = old; save(); render(); toast('Aucune autre carte compatible'); return; }
+      p.slots[i] = toSlot(pick); state.selected = i; save(); render();
+      toast((old ? old.name + ' remplacé par ' : '') + pick.nom);
+    }).catch(function (err) { if (old && !p.slots[i]) p.slots[i] = old; save(); render(); toast('Remplacement impossible : ' + err.message); });
+  }
+  el('rejectedReset').addEventListener('click', function () { state.rejected = {}; save(); renderRejected(); toast('Les cartes écartées seront de nouveau proposées'); });
+
   el('localGenBtn').addEventListener('click', function () {
     var status = el('aiGenStatus');
     status.textContent = 'Chargement de la base…';
