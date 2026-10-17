@@ -141,6 +141,10 @@
   .suggest { display: flex; flex-wrap: wrap; gap: 6px; }
   .pick { display: flex; flex-direction: column; gap: 6px; }
   .pick-label { font-size: 14px; color: var(--muted); }
+  .seg-wide { display: flex; }
+  .seg-wide button { flex: 1; }
+  .chip small { color: var(--muted); margin-left: 4px; }
+  .chip[aria-pressed="true"] small { color: inherit; opacity: .7; }
   .color-chip { display: inline-flex; align-items: center; gap: 6px; padding-left: 8px; }
   .color-chip .dot { width: 14px; height: 14px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); }
   .color-chip[aria-pressed="true"] .dot { box-shadow: 0 0 0 2px var(--bg); }
@@ -220,7 +224,23 @@
 
     <div class="tab" id="tabTheme" role="tabpanel" hidden>
       <p class="hint db-badge" id="dbStatus">Chargement de la base de cartes analysées…</p>
-      <label>Ce que tu veux voir sur la page
+      <div class="pick">
+        <span class="pick-label">Type de page</span>
+        <div class="seg seg-wide" role="group" aria-label="Type de page">
+          <button type="button" data-ptype="theme">Thème</button>
+          <button type="button" data-ptype="vedette">Carte vedette</button>
+          <button type="button" data-ptype="illus">Illustrateur</button>
+        </div>
+        <p class="hint" id="ptypeHint"></p>
+      </div>
+      <div class="pick" id="illusBox" hidden>
+        <label>Illustrateur
+          <input id="illusInput" list="illusList" autocomplete="off" placeholder="Tape un nom ou choisis ci-dessous">
+        </label>
+        <datalist id="illusList"></datalist>
+        <div class="suggest" id="illusTop"></div>
+      </div>
+      <label><span id="themeLabel">Ce que tu veux voir sur la page</span>
         <input id="aiTheme" placeholder="ex. ville, bord de mer, forêt au soleil, nuit étoilée">
       </label>
       <div class="suggest" id="suggest"></div>
@@ -1170,8 +1190,9 @@
     }
 
     // Choisit `count` cartes : pertinentes pour le mot-clé, puis les plus cohérentes entre elles
-    function select(cands, spec, seeds, count, rnd) {
+    function select(cands, spec, seeds, count, rnd, opts) {
       rnd = rnd || Math.random;
+      var bonus = (opts && opts.bonus) || function () { return 0; };
       cands.forEach(function (c) { c._k = keywordScore(c, spec); });
       var pool = cands;
       if (!spec.empty) {
@@ -1186,7 +1207,7 @@
       var group = seeds.slice();
       if (!group.length && pool.length) {
         // première carte : la plus pertinente parmi les plus belles
-        var first = pool.slice().sort(function (a, b) { return (b._k / maxK * 10 + starScore(b) + rnd()) - (a._k / maxK * 10 + starScore(a) + rnd()); })[0];
+        var first = pool.slice().sort(function (a, b) { return (b._k / maxK * 10 + starScore(b) + bonus(b) + rnd()) - (a._k / maxK * 10 + starScore(a) + bonus(a) + rnd()); })[0];
         chosen.push(first); group.push(first);
       }
       var used = {};
@@ -1196,7 +1217,7 @@
         for (var i = 0; i < pool.length; i++) {
           var c = pool[i];
           if (used[c.id]) continue;
-          var s = (c._k / maxK) * (spec.empty ? 0 : 9) + coherence(c, group) + rnd() * 1.2;
+          var s = (c._k / maxK) * (spec.empty ? 0 : 9) + coherence(c, group) + bonus(c) + rnd() * 1.2;
           if (s > bestS) { bestS = s; bestC = c; }
         }
         if (!bestC) break;
@@ -1292,57 +1313,189 @@
   var BIG_BANNER = /^(v|vmax|vstar|v-union|gx|turbo|autre)$/i;
 
   // ----- préparation commune aux deux modes
+  // ----- types de page
+  var PTYPE_KEY = STORE + '.pageType';
+  var pageType = lsGet(PTYPE_KEY, 'theme');
+  var PTYPE_HINTS = {
+    theme: 'Une page unie autour d\'un lieu, d\'une ambiance ou d\'une couleur.',
+    vedette: 'Place ta carte la plus rare au centre (onglet Cartes) : le reste de la page la met en valeur avec des cartes plus discrètes, dans ses couleurs.',
+    illus: 'Une page entière de cartes dessinées par le même illustrateur. Les mots-clés et couleurs sont facultatifs pour affiner.'
+  };
+  function showPageType() {
+    document.querySelectorAll('[data-ptype]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.ptype === pageType)); });
+    el('ptypeHint').textContent = PTYPE_HINTS[pageType];
+    el('illusBox').hidden = pageType !== 'illus';
+    el('aiUsePage').closest('label').hidden = pageType === 'vedette'; // la vedette s'appuie toujours sur la page
+    el('themeLabel').textContent = pageType === 'theme' ? 'Ce que tu veux voir sur la page' : 'Mots-clés (facultatif)';
+  }
+  document.querySelectorAll('[data-ptype]').forEach(function (b) {
+    b.addEventListener('click', function () { pageType = b.dataset.ptype; lsSet(PTYPE_KEY, pageType); showPageType(); });
+  });
+  showPageType();
+
+  // ----- illustrateurs présents dans la base (illustrations pleines seulement)
+  var illusCount = {};
+  function illusKey(s) { return Engine.strip(s).replace(/[^a-z0-9]+/g, ''); }
+  function buildIllustrators() {
+    illusCount = {};
+    DB.forEach(function (c) { if (c.illus && c.part === 'totale') illusCount[c.illus] = (illusCount[c.illus] || 0) + 1; });
+    var names = Object.keys(illusCount).sort(function (a, b) { return illusCount[b] - illusCount[a] || a.localeCompare(b); });
+    var list = el('illusList'); list.innerHTML = '';
+    names.forEach(function (n) { var o = document.createElement('option'); o.value = n; o.label = illusCount[n] + ' cartes'; list.appendChild(o); });
+    var top = el('illusTop'); top.innerHTML = '';
+    names.slice(0, 12).forEach(function (n) {
+      var c = mk('button', 'chip'); c.type = 'button';
+      c.appendChild(document.createTextNode(n)); c.appendChild(mk('small', null, illusCount[n]));
+      c.addEventListener('click', function () { el('illusInput').value = n; markIllus(); });
+      top.appendChild(c);
+    });
+    markIllus();
+  }
+  function markIllus() {
+    var v = el('illusInput').value;
+    Array.prototype.forEach.call(el('illusTop').children, function (c) { c.setAttribute('aria-pressed', String(c.firstChild.textContent === v)); });
+  }
+  el('illusInput').addEventListener('input', markIllus);
+  function findIllustrator(q) {
+    var k = illusKey(q), names = Object.keys(illusCount);
+    if (!k) return null;
+    var exact = names.filter(function (n) { return illusKey(n) === k; });
+    if (exact.length) return exact[0];
+    var part = names.filter(function (n) { return illusKey(n).indexOf(k) !== -1; }).sort(function (a, b) { return illusCount[b] - illusCount[a]; });
+    return part[0] || null;
+  }
+  loadDb().then(buildIllustrators).catch(function () {});
+
+  // ----- carte vedette : ce qui rend une carte « discrète »
+  var FLASHY_RX = /sp[ée]cial|hyper|secr|gold|dor[ée]|shiny|chromatique|magnifique|ultra|radieu|noir blanc|futurist/i;
+  var LUM = { clair: 2, moyen: 1, sombre: 0 };
+  function quietScore(c, star) {
+    var s = 0, sat = Engine.strip(c.saturation), den = Engine.strip(c.densite);
+    s += sat === 'pastel' ? 2 : sat === 'douce' ? 1.2 : -0.8;
+    s += den === 'epuree' ? 1.5 : den === 'moyenne' ? 0.5 : -1;
+    if ((c.personnages || []).some(function (p) { return p && p.nom && p.nom !== 'inconnu'; })) s -= 1.5;
+    if (c.cadrage === 'plan large') s += 1; else if (c.cadrage === 'gros plan') s -= 1;
+    if (star && LUM[c.luminosite] != null && LUM[star.luminosite] != null && LUM[c.luminosite] > LUM[star.luminosite]) s -= 1;
+    return s;
+  }
+
+  // ----- préparation commune à tous les modes
   function prepare(onlySlot) {
     var theme = el('aiTheme').value.trim();
     var cur = page();
     var n = cur.cols * cur.rows;
     if (!DB || !DB.length) throw new Error('la base de cartes analysées est encore vide, reviens après la prochaine analyse automatique');
     var spec = Engine.parse(theme, pickedColors);
+    var kind = pageType;
+    var center = (cur.cols % 2 && cur.rows % 2) ? Math.floor(cur.rows / 2) * cur.cols + Math.floor(cur.cols / 2) : -1;
+    if (kind === 'vedette' && onlySlot != null && onlySlot === center) kind = 'theme'; // remplacer la vedette elle-même
+    var ctx = { theme: theme, spec: spec, cur: cur, n: n, kind: kind, bonus: null, fixed: null, clearFirst: false, center: center };
 
-    var empty = [];
+    // --- carte vedette : on retrouve la vedette et on prépare les cases autour
+    var star = null;
+    if (kind === 'vedette') {
+      if (center === -1) throw new Error('la carte vedette a besoin d\'une case centrale : choisis la disposition 3×3');
+      if (!cur.slots[center]) {
+        var best = -1, bi = -1;
+        cur.slots.forEach(function (c, i) {
+          if (!c) return;
+          var d = dbById[c.id];
+          var v = d ? Engine.starScore(d) : (FLASHY_RX.test(c.rarity || '') ? 2 : 0);
+          if (v > best) { best = v; bi = i; }
+        });
+        if (bi === -1) throw new Error('place d\'abord ta carte vedette au centre de la page (onglet Cartes), puis recompose');
+        cur.slots[center] = cur.slots[bi]; cur.slots[bi] = null; // la vedette va au centre
+        save(); render();
+      }
+      star = cur.slots[center];
+      ctx.star = star; ctx.starDb = dbById[star.id] || null;
+    }
+
+    var empty = [], placed = [];
     cur.slots.forEach(function (c, i) { if (!c) empty.push(i); });
-    var placed = [];
     cur.slots.forEach(function (c, i) { if (c && c.id && i !== onlySlot) placed.push({ card: c, i: i, db: dbById[c.id] || null }); });
-    if (onlySlot != null) empty = [onlySlot];
-    var usePage = (onlySlot != null || el('aiUsePage').checked) && placed.length > 0;
-    // Page à moitié remplie : on complète. Page pleine : nouvelle page (inspirée de celle-ci seulement sans mot-clé).
+    if (kind === 'vedette') {
+      if (onlySlot != null) empty = [onlySlot];
+      else if (!empty.length) {
+        // page pleine : on recompose tout autour de la vedette
+        empty = []; for (var k = 0; k < n; k++) if (k !== center) empty.push(k);
+        placed = placed.filter(function (p) { return p.i === center; });
+        ctx.clearFirst = true;
+      }
+    } else if (onlySlot != null) empty = [onlySlot];
+
+    var usePage = (onlySlot != null || kind === 'vedette' || el('aiUsePage').checked) && placed.length > 0;
     var fill = usePage && empty.length > 0;
     var seeds = (fill || (usePage && spec.empty)) ? placed.map(function (p) { return p.db; }).filter(Boolean) : [];
-    if (spec.empty && !seeds.length) throw new Error(onlySlot != null ? 'écris un thème ou garde d\'autres cartes sur la page pour trouver une remplaçante' : 'écris ce que tu veux voir, choisis une couleur, ou place quelques cartes sur la page');
     var target = fill ? empty.length : n;
+
+    // --- illustrateur
+    var artist = null;
+    if (kind === 'illus') {
+      var q = el('illusInput').value.trim();
+      if (!q) throw new Error('choisis un illustrateur');
+      artist = findIllustrator(q);
+      if (!artist) throw new Error('aucun illustrateur « ' + q + ' » dans la base pour l\'instant');
+      el('illusInput').value = artist; markIllus();
+      ctx.artist = artist;
+    } else if (spec.empty && !seeds.length) {
+      throw new Error(onlySlot != null ? 'écris un thème ou garde d\'autres cartes sur la page pour trouver une remplaçante'
+        : 'écris ce que tu veux voir, choisis une couleur, ou place quelques cartes sur la page');
+    }
 
     var exclude = {};
     Object.keys(state.rejected || {}).forEach(function (id) { exclude[id] = true; });
-    if (fill) placed.forEach(function (p) { exclude[p.card.id] = true; });
+    placed.forEach(function (p) { if (fill) exclude[p.card.id] = true; });
+    if (star) exclude[star.id] = true;
+    var starDex = ctx.starDb && ctx.starDb.dex && ctx.starDb.dex[0];
     var border = el('ruleBorder').value;
     if (border === 'auto') border = mode(seeds.map(function (c) { return c.bordure; })) || 'argent';
     var eras = null;
-    if (el('ruleEra').checked && seeds.length) { eras = {}; seeds.forEach(function (c) { eras[c.epoque] = true; }); }
-    var full = el('ruleFull').checked, clean = el('ruleClean').checked, illus = el('ruleIllus').checked;
+    if (el('ruleEra').checked && seeds.length && kind !== 'illus') { eras = {}; seeds.forEach(function (c) { eras[c.epoque] = true; }); }
+    var full = el('ruleFull').checked, clean = el('ruleClean').checked;
+    var illus = el('ruleIllus').checked && kind !== 'illus'; // un illustrateur : toutes ses illustrations pleines
+    var artistKey = artist && illusKey(artist);
     var cands = DB.filter(function (c) {
       if (exclude[c.id]) return false;
       if (/[ée]nergie|energy/i.test(c.cat || '')) return false;
+      if (artistKey && illusKey(c.illus) !== artistKey) return false;
       if (full && c.part !== 'totale') return false;
       if (illus && !/illustration/i.test(c.rarete || '')) return false;
-      if (border !== 'toutes' && c.bordure && c.bordure !== border) return false;
+      if (!artistKey && border !== 'toutes' && c.bordure && c.bordure !== border) return false;
       if (eras && !eras[c.epoque]) return false;
       if (clean && c.habillage && BIG_BANNER.test(String(c.habillage.bandeau || ''))) return false;
+      if (kind === 'vedette') {
+        if (FLASHY_RX.test(c.rarete || '') && !/^illustration rare$/i.test(c.rarete || '')) return false; // rien de plus rare que la vedette
+        if (starDex && c.dex && c.dex[0] === starDex) return false;
+      }
       return true;
     });
-    if (!cands.length) throw new Error('aucune carte ne respecte les règles choisies : assouplis-les dans « Règles de composition »');
-    return { theme: theme, spec: spec, cur: cur, n: n, placed: placed, seeds: seeds, empty: empty, fill: fill, target: target, cands: cands };
+    if (!cands.length) throw new Error(artist ? artist + ' n\'a pas encore d\'illustration pleine compatible dans la base' : 'aucune carte ne respecte les règles choisies : assouplis-les dans « Règles de composition »');
+
+    if (kind === 'vedette') {
+      var sd = ctx.starDb;
+      ctx.bonus = function (c) {
+        var b = quietScore(c, sd) * 3.2;
+        if (sd) { b += Engine.colorSim(c, sd) * 8; Engine.colorVec(sd); if (c._dom && c._dom === sd._dom) b += 2; }
+        return b;
+      };
+      if (!sd && spec.empty) throw new Error('ta carte vedette n\'est pas encore analysée : ajoute des mots-clés ou une couleur pour guider la page');
+    }
+    ctx.fixed = cur.slots.map(function (s, i) { return s && placed.some(function (p) { return p.i === i; }) ? (dbById[s.id] || null) : null; });
+    ctx.placed = placed; ctx.seeds = seeds; ctx.empty = empty; ctx.fill = fill; ctx.target = target; ctx.cands = cands;
+    return ctx;
   }
   function mode(values) {
     var count = {}, best = null;
     values.forEach(function (v) { if (v) { count[v] = (count[v] || 0) + 1; if (!best || count[v] > count[best]) best = v; } });
     return best;
   }
+  function selectFor(ctx, count) { return Engine.select(ctx.cands, ctx.spec, ctx.seeds, count, null, { bonus: ctx.bonus }); }
 
   function place3(ctx, chosen) {
     var cur = ctx.cur;
     if (ctx.fill) {
-      var fixed = cur.slots.map(function (s) { return s ? (dbById[s.id] || null) : null; });
-      var g = Engine.arrange(chosen, cur.cols, cur.rows, fixed, ctx.empty, false);
+      var g = Engine.arrange(chosen, cur.cols, cur.rows, ctx.fixed, ctx.empty, false);
       return ctx.empty.map(function (i) { return g[i]; });
     }
     var all = []; for (var i = 0; i < ctx.n; i++) all.push(i);
@@ -1356,11 +1509,14 @@
     var dom = Engine.dominantFamily(ctx.seeds.concat(real));
     var color = Engine.PAGE_COLORS[dom] || null;
     if (ctx.fill) {
+      if (ctx.clearFirst) ctx.empty.forEach(function (i) { cur.slots[i] = null; });
       cards.forEach(function (c, k) { if (c) cur.slots[ctx.empty[k]] = toSlot(c); });
       if (!cur.title || cur.title === 'Nouvelle page') cur.title = title || cur.title;
-      if (color && cur.color === '#17301F') cur.color = color;
+      if (color && (cur.color === '#17301F' || ctx.kind === 'vedette')) cur.color = color;
       state.selected = 0; save(); render();
-      status.textContent = real.length + ' carte(s) ajoutée(s) en accord avec la page' + (subtitle ? ' : ' + subtitle : '') + '.';
+      status.textContent = ctx.kind === 'vedette'
+        ? 'Page construite autour de ' + ctx.star.name + ' : ' + real.length + ' carte(s) plus discrètes dans ses couleurs.'
+        : real.length + ' carte(s) ajoutée(s) en accord avec la page' + (subtitle ? ' : ' + subtitle : '') + '.';
     } else {
       var slots = cards.map(function (c) { return c ? toSlot(c) : null; });
       while (slots.length < ctx.n) slots.push(null);
@@ -1369,18 +1525,25 @@
       status.textContent = 'Page « ' + (title || 'Nouvelle page') + ' » créée' + (subtitle ? ' : ' + subtitle : '') + '.';
     }
     if (note) status.textContent += ' ' + note;
-    var strong = real.filter(function (c) { return (c._k || 0) >= 4; }).length;
-    if (!ctx.spec.empty && strong < real.length) status.textContent += ' ' + (real.length - strong) + ' carte(s) collent moins au thème : la base n\'en contient pas encore assez.';
-    if (real.length < ctx.target) status.textContent += ' Pas assez de cartes compatibles pour tout remplir : assouplis les règles.';
+    if (ctx.kind === 'theme') {
+      var strong = real.filter(function (c) { return (c._k || 0) >= 4; }).length;
+      if (!ctx.spec.empty && strong < real.length) status.textContent += ' ' + (real.length - strong) + ' carte(s) collent moins au thème : la base n\'en contient pas encore assez.';
+    }
+    if (real.length < ctx.target) {
+      status.textContent += ctx.kind === 'illus'
+        ? ' ' + ctx.artist + ' n\'a que ' + real.length + ' illustration(s) pleine(s) utilisable(s) dans la base pour l\'instant : essaie la disposition 2×2, ou reviens quand l\'analyse aura avancé.'
+        : ' Pas assez de cartes compatibles pour tout remplir : assouplis les règles.';
+    }
     toast(ctx.fill ? 'Page complétée' : 'Nouvelle page créée');
   }
   function titleFor(ctx) {
+    if (ctx.kind === 'illus') return 'Illustrations de ' + ctx.artist;
+    if (ctx.kind === 'vedette' && (!ctx.cur.title || ctx.cur.title === 'Nouvelle page')) return 'Autour de ' + ctx.star.name;
     if (ctx.theme) return cap(ctx.theme);
     if (pickedColors.length) return cap(pickedColors.join(' et '));
     return page().title && page().title !== 'Nouvelle page' ? page().title + ' (suite)' : 'Nouvelle page';
   }
 
-  // ----- Composer sans IA
   // ↻ sur une carte : elle est écartée et remplacée par la meilleure autre carte pour cette case
   function replaceSlot(i) {
     var p = page(), old = p.slots[i];
@@ -1388,9 +1551,8 @@
       reject(old);
       p.slots[i] = null;
       var ctx = prepare(i);
-      var chosen = Engine.select(ctx.cands, ctx.spec, ctx.seeds, Math.min(6, ctx.cands.length));
-      // un peu de variété : on tire parmi les meilleures propositions
-      var pick = chosen[Math.floor(Math.random() * Math.min(3, chosen.length))];
+      var chosen = selectFor(ctx, Math.min(6, ctx.cands.length));
+      var pick = chosen[Math.floor(Math.random() * Math.min(3, chosen.length))]; // un peu de variété
       if (!pick) { p.slots[i] = old; save(); render(); toast('Aucune autre carte compatible'); return; }
       p.slots[i] = toSlot(pick); state.selected = i; save(); render();
       toast((old ? old.name + ' remplacé par ' : '') + pick.nom);
@@ -1398,21 +1560,21 @@
   }
   el('rejectedReset').addEventListener('click', function () { state.rejected = {}; save(); renderRejected(); toast('Les cartes écartées seront de nouveau proposées'); });
 
+  // ----- Composer sans IA
   el('localGenBtn').addEventListener('click', function () {
     var status = el('aiGenStatus');
     status.textContent = 'Chargement de la base…';
     loadDb().then(function () {
       var ctx = prepare();
-      var chosen = Engine.select(ctx.cands, ctx.spec, ctx.seeds, ctx.target);
-      apply(ctx, place3(ctx, chosen), titleFor(ctx), '');
+      apply(ctx, place3(ctx, selectFor(ctx, ctx.target)), titleFor(ctx), '');
     }).catch(function (err) { status.textContent = 'Erreur : ' + err.message; });
   });
 
   // ----- Composer avec l'IA : l'IA choisit et ordonne parmi une présélection cohérente
   function describe(c) {
     var b = c.bords || {}, p = c.palette || {};
-    return [c.id, c.nom, c.univers, c.lieu, c.milieu + '/' + c.profondeur, c.moment,
-      'couleurs ' + [p.dominante].concat(p.secondaires || []).join('+') + ' (' + (p.temperature || '') + ', ' + (c.luminosite || '') + ', ' + (c.saturation || '') + ')',
+    return [c.id, c.nom, c.rarete, c.univers, c.lieu, c.milieu + '/' + c.profondeur, c.moment,
+      'couleurs ' + [p.dominante].concat(p.secondaires || []).join('+') + ' (' + (p.temperature || '') + ', ' + (c.luminosite || '') + ', ' + (c.saturation || '') + ', ' + (c.densite || '') + ')',
       'style ' + c.style, 'bords ' + [b.haut, b.bas, b.gauche, b.droite].join('/'), (c.tags || []).slice(0, 6).join(',')].join(' | ');
   }
   el('aiGenBtn').addEventListener('click', function () {
@@ -1422,23 +1584,27 @@
     status.textContent = 'Chargement de la base…';
     loadDb().then(function () {
       ctx = prepare();
-      shortlist = Engine.select(ctx.cands, ctx.spec, ctx.seeds, Math.min(ctx.target * 4, 48));
+      shortlist = selectFor(ctx, Math.min(ctx.target * 4, 48));
       var cols = ctx.cur.cols, rows = ctx.cur.rows;
+      var kindRule = ctx.kind === 'vedette'
+        ? '0. La case ' + (ctx.center + 1) + ' contient la carte VEDETTE (' + (ctx.starDb ? describe(ctx.starDb) : ctx.star.name) + '). ' +
+          'Toutes les autres cartes doivent la mettre en valeur : plus calmes, moins saturées, moins chargées, dans ses couleurs, et jamais plus spectaculaires qu\'elle.\n'
+        : ctx.kind === 'illus' ? '0. Toutes les cartes sont illustrées par ' + ctx.artist + ' : compose la plus belle page possible avec son travail.\n' : '';
       var prompt =
         'Tu composes une très belle page de classeur de cartes Pokémon : grille de ' + cols + ' colonnes × ' + rows + ' lignes, cases numérotées de 1 à ' + ctx.n + ' (gauche à droite, puis haut en bas).\n' +
         (ctx.theme ? 'Thème demandé : « ' + ctx.theme + ' ». Il doit se voir au premier coup d\'œil.\n' : '') +
         (pickedColors.length ? 'Couleurs demandées : ' + pickedColors.join(' et ') + '. Elles doivent dominer la page.\n' : '') +
-        (ctx.seeds.length ? '\nCartes déjà sur la page (à prolonger) :\n' + ctx.placed.filter(function (p) { return p.db; }).map(function (p) { return 'case ' + (p.i + 1) + ' : ' + describe(p.db); }).join('\n') + '\n' : '') +
-        (ctx.fill ? '\nChoisis exactement ' + ctx.target + ' cartes pour les cases vides, dans cet ordre de cases : ' + ctx.empty.map(function (i) { return i + 1; }).join(', ') + '.\n'
+        (ctx.seeds.length && ctx.kind !== 'vedette' ? '\nCartes déjà sur la page (à prolonger) :\n' + ctx.placed.filter(function (p) { return p.db; }).map(function (p) { return 'case ' + (p.i + 1) + ' : ' + describe(p.db); }).join('\n') + '\n' : '') +
+        (ctx.fill ? '\nChoisis exactement ' + ctx.target + ' cartes pour les cases ' + ctx.empty.map(function (i) { return i + 1; }).join(', ') + ', dans cet ordre.\n'
           : '\nChoisis exactement ' + ctx.n + ' cartes, dans l\'ordre des cases.\n') +
-        '\nRègles, par ordre d\'importance :\n' +
+        '\nRègles, par ordre d\'importance :\n' + kindRule +
         '1. Unité de couleur : une palette commune et harmonieuse sur toute la page ; aucune carte ne doit trancher par sa couleur.\n' +
-        '2. Le thème se voit sur chaque carte (lieu, moment, ambiance).\n' +
+        (ctx.kind === 'theme' ? '2. Le thème se voit sur chaque carte (lieu, moment, ambiance).\n' : '') +
         '3. Même famille de style de dessin, luminosités proches.\n' +
         '4. Les couleurs aux bords de cartes voisines se raccordent, comme un seul grand décor ; le ciel en haut, le sol ou les profondeurs en bas.\n' +
         (ctx.fill ? '' : '5. La carte la plus spectaculaire au centre.\n') +
         'Réponds uniquement en JSON : {"titre": "titre court et évocateur en français", "sousTitre": "une ligne d\'ambiance", "cartes": ["id", …]}\n\n' +
-        'Cartes présélectionnées (id | nom | univers | lieu | milieu/profondeur | moment | couleurs | style | bords haut/bas/gauche/droite | tags) :\n' +
+        'Cartes présélectionnées (id | nom | rareté | univers | lieu | milieu/profondeur | moment | couleurs | style | bords haut/bas/gauche/droite | tags) :\n' +
         shortlist.map(describe).join('\n');
       status.textContent = 'L\'IA compose la page…';
       return callAI(prompt, [], 2000, function (s, model) {
@@ -1451,13 +1617,10 @@
           .filter(function (c) { var ok = c && !seen[c.id]; if (c) seen[c.id] = true; return ok; }).slice(0, ctx.target);
         if (!chosen.length) throw new Error('réponse de l\'IA inutilisable');
         for (var k = 0; chosen.length < ctx.target && k < shortlist.length; k++) if (!seen[shortlist[k].id]) { seen[shortlist[k].id] = true; chosen.push(shortlist[k]); }
-        var cards = chosen;
-        if (ctx.fill) cards = place3(ctx, chosen); // l'ordre des cases vides reste géré localement pour les raccords
-        apply(ctx, cards, res.titre || titleFor(ctx), res.sousTitre || '');
+        var cards = ctx.fill ? place3(ctx, chosen) : chosen;
+        apply(ctx, cards, ctx.kind === 'illus' ? titleFor(ctx) : (res.titre || titleFor(ctx)), res.sousTitre || '');
       }, function (err) {
-        // IA indisponible (quota, clé…) : on compose quand même, sans IA
-        var chosen = shortlist.slice(0, ctx.target);
-        apply(ctx, place3(ctx, chosen), titleFor(ctx), '', '(IA indisponible : ' + err.message + '. Page composée sans IA.)');
+        apply(ctx, place3(ctx, shortlist.slice(0, ctx.target)), titleFor(ctx), '', '(IA indisponible : ' + err.message + '. Page composée sans IA.)');
       });
     }).catch(function (err) {
       status.textContent = 'Erreur : ' + err.message;
