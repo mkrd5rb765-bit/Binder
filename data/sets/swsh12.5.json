@@ -501,7 +501,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "montagne enneigée",
+    "lieu": "pentes enneigées en altitude",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel clair et pics enneigés",
+     "milieu": "Dracaufeu Radieux en vol plané",
+     "bas": "neige soulevée et pente de la montagne"
+    },
+    "bordures": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "gris",
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": "Dracaufeu survole les sommets enneigés en laissant échapper des flammes par sa queue.",
+    "tags": [
+     "Dracaufeu",
+     "chromatique",
+     "neige",
+     "montagne",
+     "feu",
+     "vol",
+     "dragon",
+     "hiver"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 4,
    "paire": null
   },
@@ -1276,7 +1340,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt ensoleillée",
+    "lieu": "lisière de forêt verdoyante",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et feuillage des arbres",
+     "milieu": "Chrysapile Radieux au premier plan sur une pierre",
+     "bas": "herbe et fleurs rouges"
+    },
+    "bordures": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "observe",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Une colonie de Chrysapile profite paisiblement du soleil dans la forêt.",
+    "tags": [
+     "Chrysapile",
+     "chromatique",
+     "forêt",
+     "insecte",
+     "électricité",
+     "arbres",
+     "fleurs",
+     "nature"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 736,
    "paire": null
   },
@@ -2551,7 +2679,71 @@
    "stade": "VMAX",
    "evolue_de": "Rayquaza-V",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "VMAX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace, ciel, vortex",
+    "lieu": "dimensions célestes",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "la tête de Rayquaza et des rubans d'énergie colorés",
+     "milieu": "le corps sinueux du Pokémon et le vortex multicolore",
+     "bas": "la mâchoire entrouverte et du texte de règles"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "noir",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "hurle",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Rayquaza",
+     "VMAX",
+     "dragon",
+     "vert",
+     "vortex",
+     "énergie",
+     "cosmos",
+     "puissance"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 384,
    "paire": null
   },
@@ -2626,7 +2818,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel, nuages, énergie",
+    "lieu": "cieux de Galar",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "le ciel bleu et des traînées d'énergie",
+     "milieu": "Éthernatos Radieux rouge vif au centre",
+     "bas": "vortex lumineux et nuages dorés"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "plane",
+    "emotion": "menaçant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Éthernatos",
+     "Radieux",
+     "dragon",
+     "rouge",
+     "ciel",
+     "énergie",
+     "nuages",
+     "lumière"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 890,
    "paire": null
   },
@@ -3576,7 +3832,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": "autre",
+     "texte_charge": true
+    },
+    "univers": "ville, intérieur, arène",
+    "lieu": "loge ou estrade urbaine",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "le haut de la tête d'Inezia et l'arrière-plan de la ville",
+     "milieu": "Inezia assise avec ses longs cheveux jaunes",
+     "bas": "le bas du fauteuil et du texte de carte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "blanc",
+      "rose"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "réfléchit",
+    "emotion": "sereine",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Inezia",
+      "role": "champion"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Inezia",
+     "Dresseur",
+     "femme",
+     "fauteuil",
+     "cheveux jaunes",
+     "ville",
+     "arène",
+     "douceur"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3597,7 +3922,88 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt, nature",
+    "lieu": "sous-bois ensoleillé",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "le feuillage vert et la lumière filtrée",
+     "milieu": "les quatre amis de Hisui regroupés",
+     "bas": "les vêtements et les mains tenant des feuilles"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "sourient",
+    "emotion": "joie",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     },
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     },
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     },
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Amis de Hisui",
+     "personnages",
+     "forêt",
+     "feuilles",
+     "sourire",
+     "amitié",
+     "nature",
+     "lumière"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3618,7 +4024,80 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ville, coucher de soleil",
+    "lieu": "rue de ville au crépuscule",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel orangé et lampadaire allumé",
+     "milieu": "cinq jeunes dresseurs groupés",
+     "bas": "sol pavé et texte de règle"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "marron",
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "posent ensemble",
+    "emotion": "joie",
+    "moment": "coucher de soleil",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     },
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Les amis de la région de Sinnoh se réunissent pour immortaliser leurs liens d'amitié au coucher du soleil.",
+    "tags": [
+     "amis",
+     "Sinnoh",
+     "dresseurs",
+     "crépuscule",
+     "lampadaire",
+     "pokéball",
+     "sourire",
+     "nostalgie"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3639,7 +4118,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "village, campagne",
+    "lieu": "chemin de village près de maisons",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu, nuages et montagnes",
+     "milieu": "professeur Sorbier marchant",
+     "bas": "chemin et valise"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "marron",
+      "blanc",
+      "gris"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "marche",
+    "emotion": "sérieux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Professeur Sorbier",
+      "role": "professeur"
+     }
+    ],
+    "histoire": "Le professeur Sorbier parcourt les chemins pour mener ses recherches sur les Pokémon.",
+    "tags": [
+     "professeur Sorbier",
+     "recherches",
+     "valise",
+     "manteau",
+     "village",
+     "montagnes",
+     "marche",
+     "sérieux"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3660,7 +4208,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "campagne, voyage",
+    "lieu": "chemin avec charrette de voyage",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et charrette",
+     "milieu": "Percupio tenant un cristal",
+     "bas": "sac à dos et texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "vert",
+      "blanc"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "montre cristal",
+    "emotion": "souriant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Percupio",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Percupio voyage à travers les âges avec sa charrette marchande, à la recherche de trésors et de mystères.",
+    "tags": [
+     "Percupio",
+     "cristal",
+     "voyageur",
+     "charrette",
+     "trésor",
+     "sourire",
+     "sac à dos",
+     "antiquité"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3853,7 +4470,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "abstrait, combat électrique",
+    "lieu": "tourbillon d'énergie avec de nombreux Pokémon",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Pokémon divers et fond rose",
+     "milieu": "Pikachu au centre entouré d'éclair",
+     "bas": "autres Pokémon et attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "jaune",
+      "violet",
+      "bleu"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan rapproché",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Pikachu libère toute sa puissance électrique au milieu d'une multitude de Pokémon fascinants.",
+    "tags": [
+     "Pikachu",
+     "électricité",
+     "éclairs",
+     "puissance",
+     "Pokémon",
+     "rose",
+     "dynamique",
+     "combat"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 172,
    "paire": null
   }

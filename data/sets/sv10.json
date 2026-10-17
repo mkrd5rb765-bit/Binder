@@ -6575,7 +6575,71 @@
    "stade": "Niveau 1",
    "evolue_de": "Yanma",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait dynamique",
+    "lieu": "espace abstrait coloré",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "bandeau argenté, nom du Pokémon et PV",
+     "milieu": "Yanmega-ex volant au-dessus de traînées roses et violettes",
+     "zones du bas": "bloc de texte du talent et attaques"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "vert",
+      "violet",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "vole rapidement",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Yanmega",
+     "ex",
+     "insecte",
+     "vol",
+     "rose",
+     "violet",
+     "vert",
+     "lignes de vitesse"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 193,
    "paire": null
   },
@@ -6600,7 +6664,71 @@
    "stade": "Niveau 2",
    "evolue_de": "Olivado",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "jardin tropical lumineux",
+    "lieu": "verger ensoleillé",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage vert et ciel clair",
+     "milieu": "Arboliva-ex avec ses fruits violets",
+     "cas": "racines du Pokémon"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "vert",
+      "violet",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "se tient",
+    "emotion": "sereine",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Arboliva",
+     "fruits",
+     "feuilles",
+     "lumière",
+     "nature",
+     "jaune",
+     "vert",
+     "ex"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 928,
    "paire": null
   },
@@ -6625,7 +6753,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": "autre",
+     "texte_charge": true
+    },
+    "univers": "ciel enflammé rouge",
+    "lieu": "cieux ardents",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "silhouette d'un dresseur et flammes",
+     "milieu": "Sulfura-ex en vol",
+     "bas": "fond rouge flamboyant"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "rouge",
+     "gauche": "rouge",
+     "droite": "rouge"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "orange",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "puissante",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Sulfura-ex de la Team Rocket survole les cieux avec son dresseur.",
+    "tags": [
+     "Sulfura",
+     "feu",
+     "flammes",
+     "rouge",
+     "vol",
+     "Team Rocket",
+     "ex",
+     "oiseau"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 146,
    "paire": null
   },
@@ -6650,7 +6846,76 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel arc-en-ciel éclatant",
+    "lieu": "cieux mystiques",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "silhouette de Luth et dégradé arc-en-ciel",
+     "milieu": "Ho-Oh-ex déployant ses ailes",
+     "bas": "plumes dorées et fond coloré"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "orange",
+     "gauche": "jaune",
+     "droite": "rouge"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "plane",
+    "emotion": "majestueuse",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Luth",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Ho-Oh-ex de Luth illumine le ciel de ses couleurs légendaires.",
+    "tags": [
+     "Ho-Oh",
+     "arc-en-ciel",
+     "Luth",
+     "légendaire",
+     "feu",
+     "vol",
+     "ex",
+     "plumes"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 250,
    "paire": 249
   },
@@ -6675,7 +6940,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Piétacé",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "paysage enneigé glacial",
+    "lieu": "toundra glacée",
+    "interieur": false,
+    "milieu": "neige",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "motifs géométriques de neige",
+     "milieu": "Balbalèze-ex imposant",
+     "bas": "sol enneigé"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "se protège",
+    "emotion": "vigilante",
+    "moment": "jour",
+    "meteo": "neige",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Balbalèze",
+     "neige",
+     "glace",
+     "bleu",
+     "blanc",
+     "hiver",
+     "ex",
+     "piquant"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 974,
    "paire": null
   },
@@ -6700,7 +7028,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond aquatique abstrait",
+    "lieu": "fonds marins abstraits",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "Oyacata nageant en haut",
+     "milieu": "corps massif d'Oyacata",
+     "bas": "vagues et texte des attaques"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "nage",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Oyacata",
+     "eau",
+     "bleu",
+     "poisson",
+     "vagues",
+     "attaques",
+     "lumineux"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 977,
    "paire": null
   },
@@ -6725,7 +7115,69 @@
    "stade": "Niveau 1",
    "evolue_de": "Élektek",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait géométrique",
+    "lieu": "dimension électrique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "antennes et tête d'Élekable",
+     "milieu": "corps massif et bras levés",
+     "bas": "jambes et texte des attaques"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "vert",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "menace",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Élekable",
+     "jaune",
+     "vert",
+     "électricité",
+     "géométrique",
+     "poing",
+     "combat"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 125,
    "paire": null
   },
@@ -6750,7 +7202,74 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": "true"
+    },
+    "univers": "quartier général secret",
+    "lieu": "base de la Team Rocket",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Giovanni et oreilles de Mewtwo",
+     "milieu": "Mewtwo assis et replié",
+     "bas": "texte du talent et des attaques"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "rouge",
+     "gauche": "rouge",
+     "droite": "rouge"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "violet",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "médite",
+    "emotion": "mystérieux",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Giovanni",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Mewtwo est contrôlé par la Team Rocket pour dominer le monde.",
+    "tags": [
+     "Mewtwo",
+     "Team Rocket",
+     "Giovanni",
+     "rouge",
+     "violet",
+     "mystère",
+     "psychique"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 150,
    "paire": 151
   },
@@ -6775,7 +7294,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "canyon rocheux enflammé",
+    "lieu": "cratère volcanique",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête cristalline de Regirock",
+     "milieu": "corps massif de pierre",
+     "bas": "texte des attaques"
+    },
+    "bords": {
+     "haut": "orange",
+     "bas": "orange",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "solide",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Regirock",
+     "roche",
+     "orange",
+     "feu",
+     "géant",
+     "cristal",
+     "combat"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 377,
    "paire": null
   },
@@ -6800,7 +7381,76 @@
    "stade": "Niveau 2",
    "evolue_de": "Carmache de Cynthia",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond stylisé doré",
+    "lieu": "fond abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Cynthia en arrière-plan et Carchacrok",
+     "milieu": "Carchacrok et attaques",
+     "bas": "bas du corps de Carchacrok et blocs de texte"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "orange",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "grogne menaçant",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Cynthia",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Carchacrok se tient prêt au combat aux côtés de sa dresseuse Cynthia.",
+    "tags": [
+     "Carchacrok",
+     "Cynthia",
+     "dragon",
+     "ex",
+     "jaune",
+     "bleu",
+     "attaques",
+     "combat"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 443,
    "paire": null
   },
@@ -6825,7 +7475,76 @@
    "stade": "Niveau 2",
    "evolue_de": "Nidorino de la Team Rocket",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond stylisé violet",
+    "lieu": "fond abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "membre de la Team Rocket en arrière-plan",
+     "milieu": "Nidoking et attaques",
+     "bas": "bas de Nidoking et blocs de texte"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "bleu",
+      "noir",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "montre les crocs",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Nidoking de la Team Rocket est prêt à empoisonner ses adversaires.",
+    "tags": [
+     "Nidoking",
+     "Team Rocket",
+     "poison",
+     "ex",
+     "violet",
+     "menaçant",
+     "crocs",
+     "combat"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 32,
    "paire": null
   },
@@ -6850,7 +7569,76 @@
    "stade": "Niveau 2",
    "evolue_de": "Nosferalto de la Team Rocket",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond stylisé turquoise",
+    "lieu": "fond abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "personnage de la Team Rocket en arrière-plan",
+     "milieu": "Nostenfer et texte de talent",
+     "bas": "attaques et blocs de texte"
+    },
+    "bords": {
+     "haut": "turquoise",
+     "bas": "turquoise",
+     "gauche": "turquoise",
+     "droite": "turquoise"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "violet",
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "vole",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Nostenfer de la Team Rocket surgit pour fondre sur ses ennemis.",
+    "tags": [
+     "Nostenfer",
+     "Team Rocket",
+     "vol",
+     "ex",
+     "turquoise",
+     "violet",
+     "ailes",
+     "combat"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 41,
    "paire": null
   },
@@ -6875,7 +7663,76 @@
    "stade": "Niveau 1",
    "evolue_de": "Grondogue de Pepper",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond stylisé violet et jaune",
+    "lieu": "fond abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Pepper en arrière-plan avec des lueurs",
+     "milieu": "Dogrino et attaques",
+     "bas": "pattes de Dogrino et blocs de texte"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "jaune",
+      "marron",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "avance",
+    "emotion": "sérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Pepper",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Dogrino de Pepper avance fièrement aux côtés de son dresseur.",
+    "tags": [
+     "Dogrino",
+     "Pepper",
+     "chien",
+     "ex",
+     "violet",
+     "jaune",
+     "marron",
+     "combat"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 942,
    "paire": null
   },
@@ -6900,7 +7757,76 @@
    "stade": "Niveau 1",
    "evolue_de": "Miaouss de la Team Rocket",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "repaire secret team rocket",
+    "lieu": "base secrète",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "entête et silhouette du membre de la team rocket",
+     "milieu": "persian ex assis au premier plan",
+     "bas": "texte d'attaque et bord inférieur"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "noir",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "pose",
+    "emotion": "sérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Un Pokémon de la Team Rocket posant fièrement aux côtés de son dresseur dans leur quartier général.",
+    "tags": [
+     "Persian",
+     "Team Rocket",
+     "félin",
+     "jaune",
+     "silhouette",
+     "méchant",
+     "ex",
+     "pokémon"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 52,
    "paire": null
   },
@@ -6921,7 +7847,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "stade de match",
+    "lieu": "arène sportive",
+    "interieur": true,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "bandeau de texte et public du stade",
+     "milieu": "jeune fille journaliste au premier plan pointant le doigt",
+     "bas": "texte de la carte de supporter"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "blanc",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "parle",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "habitant"
+     }
+    ],
+    "histoire": "Une présentatrice ou journaliste enthousiaste anime un événement sportif majeur.",
+    "tags": [
+     "journaliste",
+     "micro",
+     "stade",
+     "vert",
+     "jeune fille",
+     "supporter",
+     "arène",
+     "pokémon"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6942,7 +7937,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "montagne forêt",
+    "lieu": "chemin de randonnée",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et nuages",
+     "milieu": "jeune dresseur au premier plan dans la nature",
+     "bas": "texte de la carte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "vert",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "avance",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "Luth",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Luth commence son voyage à travers la région de Johto.",
+    "tags": [
+     "Luth",
+     "dresseur",
+     "montagne",
+     "forêt",
+     "ciel",
+     "rouge",
+     "casquette",
+     "voyage"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6963,7 +8027,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "stade ville",
+    "lieu": "arène de combat",
+    "interieur": true,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "gratte-ciels et ciel",
+     "milieu": "juge avec un sifflet pointant le doigt vers le ciel",
+     "bas": "texte de la carte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "jaune",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "arbitre",
+    "emotion": "sérieux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Un juge d'arène siffle le début ou une pénalité lors d'un match officiel.",
+    "tags": [
+     "juge",
+     "arbitre",
+     "sifflet",
+     "stade",
+     "ville",
+     "bleu",
+     "rose",
+     "match"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6984,7 +8117,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ville gratte-ciel nuit",
+    "lieu": "gratte-ciel avec vue sur la ville",
+    "interieur": true,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel nocturne et gratte-ciels illuminés",
+     "milieu": "personnage d'Amos en uniforme de la Team Rocket",
+     "bas": "base du personnage et encadré de texte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "noir",
+      "turquoise"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "arrogant",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Amos",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Les membres de la Team Rocket se préparent pour une opération d'envergure dans la ville.",
+    "tags": [
+     "Amos",
+     "Team Rocket",
+     "gratte-ciel",
+     "nuit",
+     "ville",
+     "uniforme",
+     "regard",
+     "bleu"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -7005,7 +8207,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "couloir base secrète",
+    "lieu": "couloir métallique",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "panneaux muraux métalliques",
+     "milieu": "Ariane tendant la main vers l'avant",
+     "bas": "texte de la carte et bas du corps"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "blanc",
+      "rouge",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "tend la main",
+    "emotion": "déterminée",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Ariane",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Ariane bloque le passage dans le repaire de la Team Rocket.",
+    "tags": [
+     "Ariane",
+     "Team Rocket",
+     "couloir",
+     "métal",
+     "main tendue",
+     "uniforme",
+     "gris",
+     "détermination"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -7026,7 +8297,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ruelle sombre ville",
+    "lieu": "ruelle urbaine",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "murs de briques et ruelle sombre",
+     "milieu": "Giovanni posant avec assurance",
+     "bas": "texte de la carte et veste"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "noir",
+      "gris",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "contre-jour",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose",
+    "emotion": "menaçant",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Giovanni",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Le grand patron de la Team Rocket observe ses troupes depuis les rues sombres.",
+    "tags": [
+     "Giovanni",
+     "Team Rocket",
+     "ruelle",
+     "briques",
+     "rouge",
+     "costume",
+     "chef",
+     "menaçant"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -7047,7 +8387,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "couloir base secrète",
+    "lieu": "couloir technique avec miroirs",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "plafond technique et miroirs ronds",
+     "milieu": "Lambda souriant et posant",
+     "bas": "texte de la carte et ceinture"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "violet",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "pose",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Lambda",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Lambda s'infiltre dans les installations avec un sourire machiavélique.",
+    "tags": [
+     "Lambda",
+     "Team Rocket",
+     "couloir",
+     "miroirs",
+     "cheveux violets",
+     "uniforme",
+     "sourire",
+     "vert"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -7068,7 +8477,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ville rue ruelle",
+    "lieu": "rallonge de ruelle urbaine",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Grillage métallique vert et mur de briques bleues",
+     "milieu": "Lance de la Team Rocket debout avec un sac à dos",
+     "bas": "Texte de la carte sur fond semi-transparent"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "vert",
+      "bleu",
+      "noir"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "prend la pose",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Lance",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Lance de la Team Rocket prépare un mauvais coup en ville.",
+    "tags": [
+     "Lance",
+     "Team Rocket",
+     "dresseur",
+     "briques",
+     "grillage",
+     "casquette",
+     "urbain",
+     "regard"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -8095,7 +9573,76 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace doré brillant",
+    "lieu": "fond étincelant mystique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Luth souriant avec sa casquette",
+     "milieu": "Ho-Oh-ex majestueux aux ailes déployées",
+     "bas": "Texte de la carte et attaques"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "blanc",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "déploie ses ailes",
+    "emotion": "triomphant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Luth",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Luth et son Ho-Oh-ex doré brillent de mille feux prêts au combat légendaire.",
+    "tags": [
+     "Ho-Oh",
+     "Luth",
+     "doré",
+     "brillant",
+     "légendaire",
+     "feu",
+     "oiseau",
+     "ex"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 250,
    "paire": 249
   },
@@ -8120,7 +9667,76 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace doré brillant",
+    "lieu": "fond étincelant mystique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Giovanni en costume de la Team Rocket",
+     "milieu": "Mewtwo-ex assis aux bras croisés",
+     "bas": "Texte de la carte et attaques"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "violet",
+      "noir",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "croise les bras",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Giovanni",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Giovanni et son Mewtwo-ex unissent leurs forces maléfiques sous une lueur dorée.",
+    "tags": [
+     "Mewtwo",
+     "Team Rocket",
+     "Giovanni",
+     "doré",
+     "psy",
+     "légendaire",
+     "puissance",
+     "ex"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 150,
    "paire": 151
   },
@@ -8145,7 +9761,76 @@
    "stade": "Niveau 2",
    "evolue_de": "Carmache de Cynthia",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace doré brillant",
+    "lieu": "fond étincelant mystique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Cynthia souriant avec ses longs cheveux blonds",
+     "milieu": "Carchacrok-ex en position d'attaque gueule ouverte",
+     "bas": "Texte de la carte et attaques"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "rouge",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque féroce",
+    "emotion": "combatif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Cynthia",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Cynthia et son puissant Carchacrok-ex lancent une offensive redoutable.",
+    "tags": [
+     "Carchacrok",
+     "Cynthia",
+     "dragon",
+     "doré",
+     "champion",
+     "féroce",
+     "attaque",
+     "ex"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 443,
    "paire": null
   },
@@ -8170,7 +9855,73 @@
    "stade": "Niveau 2",
    "evolue_de": "Nosferalto de la Team Rocket",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ville interieur",
+    "lieu": "base de la Team Rocket",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Dresseuse et Nostenfer-ex",
+     "milieu": "corps du Pokémon et blocs de texte",
+     "notes": "fond doré brillant"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "violet",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "souriant",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "nostenfer",
+     "team rocket",
+     "dresseuse",
+     "doré",
+     "brillant",
+     "hyper rare"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 41,
    "paire": null
   },
@@ -8191,7 +9942,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ville",
+    "lieu": "centrale de communication",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel et bâtiments",
+     "milieu": "tour de brouillage centrale",
+     "bas": "sol et ondes radio"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "émet des ondes",
+    "emotion": "neutre",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "tour de brouillage",
+     "stade",
+     "antenne",
+     "ondes",
+     "bâtiments",
+     "doré"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -8212,7 +10024,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ville",
+    "lieu": "place urbaine moderne",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "gratte-ciels modernes et ciel",
+     "milieu": "place circulaire centrale",
+     "bas": "sol pavé et petit personnage"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "observe",
+    "emotion": "paisible",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "levalendura",
+     "stade",
+     "gratte-ciels",
+     "ville",
+     "place",
+     "doré"
+    ],
+    "le": "2026-10-17",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   }
