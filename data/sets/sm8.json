@@ -426,7 +426,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt tropicale lumineuse",
+    "lieu": "sous bois moussu",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lumière traversant le feuillage et tronc d'arbre",
+     "milieu": "Caratroc se déplaçant sur le sol",
+     "habillage": "blocs de texte des attaques et du talent sur le corps du Pokémon",
+     "bas": "sol jonché de feuilles et de mousse"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "rouge",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "avance prudemment",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "caratroc",
+     "forêt",
+     "mousse",
+     "carapace",
+     "feuilles",
+     "lumière",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 213,
    "paire": null
   },
@@ -551,7 +615,70 @@
    "stade": null,
    "evolue_de": "Massko",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt luxuriante mystérieuse",
+    "lieu": "clairière de jungle",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage sombre et canopée touffue",
+     "milieu": "Jungko en position de combat au milieu des feuilles",
+     "habillage": "texte des attaques au centre sur le corps du Pokémon",
+     "bas": "sol de forêt ombragé"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "se prépare à attaquer",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "jungko",
+     "jungle",
+     "feuillage",
+     "combat",
+     "détermination",
+     "vert",
+     "liane"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 252,
    "paire": null
   },
@@ -851,7 +978,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "prairie ensoleillée",
+    "lieu": "colline herbeuse",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu lumineux avec un éclat de lumière éblouissant",
+     "milieu": "Viridium posant fièrement avec des effets de brillance",
+     "habillage": "attaques et texte superposés sur le corps du Pokémon",
+     "bas": "colline verdoyante et arborée"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "blanc",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose fièrement",
+    "emotion": "noble",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "viridium",
+     "lumière",
+     "ciel",
+     "herbe",
+     "colline",
+     "noble",
+     "brillance"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 640,
    "paire": null
   },
@@ -1101,7 +1292,71 @@
    "stade": null,
    "evolue_de": "Limagma",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "volcan en éruption",
+    "lieu": "coulée de lave ardente",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel enfumé de cendres et bulles de magma",
+     "milieu": "Volcaropod rugissant au milieu des flammes",
+     "habillage": "blocs de texte des attaques au centre",
+     "bas": "roches volcaniques sombres et coulées de lave"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "orange",
+      "noir",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "hurle de rage",
+    "emotion": "finit de rugir",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "volcaropod",
+     "volcan",
+     "lave",
+     "feu",
+     "magma",
+     "roche",
+     "chaleur"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 218,
    "paire": null
   },
@@ -1301,7 +1556,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace sombre",
+    "lieu": "fond cosmique orageux",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête ronde de Pierroteknik avec des points colorés",
+     "milieu": "corps en forme de fleur et collerette",
+     "bas": "pattes et fond cosmique"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "rouge",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "blanc",
+      "bleu",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "mystérieux",
+    "moment": "nuit",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Pierroteknik",
+     "Pokémon",
+     "Ultra-Chimère",
+     "espace",
+     "éclairs",
+     "ballon",
+     "fleur",
+     "cosmique"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 806,
    "paire": null
   },
@@ -1501,7 +1820,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "bord de mer",
+    "lieu": "plage avec vagues",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "ciel et crinière de Suicune",
+     "milieu": "tête de Suicune et gerbes d'eau",
+     "bas": "corps et vagues"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "violet",
+      "beige"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "court",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Suicune",
+     "Pokémon",
+     "eau",
+     "vagues",
+     "crinière",
+     "éclaboussures",
+     "rivage",
+     "ciel"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 245,
    "paire": null
   },
@@ -2151,7 +2534,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": "true"
+    },
+    "univers": "orage électrique",
+    "lieu": "ciel orageux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tête de Zeraora et griffes levées",
+     "milieu": "corps et éclairs",
+     "bas": "fond électrique violet"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "jaune",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "violet",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "agressif",
+    "moment": "nuit",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Zeraora",
+     "Pokémon",
+     "électricité",
+     "éclairs",
+     "griffes",
+     "orage",
+     "combat",
+     "jaune"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 807,
    "paire": null
   },
@@ -2451,7 +2898,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "canyon ou ruines",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "plumes colorées et ciel",
+     "milieu": "tête de Cryptéro et œil central",
+     "bas": "corps et paysage rocheux"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "lévite",
+    "emotion": "serein",
+    "moment": "aube",
+    "meteo": "brume",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Cryptéro",
+     "Pokémon",
+     "montagne",
+     "ruines",
+     "plumes",
+     "mystique",
+     "canyon",
+     "vol"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 561,
    "paire": null
   },
@@ -3026,7 +3537,69 @@
    "stade": null,
    "evolue_de": "Ymphect",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "flanc de montagne escarpé",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel nuageux et sommet rocheux",
+     "milieu": "Tyranocif rugissant au premier plan",
+     "bas": "rochers et poussière"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "gris"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "rugit",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tyranocif",
+     "rocher",
+     "montagne",
+     "rugissement",
+     "griffes",
+     "poussière",
+     "puissance"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 246,
    "paire": null
   },
@@ -3251,7 +3824,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "paysage rocheux",
+    "lieu": "sol rocailleux désertique",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel nuageux avec éclair",
+     "milieu": "Genesect de face",
+     "bas": "sol rocailleux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "gris",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose de combat",
+    "emotion": "menaçant",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Genesect",
+     "acier",
+     "violet",
+     "éclair",
+     "rochers",
+     "technologie",
+     "robot"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 649,
    "paire": null
   },
@@ -3301,7 +3936,69 @@
    "stade": null,
    "evolue_de": "Goupix d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt magique",
+    "lieu": "sous-bois lumineux",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage d'arbres lumineux",
+     "milieu": "Feunard d'Alola élégant",
+     "bas": "sol forestier"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "blanc",
+     "secondaires": [
+      "bleu",
+      "doré"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "se tient debout",
+    "emotion": "gracieux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Feunard",
+     "Alola",
+     "glace",
+     "forêt",
+     "lumière",
+     "queues",
+     "magique"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 37,
    "paire": null
   },
@@ -3726,7 +4423,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "jardin fleuri",
+    "lieu": "parterre de fleurs sous un ciel bleu",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu avec éclairs",
+     "milieu": "Mimiqui au centre",
+     "bas": "fleurs colorées"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "vert",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mimiqui",
+     "fleurs",
+     "jardin",
+     "pétales",
+     "fantôme",
+     "feuillage",
+     "coloré"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 778,
    "paire": null
   },
@@ -3976,7 +4735,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel orageux",
+    "lieu": "haute altitude",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "ciel sombre et éclairs",
+     "milieu": "Lugia GX au centre",
+     "bas": "vagues d'énergie et texte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "charge",
+    "emotion": "puissance",
+    "moment": "nuit",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Lugia",
+     "GX",
+     "éclair",
+     "ciel",
+     "orage",
+     "puissance",
+     "légendaire"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 249,
    "paire": 250
   },
@@ -4764,7 +5585,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni vert",
+    "lieu": "studio abstrait",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête de Caratroc GX",
+     "milieu": "carapace et texte",
+     "bas": "pieds et bas de carte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Caratroc",
+     "GX",
+     "vert",
+     "carapace",
+     "full art",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 213,
    "paire": null
   },
@@ -4789,7 +5671,67 @@
    "stade": null,
    "evolue_de": "Massko",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni vert",
+    "lieu": "studio abstrait",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête de Jungko GX",
+     "milieu": "torse, bras lames et texte",
+     "bas": "bas de carte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Jungko",
+     "GX",
+     "lames",
+     "vert",
+     "full art",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 252,
    "paire": null
   },
@@ -4814,7 +5756,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni vert",
+    "lieu": "studio abstrait",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "cornes de Viridium GX",
+     "milieu": "corps et texte",
+     "bas": "sabots et bas de carte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rose",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose",
+    "emotion": "sérénité",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Viridium",
+     "GX",
+     "légendaire",
+     "vert",
+     "full art",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 640,
    "paire": null
   },
@@ -4839,7 +5842,71 @@
    "stade": null,
    "evolue_de": "Limagma",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni rouge",
+    "lieu": "fond uni rouge",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Tête et flamme du Pokémon",
+     "milieu": "Corps et coquille",
+     "bas": "Base de la carte avec texte"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "rouge",
+     "gauche": "rouge",
+     "droite": "rouge"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "jaune",
+      "noir",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "regarde",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Volcaropod",
+     "GX",
+     "Pokémon",
+     "feu",
+     "rouge",
+     "lave",
+     "coquille",
+     "créature"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 218,
    "paire": null
   },
@@ -4864,7 +5931,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni rouge",
+    "lieu": "fond uni rouge",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Tête sphérique du Pokémon",
+     "milieu": "Collerette et bras",
+     "bas": "Jambes et texte"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "rouge",
+     "gauche": "rouge",
+     "droite": "rouge"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "blanc",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "dynamique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Pierroteknik",
+     "GX",
+     "Ultra-Chimère",
+     "feu",
+     "rouge",
+     "sphère",
+     "fantaisiste",
+     "créature"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 806,
    "paire": null
   },
@@ -4889,7 +6020,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni bleu",
+    "lieu": "fond uni bleu",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Rubans et tête",
+     "milieu": "Corps du Pokémon",
+     "bas": "Pattes et texte"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "violet",
+      "blanc",
+      "turquoise"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "observe",
+    "emotion": "serein",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Suicune",
+     "GX",
+     "Pokémon",
+     "eau",
+     "bleu",
+     "légendaire",
+     "rubans",
+     "gracieux"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 245,
    "paire": null
   },
@@ -4914,7 +6109,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni jaune",
+    "lieu": "fond uni jaune",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Tête et oreilles",
+     "milieu": "Torse et bras musclés",
+     "bas": "Jambes et texte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "bleu",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "grogne",
+    "emotion": "combatif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Zeraora",
+     "GX",
+     "Pokémon",
+     "électricité",
+     "jaune",
+     "félin",
+     "griffes",
+     "puissant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 807,
    "paire": null
   },
@@ -4939,7 +6198,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni minimaliste",
+    "lieu": "studio abstrait violet",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Le Pokémon Cryptéro GX",
+     "milieu": "Le corps du Pokémon et les boîtes de texte",
+     "bas": "Le bas des ailes colorées"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "plane",
+    "emotion": "mystérieuse",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Cryptéro GX",
+     "Pokémon",
+     "Ultra Rare",
+     "ailes colorées",
+     "violet",
+     "fond uni"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 561,
    "paire": null
   },
@@ -4964,7 +6285,68 @@
    "stade": null,
    "evolue_de": "Ymphect",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni minimaliste",
+    "lieu": "studio abstrait vert",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "La tête et les épines dorsales de Tyranocif",
+     "milieu": "Le corps massif et les attaques",
+     "bas": "Le bas du corps et les statistiques"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "grogne",
+    "emotion": "agressive",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tyranocif GX",
+     "Pokémon",
+     "Ultra Rare",
+     "vert",
+     "épines",
+     "monstre"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 246,
    "paire": null
   },
@@ -4989,7 +6371,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni minimaliste",
+    "lieu": "studio abstrait gris",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "La tête robotique de Genesect GX",
+     "milieu": "Le torse métallique et le texte",
+     "bas": "Les jambes et les statistiques"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "gris",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Genesect GX",
+     "Pokémon",
+     "Ultra Rare",
+     "acier",
+     "robot",
+     "violet"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 649,
    "paire": null
   },
@@ -5014,7 +6457,68 @@
    "stade": null,
    "evolue_de": "Goupix d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni minimaliste",
+    "lieu": "studio abstrait rose",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Les queues de Feunard d'Alola",
+     "milieu": "Le corps blanc et les boîtes de texte",
+     "bas": "Les pattes et le bas de la carte"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "rose",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "observe",
+    "emotion": "gracieuse",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Feunard d'Alola GX",
+     "Pokémon",
+     "Ultra Rare",
+     "rose",
+     "glACE",
+     "queues multiples"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 37,
    "paire": null
   },
@@ -5039,7 +6543,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond rose uni",
+    "lieu": "studio rose",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Mimiqui GX",
+     "milieu": "corps de Mimiqui",
+     "zones": "base de la carte avec texte"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "rose",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "noir",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "mystérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mimiqui",
+     "Pokémon",
+     "GX",
+     "rose",
+     "tissu",
+     "fantôme",
+     "adorable"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 778,
    "paire": null
   },
@@ -5064,7 +6630,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait argenté",
+    "lieu": "espace abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de Lugia",
+     "milieu": "bras levés",
+     "bas": "corps de Lugia"
+    },
+    "bords": {
+     "haut": "argenté",
+     "bas": "argenté",
+     "gauche": "argenté",
+     "droite": "argenté"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "grogne",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Lugia",
+     "Pokémon",
+     "GX",
+     "légendaire",
+     "argenté",
+     "bleu",
+     "puissance"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 249,
    "paire": 250
   },
@@ -5085,7 +6713,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "laboratoire futuriste",
+    "lieu": "bâtiment de la fondation Aether",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de Saubohne",
+     "milieu": "torse et lunettes",
+     "bas": "texte de la carte"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "pose",
+    "emotion": "arrogant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Saubohne",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Saubohne élabore un plan machiavélique au sein de la Fondation Aether.",
+    "tags": [
+     "Saubohne",
+     "Dresseur",
+     "Supporter",
+     "lunettes",
+     "futuriste",
+     "Aether",
+     "homme"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5106,7 +6801,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond lumineux orange",
+    "lieu": "arène ou studio",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête du juge",
+     "milieu": "bras tendu et sifflet",
+     "bas": "texte de la carte"
+    },
+    "bords": {
+     "haut": "orange",
+     "bas": "orange",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "montre du doigt",
+    "emotion": "sévère",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Le juge arbitre un match crucial en imposant de nouvelles règles aux joueurs.",
+    "tags": [
+     "Juge",
+     "Dresseur",
+     "Supporter",
+     "sifflet",
+     "arbitre",
+     "orange",
+     "étoiles"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5127,7 +6889,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "terrain de golf",
+    "lieu": "parcours de golf ensoleillé",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et plume blanche stylisée",
+     "milieu": "Kahili tenant un club de golf",
+     "bas": "pelouse verte et club posé"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "vert",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "swinguer",
+    "emotion": "déterminée",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [
+     {
+      "nom": "Kahili",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Kahili",
+     "golf",
+     "sport",
+     "femme",
+     "bleu",
+     "plume",
+     "club"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5148,7 +6977,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "chambre d'artiste",
+    "lieu": "atelier de peinture",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "mur rose et motifs de fleurs colorées",
+     "milieu": "Oléa assise tenant un pinceau",
+     "bas": "pieds d'Oléa et Poké Ball posée"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "rose",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "peint",
+    "emotion": "rêveuse",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Oléa",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Oléa",
+     "peinture",
+     "pinceau",
+     "art",
+     "rose",
+     "créativité",
+     "atelier"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5169,7 +7065,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "nuit étoilée",
+    "lieu": "ciel nocturne mystique",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "ciel noir constellé d'étoiles",
+     "milieu": "Mortimer en mouvement",
+     "bas": "effets lumineux bleus et noirs"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "violet",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "invoque",
+    "emotion": "mystérieux",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Mortimer",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Mortimer",
+     "spectre",
+     "nuit",
+     "étoiles",
+     "violet",
+     "mystère",
+     "fantôme"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5190,7 +7153,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "laboratoire",
+    "lieu": "laboratoire du professeur",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fond orange et Kaiminus",
+     "milieu": "Professeur Orme surpris entouré de ses Pokémon",
+     "bas": "livres et documents éparpillés"
+    },
+    "bords": {
+     "haut": "orange",
+     "bas": "orange",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "vert",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "panique",
+    "emotion": "paniqué",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Professeur Orme",
+      "role": "professeur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Professeur Orme",
+     "Germignon",
+     "Héricendre",
+     "Kaiminus",
+     "laboratoire",
+     "starters",
+     "surprise"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5211,7 +7241,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "fond texturé avec des cœurs",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "la tête de Blanche avec des cœurs flottants",
+     "milieu": "le haut du corps de Blanche et des blocs de texte",
+     "bas": "les jambes de Blanche et le bas de la carte"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "blanc",
+     "gauche": "rose",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "salue souriante",
+    "emotion": "joyeuse",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Blanche",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Blanche",
+     "dresseuse",
+     "cœurs",
+     "sourire",
+     "rose",
+     "anime",
+     "ultra rare",
+     "flicage"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5236,7 +7334,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "fond irisé texturé",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "la tête arrondie du Pokémon",
+     "milieu": "la carapace ronde texturée",
+     "bas": "les attaques et le texte de la carte"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "blanc",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "vert",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose fixe",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Caratroc",
+     "GX",
+     "arc-en-ciel",
+     "rare",
+     "Pokémon",
+     "multicolore",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 213,
    "paire": null
   },
@@ -5261,7 +7422,70 @@
    "stade": null,
    "evolue_de": "Massko",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "fond irisé texturé",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "la tête de Jungko",
+     "milieu": "le haut du corps et ses bras feuillus",
+     "bas": "les attaques et le texte de la carte"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "blanc",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "vert",
+      "jaune",
+      "orange"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "se prépare à combattre",
+    "emotion": "déterminée",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Jungko",
+     "GX",
+     "arc-en-ciel",
+     "rare",
+     "Pokémon",
+     "multicolore",
+     "feuillage"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 252,
    "paire": null
   },
@@ -5286,7 +7510,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "fond irisé texturé",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "la tête et les cornes de Viridium",
+     "milieu": "le corps du Pokémon",
+     "bas": "les attaques et le texte de la carte"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "blanc",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "orange",
+      "vert",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose fixe",
+    "emotion": "sereine",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Viridium",
+     "GX",
+     "arc-en-ciel",
+     "rare",
+     "Pokémon",
+     "multicolore",
+     "légendaire"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 640,
    "paire": null
   },
@@ -5311,7 +7598,70 @@
    "stade": null,
    "evolue_de": "Limagma",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "aucun",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête de Volcaropod et flammes",
+     "milieu": "corps en lave et texte",
+     "bas": "base et texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "avance",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Volcaropod",
+     "Pokémon",
+     "arc-en-ciel",
+     "lave",
+     "brillant",
+     "rare",
+     "feu"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 218,
    "paire": null
   },
@@ -5336,7 +7686,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "aucun",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête sphérique de Pierroteknik",
+     "milieu": "collerette et bras",
+     "bas": "jambes et texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "rose",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "espièglerie",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Pierroteknik",
+     "Ultra-Chimère",
+     "arc-en-ciel",
+     "sphère",
+     "brillant",
+     "rare"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 806,
    "paire": null
   },
@@ -5361,7 +7773,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "aucun",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête et rubans de Suicune",
+     "milieu": "corps et texte",
+     "bas": "pattes et texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "bleu",
+      "turquoise",
+      "violet"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "court",
+    "emotion": "noblesse",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Suicune",
+     "Pokémon",
+     "légendaire",
+     "arc-en-ciel",
+     "eau",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 245,
    "paire": null
   },
@@ -5386,7 +7860,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "aucun",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête et crinière de Zeraora",
+     "milieu": "corps et poings",
+     "bas": "jambes et texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "vert",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "grogne",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Zeraora",
+     "Pokémon",
+     "arc-en-ciel",
+     "électricité",
+     "griffes",
+     "brillant",
+     "rare"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 807,
    "paire": null
   },
@@ -5411,7 +7948,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "dégradé coloré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête et ailes déployées de Cryptéro",
+     "milieu": "corps en forme de sphère et texte de carte",
+     "bas": "queues et bas du corps du Pokémon"
+    },
+    "bords": {
+     "haut": "argenté",
+     "bas": "argenté",
+     "gauche": "argenté",
+     "droite": "argenté"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "vert",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "plane",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Cryptéro",
+     "Pokémon",
+     "GX",
+     "arc-en-ciel",
+     "rare",
+     "dégradé",
+     "ailes",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 561,
    "paire": null
   },
@@ -5436,7 +8037,71 @@
    "stade": null,
    "evolue_de": "Ymphect",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "dégradé coloré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "cornes et tête de Tyranocif",
+     "milieu": "corps massif et texte de carte",
+     "bas": "jambes et bas du corps du Pokémon"
+    },
+    "bords": {
+     "haut": "argenté",
+     "bas": "argenté",
+     "gauche": "argenté",
+     "droite": "argenté"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "vert",
+      "orange",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "grogne",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tyranocif",
+     "Pokémon",
+     "GX",
+     "arc-en-ciel",
+     "rare",
+     "monstre",
+     "piquants",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 246,
    "paire": null
   },
@@ -5461,7 +8126,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "dégradé coloré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête robotique et antennes de Genesect",
+     "milieu": "buste, bras et texte de carte",
+     "bas": "jambes et bas du corps du Pokémon"
+    },
+    "bords": {
+     "haut": "argenté",
+     "bas": "argenté",
+     "gauche": "argenté",
+     "droite": "argenté"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rose",
+      "orange",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Genesect",
+     "Pokémon",
+     "GX",
+     "arc-en-ciel",
+     "rare",
+     "robot",
+     "métal",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 649,
    "paire": null
   },
@@ -5486,7 +8215,71 @@
    "stade": null,
    "evolue_de": "Goupix d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait arc-en-ciel",
+    "lieu": "dégradé coloré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête et longues queues élégantes de Feunard",
+     "milieu": "corps élancé et texte de carte",
+     "bas": "pattes et bas de la carte"
+    },
+    "bords": {
+     "haut": "argenté",
+     "bas": "argenté",
+     "gauche": "argenté",
+     "droite": "argenté"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "rose",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "observe",
+    "emotion": "serein",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Feunard d'Alola",
+     "Pokémon",
+     "GX",
+     "arc-en-ciel",
+     "rare",
+     "glace",
+     "queues",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 37,
    "paire": null
   },
@@ -5511,7 +8304,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "espace arc-en-ciel scintillant",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Le haut du corps de Mimiqui GX aux reflets arc-en-ciel",
+     "milieu": "Le corps spectral et la queue de Mimiqui GX avec des attaques textuelles",
+     "bas": "Le bas des attaques et les mentions légales"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "multicolore",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "rose",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "espiègle",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mimiqui",
+     "GX",
+     "arc-en-ciel",
+     "spectre",
+     "brillant",
+     "rare",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 778,
    "paire": null
   },
@@ -5536,7 +8392,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "espace arc-en-ciel scintillant",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "La tête et les bras levés de Lugia GX",
+     "milieu": "Le torse de Lugia GX avec les attaques",
+     "bas": "Les bas des attaques et les mentions légales"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "multicolore",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "orange",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "grogne",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Lugia",
+     "GX",
+     "légendaire",
+     "arc-en-ciel",
+     "brillant",
+     "rare",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 249,
    "paire": 250
   },
@@ -5557,7 +8476,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond doré scintillant",
+    "lieu": "espace doré étincelant",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Éclats lumineux dorés",
+     "milieu": "Le sac à aventure au centre",
+     "bas": "Texte de la carte et éclats"
+    },
+    "bords": {
+     "haut": "or",
+     "bas": "or",
+     "gauche": "or",
+     "droite": "or"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "marron",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "sac",
+     "objet",
+     "doré",
+     "étincelles",
+     "rare",
+     "dresseur",
+     "équipement"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5578,7 +8560,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond doré scintillant",
+    "lieu": "espace doré étincelant",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Éclats lumineux dorés",
+     "milieu": "Le casque choix au centre",
+     "bas": "Texte de la carte et éclats"
+    },
+    "bords": {
+     "haut": "or",
+     "bas": "or",
+     "gauche": "or",
+     "droite": "or"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "bleu",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "casque",
+     "outil",
+     "doré",
+     "étincelles",
+     "rare",
+     "dresseur",
+     "protection"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5599,7 +8644,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait doré",
+    "lieu": "studio abstrait lumineux",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lumière rayonnante et éclats brillants",
+     "milieu": "ceinture objet pokémon centrale",
+     "bas": "texte de règle et fond doré"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "noir",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Cet outil renforce les capacités du Pokémon qui le porte lors des duels tendus.",
+    "tags": [
+     "objet",
+     "ceinture",
+     "doré",
+     "brillant",
+     "lumière",
+     "métal",
+     "étoile"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5620,7 +8728,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait doré",
+    "lieu": "studio abstrait lumineux",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "toile d'araignée rouge et éclats",
+     "milieu": "bouteille attrape-perso bleue et argentée",
+     "bas": "texte de règle et fond doré"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "argent",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "flotte",
+    "emotion": "dynamisme",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Cet objet permet de manipuler la position des Pokémon sur le terrain.",
+    "tags": [
+     "objet",
+     "bouteille",
+     "bleu",
+     "argent",
+     "toile",
+     "brillant",
+     "doré"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5641,7 +8812,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait doré",
+    "lieu": "studio abstrait lumineux",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "éclairs électriques et lumière",
+     "milieu": "fiole électrique transparente et noire",
+     "bas": "texte de règle et éclairs"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "électrise",
+    "emotion": "énergie",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Cette fiole décuple la puissance des attaques de type Électrique.",
+    "tags": [
+     "objet",
+     "fiole",
+     "électricité",
+     "éclair",
+     "jaune",
+     "noir",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5662,7 +8895,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait doré",
+    "lieu": "studio abstrait lumineux",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lumière rayonnante et éclats",
+     "milieu": "mixeur rose et violet avec vortex",
+     "bas": "texte de règle et fond doré"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rose",
+      "violet",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "aspire",
+    "emotion": "mystère",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Cet objet énigmatique envoie les cartes directement dans la zone perdue.",
+    "tags": [
+     "objet",
+     "mixeur",
+     "rose",
+     "violet",
+     "vortex",
+     "doré",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5683,7 +8979,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait doré",
+    "lieu": "studio étincelant",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "entête texte dresseur objet",
+     "milieu": "filet ball brillante avec éclats",
+     "bas": "texte de règle sur fond semi-transparent"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "turquoise",
+      "blanc"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "magnifique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Filet Ball",
+     "Objet",
+     "doré",
+     "brillant",
+     "éclats",
+     "Pokémon",
+     "secret rare"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5704,7 +9062,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait doré",
+    "lieu": "studio étincelant",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "entête dresseur et bandeau outil",
+     "milieu": "rune sort brillante",
+     "bas": "texte de règle"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "gris",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "magnifique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Rune Sort",
+     "Outil",
+     "doré",
+     "brillant",
+     "secret rare",
+     "éclats"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5725,7 +9144,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait doré",
+    "lieu": "studio étincelant",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "entête dresseur objet",
+     "milieu": "marteau attends-voir en relief",
+     "bas": "texte de règle"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "violet",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "magnifique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Marteau Attends-Voir",
+     "Objet",
+     "doré",
+     "brillant",
+     "violet",
+     "secret rare"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   }

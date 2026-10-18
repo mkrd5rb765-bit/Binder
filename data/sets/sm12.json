@@ -27,7 +27,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt tropicale luxuriante",
+    "lieu": "au cœur de la jungle",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lumière filtrée à travers le feuillage",
+     "milieu": "Florizarre et Vipélierre GX",
+     "candre": "lianes et végétation dense"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "jaune",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "posent ensemble",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Florizarre",
+     "Vipélierre",
+     "jungle",
+     "lianes",
+     "feuillage",
+     "lumière",
+     "plante",
+     " Escouade"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 1,
    "paire": null
   },
@@ -102,7 +165,75 @@
    "stade": null,
    "evolue_de": "Ortide",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "prairie fleurie ensoleillée",
+    "lieu": "colline verdoyante aux fleurs d'oranger",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel clair et grand chapeau fleuri",
+     "milieu": "Rafflesia GX et dresseuse",
+     "bas": "pente herbeuse et fleurs"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "orange",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "marche paisiblement",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Rafflesia",
+     "fleurs",
+     "prairie",
+     "colline",
+     "dresseuse",
+     "pollen",
+     "nature",
+     "parfum"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 43,
    "paire": null
   },
@@ -553,7 +684,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "cratère volcanique ardent",
+    "lieu": "rochers et flammes",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "flammes et cornes de Dracaufeu",
+     "milieu": "Dracaufeu et Roussil GX",
+     "bas": "base rocheuse ardente"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaquent ensemble",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Dracaufeu",
+     "Roussil",
+     "feu",
+     "flammes",
+     "volcan",
+     "puissance",
+     "combat",
+     "Escouade"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 4,
    "paire": null
   },
@@ -878,7 +1072,70 @@
    "stade": null,
    "evolue_de": "Pyronille",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "tempête de feu ardente",
+    "lieu": "tourbillon de braises et rochers volants",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "rochers en lévitation et braises",
+     "milieu": "Pyrax GX en vol",
+     "bas": "vague de chaleur ardente"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "marron",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "vole rapidement",
+    "emotion": "intense",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Pyrax",
+     "feu",
+     "insecte",
+     "braises",
+     "chaleur",
+     "rochers",
+     "vol",
+     "explosion"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 636,
    "paire": null
   },
@@ -954,7 +1211,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "rivage aquatique rocheux",
+    "lieu": "bord de mer avec des vagues",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "Tiplouf et éclaboussures d'eau",
+     "milieu": "Tortank chargeant en avant",
+     "bas": "Vagues et rochers éclaboussés"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "projette de l'eau",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": "Tortank et Tiplouf unissent leurs forces pour lancer une attaque aquatique dévastatrice.",
+    "tags": [
+     "Tortank",
+     "Tiplouf",
+     "eau",
+     "vagues",
+     "éclaboussures",
+     "combat",
+     "rochers",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 7,
    "paire": null
   },
@@ -1579,7 +1899,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "mer tropicale ensoleillée",
+    "lieu": "sous l'eau près d'une plage",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "ciel et palmiers flous",
+     "milieu": "banc de Froussardine géant et petits",
+     "bas": "fonds marins et coraux"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "nage en groupe",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Froussardine",
+     "poisson",
+     "banc",
+     "mer",
+     "tropical",
+     "coraux",
+     "eau",
+     "bleu"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 746,
    "paire": null
   },
@@ -1880,7 +2263,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique lointain",
+    "lieu": "ciel étoilé et dimension parallèle",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel étoilé et Lunala",
+     "milieu": "Solgaleo portant Lillie",
+     "bas": "sol rocheux"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "voyagent ensemble",
+    "emotion": "protecteur",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Lillie",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Solgaleo et Lunala traversent le cosmos aux côtés de leur dresseur pour repousser les ténèbres.",
+    "tags": [
+     "Solgaleo",
+     "Lunala",
+     "Lillie",
+     "espace",
+     "étoiles",
+     "cosmique",
+     "légendaire",
+     "nuit"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 789,
    "paire": 792
   },
@@ -2380,7 +2831,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "jardin fleuri verdoyant",
+    "lieu": "prairie avec des fleurs jaunes et lavande",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage vert et ciel clair",
+     "milieu": "Plumeline en train de danser",
+     "bas": "fleurs jaunes et violettes"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "violet",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "peinture douce",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "danse gracieusement",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Plumeline",
+     "danse",
+     "fleurs",
+     "jaune",
+     "violet",
+     "nature",
+     "printemps",
+     "oiseau"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 741,
    "paire": null
   },
@@ -2755,7 +3269,69 @@
    "stade": null,
    "evolue_de": "Vibraninf",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "désert montagneux",
+    "lieu": "canyon rocheux",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel et parois rocheuses",
+     "milieu": "Libégon en plein vol",
+     "bas": "poussière et débris rocheux"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "gris",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "rouge"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "vole rapidement",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Libégon",
+     "désert",
+     "rochers",
+     "poussière",
+     "vol",
+     "insecte",
+     "dragon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 328,
    "paire": null
   },
@@ -3230,7 +3806,69 @@
    "stade": null,
    "evolue_de": "Miaouss d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt tropicale",
+    "lieu": "sous-bois lumineux",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage et branches",
+     "milieu": "Persian d'Alola en attaque",
+     "bas": "sol feuillu"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "gris",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "gris",
+      "orange"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "gauche"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "griffe",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Persian",
+     "Alola",
+     "forêt",
+     "griffes",
+     "attaque",
+     "félin",
+     "feuillage"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 52,
    "paire": null
   },
@@ -3582,7 +4220,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": "promo",
+     "texte_charge": true
+    },
+    "univers": "monde fantastique",
+    "lieu": "amas de baies et objets",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Toudoudou et baies",
+     "milieu": "Togepi et Mélo",
+     "bas": "fond coloré et sucré"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "jaune",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "jaune",
+      "violet"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "s'amusent",
+    "emotion": "joyeux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Togepi",
+     "Mélo",
+     "Toudoudou",
+     "baies",
+     "Poké Balls",
+     "mignon",
+     "coloré"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 173,
    "paire": null
   },
@@ -3909,7 +4609,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique",
+    "lieu": "dimension céleste",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "Dialga et Palkia",
+     "milieu": "Arceus au premier plan",
+     "bas": "lumière cosmique"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "posent",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Arceus",
+     "Dialga",
+     "Palkia",
+     "légendaires",
+     "espace",
+     "lumière",
+     "cosmique"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 483,
    "paire": 484
   },
@@ -3935,7 +4697,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel orageux",
+    "lieu": "ciel dégagé",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Zekrom et Reshiram dans le ciel",
+     "milieu": "un dresseur au centre",
+     "bas": "attaques et effets électriques"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "volent ensemble",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "N",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Les Pokémon légendaires Reshiram et Zekrom unissent leurs forces avec leur dresseur pour une bataille décisive.",
+    "tags": [
+     "dragons",
+     "feu",
+     "électricité",
+     "puissance",
+     "ciel",
+     "légendaire",
+     "combat"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 643,
    "paire": 644
   },
@@ -3961,7 +4791,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension étrange",
+    "lieu": "monde mystérieux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Mandrillon et Engloutyran",
+     "milieu": "effets et texte d'attaque",
+     "bas": "encadré de texte et PV"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "noir",
+      "violet"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "menacent",
+    "emotion": "menaçant",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Les Ultra-Chimères envahissent l'espace avec une énergie destructrice.",
+    "tags": [
+     "ultra-chimère",
+     "extraterrestre",
+     "rouge",
+     "sombre",
+     "menaçant",
+     "combat"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 799,
    "paire": null
   },
@@ -4137,7 +5028,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "scène joyeuse",
+    "lieu": "spectacle",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fond coloré et boules lumineuses",
+     "milieu": "Rondoudou et Méga-Lockpin souriants",
+     "bas": "texte et attaques"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "marron",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "posent",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Rondoudou et Méga-Lockpin se préparent à un numéro haut en couleur.",
+    "tags": [
+     "rose",
+     "bleu",
+     "joyeux",
+     "spectacle",
+     "cute",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 39,
    "paire": null
   },
@@ -4612,7 +5565,75 @@
    "stade": null,
    "evolue_de": "Type:0",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ruines industrielles",
+    "lieu": "zone dévastée",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel et structures détruites",
+     "milieu": "Silvallié et Gladio",
+     "bas": "attaques et PV"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "bleu",
+      "blanc",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "veillent",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Gladio",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Silvallié et Gladio se tiennent prêts à affronter les dangers dans les ruines.",
+    "tags": [
+     "ruines",
+     "silvallié",
+     "gladio",
+     "combat",
+     "détermination",
+     "gris",
+     "métallique"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 772,
    "paire": null
   },
@@ -5163,7 +6184,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt tropicale",
+    "lieu": "clairière verdoyante",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "grande fleur rose de Florizarre",
+     "milieu": "Florizarre et Vipélierre sur fond vert",
+     "fond uni": "lignes de texte et attaques"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rose",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "posent ensemble",
+    "emotion": "confiance",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "florizarre",
+     "vipélierre",
+     "plante",
+     "fleur",
+     "liane",
+     "vert",
+     "rose",
+     "escouade"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 1,
    "paire": null
   },
@@ -5188,7 +6273,76 @@
    "stade": null,
    "evolue_de": "Ortide",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt enchantée",
+    "lieu": "sous un arbre fleuri",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "grand chapeau de Rafflesia et tronc d'arbre",
+     "milieu": "fille endormie aux côtés de Rafflesia",
+     "bas": "sol herbeux et fleurs"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "marron",
+      "rose"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "dort paisiblement",
+    "emotion": "sérénité",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "habitant"
+     }
+    ],
+    "histoire": "Un moment de sieste partagé en toute quiétude au cœur de la forêt.",
+    "tags": [
+     "rafflesia",
+     "fille",
+     "kimono",
+     "sommeil",
+     "forêt",
+     "champignon",
+     "fleurs",
+     "paisible"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 43,
    "paire": null
   },
@@ -5214,7 +6368,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni rouge",
+    "lieu": "indéfini",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Roussil tenant un bâton enflammé",
+     "milieu": "Dracaufeu portant Roussil",
+     "bas": "texte d'attaque et cadre de carte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "orange",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "chevauche",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "dracaufeu",
+     "roussil",
+     "feu",
+     "escouade",
+     "rouge",
+     "flammes",
+     "combat",
+     "GX"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 4,
    "paire": null
   },
@@ -5239,7 +6456,71 @@
    "stade": null,
    "evolue_de": "Pyronille",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni rouge",
+    "lieu": "indéfini",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "ailes orange et tête de Pyrax",
+     "milieu": "corps enroulé de Pyrax avec contours bleus",
+     "bas": "texte d'attaque sur fond rouge"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "orange",
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "se prépare",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "pyrax",
+     "feu",
+     "insecte",
+     "rouge",
+     "orange",
+     "lumière",
+     "GX",
+     "puissant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 636,
    "paire": null
   },
@@ -5265,7 +6546,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "bord de mer",
+    "lieu": "plage ou bord de l'eau",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel clair et en-tête de carte",
+     "milieu": "Tortank et Tiplouf posés sur le sol",
+     "bas": "blocs de texte d'attaques et encadrés de règles"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "pose",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tortank",
+     "Tiplouf",
+     "eau",
+     "bleu",
+     "pokémon",
+     "escouade",
+     "GX"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 7,
    "paire": null
   },
@@ -5291,7 +6634,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "sous-marin",
+    "lieu": "fond marin avec des bulles",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "bulles et eau turquoise",
+     "milieu": "Tortank et Tiplouf entourés d'une grande bulle",
+     "bas": "fond marin vert et blocs de texte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "vert",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "flotte",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tortank",
+     "Tiplouf",
+     "bulles",
+     "eau",
+     "vert",
+     "turquoise",
+     "joie"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 7,
    "paire": null
   },
@@ -5317,7 +6722,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace nuit",
+    "lieu": "paysage nocturne sous la lune",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel étoilé et lune ronde",
+     "milieu": "Lillie au centre, Solgaleo et Lunala",
+     "bas": "attaques et texte sur fond contrasté"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "bas",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "protège",
+    "emotion": "serein",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Lillie",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Lillie se tient aux côtés de ses Pokémon légendaires sous la lumière de la lune.",
+    "tags": [
+     "Lillie",
+     "Solgaleo",
+     "Lunala",
+     "nuit",
+     "lune",
+     "étoiles",
+     "violet"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 789,
    "paire": 792
   },
@@ -5342,7 +6814,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni",
+    "lieu": "espace stylisé violet",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête et éventail de Plumeline",
+     "milieu": "corps de Plumeline en vol",
+     "bas": "texte d'attaque et bas de carte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "turquoise",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "danse",
+    "emotion": "gracieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Plumeline",
+     "danse",
+     "oiseau",
+     "violet",
+     "turquoise",
+     "gracieux"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 741,
    "paire": null
   },
@@ -5367,7 +6900,70 @@
    "stade": null,
    "evolue_de": "Vibraninf",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "désert rocheux",
+    "lieu": "sol désertique",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "grandes ailes vertes et tête de Libégon",
+     "milieu": "corps de Libégon et blocs de texte d'attaque",
+     "bas": "queue et bas de carte"
+    },
+    "bords": {
+     "haut": "orange",
+     "bas": "noir",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "vert",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Libégon",
+     "Pokémon",
+     "GX",
+     "désert",
+     "ailes",
+     "vert",
+     "orange",
+     "créature"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 328,
    "paire": null
   },
@@ -5392,7 +6988,70 @@
    "stade": null,
    "evolue_de": "Miaouss d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni",
+    "lieu": "studio abstrait",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête et oreilles de Persian d'Alola",
+     "milieu": "corps du chat et texte d'attaque",
+     "bas": "bas de carte"
+    },
+    "bords": {
+     "haut": "turquoise",
+     "bas": "noir",
+     "gauche": "turquoise",
+     "droite": "turquoise"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "gris",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "marche",
+    "emotion": "arrogant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Persian",
+     "Alola",
+     "Pokémon",
+     "GX",
+     "chat",
+     "gris",
+     "turquoise",
+     "félin"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 52,
    "paire": null
   },
@@ -5419,7 +7078,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique",
+    "lieu": "dimension légendaire",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "têtes des trois Pokémon légendaires",
+     "milieu": "corps d'Arceus, Dialga et Palkia",
+     "bas": "bas de carte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "noir",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Arceus",
+     "Dialga",
+     "Palkia",
+     "Escouade",
+     "GX",
+     "doré",
+     "légendaire",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 483,
    "paire": 484
   },
@@ -5446,7 +7168,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "temple ancien",
+    "lieu": "sanctuaire secret",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "architecture de temple et statues",
+     "milieu": "statues des trois Pokémon légendaires en pierre",
+     "bas": "bas de carte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "noir",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "peinture texturée",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "solennel",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Arceus",
+     "Dialga",
+     "Palkia",
+     "statue",
+     "temple",
+     "pierre",
+     "Escouade",
+     "GX"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 483,
    "paire": 484
   },
@@ -5472,7 +7257,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel et éclairs",
+    "lieu": "ciel orageux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Zekrom noir et Reshiram blanc",
+     "milieu": "N (personnage humain) au centre",
+     "bas": "traits de flammes et éclairs"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "noir",
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose de dresseur",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "N",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Le dresseur N se tient aux côtés de Reshiram et Zekrom prêts à livrer combat.",
+    "tags": [
+     "dresseur",
+     "Zekrom",
+     "Reshiram",
+     "éclairs",
+     "flammes",
+     "combativité",
+     "ciel"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 643,
    "paire": 644
   },
@@ -5498,7 +7351,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension parallèle",
+    "lieu": "Ultra-Espace",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Mandrillon et Engloutyran",
+     "milieu": "silhouettes sombres",
+     "bas": "fond rouge et noir"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "rouge",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "menacent",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mandrillon",
+     "Engloutyran",
+     "Ultra-Chimère",
+     "sombre",
+     "rouge",
+     "menaçant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 799,
    "paire": null
   },
@@ -5524,7 +7438,68 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension parallèle",
+    "lieu": "Ultra-Espace",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Mandrillon violet et Engloutyran",
+     "milieu": "nuages rouges",
+     "bas": "motifs spirales"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "violet",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "volent et avancent",
+    "emotion": "intrigant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mandrillon",
+     "Engloutyran",
+     "Ultra-Chimère",
+     "violet",
+     "rouge",
+     "fantastique"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 799,
    "paire": null
   },
@@ -5550,7 +7525,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni",
+    "lieu": "studio",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "oreilles de Méga-Lockpin",
+     "milieu": "Rondoudou et Méga-Lockpin",
+     "bas": "pattes et sol"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "rose",
+      "marron"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "posent",
+    "emotion": "joueur",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Méga-Lockpin",
+     "Rondoudou",
+     "Escouade",
+     "rose",
+     "marron",
+     "joueur",
+     "gris"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 39,
    "paire": null
   },
@@ -5576,7 +7613,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "prairie fleurie magique",
+    "lieu": "champ fleuri coloré",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Méga-Lockpin endormi",
+     "milieu": "Rondoudou blotti contre Méga-Lockpin",
+     "bas": "fleurs multicolores et texte d'attaque"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "jaune",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "dort paisiblement",
+    "emotion": "tendresse",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Méga-Lockpin",
+     "Rondoudou",
+     "fleurs",
+     "sommeil",
+     "câlin",
+     "pastel",
+     "tendre",
+     "multicolore"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 39,
    "paire": null
   },
@@ -5601,7 +7702,76 @@
    "stade": null,
    "evolue_de": "Type:0",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt verdoyante",
+    "lieu": "lisière de forêt",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage d'arbre et tête de Silvallié",
+     "milieu": "Gladio et Silvallié câlin",
+     "bas": "corps de Silvallié et texte des attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "gris",
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "se câlinent",
+    "emotion": "complicité",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "Gladio",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Silvallié",
+     "Gladio",
+     "forêt",
+     "affection",
+     "feuillage",
+     "gris",
+     "vert",
+     "complices"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 772,
    "paire": null
   },
@@ -5622,7 +7792,80 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait scintillant",
+    "lieu": "espace magique décoratif",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Cynthia avec ses longs cheveux blonds",
+     "milieu": "Percila avec son chapeau blanc et ses mains tendues",
+     "bas": "texte de la carte de Supporter"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "jaune",
+      "blanc",
+      "rose"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "posent ensemble",
+    "emotion": "assurance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Cynthia",
+      "role": "champion"
+     },
+     {
+      "nom": "Percila",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Cynthia",
+     "Percila",
+     "blond",
+     "violet",
+     "scintillant",
+     "élégance",
+     "dresseuses",
+     "magique"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5643,7 +7886,80 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "décor urbain dynamique",
+    "lieu": "arène de combat",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Guzma avec ses lunettes sur la tête",
+     "milieu": "Pectorius le poing en avant avec une Poké Ball",
+     "bas": "texte de la carte de Supporter"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "jaune",
+      "marron",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "prennent la pose",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Guzma",
+      "role": "dresseur"
+     },
+     {
+      "nom": "Pectorius",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Guzma",
+     "Pectorius",
+     "combat",
+     "poing",
+     "orange",
+     "détermination",
+     "dynamique",
+     "Poké Ball"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5664,7 +7980,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait scintillant",
+    "lieu": "espace coloré et magique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "chevelure blonde tressée et éclats brillants",
+     "milieu": "Lilie en mouvement souriante",
+     "bas": "vêtements roses et reflets étincelants"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "jaune",
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose dynamique",
+    "emotion": "déterminée",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Lilie",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Lilie",
+     "rose",
+     "brillant",
+     "étoiles",
+     "magique",
+     "sourire",
+     "dynamique",
+     "ultra rare"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5685,7 +8070,80 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel dégagé",
+    "lieu": "extérieur ensoleillé",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu clair avec nuages stylisés",
+     "milieu": "Barbara et Néphie côte à côte avec une canne à pêche",
+     "bas": "vêtements bleus et blancs, sac à dos"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "blanc",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "marchent ensemble",
+    "emotion": "joyeuse",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [
+     {
+      "nom": "Barbara",
+      "role": "dresseur"
+     },
+     {
+      "nom": "Néphie",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Barbara",
+     "Néphie",
+     "escouade",
+     "sourire",
+     "canne à pêche",
+     "bleu",
+     "été",
+     "amies"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5706,7 +8164,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond mystérieux",
+    "lieu": "espace sombre aux symboles cryptiques",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "casquette noire et cheveux verts",
+     "milieu": "N souriant en manteau bleu",
+     "bas": "main tendue avec des rayons lumineux"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "noir",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "tend la main",
+    "emotion": "énigmatique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "N",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "N",
+     "résolution",
+     "cheveux verts",
+     "casquette",
+     "lumière",
+     "mystérieux",
+     "bleu",
+     "magique"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5727,7 +8254,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "laboratoire ou bibliothèque",
+    "lieu": "intérieur de laboratoire",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cheveux gris et haut du corps du professeur",
+     "milieu": "Professeur Chen tendant la main vers des Poké Balls",
+     "bas": "Poké Balls posées sur un support"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "beige",
+     "secondaires": [
+      "rouge",
+      "blanc",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "tend la main",
+    "emotion": "accueillante",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Professeur Chen",
+      "role": "professeur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Professeur Chen",
+     "laboratoire",
+     "Poké Balls",
+     "installation",
+     "beige",
+     "sourire",
+     "accueillant",
+     "recherche"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5748,7 +8344,79 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait coloré",
+    "lieu": "studio abstrait",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "bannière de texte et ciel abstrait divisé en rouge et vert",
+     "milieu": "les deux dresseurs Red et Blue côte à côte",
+     "bas": "texte de capacité et encadré de règle"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rouge",
+      "vert",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "posent ensemble",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Red",
+      "role": "dresseur"
+     },
+     {
+      "nom": "Blue",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Red et Blue se tiennent prêts pour le combat suprême.",
+    "tags": [
+     "dresseurs",
+     "pokéball",
+     "rouge",
+     "vert",
+     "casquette",
+     "amis",
+     "affrontement"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5769,7 +8437,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait coloré",
+    "lieu": "piste urbaine",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de la dresseuse et lignes colorées",
+     "milieu": "corps en mouvement avec des rollers",
+     "bas": "texte de règle et rollers en premier plan"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "patine",
+    "emotion": "joyeuse",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "La skateuse s'élance à pleine vitesse dans les rues.",
+    "tags": [
+     "roller",
+     "casque",
+     "vitesse",
+     "lignes",
+     "dynamique",
+     "pokéball",
+     "sport"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5790,7 +8526,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait scintillant",
+    "lieu": "centre d'arène",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "coiffures et haut du corps",
+     "milieu": "buste et main tendant une Pokéball",
+     "bas": "blocs de texte et bas du corps"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "blanc",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "tend la main",
+    "emotion": "souriante",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Écho",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Écho attend son prochain défi avec confiance.",
+    "tags": [
+     "écho",
+     "pokéball",
+     "étoiles",
+     "sourire",
+     "cheveux",
+     "bleu",
+     "dresseuse"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -5815,7 +8619,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt d'automne",
+    "lieu": "clairière boisée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel dégagé et fumée de Chartor",
+     "milieu": "dresseuse en action et Chartor fumant",
+     "bas": "attaques et sol jonché de feuilles"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "orange",
+      "marron",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "combat",
+    "emotion": "énergique",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "automne",
+    "personnages": [
+     {
+      "nom": "Flannery",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Flannery et Chartor libèrent la puissance du type Feu dans les bois d'automne.",
+    "tags": [
+     "chartor",
+     "flannery",
+     "feu",
+     "automne",
+     "feuilles",
+     "fumée",
+     "tortue"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 324,
    "paire": null
   },
@@ -5840,7 +8712,76 @@
    "stade": "Niveau 1",
    "evolue_de": "Farfuret",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "laboratoire de recherche",
+    "lieu": "intérieur d'un laboratoire avec des machines et des éprouvettes",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Le haut de l'illustration montre des étagères et des cuves lumineuses du laboratoire.",
+     "milieu": "Dimoret se tient au premier plan à droite, les bras croisés, tandis qu'un dresseur se tient à gauche.",
+     "bas": "Le sol carrelé du laboratoire et les pieds des personnages."
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "jaune",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "noir",
+      "rouge",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose fier",
+    "emotion": "sérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Cyrus",
+      "role": "autre"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Dimoret",
+     "laboratoire",
+     "machines",
+     "éprouvettes",
+     "dresseur",
+     "bleu",
+     "science",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 215,
    "paire": null
   },
@@ -5865,7 +8806,74 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel ensoleillé",
+    "lieu": "plein air avec des bulles scintillantes",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Un ciel coloré aux teintes pastel avec des bulles lumineuses.",
+     "milieu": "Tiplouf et sa dresseuse posent joyeusement au centre.",
+     "bas": "Le bas du corps des personnages et des reflets lumineux."
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "jaune",
+     "gauche": "rose",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "pose joyeuse",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Aurore",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Tiplouf",
+     "Aurore",
+     "bulles",
+     "ciel",
+     "pastel",
+     "joyeux",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 393,
    "paire": null
   },
@@ -5890,7 +8898,74 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fonds marins",
+    "lieu": "océan sous-marin avec des algues et des poissons",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "La surface de l'eau lointaine filtrant la lumière du soleil.",
+     "milieu": "Froussardine sous sa forme banc immense avec une dresseuse à côté.",
+     "bas": "Des algues et des petits Froussardine nageant près du fond."
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "jaune",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "nage sous l'eau",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Althéa",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Froussardine",
+     "océan",
+     "sous-marin",
+     "algues",
+     "poissons",
+     "bleu",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 746,
    "paire": null
   },
@@ -5915,7 +8990,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "bibliothèque de recherche",
+    "lieu": "intérieur d'une bibliothèque avec de grandes étagères de livres",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Des étagères remplies de livres colorés.",
+     "milieu": "Un Pikachu assis sur un meuble et un dresseur de dos qui se tourne vers lui.",
+     "bas": "Le sol de la bibliothèque et le bas des étagères."
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "jaune",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "jaune",
+      "rouge",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "discute avec",
+    "emotion": "amical",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Red",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Pikachu",
+     "bibliothèque",
+     "livres",
+     "dresseur",
+     "étagères",
+     "intérieur",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 172,
    "paire": null
   },
@@ -5940,7 +9083,76 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "atelier mécanique",
+    "lieu": "garage ou atelier encombré d'outils",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Étagères avec des outils, personnages en arrière-plan et petits Magnéti",
+     "milieu": "Dresseur tenant un Magnéti au premier plan",
+     "bas": "Sol de l'atelier avec des pièces métalliques"
+    },
+    "bords": {
+     "haut": "sombre",
+     "bas": "sombre",
+     "gauche": "sombre",
+     "droite": "sombre"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "gris",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "répare",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Auguste",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Un champion prépare ses Pokémon acier dans son atelier.",
+    "tags": [
+     "atelier",
+     "métal",
+     "outils",
+     "vis",
+     "aimant",
+     "mécanicien",
+     "garage",
+     "lumière"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 81,
    "paire": null
   },
@@ -5965,7 +9177,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond stylisé",
+    "lieu": "scène artistique urbaine",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Motifs graphiques et écriture japonaise stylisée",
+     "milieu": "Smogo géant et personnage féminin punk",
+     "bas": "Effets graphiques et typographies"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "noir",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "noir",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "rebelle",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Stryka",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Une performance musicale et toxique menée par une championne rock.",
+    "tags": [
+     "violet",
+     "guitare",
+     "tête de mort",
+     "fumée",
+     "graffiti",
+     "musique",
+     "punk",
+     "style"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 109,
    "paire": null
   },
@@ -5990,7 +9270,76 @@
    "stade": "Niveau 2",
    "evolue_de": "Kirlia",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "prairie fleurie",
+    "lieu": "colline verdoyante",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Ciel clair et lointain",
+     "milieu": "Gallame et un dresseur assis dans l'herbe",
+     "bas": "Fleurs rouges et verdure au premier plan"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "se reposent",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "Tili",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Un dresseur et son partenaire profitent d'un moment de détente en pleine nature.",
+    "tags": [
+     "herbe",
+     "fleurs rouges",
+     "colline",
+     "détente",
+     "amitié",
+     "ciel",
+     "paisible",
+     "verdure"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -6015,7 +9364,76 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "chambre chaleureuse",
+    "lieu": "intérieur avec du tissu et des outils de couture",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Linge étendu et étagères de la chambre",
+     "milieu": "Jeune fille cousant un costume de Mimiqui",
+     "bas": "Pelote d'épingles et mobilier en bois"
+    },
+    "bords": {
+     "haut": "beige",
+     "bas": "marron",
+     "gauche": "beige",
+     "droite": "beige"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "beige",
+     "secondaires": [
+      "violet",
+      "marron",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "coud",
+    "emotion": "concentré",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "habitant"
+     }
+    ],
+    "histoire": "Une couturière confectionne patiemment un déguisement inspiré d'un Pokémon mystérieux.",
+    "tags": [
+     "couture",
+     "tissu",
+     "aiguille",
+     "pelote",
+     "chambre",
+     "déguisement",
+     "fil",
+     "chaleureux"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 778,
    "paire": null
   },
@@ -6040,7 +9458,75 @@
    "stade": "Niveau 1",
    "evolue_de": "Rototaupe",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "désert montagneux",
+    "lieu": "carrière ou mine à ciel ouvert",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "un dresseur avec un chapeau de cowboy et un ciel bleu clair avec une mine industrielle au loin",
+     "milieu": "le Pokémon Minotaupe accroupi au premier plan",
+     "bas": "le sol rocheux et poussiéreux"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "bleu",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "plate",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Minotaupe",
+     "dresseur",
+     "chapeau de cowboy",
+     "désert",
+     "mine",
+     "Roche",
+     "Sol",
+     "poussière"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 529,
    "paire": null
   },
@@ -6065,7 +9551,75 @@
    "stade": "Niveau 1",
    "evolue_de": "Onix",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "grotte souterraine",
+    "lieu": "caverne rocheuse sombre",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "le gigantesque Pokémon Steelix aux reflets métalliques brillants",
+     "milieu": "une jeune dresseuse poing levé au premier plan",
+     "bas": "le sol rocheux de la grotte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "orange",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "combat",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Steelix",
+     "dresseur",
+     "grotte",
+     "métal",
+     "roche",
+     "éclat",
+     "combat",
+     "caverne"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 95,
    "paire": null
   },
@@ -6090,7 +9644,75 @@
    "stade": "Niveau 2",
    "evolue_de": "Ponchien",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "bord de mer",
+    "lieu": "plage tropicale",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu avec des nuages cotonneux et des palmiers",
+     "milieu": "le grand Pokémon Mastouffe et une dresseuse entourés de mousse de bain",
+     "bas": "la plage de sable avec des accessoires de bain"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "beige",
+     "gauche": "bleu",
+     "droite": "beige"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "beige",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "se détend",
+    "emotion": "heureux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Mastouffe",
+     "dresseur",
+     "plage",
+     "mer",
+     "palmiers",
+     "mousse",
+     "bain",
+     "été"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 506,
    "paire": null
   },
@@ -6116,7 +9738,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt magique",
+    "lieu": "clairière enchantée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "le haut des Pokémon Florizarre et Vipélierre avec un effet arc-en-ciel",
+     "milieu": "les visages des deux Pokémon de l'Escouade",
+     "bas": "les attaques et le texte de la carte"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "jaune",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "vert",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "alliance",
+    "emotion": "puissant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Florizarre",
+     "Vipélierre",
+     "Escouade",
+     "GX",
+     "arc-en-ciel",
+     "Plante",
+     "forêt",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 1,
    "paire": null
   },
@@ -6141,7 +9826,76 @@
    "stade": "Niveau 2",
    "evolue_de": "Ortide",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "jardin fleuri",
+    "lieu": "forêt magique et fleurie",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Le grand chapeau du Pokémon et un personnage de dos",
+     "milieu": "Le corps de Rafflesia et du texte descriptif",
+     "bas": "Des blocs de texte d'attaques et statistiques"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "blanc",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "vert",
+      "jaune",
+      "rose"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "dort",
+    "emotion": "apaisement",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Un Dresseur et son Rafflesia profitent d'un moment de repos paisible au cœur d'un jardin fleuri.",
+    "tags": [
+     "rafflesia",
+     "fleurs",
+     "arc-en-ciel",
+     "sommeil",
+     "paix",
+     "dresseur",
+     "plante",
+     "secrète"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 43,
    "paire": null
   },
@@ -6167,7 +9921,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel ouvert",
+    "lieu": "altitude en vol",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Roussil tenant une branche enflammée",
+     "milieu": "Dracaufeu en plein vol et texte de l'attaque",
+     "bas": "Statistiques et texte des attaques"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rouge",
+      "orange",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "détermination",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Dracaufeu et Roussil font équipe pour fendre les airs avec des reflets arc-en-ciel.",
+    "tags": [
+     "dracaufeu",
+     "roussil",
+     "escouade",
+     "feu",
+     "vol",
+     "arc-en-ciel",
+     "dragon",
+     "puissance"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 4,
    "paire": null
   },
@@ -6192,7 +10010,71 @@
    "stade": "Niveau 1",
    "evolue_de": "Pyronille",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": "true"
+    },
+    "univers": "ciel ouvert",
+    "lieu": "espace aérien lumineux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "La tête du Pokémon papillon de profil",
+     "milieu": "Les grandes ailes déployées et les attaques",
+     "bas": "Faiblesse, résistance et texte technique"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "blanc",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "orange",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "sérénité",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Pyrax déploie ses immenses ailes irisées dans une lueur céleste.",
+    "tags": [
+     "pyrax",
+     "papillon",
+     "feu",
+     "insecte",
+     "arc-en-ciel",
+     "ailes",
+     "lumière",
+     "grâce"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 636,
    "paire": null
   },
@@ -6218,7 +10100,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "bord de mer",
+    "lieu": "plage ou rivage aquatique",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Tiplouf juché sur l'épaule de Tortank",
+     "milieu": "Le corps massif de Tortank et ses canons",
+     "bas": "Informations de cartes et attaques"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "bleu",
+      "vert",
+      "jaune"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "pose",
+    "emotion": "complicité",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Tortank et Tiplouf s'associent pour former un duo aquatique redoutable et soudé.",
+    "tags": [
+     "tortank",
+     "tiplouf",
+     "escouade",
+     "eau",
+     "arc-en-ciel",
+     "canons",
+     "amis",
+     "stratégie"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 7,
    "paire": null
   },
@@ -6244,7 +10190,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique",
+    "lieu": "dimension céleste",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel arc-en-ciel et Pokémon légendaires",
+     "milieu": "personnage humain et silhouettes des Pokémon",
+     "bas": "blocs de texte d'attaques"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "bleu",
+      "violet"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "posent ensemble",
+    "emotion": "sérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Lillie",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Les légendaires d'Alola se réunissent avec leur dresseur dans une lueur arc-en-ciel.",
+    "tags": [
+     "arc-en-ciel",
+     "légendaire",
+     "cosmique",
+     "brillant",
+     "étoiles",
+     "escouade",
+     "lumineux"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 789,
    "paire": 792
   },
@@ -6269,7 +10283,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel arc-en-ciel",
+    "lieu": "dans les airs",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de Plumeline et éventail",
+     "milieu": "corps de Plumeline en vol",
+     "bas": "attaques et statistiques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "vert",
+      "rose",
+      "jaune"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "danse",
+    "emotion": "joyeux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "oiseau",
+     "danse",
+     "éventail",
+     "arc-en-ciel",
+     "brillant",
+     "plumes",
+     "multicolore"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 741,
    "paire": null
   },
@@ -6294,7 +10371,70 @@
    "stade": "Niveau 2",
    "evolue_de": "Vibraninf",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "désert arc-en-ciel",
+    "lieu": "étendues désertiques",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête et antennes de Libégon",
+     "milieu": "corps et ailes déployées",
+     "bas": "blocs de texte et attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "orange",
+      "vert",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "observe",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "dragon",
+     "insecte",
+     "arc-en-ciel",
+     "brillant",
+     "désert",
+     "ailes",
+     "multicolore"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 328,
    "paire": null
   },
@@ -6319,7 +10459,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Miaouss d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ville arc-en-ciel",
+    "lieu": "rue d'Alola",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de Persian",
+     "milieu": "corps du félin",
+     "bas": "attaques et texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "rose",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "avance",
+    "emotion": "arrogant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "chat",
+     "félin",
+     "alola",
+     "arc-en-ciel",
+     "brillant",
+     "fier",
+     "multicolore"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 52,
    "paire": null
   },
@@ -6346,7 +10549,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique infini",
+    "lieu": "dimensions célestes légendaires",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Arceus, Dialga et Palkia imposants",
+     "milieu": "lignes d'attaque et texte",
+     "bas": "blocs de texte et capacités GX"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "multicolore",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "blanc",
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "dominent l'espace",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Les trois divinités du temps, de l'espace et de la création unissent leurs forces cosmiques.",
+    "tags": [
+     "Arceus",
+     "Dialga",
+     "Palkia",
+     "GX",
+     "arc-en-ciel",
+     "légendaire",
+     "espace",
+     "divin"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 483,
    "paire": 484
   },
@@ -6372,7 +10639,76 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "monde de Unys",
+    "lieu": "aux côtés de N",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Reshiram et Zekrom avec N",
+     "milieu": "attaques et effets",
+     "bas": "capacités GX et texte"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "multicolore",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rouge",
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "posent ensemble",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "N",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Le dresseur N se tient fièrement entre le dragon de feu et le dragon de foudre.",
+    "tags": [
+     "Reshiram",
+     "Zekrom",
+     "N",
+     "GX",
+     "arc-en-ciel",
+     "dragons",
+     "Unys",
+     "légendaire"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 643,
    "paire": 644
   },
@@ -6398,7 +10734,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension parallèle",
+    "lieu": "Ultra-Espace",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Mandrillon et Engloutyran",
+     "milieu": "attaques et talent",
+     "bas": "attaque GX et informations"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "multicolore",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "vert",
+      "rose",
+      "orange"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "menacent",
+    "emotion": "sauvagerie",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Les deux Ultra-Chimères surgissent d'une faille dimensionnelle pour semer le chaos.",
+    "tags": [
+     "Mandrillon",
+     "Engloutyran",
+     "GX",
+     "Ultra-Chimère",
+     "arc-en-ciel",
+     "alien",
+     "menaçant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 799,
    "paire": null
   },
@@ -6424,7 +10823,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "monde joyeux",
+    "lieu": "scène ludique",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Méga-Lockpin et Rondoudou",
+     "milieu": "attaques et effets",
+     "bas": "attaque GX et texte"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "multicolore",
+     "gauche": "multicolore",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rose",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "bondissent",
+    "emotion": "joie",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Un duo dynamique et énergique prêt à bondir sur ses adversaires avec le sourire.",
+    "tags": [
+     "Lockpin",
+     "Rondoudou",
+     "GX",
+     "Méga",
+     "arc-en-ciel",
+     "mignon",
+     "énergie",
+     "normal"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 39,
    "paire": null
   },
@@ -6449,7 +10912,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Type:0",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond arc-en-ciel",
+    "lieu": "fond dégradé coloré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête du Pokémon et dégradé arc-en-ciel",
+     "milieu": "corps du Pokémon et textes des attaques",
+     "bas": "pattes du Pokémon et mentions légales"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "bleu",
+      "rose"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "pose",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Silvallié",
+     "GX",
+     "arc-en-ciel",
+     "Pokémon",
+     "rare",
+     "multilcolore",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 772,
    "paire": null
   },
@@ -6470,7 +10996,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "intérieur usine",
+    "lieu": "fonderie industrielle",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cheminée et fumées",
+     "milieu": "grand four en pierre et fourneaux",
+     "bas": "sol de l'atelier et texte de règle"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "marron",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "feu",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "chauffe",
+    "emotion": "chaleureux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "âtre géant",
+     "stade",
+     "feu",
+     "usine",
+     "four",
+     "or",
+     "métallique"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6491,7 +11079,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond doré brillant",
+    "lieu": "espace abstrait doré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "reflets lumineux étincelants",
+     "milieu": "objet technologique en gros plan et texte",
+     "bas": "base de l'objet et texte explicatif"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "dynamique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "attrape-suprême",
+     "objet",
+     "dresseur",
+     "or",
+     "technologie",
+     "brillant",
+     "étoiles"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6512,7 +11162,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond doré lumineux",
+    "lieu": "espace abstrait doré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lanière de l'amulette et éclats lumineux",
+     "milieu": "amulette en bois coloré et texte",
+     "bas": "bas de l'amulette et encadré de règle"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "marron",
+      "rose",
+      "violet"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "suspendue",
+    "emotion": "mystique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "amulette",
+     "tour des îles",
+     "outil",
+     "or",
+     "bois",
+     "amulette magique",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6533,7 +11246,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "objet magique brillant",
+    "lieu": "fond lumineux magique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lumière éclatante et reflets brillants",
+     "milieu": "canne à pêche bleue et dorée en diagonale, moulinet",
+     "bas": "bâton de canne et texte de règle"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "flotte",
+    "emotion": "émerveillement",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "canne à pêche",
+     "objet",
+     "doré",
+     "brillant",
+     "magique",
+     "lumière",
+     "bleu",
+     "pêche"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6554,7 +11331,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "poupée magique brillante",
+    "lieu": "fond lumineux magique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "étoiles scintillantes et lumière dorée",
+     "milieu": "Mélofée en peluche rose au centre",
+     "bas": "texte de règle sur fond doré"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rose",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attend",
+    "emotion": "attendrissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "poupée",
+     "Mélofée",
+     "peluche",
+     "doré",
+     "brillant",
+     "magique",
+     "rose",
+     "objet"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6575,7 +11415,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dojo arts martiaux",
+    "lieu": "intérieur d'un dojo traditionnel",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "murs en bois, panneaux muraux et décorations",
+     "milieu": "tatamis verts et paravents",
+     "bas": "tatamis et texte de règle"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "jaune",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "s'entraîne",
+    "emotion": "sérieux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "dojo",
+     "arts martiaux",
+     "tatami",
+     "bois",
+     "intérieur",
+     "stade",
+     "combat",
+     "doré"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6596,7 +11499,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "centrale électrique industrielle",
+    "lieu": "salle des machines d'une usine",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "murs industriels en béton et tuyaux",
+     "milieu": "machines, générateurs et console de commande",
+     "bas": "sol métallique et texte de règle"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "fonctionne",
+    "emotion": "industriel",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "centrale",
+     "énergie",
+     "usine",
+     "machines",
+     "industriel",
+     "stade",
+     "métal",
+     "doré"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -6617,7 +11583,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace abstrait doré",
+    "lieu": "fond doré brillant",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "lumière éclatante et éclats brillants",
+     "milieu": "objet métallique bicolore argent et or en diagonale",
+     "bas": "bloc de texte sur fond bleu et lueurs dorées"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "argent"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "brille",
+    "emotion": "mystérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "objet",
+     "doré",
+     "argenté",
+     "éclat",
+     "lumière",
+     "métal",
+     "brillant"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },

@@ -226,7 +226,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "V",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "sous-marin mystérieux",
+    "lieu": "fonds marins avec ruines",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "roue de gouvernail et colonnes rocheuses sous-marines",
+     "milieu": "Sinistrail V brandissant sa chaîne",
+     "bas": "blocs de texte et vagues sous-marines"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "marron",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "combatif",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Sinistrail utilise sa chaîne pour frapper au fond des abysses.",
+    "tags": [
+     "sinistrail",
+     "v",
+     "eau",
+     "chaîne",
+     "ancre",
+     "sous-marin",
+     "Pokémon"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 781,
    "paire": null
   },
@@ -251,7 +314,69 @@
    "stade": "VMAX",
    "evolue_de": "Sinistrail-V",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "VMAX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension énergétique",
+    "lieu": "espace dynamax coloré",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tourbillons d'énergie multicolores",
+     "milieu": "Sinistrail VMAX gigantesque",
+     "bas": "blocs de texte et vagues d'énergie"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "turquoise",
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "se déchaîne",
+    "emotion": "surpuissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Sinistrail libère toute sa puissance sous sa forme VMAX.",
+    "tags": [
+     "sinistrail",
+     "vmax",
+     "dynamax",
+     "énergie",
+     "multicolore",
+     "puissance"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 781,
    "paire": null
   },
@@ -426,7 +551,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": "promo",
+     "texte_charge": false
+    },
+    "univers": "explosion cosmique colorée",
+    "lieu": "ciel abstrait aux teintes arc-en-ciel",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "fond coloré abstrait",
+     "milieu": "Reshiram blanc en vol",
+     "bas": "texte descriptif du Pokémon et fond uni orange"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "majestueux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Reshiram déploie ses flammes pour embraser l'atmosphère.",
+    "tags": [
+     "reshiram",
+     "magnifique",
+     "feu",
+     "blanc",
+     "arc-en-ciel",
+     "légendaire"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 643,
    "paire": 644
   },
@@ -526,7 +713,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": "promo",
+     "texte_charge": false
+    },
+    "univers": "éclaboussures aquatiques arc-en-ciel",
+    "lieu": "surface de l'eau colorée",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "fond éclaboussé multicolore",
+     "milieu": "Kyogre nageant",
+     "bas": "texte descriptif du Pokémon et fond bleu"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "nage",
+    "emotion": "puissant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Kyogre provoque des pluies diluviennes et fait monter les eaux.",
+    "tags": [
+     "kyogre",
+     "magnifique",
+     "eau",
+     "orque",
+     "légendaire",
+     "éclaboussures"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 382,
    "paire": 383
   },
@@ -1151,7 +1400,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "abstrait tourbillon coloré",
+    "lieu": "espace abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "ailes du Pokémon et tourbillon",
+     "milieu": "corps du Pokémon Yveltal volant",
+     "bas": "tourbillon de couleurs vives"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rouge",
+      "noir",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Yveltal déploie ses ailes au cœur d'un vortex d'énergie cosmique.",
+    "tags": [
+     "Yveltal",
+     "Pokémon",
+     "vol",
+     "vortex",
+     "arc-en-ciel",
+     "puissance",
+     "rouge",
+     "noir"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 717,
    "paire": 716
   },
@@ -1573,7 +1886,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "V",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "univers féerique sucré",
+    "lieu": "fond magique rose",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "chapeau de chantilly et fraises",
+     "milieu": "visage et corps de Charmilly V",
+     "bas": "texte d'attaque et lueur rose"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "sourit",
+    "emotion": "joie",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Charmilly V dégage une aura sucrée irrésistible.",
+    "tags": [
+     "Charmilly V",
+     "Pokémon",
+     "crème",
+     "fraise",
+     "rose",
+     "magie",
+     "douceur"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 868,
    "paire": null
   },
@@ -1594,7 +1969,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "terrain de sport extérieur",
+    "lieu": "stade en plein air",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête en forme de Poké Ball et Poké Ball en lévitation",
+     "milieu": "corps du dresseur et jonglage de Poké Balls",
+     "bas": "jambes et chaussures"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "jongle",
+    "emotion": "joie",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Un dresseur excentrique enchaîne les numéros de jonglage avec des Poké Balls.",
+    "tags": [
+     "Ball Masqué",
+     "Supporter",
+     "jonglage",
+     "Poké Ball",
+     "stade",
+     "rouge",
+     "masque"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -1615,7 +2058,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "intérieur chaleureux maison",
+    "lieu": "chambre ou salon",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Starly sur la cage et fenêtre",
+     "milieu": "visage du garçon et cage à oiseaux",
+     "bas": "mains gantées et sol en bois"
+    },
+    "bords": {
+     "haut": "beige",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "bleu",
+      "vert",
+      "orange"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "gauche"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "observe",
+    "emotion": "concentration",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "L'ornithologue prépare une cage pour accueillir son petit Starly.",
+    "tags": [
+     "Ornithologue",
+     "Supporter",
+     "Starly",
+     "oiseau",
+     "cage",
+     "intérieur",
+     "bois",
+     "casquette"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -1636,7 +2148,73 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "chantier de fouilles",
+    "lieu": "site archéologique extérieur",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel clair et machine de chantier",
+     "milieu": "Alba Minçalor assise sur le sol",
+     "bas": "chaussures et sol poussiéreux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "beige",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "sourit",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Alba Minçalor",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Alba Minçalor explore un site de fouilles à la recherche de fossiles rares.",
+    "tags": [
+     "fossile",
+     "scientifique",
+     "archéologie",
+     "poussière",
+     "machine",
+     "blouse"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -1657,7 +2235,77 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "chemin de campagne",
+    "lieu": "sentier près d'un muret en pierre",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel et muret en pierre",
+     "milieu": "deux Dresseurs d'Arène marchant ensemble",
+     "bas": "herbe et chaussures"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "blanc",
+      "marron"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "marchent",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "champion"
+     },
+     {
+      "nom": "inconnu",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Deux dresseurs d'arène se promènent en tenant une Poké Ball.",
+    "tags": [
+     "dresseurs",
+     "poké ball",
+     "uniforme",
+     "chemin",
+     "campagne",
+     "amitié"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -1678,7 +2326,73 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "intérieur de maison",
+    "lieu": "pièce en bois avec mobilier",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "plafond et poutres en bois",
+     "milieu": "Peterson câlinant son Zigzaton de Galar",
+     "bas": "sol et pattes du Pokémon"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "noir",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "câline",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Peterson",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Peterson partage un moment tendre avec son Pokémon de type Ténèbres.",
+    "tags": [
+     "zigzaton",
+     "câlin",
+     "maison",
+     "bois",
+     "complicité",
+     "amour"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -1699,7 +2413,73 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "campagne ensoleillée",
+    "lieu": "champ de blé avec clôture",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et nuages blancs",
+     "milieu": "enfant déguisé en Évoli",
+     "bas": "herbe et chaussures"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "vert",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "enthousiaste",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "habitant"
+     }
+    ],
+    "histoire": "Un enfant en costume d'Évoli s'amuse dans les champs par une belle journée.",
+    "tags": [
+     "évoli",
+     "déguisement",
+     "costume",
+     "champ",
+     "campagne",
+     "joie"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -1720,7 +2500,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ville ensoleillée",
+    "lieu": "rue avec un bâtiment urbain",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et bâtiment sur la gauche",
+     "milieu": "Shehroz en gros plan faisant un pouce levé",
+     "bas": "short turquoise à motifs et main dans la poche"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "turquoise",
+      "marron"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "sourit",
+    "emotion": "confiant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [
+     {
+      "nom": "Shehroz",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Shehroz",
+     "lunettes de soleil",
+     "pouce levé",
+     "bâtiment",
+     "ciel",
+     "sourire",
+     "ville"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -1741,7 +2589,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel et nuages",
+    "lieu": "plein air en altitude",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu et nuages blancs",
+     "milieu": "Carolina de face ajustant son nœud",
+     "bas": "buste et taille de Carolina"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "blanc",
+      "turquoise"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "pose",
+    "emotion": "curieuse",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Carolina",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Carolina",
+     "cheveux roses",
+     "ciel",
+     "nuages",
+     "bleu",
+     "combinaison",
+     "regard attentif"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -1766,7 +2682,70 @@
    "stade": "VMAX",
    "evolue_de": "Charmilly-V",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "VMAX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond arc-en-ciel abstrait",
+    "lieu": "espace imaginaire coloré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête de Charmilly Gigamax",
+     "milieu": "corps en gâteau étagé géant",
+     "bas": "base du corps étagé"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "vert",
+      "rose"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "gigamax",
+    "emotion": "joyeux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Charmilly",
+     "VMAX",
+     "Gigamax",
+     "arc-en-ciel",
+     "gâteau",
+     "crème",
+     "multicolore"
+    ],
+    "le": "2026-10-18",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 868,
    "paire": null
   }
