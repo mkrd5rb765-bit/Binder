@@ -1606,7 +1606,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "tempête en mer",
+    "lieu": "océan agité de nuit",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "ciel sombre et nuageux",
+     "milieu": "Léviator brillant rugissant à droite",
+     "bas": "bateau avec un personnage sur l'eau agitée"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "noir",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "menace",
+    "emotion": "terrifiant",
+    "moment": "nuit",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Un dresseur en barque fait face à un Léviator brillant menaçant au milieu de la tempête.",
+    "tags": [
+     "Léviator",
+     "mer",
+     "tempête",
+     "bateau",
+     "nuit",
+     "vagues",
+     "peur",
+     "dresseur"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 129,
    "paire": null
   },
@@ -1631,7 +1699,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fonds marins scintillants",
+    "lieu": "eau profonde sous-marine",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "eau bleue profonde",
+     "milieu": "Magicarpe brillant doré entouré de bulles et d'autres Magicarpes",
+     "bas": "fonds marins sombres"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "nage",
+    "emotion": "paisible",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Magicarpe",
+     "eau",
+     "océan",
+     "brillant",
+     "doré",
+     "bulles",
+     "poisson",
+     "sous-marin"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 129,
    "paire": null
   }

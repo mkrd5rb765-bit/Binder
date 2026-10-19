@@ -2423,7 +2423,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne coucher de soleil",
+    "lieu": "flanc de montagne rocheux",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel lumineux et arbres au loin",
+     "milieu": "Salamèche assis de profil",
+     "pad": "rocher et pente abrupte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "jaune",
+      "marron",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "gauche"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "se repose",
+    "emotion": "serein",
+    "moment": "coucher de soleil",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Salamèche profite des derniers rayons du soleil sur la montagne avant d'évoluer en Reptincel.",
+    "tags": [
+     "Salamèche",
+     "feu",
+     "montagne",
+     "coucher de soleil",
+     "rocher",
+     "queue enflammée",
+     "calme"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 4,
    "paire": null
   },
@@ -2448,7 +2511,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Salamèche",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte volcanique",
+    "lieu": "paroi rocheuse sombre",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "rochers suspendus et étincelles",
+     "milieu": "Reptincel en mouvement",
+     "bas": "paroi rocheuse sombre"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "orange",
+      "jaune",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "grimpe",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Reptincel progresse avec agilité sur les parois rocheuses, attisé par sa propre flamme.",
+    "tags": [
+     "Reptincel",
+     "feu",
+     "grotte",
+     "rocher",
+     "griffes",
+     "énergie",
+     "action"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 4,
    "paire": null
   },
@@ -2473,7 +2599,70 @@
    "stade": "Niveau 2",
    "evolue_de": "Reptincel",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte volcanique",
+    "lieu": "caverne sombre",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "plafond de la grotte",
+     "milieu": "Dracaufeu rugissant",
+     "bas": "roches sombres"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "orange",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "haut"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "rugit",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Dracaufeu libère toute sa puissance au cœur de la montagne, achevant son évolution.",
+    "tags": [
+     "Dracaufeu",
+     "feu",
+     "dragon",
+     "caverne",
+     "puissance",
+     "flamme",
+     "rugissement"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 4,
    "paire": null
   }

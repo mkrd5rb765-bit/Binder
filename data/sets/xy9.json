@@ -351,7 +351,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "combat volcanique intense",
+    "lieu": "zone d'affrontement rocheuse",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel sombre et éclats de roche",
+     "milieu": "Roitiflam EX en pleine attaque avec des flammes",
+     "bas": "débris incandescents et sol rocheux"
+    },
+    "bords": {
+     "haut": "autre",
+     "bas": "autre",
+     "gauche": "autre",
+     "droite": "autre"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "marron",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Roitiflam EX déchaîne sa puissance ardente au cœur d'une explosion de flammes et de roches.",
+    "tags": [
+     "Roitiflam",
+     "EX",
+     "feu",
+     "flammes",
+     "combat",
+     "explosion",
+     "puissance",
+     "roches"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 498,
    "paire": null
   },
@@ -451,7 +515,70 @@
    "stade": "TURBO",
    "evolue_de": "Akwakwak",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "Turbo",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace abstrait doré",
+    "lieu": "dimensions dorées",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "éclairs dorés et blancs",
+     "milieu": "Akwakwak doré brillant",
+     "bas": "lignes graphiques dorées et bleues"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "doré",
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "or",
+     "brillant",
+     "éclair",
+     "TURBO",
+     "pouvoir",
+     "métallique",
+     "énergie"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 54,
    "paire": null
   },
@@ -651,7 +778,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "tempête en mer",
+    "lieu": "surface de l'eau agitée",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "Léviator rouge rugissant",
+     "milieu": "éclaboussures et vagues glacées",
+     "bas": "cadre de texte bleu"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "rugit",
+    "emotion": "furieux",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Léviator déchaîne les éléments au milieu d'une tempête glaciale.",
+    "tags": [
+     "Léviator",
+     "rouge",
+     "eau",
+     "glace",
+     "tempête",
+     "rugissement",
+     "vagues"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 129,
    "paire": null
   },
@@ -676,7 +865,69 @@
    "stade": "MÉGA",
    "evolue_de": "Léviator-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "tempête explosive",
+    "lieu": "chaos aquatique et électrique",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "texte japonais stylisé et éclairs jaunes",
+     "milieu": "M-Léviator rouge rugissant",
+     "bas": "vagues et éclaboussures"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "puissant",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "La Méga-Évolution libère une explosion d'énergie destructrice.",
+    "tags": [
+     "Méga-Léviator",
+     "explosif",
+     "éclairs",
+     "eau",
+     "rouge",
+     "jaune",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 129,
    "paire": null
   },
@@ -776,7 +1027,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "espace dimensionnel",
+    "lieu": "fissure spatio-temporelle",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Palkia surgissant du vide",
+     "milieu": "éclats cosmiques et eau",
+     "bas": "cadre de texte bleu"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "violet",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "surgit",
+    "emotion": "solennel",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Palkia traverse les dimensions en manipulant l'espace et l'eau.",
+    "tags": [
+     "Palkia",
+     "espace",
+     "cosmos",
+     "violet",
+     "légendaire",
+     "perle",
+     "dimension"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 484,
    "paire": 483
   },
@@ -801,7 +1114,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "sous l'eau luminescent",
+    "lieu": "fonds marins scintillants",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "Manaphy EX souriant avec des sphères lumineuses",
+     "milieu": "blocs de texte et attaques sur fond aquatique clair",
+     "bas": "bulles d'eau et reflets étincelants"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "nage",
+    "emotion": "joyeux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Manaphy",
+     "Pokémon",
+     "eau",
+     "sphères",
+     "lumière",
+     "bulles",
+     "bleu",
+     "scintillant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 490,
    "paire": null
   },
@@ -1026,7 +1402,69 @@
    "stade": "TURBO",
    "evolue_de": "Amphinobi",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "Turbo",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension dorée électrique",
+    "lieu": "royaume doré et étincelant",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "éclairs violets et contours dorés",
+     "milieu": "Amphinobi TURBO doré en action avec des shurikens",
+     "bas": "tourbillon doré étincelant"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "violet"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Amphinobi",
+     "TURBO",
+     "or",
+     "éclairs",
+     "shuriken",
+     "puissance",
+     "brillant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 656,
    "paire": null
   },
@@ -1176,7 +1614,69 @@
    "stade": "TURBO",
    "evolue_de": "Luxray",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "Turbo",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension dorée électrique",
+    "lieu": "royaume doré et étincelant",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "oreilles pointues et éclairs bleus",
+     "milieu": "Luxray TURBO doré hurlant avec des éclairs",
+     "bas": "lignes dorées en arrière-plan"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "hurle",
+    "emotion": "féroce",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Luxray",
+     "TURBO",
+     "or",
+     "éclairs",
+     "électricité",
+     "féroce",
+     "brillant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 403,
    "paire": null
   },
@@ -1301,7 +1801,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace psychique rose",
+    "lieu": "dimension magique et ténébreuse",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "Mentali EX dans son cadre avec des éclairs roses",
+     "milieu": "texte d'attaque sur fond rose fuchsia vibrant",
+     "bas": "lueurs magiques et étoiles scintillantes"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "rose",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "mystérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mentali",
+     "EX",
+     "psy",
+     "violet",
+     "rose",
+     "éclairs",
+     "magique",
+     "étoiles"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 133,
    "paire": null
   },
@@ -1651,7 +2214,69 @@
    "stade": "TURBO",
    "evolue_de": "Desséliande",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "Turbo",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt magique dorée",
+    "lieu": "forêt mystique scintillante",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Partie supérieure de Desséliande TURBO dorée",
+     "milieu": "Tronc et bras du Pokémon",
+     "bas": "Racines et base dorées"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "violet"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque",
+    "emotion": "puissante",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Desséliande",
+     "TURBO",
+     "or",
+     "éclairs",
+     "fantôme",
+     "plante",
+     "brillant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 708,
    "paire": null
   },
@@ -1851,7 +2476,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "espace cosmique nuit",
+    "lieu": "ciel nocturne étoilé",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "Lune brillante et ciel étoilé",
+     "milieu": "Darkrai en vol",
+     "bas": "Nuages cosmiques sombres"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "nuit",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "vole",
+    "emotion": "menaçante",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Darkrai",
+     "EX",
+     "nuit",
+     "lune",
+     "étoiles",
+     "obscurité",
+     "fantôme"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 491,
    "paire": null
   },
@@ -1901,7 +2588,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fond abstrait métallique",
+    "lieu": "arène de combat",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Étincelles et pinces de Cizayox",
+     "milieu": "Cizayox EX en mouvement",
+     "bas": "Traînées lumineuses"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "gris",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "déterminée",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Cizayox",
+     "EX",
+     "métal",
+     "rouge",
+     "pinces",
+     "vitesse",
+     "étincelles"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 123,
    "paire": null
   },
@@ -1926,7 +2675,69 @@
    "stade": "MÉGA",
    "evolue_de": "Cizayox-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "destruction métallique",
+    "lieu": "zone d'impact",
+    "interieur": false,
+    "milieu": "sol",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Débris volants et M-Cizayox",
+     "milieu": "Attaque tranchante avec idéogrammes",
+     "bas": "Pierres et poussière"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "gauche"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "frappe",
+    "emotion": "fureur",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Méga-Cizayox",
+     "EX",
+     "acier",
+     "débris",
+     "puissance",
+     "combat",
+     "bleu"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 123,
    "paire": null
   },
@@ -2076,7 +2887,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel lumineux magique",
+    "lieu": "en plein vol dans les nuages",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Lumière éclatante et reflets dorés",
+     "milieu": "Togekiss en plein vol planant",
+     "bas": "Blocs de texte des attaques sur fond rose"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "noir",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "blanc",
+     "secondaires": [
+      "rose",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "vole gracieusement",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Togekiss",
+     "vol",
+     "ciel",
+     "lumière",
+     "brillant",
+     "ailes",
+     "blanc",
+     "joyeux"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 175,
    "paire": null
   },
@@ -2226,7 +3100,70 @@
    "stade": "TURBO",
    "evolue_de": "Rattatac",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "Turbo",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension électrique dorée",
+    "lieu": "espace énergétique fulgurant",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Rayons lumineux et éclairs",
+     "milieu": "Rattatac Turbo doré rugissant",
+     "bas": "Éclairs roses et texte d'attaque"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "rose"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "rugit férocement",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Rattatac",
+     "Turbo",
+     "or",
+     "éclairs",
+     "énergie",
+     "puissance",
+     "jaune",
+     "agressif"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 19,
    "paire": null
   },
@@ -2301,7 +3238,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel céleste flamboyant",
+    "lieu": "cieux divins",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Ailes déployées et rayons dorés",
+     "milieu": "Ho-Oh EX criant vers l'avant",
+     "bas": "Blocs de texte et talents sur fond clair"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "noir",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "crie puissamment",
+    "emotion": "majestueux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Ho-Oh",
+     "EX",
+     "feu",
+     "ciel",
+     "majestueux",
+     "lumineux",
+     "rouge",
+     "légendaire"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 250,
    "paire": 249
   },
@@ -2842,7 +3842,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "tempête en mer",
+    "lieu": "océan tumultueux",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "Vagues agitées et ciel violet",
+     "milieu": "Léviator EX rouge géant rugissant",
+     "bas": "Texte des attaques sur fond blanc et bleu"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "noir",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "bleu",
+      "violet"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "rugit furieusement",
+    "emotion": "furieux",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Léviator",
+     "EX",
+     "shiny",
+     "rouge",
+     "eau",
+     "tempête",
+     "vagues",
+     "colère"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 129,
    "paire": null
   },
@@ -2867,7 +3930,69 @@
    "stade": "MÉGA",
    "evolue_de": "Léviator-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond marin",
+    "lieu": "fonds marins agités",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "profondeurs",
+    "zones": {
+     "haut": "tête gigantesque de Léviator rouge hurlant",
+     "milieu": "corps sinueux et éclairs jaunes",
+     "bas": "queue et bulles d'eau"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "Rugit agressivement",
+    "emotion": "colère",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "M-Léviator",
+     "Pokémon",
+     "rouge",
+     "eau",
+     "éclairs",
+     "agressif",
+     "fonds marins"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 129,
    "paire": null
   },
@@ -2892,7 +4017,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "sous-marin",
+    "lieu": "bulle d'eau lumineuse",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "bulles d'eau et lueur rose",
+     "milieu": "Manaphy souriant",
+     "bas": "eau bleue et vagues"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "flotte joyeusement",
+    "emotion": "joie",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Manaphy",
+     "Pokémon",
+     "bleu",
+     "eau",
+     "bulles",
+     "sourire",
+     "mignon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 490,
    "paire": null
   },
@@ -2917,7 +4104,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique",
+    "lieu": "dimension psychique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "oreilles allongées et nébuleuse violette",
+     "milieu": "Mentali de profil",
+     "bas": "énergie rose et vagues d'énergie"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "rose",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "observe calmement",
+    "emotion": "sérénité",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mentali",
+     "Pokémon",
+     "violet",
+     "psy",
+     "énergie",
+     "espace",
+     "mystique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 133,
    "paire": null
   },
@@ -2942,7 +4191,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension obscure",
+    "lieu": "ciel ténébreux rouge",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tête blanche encapuchonnée",
+     "milieu": "corps noir et collerette rouge",
+     "bas": "ombres et énergie ténébreuse"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "contre-jour",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "plane menaçant",
+    "emotion": "menaçant",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Darkrai",
+     "Pokémon",
+     "noir",
+     "ténèbres",
+     "rouge",
+     "menaçant",
+     "mystérieux"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 491,
    "paire": null
   },
@@ -2967,7 +4278,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "arène de combat",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de Cizayox EX et cornes",
+     "milieu": "corps de Cizayox EX avec pinces et attaques",
+     "bas": "pattes et texte des attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "vert",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Cizayox",
+     "métal",
+     "rouge",
+     "pince",
+     "combat",
+     "EX",
+     "brillant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 123,
    "paire": null
   },
@@ -2992,7 +4366,69 @@
    "stade": "MÉGA",
    "evolue_de": "Cizayox-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "arène de combat",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de M-Cizayox EX et pinces massives",
+     "milieu": "corps de M-Cizayox EX et texte d'attaque",
+     "bas": "pattes et blocs de texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "vert",
+      "bleu",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "reflets",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "méga-évolution",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mega Cizayox",
+     "acier",
+     "rouge",
+     "pinces",
+     "EX",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 123,
    "paire": null
   },
@@ -3017,7 +4453,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel radieux",
+    "lieu": "cieux sacrés",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "ailes déployées de Ho-Oh EX",
+     "milieu": "long cou tendu et tête criante",
+     "bas": "griffes et texte des attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "orange",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "crie",
+    "emotion": "triomphant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Ho-Oh",
+     "feu",
+     "vol",
+     "oiseau",
+     "lumière",
+     "EX",
+     "légendaire"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 250,
    "paire": 249
   },
@@ -3038,7 +4537,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel et brume",
+    "lieu": "en plein vol",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "tête et ballon de Carolina",
+     "milieu": "corps en mouvement et texte de description",
+     "bas": "jambes et bas de la carte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "blanc",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "s'étire",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Carolina",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Carolina",
+     "dresseur",
+     "supporter",
+     "bleu",
+     "vol",
+     "gant",
+     "sourire"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3063,7 +4630,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "mer agitée vagues",
+    "lieu": "océan déchaîné",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "Léviator rouge rugissant",
+     "milieu": "Amphinobi et un Pokémon aquatique sur les vagues",
+     "bas": "vagues écumantes et texte de la carte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "rugit",
+    "emotion": "colère",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Léviator",
+     "Amphinobi",
+     "océan",
+     "vagues",
+     "écume",
+     "combat",
+     "Pokémon",
+     "eau"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 129,
    "paire": null
   }

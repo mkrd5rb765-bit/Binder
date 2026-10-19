@@ -101,7 +101,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt lumineuse",
+    "lieu": "clairière ensoleillée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "antennes et tête de Scarhino",
+     "milieu": "corps du scarabée et éclats dorés",
+     "bas": "sol herbeux et attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "charge",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Scarhino",
+     "insecte",
+     "bleu",
+     "vert",
+     "éclats",
+     "doré",
+     "Pokémon EX",
+     "forêt"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 214,
    "paire": 127
   },
@@ -126,7 +189,71 @@
    "stade": "MÉGA",
    "evolue_de": "Scarhino-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "arène de combat",
+    "lieu": "chaos d'une attaque",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de M-Scarhino EX et cornes",
+     "milieu": "texte japonais en relief, éclats de bois",
+     "bas": "bloc de texte des attaques"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque puissante",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Mega Scarhino déclenche son attaque ultime pour terrasser ses adversaires.",
+    "tags": [
+     "Scarhino",
+     "Méga-Évolution",
+     "insecte",
+     "combat",
+     "explosion",
+     "bois",
+     "vert",
+     "bleu"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 214,
    "paire": 127
   },
@@ -501,7 +628,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "bord de mer",
+    "lieu": "éclaboussures d'eau",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "éclaboussures et eau en mouvement",
+     "milieu": "Crapustule EX en action",
+     "bas": "bloc de texte des attaques"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "projette de l'eau",
+    "emotion": "dynamisme",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Crapustule EX surgit des vagues pour lancer un assaut aquatique.",
+    "tags": [
+     "Crapustule",
+     "eau",
+     "vagues",
+     "éclaboussures",
+     "bleu",
+     "combat",
+     "bulle"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 535,
    "paire": null
   },
@@ -1351,7 +1540,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace ou grotte",
+    "lieu": "explosion d'énergie",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "débris rocheux en lévitation",
+     "milieu": "Lucario EX et faisceaux d'énergie",
+     "bas": "bloc de texte des attaques"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "gauche"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "canalise l'énergie",
+    "emotion": "concentration",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Lucario EX rassemble son aura pour déclencher une puissante attaque combat.",
+    "tags": [
+     "Lucario",
+     "aura",
+     "combat",
+     "rochers",
+     "énergie",
+     "bleu",
+     "marron"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 447,
    "paire": null
   },
@@ -1401,7 +1653,71 @@
    "stade": "MÉGA",
    "evolue_de": "Lucario-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "arène de combat",
+    "lieu": "chaos rocheux",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "débris de pierre et éclairs jaunes",
+     "milieu": "M-Lucario EX et texte japonais",
+     "bas": "bloc de texte des attaques"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "jaune",
+      "rouge",
+      "noir"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "frappe le sol",
+    "emotion": "férocité",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Méga-Lucario EX libère toute sa puissance en brisant la roche autour de lui.",
+    "tags": [
+     "Lucario",
+     "Méga-Évolution",
+     "combat",
+     "rochers",
+     "explosion",
+     "jaune",
+     "marron",
+     "aura"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 447,
    "paire": null
   },
@@ -1626,7 +1942,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "combat aérien dynamique",
+    "lieu": "ciel en mouvement",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel dégagé avec effets de vitesse",
+     "milieu": "Brutalibré en plein vol",
+     "bas": "lignes de vitesse lumineuses"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "vert",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "vole rapidement",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Brutalibré",
+     "EX",
+     "vol",
+     "vitesse",
+     "lumière",
+     "ciel",
+     "combat",
+     "dynamique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 701,
    "paire": null
   },
@@ -1876,7 +2256,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel nuageux",
+    "lieu": "altitude élevée",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel et tête de Dracolosse",
+     "milieu": "corps de Dracolosse en mouvement",
+     "bas": "effets lumineux tourbillonnants"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "fonce vers l'avant",
+    "emotion": "puissant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Dracolosse",
+     "EX",
+     "dragon",
+     "vol",
+     "puissance",
+     "ciel",
+     "lumière",
+     "aura"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 147,
    "paire": null
   },
@@ -2583,7 +3026,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt lumineuse",
+    "lieu": "sous-bois ensoleillé",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "canopée et feuillage",
+     "milieu": "Scarhino EX géant",
+     "bas": "sol forestier sombre"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "pose de combat",
+    "emotion": "solide",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Scarhino",
+     "EX",
+     "insecte",
+     "forêt",
+     "feuillage",
+     "lumière",
+     "contour jaune",
+     "combat"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 214,
    "paire": 127
   },
@@ -2608,7 +3114,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fonds marins mystérieux",
+    "lieu": "sous l'eau",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "surface de l'eau et bulles",
+     "milieu": "Crapustule EX avec sa langue sortie",
+     "bas": "fonds marins sombres et violets"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "violet"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "attaque avec la langue",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Crapustule",
+     "EX",
+     "eau",
+     "sous-marin",
+     "bulles",
+     "langue",
+     "combat",
+     "bleu"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 535,
    "paire": null
   },
@@ -2633,7 +3202,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "arène de combat",
+    "interieur": true,
+    "milieu": "fond uni",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "oreilles et tête de Lucario",
+     "milieu": "corps de Lucario",
+     "bas": "jambes et blocs de texte d'attaques"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose de combat",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Lucario",
+     "Pokémon",
+     "combat",
+     "aura",
+     "lumière",
+     "combat",
+     "poing"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 447,
    "paire": null
   },
@@ -2658,7 +3289,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel étoilé abstrait",
+    "lieu": "dans les airs",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "antennes et têtes de Dracolosse",
+     "milieu": "corps massif de Dracolosse",
+     "bas": "ventre et texte d'attaque"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "vole",
+    "emotion": "serein",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Dracolosse",
+     "dragon",
+     "vol",
+     "ciel",
+     "rayons",
+     "jaune",
+     "bleu"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 147,
    "paire": null
   },
@@ -2679,7 +3372,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "studio de télévision",
+    "lieu": "plateau TV avec projecteurs",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête du journaliste et de Ratentif",
+     "milieu": "buste, costume et micro",
+     "bas": "texte de la carte"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "marron",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "présente",
+    "emotion": "souriant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Un journaliste interviewe les dresseurs sur les plateaux de télévision.",
+    "tags": [
+     "journaliste",
+     "costume",
+     "micro",
+     "Ratentif",
+     "studio",
+     "télévision",
+     "projecteurs"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -2700,7 +3460,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "laboratoire scientifique",
+    "lieu": "intérieur de laboratoire",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "chercheur principal et assistante",
+     "milieu": "Amagara et notes",
+     "bas": "texte de la carte"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "observe",
+    "emotion": "studieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "professeur"
+     }
+    ],
+    "histoire": "Des scientifiques étudient des fossiles pour ressusciter de vieux Pokémon.",
+    "tags": [
+     "chercheur",
+     "fossiles",
+     "Amagara",
+     "laboratoire",
+     "scientifique",
+     "blouse",
+     "lunettes"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -2721,7 +3548,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "arène de combat",
+    "lieu": "intérieur d'une arène sportive",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Le visage déterminé de Cornélia et le haut de son corps",
+     "milieu": "Un bras levé canalisant de l'énergie lumineuse",
+     "texte_charge": "Du texte de règle semi-transparent au milieu de l'illustration"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "prépare une attaque",
+    "emotion": "détermination",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Cornélia",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Cornélia rassemble son énergie pour libérer toute la puissance de son Pokémon.",
+    "tags": [
+     "Cornélia",
+     "dresseur",
+     "énergie",
+     "combat",
+     "casque",
+     "lumière",
+     "anime",
+     "détermination"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -2746,7 +3641,70 @@
    "stade": "MÉGA",
    "evolue_de": "Scarhino-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "combat intense",
+    "lieu": "zone d'impact",
+    "interieur": false,
+    "milieu": "sol",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "M-Scarhino EX imposant avec ses grandes cornes",
+     "milieu": "Texte d'attaque en japonais en relief doré",
+     "bas": "Éclats de roche et projections d'énergie rose et jaune"
+    },
+    "bords": {
+     "haut": "or",
+     "bas": "or",
+     "gauche": "or",
+     "droite": "or"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "rose"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque puissante",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "M-Scarhino libère une attaque dévastatrice en brisant le sol sous sa force.",
+    "tags": [
+     "M-Scarhino",
+     "Méga-Évolution",
+     "combat",
+     "rochers",
+     "doré",
+     "puissance",
+     "explosion",
+     "attaque"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 214,
    "paire": 127
   },
@@ -2771,7 +3729,70 @@
    "stade": "MÉGA",
    "evolue_de": "Lucario-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "combat intense",
+    "lieu": "zone d'impact",
+    "interieur": false,
+    "milieu": "sol",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Tête de M-Lucario EX de profil avec un regard furieux",
+     "milieu": "Texte d'attaque en japonais en relief doré",
+     "bas": "De nombreux débris rocheux en suspension"
+    },
+    "bords": {
+     "haut": "or",
+     "bas": "or",
+     "gauche": "or",
+     "droite": "or"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "frappe le sol",
+    "emotion": "colère",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "M-Lucario assène un coup surpuissant qui projette des rochers de toutes parts.",
+    "tags": [
+     "M-Lucario",
+     "Méga-Évolution",
+     "combat",
+     "rochers",
+     "doré",
+     "poing",
+     "agressif",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 447,
    "paire": null
   }

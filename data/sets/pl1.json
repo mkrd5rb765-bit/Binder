@@ -3129,7 +3129,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "centrale électrique",
+    "lieu": "intérieur sombre avec éclairs",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "bras levés d'Elektek",
+     "milieu": "corps massif rayé et éclairs",
+     "bas": "pieds et griffes d'Elektek"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "charge",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Elektek",
+     "électricité",
+     "éclairs",
+     "rayures",
+     "poing",
+     "monstre",
+     "jaune et noir"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 125,
    "paire": null
   },
@@ -3154,7 +3216,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ring de boxe",
+    "lieu": "ring de boxe en intérieur",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fond vert du ring",
+     "milieu": "Tygnon en position de combat",
+     "bas": "sol du ring"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "combat",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tygnon",
+     "Pokémon",
+     "boxe",
+     "gants rouges",
+     "ring",
+     "combat",
+     "sport",
+     "rétro"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 107,
    "paire": 106
   },
@@ -3179,7 +3305,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt verdoyante",
+    "lieu": "clairière en forêt",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "tourbillon de vent et feuillage",
+     "milieu": "Insécateur en plein vol",
+     "bas": "lumières de la forêt"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "blanc",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": "vent",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Insécateur",
+     "Pokémon",
+     "insecte",
+     "lames",
+     "vert",
+     "vent",
+     "forêt",
+     "attaque"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 123,
    "paire": null
   },

@@ -26,7 +26,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt tropicale",
+    "lieu": "jungle luxuriante",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillages verts et lumière dorée",
+     "milieu": "Florizarre EX avec une grande bouche ouverte, feuilles tropicales",
+     "bas": "bloc d'attaque sur fond vert"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "hurle",
+    "emotion": "puissant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Florizarre",
+     "plante",
+     "jungle",
+     "feuilles",
+     "lumière",
+     "rugissement",
+     "EX"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 1,
    "paire": null
   },
@@ -51,7 +114,70 @@
    "stade": "MÉGA",
    "evolue_de": "Florizarre-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt magique",
+    "lieu": "sous bois avec des pétales roses",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "grande fleur rose et texte Méga",
+     "milieu": "M Florizarre EX avec écriture japonaise en relief",
+     "bas": "attaques et texte sur fond vert"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rose",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Méga-Florizarre",
+     "pétales",
+     "rose",
+     "fleur",
+     "jungle",
+     "puissance",
+     "EX"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 1,
    "paire": null
   },
@@ -726,7 +852,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "bord de mer",
+    "lieu": "éclaboussures d'eau",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciels et canons de Tortank",
+     "milieu": "Tortank EX hurlant avec des jets d'eau",
+     "bas": "attaques et texte sur fond bleu"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "jaune",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "projette de l'eau",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tortank",
+     "eau",
+     "canons",
+     "éclaboussures",
+     "combat",
+     "bleu",
+     "EX"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 7,
    "paire": null
   },
@@ -751,7 +940,70 @@
    "stade": "MÉGA",
    "evolue_de": "Tortank-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "combat aquatique intense",
+    "lieu": "bataille d'eau",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "canons en acier et éclaboussures",
+     "milieu": "tête de Tortank au premier plan",
+     "bas": "gouttes d'eau et éclats roses"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "bleu",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "gris",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tortank",
+     "eau",
+     "acier",
+     "canons",
+     "éclaboussures",
+     "puissance",
+     "combat",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 7,
    "paire": null
   },
@@ -1151,7 +1403,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "énergie électrique pure",
+    "lieu": "espace lumineux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "oreilles d'Emolga et éclairs",
+     "milieu": "visage expressif du Pokémon",
+     "bas": "fond rose et éclairs jaunes"
+    },
+    "bords": {
+     "haut": "rose",
+     "bas": "jaune",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rose",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "surprend",
+    "emotion": "surprise",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Emolga",
+     "électrique",
+     "éclairs",
+     "rose",
+     "jaune",
+     "mignon",
+     "énergie"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 587,
    "paire": null
   },
@@ -1976,7 +2290,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "chaos ténébreux",
+    "lieu": "dimension obscure",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "ailes déployées et énergie noire",
+     "milieu": "tête menaçante d'Yveltal",
+     "bas": "particules lumineuses et éclairs roses"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "rouge",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "Rugit",
+    "emotion": "menaçant",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Yveltal",
+     "ténèbres",
+     "rouge",
+     "noir",
+     "énergie",
+     "menace",
+     "légendaire"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 717,
    "paire": 716
   },
@@ -2001,7 +2377,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "vitesse métallique",
+    "lieu": "tourbillon d'acier",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ailes tranchantes et bec",
+     "milieu": "corps en acier d'Airmure",
+     "bas": "lignes de vitesse et plumes métalliques"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "fonce",
+    "emotion": "détermination",
+    "moment": "jour",
+    "meteo": "vent",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Airmure",
+     "acier",
+     "vol",
+     "vitesse",
+     "métal",
+     "tranchant",
+     "combat"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 227,
    "paire": null
   },
@@ -2426,7 +2864,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace féerique magique",
+    "lieu": "dimension mystique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "bois ramifiés colorés et étincelles",
+     "milieu": "Xerneas EX au galop",
+     "texte_charge": "bloc de texte des attaques sur fond rose"
+    },
+    "bords": {
+     "haut": "multicolore",
+     "bas": "rose",
+     "gauche": "bleu",
+     "droite": "multicolore"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "bleu",
+      "rose",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "court",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Xerneas",
+     "EX",
+     "bois",
+     "magique",
+     "lumière",
+     "étincelles",
+     "coloré",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 716,
    "paire": 717
   },
@@ -3424,7 +3926,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt verte luxuriante",
+    "lieu": "sous-bois verdoyant",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fleur géante de Florizarre et lueur verte",
+     "milieu": "Florizarre EX en gros plan",
+     "bas": "bloc de texte des attaques"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "gris",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "avance",
+    "emotion": "détermination",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Florizarre",
+     "EX",
+     "plante",
+     "fleur",
+     "vert",
+     "lumière",
+     "puissant",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 1,
    "paire": null
   },
@@ -3449,7 +4014,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond violet électrique",
+    "lieu": "espace aquatique énergétique",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "canons hydro et lueurs bleues",
+     "milieu": "Tortank EX en position de combat",
+     "bas": "bloc de texte des attaques"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "gris",
+     "gauche": "bleu",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "violet",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "combat",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tortank",
+     "EX",
+     "eau",
+     "canons",
+     "violet",
+     "électricité",
+     "bleu",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 7,
    "paire": null
   },
@@ -3474,7 +4102,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond rose éclairs jaunes",
+    "lieu": "ciel orageux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "oreilles d'Emolga et éclair",
+     "milieu": "Emolga EX volant avec des éclairs",
+     "bas": "bloc de texte sur fond rose"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "rose",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "jaune",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "énergie",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Emolga",
+     "EX",
+     "électricité",
+     "éclair",
+     "rose",
+     "jaune",
+     "vol",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 587,
    "paire": null
   },
@@ -3499,7 +4190,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique scintillant",
+    "lieu": "fond étoilé abstrait",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Yveltal EX au centre et étoiles étincelantes",
+     "milieu": "corps du Pokémon et blocs de texte d'attaques",
+     "bas": "pattes du Pokémon et informations de carte"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "rouge",
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "Rugit",
+    "emotion": "menaçant",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Yveltal",
+     "EX",
+     "étoiles",
+     "cosmique",
+     "rouge et noir",
+     "lugubre",
+     "puissant",
+     "lumineux"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 717,
    "paire": 716
   },
@@ -3524,7 +4279,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "espace coloré dynamique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête d'Airmure EX et lignes bleues",
+     "milieu": "corps métallique et texte des attaques",
+     "bas": "ailes tranchantes et bas de carte"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "violet",
+     "gauche": "bleu",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "blanc",
+      "violet"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "Crie",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Airmure",
+     "EX",
+     "métal",
+     "acier",
+     "tranchant",
+     "bleu et rouge",
+     "dynamique",
+     "attaquant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 227,
    "paire": null
   },
@@ -3549,7 +4368,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "arc-en-ciel lumineux",
+    "lieu": "fond féerique multicolore",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "bois majestueux de Xerneas et étoiles",
+     "milieu": "corps bleu foncé et texte des attaques",
+     "bas": "pattes fines et bas de carte"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "jaune",
+     "gauche": "orange",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "Pose majestueuse",
+    "emotion": "gracieux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Xerneas",
+     "EX",
+     "arc-en-ciel",
+     "lumière",
+     "gracieux",
+     "bois lumineux",
+     "légendaire",
+     "féerique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 716,
    "paire": 717
   }

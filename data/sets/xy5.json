@@ -476,7 +476,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt sombre mystique",
+    "lieu": "cœur de la forêt enchantée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "branches et feuillage de Desséliande",
+     "milieu": "tronc avec lueur rouge centrale",
+     "bas": "cadre d'attaque vert"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "violet"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "veille",
+    "emotion": "mystérieux",
+    "moment": "nuit",
+    "meteo": "brume",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "desséliande",
+     "forêt",
+     "bois",
+     "feuilles",
+     "sombre",
+     "lueur",
+     "mystère",
+     "plante"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 708,
    "paire": null
   },
@@ -726,7 +789,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "volcan en éruption",
+    "lieu": "cratère volcanique",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "projections de lave et explosions",
+     "milieu": "Camérupt souriant qui surgit",
+     "bas": "cadre d'attaques orange"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "surgit",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "camérupt",
+     "volcan",
+     "feu",
+     "lave",
+     "explosion",
+     "roches",
+     "chaleur",
+     "orange"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 322,
    "paire": null
   },
@@ -951,7 +1077,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "océan agité",
+    "lieu": "surface de l'eau",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "Wailord surgissant de l'eau",
+     "milieu": "éclaboussures et vagues circulaires",
+     "bas": "cadre d'attaque bleu"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "turquoise"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "nage",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "wailord",
+     "océan",
+     "eau",
+     "baleine",
+     "bleu",
+     "vagues",
+     "éclaboussures",
+     "marin"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 320,
    "paire": null
   },
@@ -1351,7 +1540,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "océan éclaboussures vagues",
+    "lieu": "surface de l'eau en pleine tempête",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "Éclaboussures et eau jaillissante",
+     "milieu": "Kyogre EX surgissant des vagues",
+     "bas": "Texte des attaques sur fond bleu aquatique"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "surgit",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Kyogre émerge des profondeurs océaniques pour libérer sa puissance légendaire.",
+    "tags": [
+     "Kyogre",
+     "eau",
+     "éclaboussures",
+     "vagues",
+     "légendaire",
+     "bleu",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 382,
    "paire": 383
   },
@@ -1376,7 +1627,69 @@
    "stade": "MÉGA",
    "evolue_de": "Kyogre-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": "autre",
+     "texte_charge": true
+    },
+    "univers": "océan tempête énergie",
+    "lieu": "océan déchainé en primo-résurgence",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "Texte Primo-Kyogre et cristaux d'énergie",
+     "milieu": "Primo-Kyogre avec des glyphes japonais lumineux",
+     "bas": "Attaque Tempête Océanique et encadré de règles"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "déchaîne tempête",
+    "emotion": "colère",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Primo-Kyogre atteint sa forme ultime, provoquant des cataclysmes océaniques.",
+    "tags": [
+     "Primo-Kyogre",
+     "eau",
+     "tempête",
+     "énergie",
+     "légendaire",
+     "glyphes",
+     "bleu"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 382,
    "paire": 383
   },
@@ -2126,7 +2439,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "roche terre explosions",
+    "lieu": "cratère rocheux en éruption",
+    "interieur": false,
+    "milieu": "sol",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Ciel poussiéreux et cornes de Groudon",
+     "milieu": "Groudon EX frappant le sol avec force",
+     "bas": "Attaques sur fond ocre et orange"
+    },
+    "bords": {
+     "haut": "orange",
+     "bas": "orange",
+     "gauche": "marron",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "marron",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "frappe le sol",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Groudon écrase la roche, démontrant sa maîtrise absolue de la terre.",
+    "tags": [
+     "Groudon",
+     "roche",
+     "terre",
+     "explosion",
+     "légendaire",
+     "orange",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 383,
    "paire": 382
   },
@@ -2151,7 +2526,69 @@
    "stade": "MÉGA",
    "evolue_de": "Groudon-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": "autre",
+     "texte_charge": true
+    },
+    "univers": "magma volcan énergie",
+    "lieu": "fissure terrestre en fusion",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Texte Primo-Groudon et magma en fusion",
+     "milieu": "Primo-Groudon avec des lueurs ardentes et glyphes",
+     "bas": "Volcan de Gaïa et texte de règles"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "rouge",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "orange",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "libère magma",
+    "emotion": "fureur",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Primo-Groudon libère l'énergie de magma accumulée au cœur de la planète.",
+    "tags": [
+     "Primo-Groudon",
+     "magma",
+     "volcan",
+     "feu",
+     "légendaire",
+     "rouge",
+     "énergie"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 383,
    "paire": 382
   },
@@ -2276,7 +2713,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "bord de mer",
+    "lieu": "surface de l'eau agitée",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "éclaboussures et vagues",
+     "milieu": "tête de Sharpedo surgissant de l'eau",
+     "bas": "bloc de texte des attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "charge",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Sharpedo surgit des vagues pour attaquer par surprise avec férocité.",
+    "tags": [
+     "Sharpedo",
+     "eau",
+     "vagues",
+     "requin",
+     "éclaboussures",
+     "dents",
+     "attaque",
+     "bleu"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 318,
    "paire": null
   },
@@ -2326,7 +2826,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte métallique",
+    "lieu": "espace sombre aux reflets dorés",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "étincelles et éclats dorés",
+     "milieu": "Galeking en plein mouvement de charge",
+     "bas": "bloc de texte des attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "gris",
+      "noir"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "gauche"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "frappe",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Galeking libère une puissance métallique fulgurante au cœur de la mine.",
+    "tags": [
+     "Galeking",
+     "acier",
+     "métal",
+     "étincelles",
+     "doré",
+     "puissance",
+     "charge",
+     "combat"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 304,
    "paire": null
   },
@@ -2351,7 +2914,71 @@
    "stade": "MÉGA",
    "evolue_de": "Galeking-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte de cristaux",
+    "lieu": "caverne cristalline scintillante",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cristaux sombres et énergie rose",
+     "milieu": "Méga-Galeking rugissant avec force",
+     "bas": "cristaux violets au premier plan"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "rose",
+      "gris",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "rugit",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "La méga-évolution de Galeking libère une énergie écrasante au milieu des cristaux.",
+    "tags": [
+     "Méga-Galeking",
+     "cristaux",
+     "acier",
+     "rose",
+     "violet",
+     "puissance",
+     "méga-évolution",
+     "caverne"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 304,
    "paire": null
   },
@@ -2626,7 +3253,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt magique",
+    "lieu": "clairière enchantée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "auréole lumineuse et cristaux",
+     "milieu": "Gardevoir EX posant élégamment",
+     "bas": "bloc de texte sur fond rose"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "vert",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "gracieux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Gardevoir EX invoque une douce aura féerique pour protéger ses alliés.",
+    "tags": [
+     "Gardevoir",
+     "fée",
+     "magie",
+     "brillance",
+     "rose",
+     "vert",
+     "élégance",
+     "lumière"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -2651,7 +3341,70 @@
    "stade": "MÉGA",
    "evolue_de": "Gardevoir-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension magique rose",
+    "lieu": "espace énergétique rose",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Méga-Gardevoir EX en position dynamique",
+     "milieu": "lignes d'énergie lumineuses et nom de l'attaque",
+     "bas": "vagues d'énergie rose et texte de carte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "rose",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "combatif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mega-Gardevoir",
+     "EX",
+     "rose",
+     "énergie",
+     "lumière",
+     "magique",
+     "attaque",
+     "brillant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -3534,7 +4287,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt sombre mystique",
+    "lieu": "bois profonds",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cimes des arbres et bras levé de Desséliande",
+     "milieu": "corps en bois et attaques du Pokémon",
+     "bas": "racines et sol de la forêt"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "noir",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "menace",
+    "emotion": "menaçant",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Desséliande",
+     "EX",
+     "forêt",
+     "bois",
+     "vert",
+     "marron",
+     "spectre",
+     "plante"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 708,
    "paire": null
   },
@@ -3559,7 +4375,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "volcan en éruption",
+    "lieu": "cratère volcanique",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cheminées volcaniques rocheuses",
+     "milieu": "Camérupt EX et ondes de choc ardentes",
+     "bas": "roches et texte de carte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "marron",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "grogne",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Camérupt",
+     "EX",
+     "feu",
+     "volcan",
+     "lave",
+     "orange",
+     "roche",
+     "chaleur"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 322,
    "paire": null
   },
@@ -3584,7 +4463,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fonds marins lumineux",
+    "lieu": "océan",
+    "interieur": "false",
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "bulles et vagues d'eau azur",
+     "milieu": "Wailord EX gigantesque sautant hors de l'eau",
+     "bas": "remous aquatiques et attaques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "turquoise"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "nage",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Wailord",
+     "EX",
+     "eau",
+     "océan",
+     "bleu",
+     "baleine",
+     "vagues",
+     "bulles"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 320,
    "paire": null
   },
@@ -3609,7 +4551,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "océan déchaîné",
+    "lieu": "surface de l'eau agitée",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "ciel et éclaboussures d'eau",
+     "milieu": "corps de Kyogre",
+     "bas": "vagues et remous marins"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "noir",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "nage",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Kyogre",
+     "eau",
+     "vagues",
+     "océan",
+     "légendaire",
+     "bleu",
+     "éclaboussures",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 382,
    "paire": 383
   },
@@ -3634,7 +4640,71 @@
    "stade": "MÉGA",
    "evolue_de": "Kyogre-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "tempête sous-marine",
+    "lieu": "fonds océaniques agités",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "profondeurs",
+    "zones": {
+     "haut": "surface de l'eau claire",
+     "milieu": "Primo-Kyogre et vagues d'énergie",
+     "bas": "éclairs et remous"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "noir",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "déchaîne une tempête",
+    "emotion": "colère",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Primo-Kyogre",
+     "tempête",
+     "eau",
+     "énergie",
+     "légendaire",
+     "rose",
+     "bleu",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 382,
    "paire": 383
   },
@@ -3659,7 +4729,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "éruption volcanique",
+    "lieu": "ciel rocheux en feu",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "chute de rochers",
+     "milieu": "Groudon et rayons lumineux",
+     "bas": "sol rocheux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "marron",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "rugit",
+    "emotion": "fureur",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Groudon",
+     "rochers",
+     "feu",
+     "terre",
+     "légendaire",
+     "jaune",
+     "rouge",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 383,
    "paire": 382
   },
@@ -3684,7 +4818,71 @@
    "stade": "MÉGA",
    "evolue_de": "Groudon-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "cataclysme terrestre",
+    "lieu": "fissures magmatiques",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "roche fracturée",
+     "milieu": "Primo-Groudon et failles d'énergie",
+     "bas": "explosions d'énergie bleue"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "bleu",
+      "noir",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "libère de l'énergie",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Primo-Groudon",
+     "magma",
+     "terre",
+     "énergie",
+     "légendaire",
+     "rouge",
+     "bleu",
+     "Pokémon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 383,
    "paire": 382
   },
@@ -3709,7 +4907,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fonds marin aquatique",
+    "lieu": "océan sous-marin",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "bulle d'air et surface lumineuse",
+     "milieu": "Sharpedo EX gueule ouverte au premier plan",
+     "fond": "eau bleue avec reflets et bulles"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "crie",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Sharpedo surgit des profondeurs océaniques pour attaquer ses proies.",
+    "tags": [
+     "Sharpedo",
+     "requin",
+     "eau",
+     "océan",
+     "crocs",
+     "bulle",
+     "bleu",
+     "attaque"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 318,
    "paire": null
   },
@@ -3734,7 +4995,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "grotte de cristal",
+    "lieu": "caverne souterraine",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cristaux géants bleus",
+     "milieu": "Galeking EX debout",
+     "bas": "sol de la grotte"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "gris",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "pose",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Galeking explore les profondeurs rocheuses à la recherche de minéraux.",
+    "tags": [
+     "Galeking",
+     "acier",
+     "cristal",
+     "grotte",
+     "caverne",
+     "bleu",
+     "armure",
+     "roche"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 304,
    "paire": null
   },
@@ -3759,7 +5083,70 @@
    "stade": "MÉGA",
    "evolue_de": "Galeking-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension énergétique",
+    "lieu": "espace mystique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel étoilé et éclairs roses",
+     "milieu": "M-Galeking EX en action avec texte japonais",
+     "bas": "effets d'énergie rose et noire"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "rose",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "puissant",
+    "moment": "nuit",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Méga-Galeking libère toute sa puissance destructrice lors d'une méga-évolution.",
+    "tags": [
+     "Mega-Galeking",
+     "acier",
+     "méga-évolution",
+     "énergie",
+     "éclairs",
+     "rose",
+     "noir",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 304,
    "paire": null
   },
@@ -3784,7 +5171,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "galaxie enchantée",
+    "lieu": "espace cosmique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel violet étoilé",
+     "milieu": "Gardevoir EX gracieuse",
+     "bas": "vague d'énergie blanche"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "blanc",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "flotte",
+    "emotion": "serène",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Gardevoir canalise les énergies cosmiques pour protéger ses alliés.",
+    "tags": [
+     "Gardevoir",
+     "psy",
+     "fée",
+     "espace",
+     "étoiles",
+     "violet",
+     "gracieux",
+     "magie"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -3809,7 +5259,71 @@
    "stade": "MÉGA",
    "evolue_de": "Gardevoir-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique coloré",
+    "lieu": "dimensions mystiques",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "tête de Mega Gardevoir et éclairs jaunes",
+     "milieu": "corps de Mega Gardevoir et texte d'attaque",
+     "bas": "robe volumineuse et texte de règles"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "blanc",
+      "rose",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "pose de combat",
+    "emotion": "déterminée",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mega Gardevoir",
+     "EX",
+     "Pokémon",
+     "éclairs",
+     "cosmos",
+     "rose",
+     "blanc",
+     "noir"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -3830,7 +5344,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "bord de mer",
+    "lieu": "vagues déchaînées",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel et vagues écumantes",
+     "milieu": "personnage d'Arthur souriant",
+     "bas": "corps et texte descriptif"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "doré"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "pose confiante",
+    "emotion": "sûre de soi",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Arthur",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Arthur prépare un plan audacieux lié à l'océan.",
+    "tags": [
+     "Arthur",
+     "Supporter",
+     "océan",
+     "vagues",
+     "bleu",
+     "ancre",
+     "bandeau"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3851,7 +5432,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "volcan en éruption",
+    "lieu": "tourbillon de magma",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "explosion de magma et éclat lumineux",
+     "milieu": "personnage de Max avec des lunettes",
+     "bas": "veste rouge et texte descriptif"
+    },
+    "bords": {
+     "haut": "orange",
+     "bas": "orange",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "réfléchit avec assurance",
+    "emotion": "malicieuse",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Max",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Max échafaude une ruse au cœur du foyer volcanique.",
+    "tags": [
+     "Max",
+     "Supporter",
+     "feu",
+     "magma",
+     "rouge",
+     "lunettes",
+     "stratégie"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3872,7 +5520,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt verdoyante",
+    "lieu": "clairière ensoleillée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "sac à dos et feuillage flouté",
+     "milieu": "Professeur Seko écrivant des notes",
+     "bas": "pantalon vert et texte descriptif"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "blanc",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "écrit des observations",
+    "emotion": "joyeuse",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "Seko",
+      "role": "professeur"
+     }
+    ],
+    "histoire": "Le Professeur Seko analyse le comportement des Pokémon en pleine nature.",
+    "tags": [
+     "Professeur Seko",
+     "Supporter",
+     "forêt",
+     "vert",
+     "cahier",
+     "recherche",
+     "nature"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3893,7 +5608,78 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "école intérieur",
+    "lieu": "couloir ou salle de classe",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "titre et Poké Ball levée",
+     "milieu": "deux dresseuses souriantes dos à dos",
+     "bas": "texte de règle et pieds des personnages"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "beige",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "posent joyeusement",
+    "emotion": "joie",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     },
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "dresseuses",
+     "Poké Ball",
+     "uniforme",
+     "sourire",
+     "filles",
+     "complicité",
+     "orange"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3914,7 +5700,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "studio étincelant",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "éclats lumineux dorés",
+     "milieu": "Scuba Ball en lévitation",
+     "bas": "effet d'explosion lumineuse"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "dynamisme",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Scuba Ball",
+     "objet",
+     "bleu",
+     "blanc",
+     "brillance",
+     "or",
+     "étoiles"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3935,7 +5783,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fond abstrait doré",
+    "lieu": "studio étincelant",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lumières et éclats dorés",
+     "milieu": "Maillet Amélioré en rotation",
+     "bas": "reflets dorés"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "argent"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "tourbillonne",
+    "emotion": "puissance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Maillet Amélioré",
+     "marteau",
+     "or",
+     "noir",
+     "étoile",
+     "étincelles",
+     "objet"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3956,7 +5866,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "plateforme technologique",
+    "lieu": "arène ou laboratoire",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fond sombre constellé",
+     "milieu": "Poké Ball sur socle lumineux",
+     "bas": "bouton d'activation et lignes roses"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rose",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "se téléporte",
+    "emotion": "mystère",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Échange",
+     "Poké Ball",
+     "technologie",
+     "lumière",
+     "plateforme",
+     "or",
+     "futuriste"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3977,7 +5949,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "espace abstrait doré",
+    "lieu": "monde imaginaire étincelant",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "lumière dorée et reflets brillants",
+     "milieu": "carte d'outil étincelante penchée",
+     "bas": "fond doré lumineux"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "orange"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "mystérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "carte",
+     "outil",
+     "doré",
+     "brillant",
+     "magique",
+     "lumière",
+     "mystère",
+     "or"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   }

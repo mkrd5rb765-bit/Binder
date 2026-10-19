@@ -651,7 +651,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "orage électrique puissant",
+    "lieu": "ciel orageux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tête et bras de Fulguris EX",
+     "milieu": "sphère d'énergie électrique et éclairs",
+     "bas": "éclairs et texte d'attaque"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "colère",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Fulguris libère une puissante décharge électrique en plein cœur de la tempête.",
+    "tags": [
+     "Pokémon",
+     "Fulguris",
+     "EX",
+     "électricité",
+     "éclairs",
+     "bleu",
+     "tempête",
+     "combat"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 642,
    "paire": null
   },
@@ -851,7 +914,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace abstrait",
+    "lieu": "dimension psychique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "entête avec nom et PV",
+     "milieu": "Gallame EX en mouvement avec éclairs d'énergie",
+     "bas": "capacités et texte de règle"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "bleu",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "violet",
+      "blanc",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque, fonce",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Gallame",
+     "Pokémon",
+     "EX",
+     "combat",
+     "énergie",
+     "lame",
+     "vert",
+     "violet"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -876,7 +1003,70 @@
    "stade": "MÉGA",
    "evolue_de": "Gallame-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace abstrait",
+    "lieu": "dimension méga",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "entête méga avec nom et PV",
+     "milieu": "Méga-Gallame EX avec texte japonais stylisé",
+     "bas": "règle des méga-évolutions et capacités"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "violet",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "jaune",
+      "vert",
+      "violet"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque puissante",
+    "emotion": "féroce",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Méga-Gallame",
+     "Pokémon",
+     "EX",
+     "méga-évolution",
+     "rouge",
+     "jaune",
+     "attaque"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -1451,7 +1641,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel étoilé",
+    "lieu": "altitude élevée",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "entête avec nom et PV",
+     "milieu": "Latios EX en vol rapide vers la droite",
+     "bas": "attaques et texte de règle"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "bleu",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "doré"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "vole, fonce",
+    "emotion": "concentré",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Latios",
+     "Pokémon",
+     "EX",
+     "vol",
+     "bleu",
+     "ciel",
+     "vitesse"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 381,
    "paire": 380
   },
@@ -1476,7 +1728,70 @@
    "stade": "MÉGA",
    "evolue_de": "Latios-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cristallin",
+    "lieu": "dimension brisée",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "entête méga avec nom et PV",
+     "milieu": "Méga-Latios EX avec cristaux et texte japonais",
+     "bas": "règle des méga-évolutions et capacités"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "rose",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "sonique, vole",
+    "emotion": "intense",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Méga-Latios",
+     "Pokémon",
+     "EX",
+     "cristaux",
+     "violet",
+     "rose",
+     "vitesse"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 381,
    "paire": 380
   },
@@ -1501,7 +1816,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "espace céleste tourmenté",
+    "lieu": "dans les airs",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tête de Rayquaza EX",
+     "milieu": "corps enroulé et éclairs",
+     "bas": "énergie et attaques de la carte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "blanc",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Rayquaza se prépare à libérer une puissante attaque dans les hauteurs de l'atmosphère.",
+    "tags": [
+     "Rayquaza EX",
+     "Pokémon",
+     "dragon",
+     "vert",
+     "éclairs",
+     "énergie",
+     "mâchoire ouverte",
+     "attaques"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 384,
    "paire": null
   },
@@ -1526,7 +1905,71 @@
    "stade": "MÉGA",
    "evolue_de": "Rayquaza-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ciel orageux cosmique",
+    "lieu": "haute atmosphère",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tête menaçante du Méga-Rayquaza",
+     "milieu": "inscriptions japonaises dorées et éclairs",
+     "bas": "anneaux dorés et attaques"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "bleu",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "méga-évolution",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Méga-Rayquaza EX déchaîne sa puissance ancestrale à travers une tempête d'énergie.",
+    "tags": [
+     "Mega Rayquaza EX",
+     "Pokémon",
+     "dragon",
+     "vert",
+     "or",
+     "éclairs",
+     "texte japonais",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 384,
    "paire": null
   },
@@ -1551,7 +1994,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "dimension obscure énergétique",
+    "lieu": "espace mystique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "têtes menaçantes de Trioxhydre",
+     "milieu": "sphères d'énergie lumineuses",
+     "bas": "texte et capacités de la carte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "rose",
+      "noir",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "concentre énergie",
+    "emotion": "menaçant",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Trioxhydre EX canalise des flux d'énergie ténébreuse pour anéantir ses opposants.",
+    "tags": [
+     "Trioxhydre EX",
+     "Pokémon",
+     "dragon",
+     "ténèbres",
+     "sphères lumineuses",
+     "violet",
+     "énergie",
+     "menaçant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 633,
    "paire": null
   },
@@ -1876,7 +2383,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ciel orageux monochrome",
+    "lieu": "dans les airs",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tête de Rayquaza EX",
+     "milieu": "corps replié avec sphère d'énergie",
+     "bas": "attaques de la carte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "gris",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "prépare attaque",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Rayquaza EX concentre l'énergie des éclairs avant de fondre sur sa cible.",
+    "tags": [
+     "Rayquaza EX",
+     "Pokémon",
+     "dragon",
+     "vert",
+     "orages",
+     "sphère lumineuse",
+     "griffes",
+     "attaque"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 384,
    "paire": null
   },
@@ -1901,7 +2472,71 @@
    "stade": "MÉGA",
    "evolue_de": "Rayquaza-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel nuageux mouvement",
+    "lieu": "en altitude dans les nuages",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel nuageux avec M-Rayquaza EX en plein vol",
+     "milieu": "le corps du Pokémon serpentiforme vert et noir en diagonale",
+     "bas": "nuages blancs et texte d'attaque"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "noir",
+      "blanc",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "vole rapidement",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": "nuageux",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "M-Rayquaza",
+     "dragon",
+     "vol",
+     "nuages",
+     "vert",
+     "puissance",
+     "vitesse",
+     "ciel"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 384,
    "paire": null
   },
@@ -1951,7 +2586,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel étoilé fleuri",
+    "lieu": "nuit étoilée avec pétales roses",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel sombre constellé d'étoiles scintillantes",
+     "milieu": "Shaymin EX volant parmi des pétales roses flottants",
+     "bas": "pétales et texte de description"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "blanc",
+      "rose",
+      "noir"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "flotte gracieusement",
+    "emotion": "douceur",
+    "moment": "nuit",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Shaymin",
+     "fleurs",
+     "pétales",
+     "étoiles",
+     "vol",
+     "nuit",
+     "gracieux",
+     "magique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 492,
    "paire": null
   },
@@ -2437,7 +3136,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel orageux électrique",
+    "lieu": "tempête d'éclairs",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Ciel turquoise et éclairs jaunes",
+     "milieu": "Fulguris EX sur un nuage d'orage",
+     "bas": "gros nuage blanc et texte de carte"
+    },
+    "bords": {
+     "haut": "turquoise",
+     "bas": "blanc",
+     "gauche": "turquoise",
+     "droite": "turquoise"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "blanc",
+      "turquoise"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "invoque l'électricité",
+    "emotion": "colère",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Fulguris",
+     "électricité",
+     "orage",
+     "éclairs",
+     "nuage",
+     "bleu",
+     "puissance",
+     "légendaire"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 642,
    "paire": null
   },
@@ -2462,7 +3225,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace abstrait coloré",
+    "lieu": "dimension psychique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "fond violet et rose avec lignes lumineuses",
+     "milieu": "Gallame EX en pose de combat avec ses lames vertes",
+     "bas": "jambes du Pokémon et texte de carte"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "rose",
+      "vert",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose de combat",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Gallame",
+     "combat",
+     "lames",
+     "psychique",
+     "violet",
+     "détermination",
+     "vitesse",
+     "abstrait"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -2487,7 +3314,70 @@
    "stade": "MÉGA",
    "evolue_de": "Gallame-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace abstrait",
+    "lieu": "dimension cosmique",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "Mega Gallame EX posé en diagonale avec des éclairs jaunes",
+     "milieu": "nom de l'attaque en gros lettrage rouge et jaune",
+     "bas": "bloc de texte et bas du corps du Pokémon"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mega Gallame",
+     "EX",
+     "éclairs",
+     "violet",
+     "cosmique",
+     "combat",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 280,
    "paire": null
   },
@@ -2512,7 +3402,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace étoilé",
+    "lieu": "galaxie lumineuse",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête et aile gauche de Latios EX",
+     "milieu": "corps du Pokémon et blocs de texte des attaques",
+     "bas": "extrémités des ailes et bas de la carte"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "violet",
+      "blanc",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "sérénité",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Latios",
+     "EX",
+     "bleu",
+     "espace",
+     "étoiles",
+     "vol",
+     "Dragon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 381,
    "paire": 380
   },
@@ -2537,7 +3490,70 @@
    "stade": "MÉGA",
    "evolue_de": "Latios-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique",
+    "lieu": "nébuleuse explosive",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête et ailes de Mega Latios EX",
+     "milieu": "nom de l'attaque en gros lettrage rouge et jaune",
+     "bas": "bloc de texte et effet d'énergie"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "charge",
+    "emotion": "férocité",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mega Latios",
+     "EX",
+     "rose",
+     "bleu",
+     "explosion",
+     "vitesse",
+     "cosmique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 381,
    "paire": 380
   },
@@ -2562,7 +3578,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait",
+    "lieu": "dimension obscure",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "têtes de Trioxhydre EX rugissant",
+     "milieu": "corps du Pokémon et blocs de texte",
+     "bas": "règles des Pokémon EX et bas de carte"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "noir",
+      "bleu",
+      "rose"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "rugit",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Trioxhydre",
+     "EX",
+     "dragon",
+     "sombre",
+     "menaçant",
+     "têtes multiples",
+     "rugissement"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 633,
    "paire": null
   },
@@ -2587,7 +3666,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace tourbillon cosmique",
+    "lieu": "dimension céleste abstraite",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "tête grande ouverte de Rayquaza",
+     "milieu": "corps enroulé du Pokémon",
+     "bas": "queue et tourbillons d'énergie"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "hurle",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Rayquaza déchaîne sa puissance dans une distorsion spatiale.",
+    "tags": [
+     "Rayquaza",
+     "dragon",
+     "vert",
+     "mâchoire",
+     "tourbillon",
+     "espace",
+     "énergie",
+     "rugissement"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 384,
    "paire": null
   },
@@ -2612,7 +3754,70 @@
    "stade": "MÉGA",
    "evolue_de": "Rayquaza-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace énergie cosmique",
+    "lieu": "dimension de méga-évolution",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "cornes et tête de Méga-Rayquaza",
+     "milieu": "grandes inscriptions japonaises et corps",
+     "bas": "vagues d'énergie rose fushia"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "vert",
+      "rose"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "charge",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Méga-Rayquaza concentre une énergie surpuissante prête à briser l'émeraude.",
+    "tags": [
+     "Mega-Rayquaza",
+     "noir",
+     "vert",
+     "rose",
+     "foudre",
+     "puissance",
+     "dragon",
+     "lettrage"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 384,
    "paire": null
   },
@@ -2637,7 +3842,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel tourbillon bleu",
+    "lieu": "altitude aérienne",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "oreilles et têtes de Shaymin",
+     "milieu": "corps élancé et colerette rouge",
+     "bas": "pattes et lignes d'énergie"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Shaymin s'envole gracieusement dans les airs pour accomplir sa mission.",
+    "tags": [
+     "Shaymin",
+     "vol",
+     "blanc",
+     "vert",
+     "fleur",
+     "ciel",
+     "vitesse",
+     "pokemon"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 492,
    "paire": null
   },
@@ -2658,7 +3926,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt verdoyante ensoleillée",
+    "lieu": "lisière de forêt",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "chevelure verte et feuillage flou",
+     "milieu": "buste de Timmy et sacoche",
+     "bas": "texte et contours de carte"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "beige"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "sourit",
+    "emotion": "amical",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "Timmy",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Timmy se prépare à faire progresser son équipe de Pokémon.",
+    "tags": [
+     "Timmy",
+     "dresseur",
+     "vert",
+     "cheveux",
+     "sourire",
+     "forêt",
+     "sacoche",
+     "jeune"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -2679,7 +4015,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel et nuages",
+    "lieu": "en plein vol en altitude",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "cheveux violets et visage d'Alizée",
+     "milieu": "buste et manteau bleu, texte des attaques",
+     "chiffre_ou_texte": "texte descriptif de la carte au centre",
+     "bas": "mains et bas du corps"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "violet",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "pose fière",
+    "emotion": "arrogante",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Alizée",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Alizée contemple le ciel avant un combat aérien.",
+    "tags": [
+     "femme",
+     "cheveux violets",
+     "manteau",
+     "ciel",
+     "nuages",
+     "regard",
+     "pose"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -2700,7 +4104,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "laboratoire technologique",
+    "lieu": "salle des machines électriques",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "plafond et structures métalliques lumineuses",
+     "milieu": "sphère d'énergie électrique",
+     "bas": "sol quadrillé"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "orange",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "génère de l'énergie",
+    "emotion": "dynamique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "L'énergie est transférée entre les stations du laboratoire.",
+    "tags": [
+     "technologie",
+     "électricité",
+     "sphère",
+     "lumière",
+     "jaune",
+     "machine",
+     "futuriste"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -2721,7 +4187,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "cyberespace abstrait",
+    "lieu": "réseau informatique virtuel",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lignes lumineuses et grille orange",
+     "milieu": "appareil en forme de bouclier bleu et blanc",
+     "bas": "pistes de données et reflets dorés"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "technologique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Le dispositif analyse les données du cyberespace pour retrouver les souvenirs de combat.",
+    "tags": [
+     "cyber",
+     "objet",
+     "bouclier",
+     "bleu",
+     "orange",
+     "réseau",
+     "technologie"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   }

@@ -151,7 +151,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": "autre",
+     "texte_charge": true
+    },
+    "univers": "bord de mer",
+    "lieu": "surface de l'eau agité",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "Kyogre et Sharpedo de la Team Aqua",
+     "milieu": "membre de la Team Aqua et texte d'attaque",
+     "bas": "membres de la Team Aqua dans l'eau"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque en équipe",
+    "emotion": "menaçante",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "La Team Aqua déploie sa puissance maritime avec Kyogre.",
+    "tags": [
+     "Kyogre",
+     "Team Aqua",
+     "eau",
+     "vagues",
+     "Pokémon",
+     "combat",
+     "bleu"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 382,
    "paire": 383
   },
@@ -376,7 +443,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "noire",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "repaire souterrain rocheux",
+    "lieu": "base de la Team Magma",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Groudon et membres de la Team Magma",
+     "milieu": "blocs de texte d'attaque et dresseurs",
+     "bas": "bas de carte avec mentions légales"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "rouge",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "habitant"
+     }
+    ],
+    "histoire": "Les membres de la Team Magma se préparent au combat aux côtés de Groudon.",
+    "tags": [
+     "groudon",
+     "team magma",
+     "roche",
+     "rouge",
+     "membres",
+     "combat",
+     "pokémon",
+     "caverne"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 383,
    "paire": 382
   },

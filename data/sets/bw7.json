@@ -3470,7 +3470,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "noire",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt magique lumineuse",
+    "lieu": "clairière enchantée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lueurs sphériques flottantes et ciel coloré",
+     "milieu": "Celebi-EX au premier plan",
+     "bas": "végétation floue et lueurs vertes"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "jaune",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte, regarde",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": null,
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Celebi",
+     "EX",
+     "plante",
+     "légendaire",
+     "lueurs",
+     "magique",
+     "forêt"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 251,
    "paire": null
   },
@@ -3495,7 +3557,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "rivage aquatique",
+    "lieu": "cours d'eau turquoise",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "vagues et éclaboussures d'eau",
+     "milieu": "Keldeo EX de profil",
+     "bas": "corps du Pokémon et vagues"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "turquoise",
+     "droite": "turquoise"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "marron",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "pose dynamique",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Keldeo",
+     "eau",
+     "vagues",
+     "écume",
+     "crinière",
+     "bleu",
+     "turquoise",
+     "Pokémon EX"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 647,
    "paire": null
   },
@@ -3520,7 +3646,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace cosmique",
+    "lieu": "ciel étoilé et étincelant",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "croissant de lune et ciel coloré",
+     "milieu": "Cresselia EX et trainées d'énergie",
+     "bas": "particules lumineuses"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "rose",
+     "gauche": "violet",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte gracieusement",
+    "emotion": "serein",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Cresselia",
+     "lune",
+     "étoiles",
+     "cosmos",
+     "violet",
+     "bleu",
+     "étincelles",
+     "Pokémon EX"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 488,
    "paire": null
   },
@@ -3545,7 +3735,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "grotte rocheuse",
+    "lieu": "cavité souterraine",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "formations rocheuses suspendues",
+     "milieu": "Démétéros EX en avant",
+     "bas": "rochers et sol bruni"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "orange",
+     "droite": "orange"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "orange",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "attaque menaçante",
+    "emotion": "colérique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Démétéros",
+     "rocher",
+     "terre",
+     "marron",
+     "orange",
+     "griffes",
+     "caverne",
+     "Pokémon EX"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 645,
    "paire": null
   },
@@ -3570,7 +3823,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "tempête électrique",
+    "lieu": "ciel orageux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "éclairs et lueurs dorées",
+     "milieu": "Kyurem Noir EX au centre",
+     "bas": "câbles d'énergie et foudre"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "jaune",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "canalise l'électricité",
+    "emotion": "puissant",
+    "moment": "nuit",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Kyurem",
+     "dragon",
+     "noir",
+     "foudre",
+     "électricité",
+     "bleu",
+     "jaune",
+     "tempête",
+     "Pokémon EX"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 646,
    "paire": null
   },
@@ -3595,7 +3912,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "volcan magma roche",
+    "lieu": "cœur d'un volcan en éruption",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel enflammé et cornes du Pokémon",
+     "milieu": "corps massif de Kyurem Blanc EX avec des appendices ardents",
+     "bas": "magma en fusion et rochers incandescents"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chauda"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Kyurem Blanc libère toute sa puissance dans une fournaise ardente.",
+    "tags": [
+     "Kyurem Blanc",
+     "feu",
+     "magma",
+     "lave",
+     "dragon",
+     "glace",
+     "explosif",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 646,
    "paire": null
   },
@@ -3616,7 +3997,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "jardin verdoyant ensoleillé",
+    "lieu": "parc ou jardin extérieur",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "chapeau vert et cheveux blonds de Bianca",
+     "milieu": "buste de Bianca tenant une Poké Ball",
+     "bas": "vêtements verts et herbe floue"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "orange",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "sourit",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [
+     {
+      "nom": "Bianca",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Bianca part à l'aventure avec le sourire et sa Poké Ball prête à l'emploi.",
+    "tags": [
+     "Bianca",
+     "Poké Ball",
+     "verte",
+     "chapeau",
+     "sourire",
+     "printemps",
+     "dresseuse"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3637,7 +4085,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "classe ou école",
+    "lieu": "salle de classe devant un tableau",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "main de Tcheren tenant une craie",
+     "milieu": "buste de Tcheren en chemise blanche et cravate",
+     "bas": "pantalon et bas du corps"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "enseigne",
+    "emotion": "sérieux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Tcheren",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Tcheren endosse son rôle de professeur et guide ses élèves avec rigueur.",
+    "tags": [
+     "Tcheren",
+     "craie",
+     "école",
+     "tableau",
+     "chemise",
+     "cravate",
+     "professeur"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3658,7 +4173,74 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "bord de mer venté",
+    "lieu": "extérieur en bord de mer",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "main gantée de Carolina montrant une Poké Ball",
+     "milieu": "visage souriant et haut de la tenue de Carolina",
+     "bas": "taille et bas du corps avec des lignes de vent"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "fait un clin d'œil",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": "vent",
+    "saison": "été",
+    "personnages": [
+     {
+      "nom": "Carolina",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Carolina fait une pause pleine de vivacité au bord de l'eau.",
+    "tags": [
+     "Carolina",
+     "Poké Ball",
+     "bleu",
+     "vent",
+     "clin d'œil",
+     "championne",
+     "été"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -3683,7 +4265,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Gringolem",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "espace mystérieux",
+    "lieu": "dimension parallèle",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel tourbillonnant",
+     "milieu": "Golemastoc en plein vol",
+     "bas": "vortex énergétique"
+    },
+    "bords": {
+     "haut": "or",
+     "bas": "or",
+     "gauche": "or",
+     "droite": "or"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "jaune",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "vole",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Golemastoc",
+     "Pokémon",
+     "vol",
+     "robot",
+     "ancien",
+     "vortex",
+     "bleu"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 622,
    "paire": null
   },
@@ -3708,7 +4353,68 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte mystérieuse",
+    "lieu": "profonds souterrains",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "halo lumineux",
+     "milieu": "Terrakium en mouvement",
+     "bas": "sol rocheux"
+    },
+    "bords": {
+     "haut": "or",
+     "bas": "or",
+     "gauche": "or",
+     "droite": "or"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "rouge",
+      "beige"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "charge",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Terrakium",
+     "Pokémon",
+     "charge",
+     "légendaire",
+     "rocher",
+     "turquoise"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 639,
    "paire": null
   },
@@ -3733,7 +4439,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Tylton",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ciel étoilé",
+    "lieu": "espace céleste",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "ciel étoilé violet",
+     "milieu": "Altaria volant avec ses ailes de nuages",
+     "bas": "courbes lumineuses colorées"
+    },
+    "bords": {
+     "haut": "or",
+     "bas": "or",
+     "gauche": "or",
+     "droite": "or"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "jaune",
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "vole",
+    "emotion": "joyeux",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Altaria",
+     "Pokémon",
+     "vol",
+     "nuage",
+     "étoiles",
+     "jaune",
+     "violet"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 333,
    "paire": null
   },
@@ -3754,7 +4523,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fond abstrait brillant",
+    "lieu": "espace abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "lumière rayonnante",
+     "milieu": "Casque Brut posé au centre",
+     "bas": "reflets dorés"
+    },
+    "bords": {
+     "haut": "or",
+     "bas": "or",
+     "gauche": "or",
+     "droite": "or"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "jaune",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "est posé",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Casque Brut",
+     "objet",
+     "dresseur",
+     "équipement",
+     "jaune",
+     "rouge",
+     "brillant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   }

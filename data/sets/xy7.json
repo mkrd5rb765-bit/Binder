@@ -176,7 +176,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt tropicale",
+    "lieu": "jungle luxuriante",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage",
+     "milieu": "Jungko EX en action",
+     "bas": "sol de jungle"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "férocité",
+    "moment": "jour",
+    "meteo": null,
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Jungko EX fond sur sa proie à travers les feuilles de la canopée.",
+    "tags": [
+     "Jungko",
+     "plante",
+     "feuilles",
+     "jungle",
+     "vert",
+     "attaque",
+     "griffes",
+     "vitesse"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 252,
    "paire": null
   },
@@ -201,7 +264,71 @@
    "stade": "MÉGA",
    "evolue_de": "Jungko-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt sombre",
+    "lieu": "bois mystérieux",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de M-Jungko EX et kanjis lumineux",
+     "milieu": "corps du Pokémon et feuillages",
+     "bas": "bloc de texte et reflets"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "noir",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "combatif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "M-Jungko EX libère une puissante attaque en pleine forêt.",
+    "tags": [
+     "Jungko",
+     "Méga",
+     "plante",
+     "feuilles",
+     "kanjis",
+     "éclats",
+     "vert",
+     "combat"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 252,
    "paire": null
   },
@@ -626,7 +753,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace glacé",
+    "lieu": "dimension parallèle de glace",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de Kyurem EX et éclats de glace",
+     "milieu": "corps du Pokémon et cercles d'énergie",
+     "bas": "bloc de texte et cristaux"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "jaune",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "charge",
+    "emotion": "puissant",
+    "moment": "indéfini",
+    "meteo": "neige",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": "Kyurem EX déchaîne sa puissance glaciale dans un tourbillon de cristaux.",
+    "tags": [
+     "Kyurem",
+     "glACE",
+     "dragon",
+     "cristaux",
+     "bleu",
+     "énergie",
+     "froid",
+     "éclats"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 646,
    "paire": null
   },
@@ -676,7 +867,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "laboratoire électrique",
+    "lieu": "salle d'expérimentation",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "éclairs et tête de Pharamp EX dans le cadre",
+     "milieu": "corps de Pharamp EX et fond métallique",
+     "bas": "bloc de texte et éclairs traversants"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "gris",
+      "bleu",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "néon",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "observe",
+    "emotion": "calme",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Pharamp EX se prépare à canaliser l'électricité.",
+    "tags": [
+     "Pharamp",
+     "électrique",
+     "jaune",
+     "rayures",
+     "orbe",
+     "cadre",
+     "éclairs",
+     "métal"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 179,
    "paire": null
   },
@@ -701,7 +956,71 @@
    "stade": "MÉGA",
    "evolue_de": "Pharamp-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "tempête électrique",
+    "lieu": "ciel orageux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête chevelue de M-Pharamp EX et kanjis",
+     "milieu": "corps du Pokémon et éclairs roses",
+     "bas": "bloc de texte et décharges d'énergie"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "rose",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "libère énergie",
+    "emotion": "intense",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "M-Pharamp EX déploie sa magnifique chevelure et provoque une tempête électrique.",
+    "tags": [
+     "Pharamp",
+     "Méga",
+     "électrique",
+     "chevelure",
+     "éclairs",
+     "kanjis",
+     "rose",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 179,
    "paire": null
   },
@@ -901,7 +1220,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension mystique abstraite",
+    "lieu": "espace dimensionnel violet",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Hoopa surgissant d'un anneau",
+     "milieu": "texte de la carte et anneau lumineux",
+     "bas": "anneau doré au sol et effets cosmiques"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "rose",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Hoopa utilise ses pouvoirs dimensionnels pour manipuler l'espace et faire apparaître des objets par ses anneaux.",
+    "tags": [
+     "Hoopa",
+     "Pokémon",
+     "anneau",
+     "violet",
+     "lumière",
+     "magie",
+     "cosmique",
+     "griffes"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 720,
    "paire": null
   },
@@ -926,7 +1309,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "grotte rocheuse sombre",
+    "lieu": "caverne éboulée",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "débris de rochers en suspension",
+     "milieu": "Mackogneur en plein mouvement",
+     "bas": "rochers et poussière"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "gris",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "frappe",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Mackogneur déclenche une onde de choc destructrice au cœur d'une caverne.",
+    "tags": [
+     "Mackogneur",
+     "rochers",
+     "combat",
+     "poings",
+     "poussière",
+     "caverne",
+     "explosion"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 66,
    "paire": null
   },
@@ -1051,7 +1496,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "versant de montagne en ruine",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel et crêtes rocheuses",
+     "milieu": "Tyranocif rugissant avec des rochers",
+     "bas": "poussière et débris"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "gris",
+      "marron",
+      "noir"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "rugit",
+    "emotion": "féroce",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Tyranocif provoque un séisme dévastateur qui pulvérise les montagnes alentour.",
+    "tags": [
+     "Tyranocif",
+     "roche",
+     "vert",
+     "colère",
+     "montagne",
+     "éboulis",
+     "griffes"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 246,
    "paire": null
   },
@@ -1076,7 +1584,70 @@
    "stade": "MÉGA",
    "evolue_de": "Tyranocif-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "tempête destructrice",
+    "lieu": "zone d'impact cataclysmique",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "éclairs jaunes et texte d'attaque japonais",
+     "milieu": "Méga-Tyranocif enragé",
+     "bas": "énergie sombre et éclairs"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "violet",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "déchaîne une attaque",
+    "emotion": "furieux",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Méga-Tyranocif libère toute l'énergie de sa méga-évolution pour anéantir ses ennemis dans un cataclysme.",
+    "tags": [
+     "Méga-Tyranocif",
+     "méga-évolution",
+     "éclair",
+     "énergie",
+     "puissance",
+     "destruction",
+     "chaos"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 246,
    "paire": null
   },
@@ -1426,7 +1997,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension mystérieuse espace",
+    "lieu": "monde distordu",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête dorée de Giratina et éclairs",
+     "milieu": "corps du Pokémon et blocs de texte",
+     "bas": "sol rocheux et éclairs"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Giratina",
+     "éclair",
+     "or",
+     "noir",
+     "puissance",
+     "combat",
+     "dimension",
+     "monstre"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 487,
    "paire": null
   },
@@ -1701,7 +2335,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel tourbillonnant tempête",
+    "lieu": "haute altitude",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "tourbillons d'énergie blanche",
+     "milieu": "Lugia EX en vol et texte",
+     "bas": "nuages et blocs de texte"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "blanc",
+     "secondaires": [
+      "gris",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "vole",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "vent",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Lugia",
+     "vent",
+     "blanc",
+     "oiseau",
+     "légendaire",
+     "ciel",
+     "énergie"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 249,
    "paire": 250
   },
@@ -2062,7 +2758,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "forêt tropicale lumineuse",
+    "lieu": "canopée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage et ciel bleu",
+     "milieu": "Jungko EX et texte",
+     "bas": "sol forestier"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "pose",
+    "emotion": "confiant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Jungko",
+     "plante",
+     "vert",
+     "jungle",
+     "feuillage",
+     "soleil",
+     "agilité"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 252,
    "paire": null
   },
@@ -2087,7 +2845,69 @@
    "stade": "MÉGA",
    "evolue_de": "Jungko-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "jungle énergie explosive",
+    "lieu": "forêt mystique",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lignes d'énergie rose et verte",
+     "milieu": "Méga-Jungko EX et texte",
+     "bas": "pattes et sol"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rose",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Méga-Jungko",
+     "plante",
+     "énergie",
+     "rose",
+     "vert",
+     "puissance",
+     "combat"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 252,
    "paire": null
   },
@@ -2112,7 +2932,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace glacial mystérieux",
+    "lieu": "dimension glacée",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "tête du pokémon sur fond bleu nuit étoilé",
+     "milieu": "corps et bras du pokémon",
+     "bas": "pattes du pokémon et texte d'attaque"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "flotte, observe",
+    "emotion": "solennel",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Kyurem",
+     "glace",
+     "dragon",
+     "lumière",
+     "bleu",
+     "étoiles",
+     "puissant",
+     "futuriste"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 646,
    "paire": null
   },
@@ -2137,7 +3020,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "orage électrique puissant",
+    "lieu": "ciel orageux",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "éclairs et ciel violet et jaune",
+     "milieu": "corps du pokémon de profil",
+     "bas": "queue lumineuse et texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "violet",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "génère électricité",
+    "emotion": "dynamique",
+    "moment": "nuit",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Pharamp",
+     "électricité",
+     "éclair",
+     "jaune",
+     "violet",
+     "queue lumineuse",
+     "orage",
+     "puissant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 179,
    "paire": null
   },
@@ -2162,7 +3108,69 @@
    "stade": "MÉGA",
    "evolue_de": "Pharamp-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "tempête d'énergie rose",
+    "lieu": "dimension électrique",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "tête de méga-pharamp et éclairs",
+     "milieu": "bannière texte et corps",
+     "bas": "base et éclairs bleus"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "mega-évolue",
+    "emotion": "surpuissant",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mega-Pharamp",
+     "chevelure blanche",
+     "rose",
+     "éclairs",
+     "électricité",
+     "dragon",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 179,
    "paire": null
   },
@@ -2187,7 +3195,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension magique colorée",
+    "lieu": "portail dimensionnel",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "tête de Hoopa avec cornes et anneaux",
+     "milieu": "bras croisés et anneaux dorés",
+     "bas": "bas du corps et texte"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "violet",
+      "or"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "invoque anneaux",
+    "emotion": "malicieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Hoopa",
+     "anneaux",
+     "dimension",
+     "violet",
+     "or",
+     "magie",
+     "légendaire",
+     "espace"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 720,
    "paire": null
   },
@@ -2212,7 +3283,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "espace abstrait doré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Mackogneur avec ses quatre bras déployés et des rochers en lévitation",
+     "milieu": "le corps massif de Mackogneur de face avec un poing en avant",
+     "bas": "le bas du corps de Mackogneur et des débris au sol"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "orange",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "frappe poing en avant",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mackogneur",
+     "combat",
+     "poing",
+     "lumière",
+     "jaune",
+     "rochers",
+     "puissance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 66,
    "paire": null
   },
@@ -2237,7 +3370,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait sombre",
+    "lieu": "dimension obscure",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "la tête de Tyranocif avec ses cornes",
+     "milieu": "le corps massif de Tyranocif avec une posture agressive",
+     "bas": "les jambes de Tyranocif et le bas de la carte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "vert",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "rugit menaçant",
+    "emotion": "menaçant",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Tyranocif",
+     "rouge",
+     "vert",
+     "menaçant",
+     "obscurité",
+     "monstre",
+     "puissant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 246,
    "paire": null
   },
@@ -2262,7 +3457,69 @@
    "stade": "MÉGA",
    "evolue_de": "Tyranocif-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "tempête d'énergie électrique",
+    "lieu": "dimension électrique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "éclairs jaunes et tête de Méga-Tyranocif",
+     "milieu": "Méga-Tyranocif rugissant avec des éclairs et texte japonais stylisé",
+     "bas": "le bas de la carte avec des éclairs"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "déchaîne sa foudre",
+    "emotion": "furieux",
+    "moment": "indéfini",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Méga-Tyranocif",
+     "foudre",
+     "éclairs",
+     "jaune",
+     "bleu",
+     "puissance",
+     "rugissement"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 246,
    "paire": null
   },
@@ -2287,7 +3544,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension parallèle",
+    "lieu": "Monde Distorsion",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "les rubans sombres et la tête dorée de Giratina",
+     "milieu": "le corps sinueux de Giratina avec sa collerette dorée",
+     "bas": "le bas du corps et les rubans de Giratina"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "jaune",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "flotte menaçant",
+    "emotion": "mystérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Giratina",
+     "légendaire",
+     "dragon",
+     "or",
+     "rouge",
+     "mystère",
+     "dimension"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 487,
    "paire": null
   },
@@ -2312,7 +3631,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ciel et énergie",
+    "lieu": "ciel dégagé",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tête et ailes de Lugia",
+     "milieu": "corps de Lugia et attaques",
+     "bas": "queue de Lugia et texte de règles"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "noir",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Lugia déploie toute sa puissance dans les airs pour lancer une attaque dévastatrice.",
+    "tags": [
+     "Lugia",
+     "Pokémon",
+     "EX",
+     "ciel",
+     "bleu",
+     "lumière",
+     "puissance",
+     "aile"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 249,
    "paire": 250
   },
@@ -2333,7 +3716,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "intérieur sophistiqué",
+    "lieu": "bureau ou hall chic",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête et cheveux de Pierre",
+     "milieu": "buste, cravate et texte",
+     "bas": "mains tenant une Pokéball et texte"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "rouge",
+      "blanc",
+      "gris"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "confiance",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Pierre",
+      "role": "champion"
+     }
+    ],
+    "histoire": "Le champion Pierre se prépare à affronter un dresseur redoutable.",
+    "tags": [
+     "Pierre",
+     "Dresseur",
+     "champion",
+     "Pokéball",
+     "costume",
+     "cravate rouge",
+     "regard confiant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -2358,7 +3809,70 @@
    "stade": "MÉGA",
    "evolue_de": "Kyogre-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": "autre",
+     "texte_charge": true
+    },
+    "univers": "océan et tempête",
+    "lieu": "fonds marins agités",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "tête massive de Primo-Kyogre",
+     "milieu": "nageoires et texte d'attaque",
+     "bas": "fond marin et éclairs jaunes"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "bleu",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "s'illumine",
+    "emotion": "colère",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Primo-Kyogre déclenche une tempête océanique d'une violence inouïe.",
+    "tags": [
+     "Primo-Kyogre",
+     "EX",
+     "Mega",
+     "eau",
+     "tempête",
+     "jaune",
+     "bleu",
+     "légendaire"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 382,
    "paire": 383
   },
@@ -2383,7 +3897,71 @@
    "stade": "MÉGA",
    "evolue_de": "Groudon-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": "autre",
+     "texte_charge": true
+    },
+    "univers": "volcan et magma",
+    "lieu": "cratère volcanique",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "tête de Primo-Groudon ouvrant la gueule",
+     "milieu": "corps massif, griffes et texte d'attaque",
+     "bas": "griffes géantes et texte de règles"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "rugit",
+    "emotion": "fureur",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Primo-Groudon libère la puissance ardente du magma pour consumer le terrain.",
+    "tags": [
+     "Primo-Groudon",
+     "EX",
+     "Mega",
+     "feu",
+     "volcan",
+     "magma",
+     "jaune",
+     "rouge",
+     "légendaire"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 383,
    "paire": 382
   },
@@ -2408,7 +3986,71 @@
    "stade": "MÉGA",
    "evolue_de": "Rayquaza-EX",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "EX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace céleste doré",
+    "lieu": "ciel étincelant",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "ciel",
+    "zones": {
+     "haut": "tête de M-Rayquaza EX",
+     "milieu": "corps du Pokémon et textes d'attaque",
+     "bas": "queue du Pokémon et bordure dorée"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "doré",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "rose",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "puissance",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "M-Rayquaza déchaîne sa puissance céleste pour foudroyer ses ennemis.",
+    "tags": [
+     "Pokémon",
+     "méga-évolution",
+     "or",
+     "noir",
+     "rose",
+     "éclair",
+     "puissant",
+     "brillant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 384,
    "paire": null
   },
@@ -2429,7 +4071,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "espace énergétique doré",
+    "lieu": "dimension d'énergie",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "sphères d'énergie rouge et verte",
+     "milieu": "lignes lumineuses",
+     "bas": "autres sphères partiellement visibles"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "gris",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "brille",
+    "emotion": "dynamique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Des sphères d'énergie élémentaire sont récupérées pour alimenter un combat.",
+    "tags": [
+     "objet",
+     "énergie",
+     "rouge",
+     "vert",
+     "or",
+     "étincelles",
+     "récupération"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   },
@@ -2450,7 +4154,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "espace lumineux doré",
+    "lieu": "dimension mystique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "boîte aux lettres rouge ouverte",
+     "milieu": "éclats lumineux",
+     "bas": "reflets dorés"
+    },
+    "bords": {
+     "haut": "doré",
+     "bas": "gris",
+     "gauche": "doré",
+     "droite": "doré"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "ouvre",
+    "emotion": "surprise",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Le courrier du dresseur s'ouvre pour révéler de précieuses cartes.",
+    "tags": [
+     "objet",
+     "boîte aux lettres",
+     "rouge",
+     "or",
+     "lumière",
+     "magie",
+     "dresseur"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": null,
    "paire": null
   }

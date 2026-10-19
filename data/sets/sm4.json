@@ -451,7 +451,70 @@
    "stade": null,
    "evolue_de": "Magicarpe",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "océan mer déchaînée",
+    "lieu": "pleine mer",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "tête dressée de Léviator et ciel crépusculaire",
+     "milieu": "gueule grande ouverte rugissante et crête dorsale",
+     "bas": "vagues déferlantes et remous d'écume blanche"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "blanc",
+     "gauche": "turquoise",
+     "droite": "turquoise"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "orange",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "rugit émerge",
+    "emotion": "colère",
+    "moment": "coucher de soleil",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Léviator",
+     "vagues",
+     "écume",
+     "tempête",
+     "rugissement",
+     "mer",
+     "océan",
+     "crépuscule"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 129,
    "paire": null
   },
@@ -851,7 +914,70 @@
    "stade": null,
    "evolue_de": "Gravalanch d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "colline prairie falaise",
+    "lieu": "plaine herbeuse",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "arcs électriques crépitants et ciel bleu",
+     "milieu": "corps massif de Grolem d'Alola et étincelles",
+     "bas": "sol terreux labouré et éclairs dorés"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "gris",
+     "gauche": "jaune",
+     "droite": "vert"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "jaune",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "charge attaque",
+    "emotion": "combatif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Grolem d'Alola",
+     "électricité",
+     "éclairs",
+     "roche",
+     "prairie",
+     "magnétisme",
+     "impact",
+     "charge"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 74,
    "paire": null
   },
@@ -1226,7 +1352,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "Ultra-Dimension espace néant",
+    "lieu": "Ultra-Dimension",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "cloche vitreuse et translucide de Zéroïd avec motifs étoilés",
+     "milieu": "tentacules souples ondulant sur fond d'éclairs violets",
+     "bas": "pointes des tentacules flottant dans le vide obscur"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flotte lévite",
+    "emotion": "mystérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Zéroïd",
+     "Ultra-Chimère",
+     "méduse",
+     "translucide",
+     "tentacules",
+     "lévitation",
+     "néon",
+     "obscurité"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 793,
    "paire": null
   },
@@ -1426,7 +1615,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "Ultra-Dimension espace néant",
+    "lieu": "Ultra-Dimension",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête casquée, yeux noirs et antennes dressées",
+     "milieu": "buste ultra-musclé rougeoyant et bras en flexion",
+     "bas": "jambes puissantes et fond noir parcouru d'arcs électriques"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "noir",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "pose montre muscles",
+    "emotion": "fier",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mouscoto",
+     "Ultra-Chimère",
+     "muscles",
+     "puissance",
+     "moustique",
+     "pose",
+     "éclairs",
+     "force"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 794,
    "paire": null
   },
@@ -1576,7 +1828,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "abysse dimensionnel sombre",
+    "lieu": "Ultra-Dimension obscure",
+    "interieur": false,
+    "milieu": "espace",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête cornue et pinces articulées d'Engloutyran sous des éclairs violets",
+     "milieu": "gueule béante hérissée de crocs et bras massifs",
+     "bas": "corps sombre et cartouches des attaques GX"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "violet"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque rugit",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Ultra-Chimère",
+     "Engloutyran",
+     "crocs",
+     "pinces",
+     "éclairs",
+     "ténèbres",
+     "monstre",
+     "3D"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 799,
    "paire": null
   },
@@ -1776,7 +2092,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "abysse dimensionnel sombre",
+    "lieu": "Ultra-Dimension obscure",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête en origami et lames supérieures jaunes de Katagami",
+     "milieu": "corps de papier fin entouré d'arcs électriques bleus et violets",
+     "bas": "pieds acérés au-dessus des cartouches d'attaques"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "noir",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "noir",
+     "secondaires": [
+      "blanc",
+      "jaune",
+      "orange"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "tranche vole",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Katagami",
+     "Ultra-Chimère",
+     "origami",
+     "lame",
+     "papier",
+     "éclairs",
+     "acier",
+     "3D"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 798,
    "paire": null
   },
@@ -1876,7 +2256,70 @@
    "stade": null,
    "evolue_de": "Noeunoeuf",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "bord de mer tropical",
+    "lieu": "côte d'une île tropicale",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "têtes hilares de Noadkoko d'Alola et cime de palmier sous un soleil éclatant",
+     "milieu": "long cou courbé surplombant l'atoll, la mer et la plage",
+     "bas": "petite tête caudale et texte des attaques"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "marron",
+     "gauche": "bleu",
+     "droite": "vert"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "sourit domine",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Noadkoko d'Alola",
+     "palmier",
+     "plage",
+     "océan",
+     "soleil",
+     "île",
+     "tropical",
+     "3D"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 102,
    "paire": null
   },
@@ -2276,7 +2719,71 @@
    "stade": null,
    "evolue_de": "Type:0",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "montagne canyon rocheux",
+    "lieu": "gorge rocheuse ensoleillée",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "crête argentée de Silvallié et percée de rayons solaires",
+     "milieu": "tête mécanique, collerette blanche et griffes acérées",
+     "bas": "pattes griffues sur le sol fissuré et attaques de la carte"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "blanc",
+      "gris",
+      "orange"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "bondit rugit",
+    "emotion": "combattif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Silvallié",
+     "chimère",
+     "canyon",
+     "rochers",
+     "griffes",
+     "crête",
+     "rayons",
+     "3D"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 772,
    "paire": null
   },
@@ -2511,7 +3018,70 @@
    "stade": null,
    "evolue_de": "Magicarpe",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait",
+    "lieu": "fond uni bleu",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "crête blanche et cornes bleues de Léviator",
+     "milieu": "tête menaçante à gueule grande ouverte",
+     "bas": "corps ondulant bleu et ventre jaune"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "beige"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "rugit",
+    "emotion": "colère",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Léviator",
+     "serpent de mer",
+     "fond bleu",
+     "Full Art",
+     "3D",
+     "gueule ouverte",
+     "crocs",
+     "menaçant"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 129,
    "paire": null
   },
@@ -2536,7 +3106,70 @@
    "stade": null,
    "evolue_de": "Gravalanch d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait",
+    "lieu": "fond uni jaune",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "canons magnétiques noirs et dorés sur le dos",
+     "milieu": "visage moustachu et corps de pierre grise",
+     "bas": "bras rocheux et base du corps"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "gris",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "pose fière",
+    "emotion": "détermination",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Grolem d'Alola",
+     "roche",
+     "électricité",
+     "magnétisme",
+     "fond jaune",
+     "3D",
+     "Full Art",
+     "barbe"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 74,
    "paire": null
   },
@@ -2561,7 +3194,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait",
+    "lieu": "fond uni violet",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "cloche translucide à motifs étoilés",
+     "milieu": "bordure bleue ondulée et corps de méduse",
+     "bas": "tentacules blanches flottantes"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "mystère",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Zéroïd",
+     "Ultra-Chimère",
+     "méduse",
+     "parasite",
+     "translucide",
+     "fond violet",
+     "tentacules",
+     "Full Art"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 793,
    "paire": null
   },
@@ -2586,7 +3282,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait",
+    "lieu": "fond uni marron",
+    "interieur": false,
+    "milieu": "fond uni",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "trompe effilée, antennes et petites ailes",
+     "milieu": "bras hypertrophiés et torse musclé",
+     "bas": "pattes postérieures et épines noires"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "rouge",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "fléchit muscles",
+    "emotion": "confiance",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mouscoto",
+     "Ultra-Chimère",
+     "moustique",
+     "muscles",
+     "rouge",
+     "fond marron",
+     "force",
+     "Full Art"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 794,
    "paire": null
   },
@@ -2611,7 +3370,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait dimensionnel",
+    "lieu": "ultra-dimension abstraite",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "pinces supérieures, cornes et petite tête du Pokémon",
+     "milieu": "immense gueule circulaire bleue bordée de dents jaunes",
+     "bas": "pattes massives et encadré de l'attaque GX"
+    },
+    "bords": {
+     "haut": "turquoise",
+     "bas": "noir",
+     "gauche": "turquoise",
+     "droite": "turquoise"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "noir",
+      "jaune",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "rugit gueule béante",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "ultra-chimère",
+     "gueule",
+     "dents",
+     "mâchoire",
+     "pinces",
+     "cornes",
+     "cyan",
+     "énergie"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 799,
    "paire": null
   },
@@ -2636,7 +3459,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait épuré",
+    "lieu": "espace abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête en forme de lanterne origami et lames levées",
+     "milieu": "corps géométrique blanc et jaune tranchant",
+     "bas": "jambes pointues et bandeau de l'attaque GX"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "blanc",
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "déploie ses lames",
+    "emotion": "combatif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "origami",
+     "ultra-chimère",
+     "lames",
+     "papier",
+     "géométrique",
+     "tranchant",
+     "blanc",
+     "rouge"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 798,
    "paire": null
   },
@@ -2661,7 +3548,71 @@
    "stade": null,
    "evolue_de": "Noeunoeuf",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond uni doré",
+    "lieu": "fond abstrait olive",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "couronne de feuilles de palmier et trois têtes hilares",
+     "milieu": "très long cou courbé segmenté",
+     "bas": "base du tronc, pattes et queue feuillue"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "jaune",
+      "turquoise"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "sourit joyeusement",
+    "emotion": "joyeux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "palmier",
+     "noix de coco",
+     "long cou",
+     "tropical",
+     "visages",
+     "sourire",
+     "dragon",
+     "alola"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 102,
    "paire": null
   },
@@ -2686,7 +3637,71 @@
    "stade": null,
    "evolue_de": "Type:0",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait argenté",
+    "lieu": "espace abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "grande crête argentée et tête masquée aux yeux rouges",
+     "milieu": "crinière blanche ébouriffée et torse mécanique",
+     "bas": "pattes avant griffues et bande d'attaque GX bleue"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "blanc",
+      "bleu",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "néon",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "prend la pose",
+    "emotion": "fier",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "chimère",
+     "crête",
+     "masque",
+     "griffes",
+     "yeux rouges",
+     "argent",
+     "aura cyan",
+     "mécanique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 772,
    "paire": null
   },
@@ -2707,7 +3722,76 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait dynamique",
+    "lieu": "arrière-plan graphique bicolore",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête de Gladio avec sa longue mèche blonde sur fond bleu cyan et rose vif",
+     "milieu": "main gantée saisissant son poignet, regard intense et texte de jeu",
+     "bas": "tenue noire, sacoche rouge en bandoulière et cartouche de règle Supporter"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "noir",
+      "bleu",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "serre son poignet",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Gladio",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Gladio",
+     "dresseur",
+     "mèche",
+     "pose dramatique",
+     "contraste",
+     "tenue noire",
+     "Alola",
+     "intensité"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": null,
    "paire": null
   },
@@ -2728,7 +3812,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "espace lumineux géométrique",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "visage souriant et volumineuse chevelure blonde d'Elsa-Mina traversée de rayons",
+     "milieu": "buste, robe blanche futuriste ornée d'un prisme sombre et texte de règles",
+     "bas": "jambes élancées d'Elsa-Mina et cartouche de règle Supporter"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "gauche"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "sourit avec assurance",
+    "emotion": "confiant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Elsa-Mina",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Elsa-Mina",
+     "dresseur",
+     "cheveux blonds",
+     "robe blanche",
+     "rayons lumineux",
+     "élégance",
+     "fond géométrique",
+     "Alola"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": null,
    "paire": null
   },
@@ -2749,7 +3901,75 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "cristaux étincelants",
+    "lieu": "fond cristallin facetté",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "visage souriant d'Alyxia avec sa coiffure sombre sur fond de cristaux bleus étincelants",
+     "milieu": "bras levé, colliers or et rose, haut court rose clair et texte d'effet",
+     "bas": "short rose, main ornée de bracelets et cartouche de règle Supporter"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "prend la pose",
+    "emotion": "confiant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "Alyxia",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Alyxia",
+     "dresseur",
+     "cristaux",
+     "bijoux",
+     "facettes",
+     "étincelles",
+     "fond bleu",
+     "Alola"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": null,
    "paire": null
   },
@@ -2774,7 +3994,70 @@
    "stade": null,
    "evolue_de": "Magicarpe",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace prismatique irisé",
+    "lieu": "fond arc-en-ciel vaporeux",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "crête dorsale et tête menaçante de Léviator avec les yeux perçants",
+     "milieu": "immense gueule ouverte féroce, corps sinueux et textes des attaques Cascade et Désastre Draconien",
+     "bas": "queue enroulée, bandeau noir de l'attaque Tempête d'Effroi GX et informations de jeu"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "rugit férocement",
+    "emotion": "enragé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Léviator",
+     "arc-en-ciel",
+     "gueule béante",
+     "relief 3D",
+     "irisé",
+     "menaçant",
+     "dragon marin",
+     "écailles"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 129,
    "paire": null
   },
@@ -2799,7 +4082,71 @@
    "stade": null,
    "evolue_de": "Gravalanch d’Alola",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension abstraite",
+    "lieu": "fond arc-en-ciel",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête et carapace rocheuse de Grolem d'Alola avec sa moustache de limaille",
+     "milieu": "torse massif et poings de pierre",
+     "bas": "bas du corps trapu et pavés de texte d'attaques"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "gris",
+     "gauche": "blanc",
+     "droite": "blanc"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "jaune",
+      "vert",
+      "orange"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "prend la pose",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Grolem d'Alola",
+     "arc-en-ciel",
+     "rainbow rare",
+     "roche",
+     "électrique",
+     "relief",
+     "3D",
+     "prisme"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 74,
    "paire": null
   },
@@ -2824,7 +4171,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension abstraite",
+    "lieu": "fond arc-en-ciel",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "ombrelle translucide de Zéroïd parée de motifs étoilés",
+     "milieu": "tentacules ondulants et vaporeux",
+     "bas": "pointes des tentacules et attaques GX"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "gris",
+     "gauche": "blanc",
+     "droite": "blanc"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rose",
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "mystérieux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Zéroïd",
+     "Ultra-Chimère",
+     "méduse",
+     "arc-en-ciel",
+     "rainbow rare",
+     "translucide",
+     "tentacules",
+     "3D"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 793,
    "paire": null
   },
@@ -2849,7 +4260,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension abstraite",
+    "lieu": "fond arc-en-ciel",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "antennes dressées et tête triangulaire de Mouscoto",
+     "milieu": "biceps surdimensionnés et torse puissant gonflé",
+     "bas": "longues pattes grêles et bandeau de l'attaque Expansion GX"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "gris",
+     "gauche": "blanc",
+     "droite": "blanc"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "rouge",
+      "vert",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flexe ses muscles",
+    "emotion": "fier",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mouscoto",
+     "Ultra-Chimère",
+     "moustique",
+     "muscles",
+     "arc-en-ciel",
+     "rainbow rare",
+     "puissance",
+     "3D"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 794,
    "paire": null
   },
@@ -2874,7 +4349,71 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension abstraite",
+    "lieu": "fond arc-en-ciel",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "pinces supérieures et cornes relevées",
+     "milieu": "gueule immense et béante garnie de crocs",
+     "bas": "mâchoire inférieure dentelée et attaques texturées"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "gris",
+     "gauche": "blanc",
+     "droite": "blanc"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "bleu",
+      "orange",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "rugit",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Engloutyran",
+     "Ultra-Chimère",
+     "gueule",
+     "crocs",
+     "arc-en-ciel",
+     "rainbow rare",
+     "monstre",
+     "3D"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 799,
    "paire": null
   },
@@ -2899,7 +4438,69 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension abstraite",
+    "lieu": "fond arc-en-ciel abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "tête en origami géométrique aux reflets arc-en-ciel",
+     "milieu": "corps de papier plié et bras en forme d'épées tranchantes",
+     "bas": "jambes effilées et bandeau d'attaque GX texturé"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "rose",
+     "gauche": "jaune",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "blanc",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "lévite en garde",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "ultra-chimère",
+     "origami",
+     "arc-en-ciel",
+     "lame",
+     "papier",
+     "géométrie",
+     "holographique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 798,
    "paire": null
   },
@@ -2924,7 +4525,69 @@
    "stade": null,
    "evolue_de": "Noeunoeuf",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension tropicale abstraite",
+    "lieu": "fond arc-en-ciel abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "têtes hilares au sommet du palmier et feuilles déployées",
+     "milieu": "très long cou courbé segmenté",
+     "bas": "base du tronc et pattes massives"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "rose",
+     "gauche": "jaune",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "vert",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "ondule et sourit",
+    "emotion": "joyeux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "palmier",
+     "alola",
+     "arc-en-ciel",
+     "sourire",
+     "long cou",
+     "tropical",
+     "holographique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 102,
    "paire": null
   },
@@ -2949,7 +4612,69 @@
    "stade": null,
    "evolue_de": "Type:0",
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "GX",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "dimension abstraite",
+    "lieu": "fond arc-en-ciel abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "grande crête déployée et masque mécanique de Silvallié",
+     "milieu": "collerette de plumes et buste de la chimère",
+     "bas": "pattes puissantes et queue écailleuse"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "rose",
+     "gauche": "jaune",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "multicolore",
+     "secondaires": [
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "se tient fier",
+    "emotion": "majestueux",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "chimère",
+     "crête",
+     "arc-en-ciel",
+     "hybride",
+     "griffes",
+     "masque",
+     "holographique"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 772,
    "paire": null
   },
@@ -2970,7 +4695,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "totale",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "espace technologique étincelant",
+    "lieu": "tourbillon doré abstrait",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "ondes de lumière dorée et reflets scintillants",
+     "milieu": "dispositif technologique avec antenne parabolique métallique",
+     "bas": "poignée de l'appareil et encadrés de règles"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte en brillant",
+    "emotion": "dynamique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "gadget",
+     "antenne",
+     "parabole",
+     "or",
+     "doré",
+     "étincelles",
+     "technologie",
+     "brillance"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": null,
    "paire": null
   },
@@ -2991,7 +4779,70 @@
    "stade": null,
    "evolue_de": null,
    "priorite": 2,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "fond abstrait lumineux",
+    "lieu": "espace radiant doré",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "bâton de relais métallique en diagonale entouré d'étincelles",
+     "milieu": "corps du tube avec symboles d'énergie colorés et texte de règles",
+     "bas": "extrémité inférieure du bâton et encadré d'effet"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "blanc",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "lévite et brille",
+    "emotion": "triomphant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "bâton",
+     "relais",
+     "or",
+     "métal",
+     "étincelles",
+     "lumière",
+     "énergie",
+     "objet"
+    ],
+    "le": "2026-10-19",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": null,
    "paire": null
   },
