@@ -1257,7 +1257,69 @@
    "stade": "Niveau 1",
    "evolue_de": "Vrombi",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "arène cristalline",
+    "lieu": "sol rocheux sous éclat cristallin",
+    "interieur": false,
+    "milieu": "abstrait",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "couronne Téracristal étincelante et éclats de gemmes",
+     "milieu": "Vrombotor Téracristalisé aux reflets facettés",
+     "bas": "cristaux dorés en lévitation sur fond sablonneux"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "beige",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "gris",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "fonce",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "téracristal",
+     "moteur",
+     "diamant",
+     "cristaux",
+     "étincelles",
+     "métal",
+     "puissance"
+    ],
+    "le": "2026-10-22",
+    "modele": "gemini-3.7-flash"
+   },
    "famille": 965,
    "paire": null
   },
@@ -1282,7 +1344,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "maison de nuit",
+    "lieu": "salle à manger aux fenêtres illuminées",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fenêtres cintrées à carreaux dorés",
+     "milieu": "Soporifik debout au regard sournois",
+     "bas": "tables rondes avec vaisselle et plantes en pot"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "noir",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "arrière"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "épie",
+    "emotion": "malicieux",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "soporifik",
+     "intérieur",
+     "fenêtre",
+     "nuit",
+     "ombre",
+     "plante",
+     "table",
+     "mystère"
+    ],
+    "le": "2026-10-22",
+    "modele": "gemini-3.7-flash"
+   },
    "famille": 96,
    "paire": null
   },
@@ -1307,7 +1432,69 @@
    "stade": "Niveau 1",
    "evolue_de": "Soporifik",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt enchantée",
+    "lieu": "clairière aux fleurs en clochettes",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ondes hypnotiques blanches et branchages stylisés",
+     "milieu": "Hypnomade accroupi balançant son pendule",
+     "bas": "tapis de fleurs roses et petits galets colorés"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "rose",
+     "gauche": "rose",
+     "droite": "rose"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "balance son pendule",
+    "emotion": "sournois",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "pendule",
+     "hypnose",
+     "fleurs",
+     "ondes",
+     "clairière",
+     "psychique",
+     "magie"
+    ],
+    "le": "2026-10-22",
+    "modele": "gemini-3.7-flash"
+   },
    "famille": 96,
    "paire": null
   },
@@ -1332,7 +1519,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "jungle nocturne",
+    "lieu": "feuillage tropical sous la lune",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "lune ronde jaune dans le ciel sombre",
+     "milieu": "Skelénox flottant parmi les feuilles découpées",
+     "bas": "dense lianes et feuilles de monstera bleu sombre"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "noir",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "nuit",
+     "direction": "haut"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "flotte dans l'obscurité",
+    "emotion": "mystérieux",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "lune",
+     "fantôme",
+     "monstera",
+     "crâne",
+     "nuit",
+     "plantes",
+     "spectre"
+    ],
+    "le": "2026-10-22",
+    "modele": "gemini-3.7-flash"
+   },
    "famille": 355,
    "paire": null
   },
