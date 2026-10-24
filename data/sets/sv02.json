@@ -10918,7 +10918,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "mine souterraine tunnel",
+    "lieu": "galerie de mine étayée",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "poutres de soutènement en bois du plafond",
+     "milieu": "Germéclat flottant, corolle bleue et bulbe violet",
+     "bas": "parois et sol rocheux de la galerie"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "bleu",
+      "violet",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "crayon",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Germéclat",
+     "mine",
+     "bois",
+     "poutres",
+     "cristal",
+     "tunnel",
+     "lévitation",
+     "souterrain"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 969,
    "paire": null
   },
@@ -10943,7 +11007,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Germéclat",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte caverne roche",
+    "lieu": "caverne rocheuse éclairée",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "paroi rocheuse et éclats cristallins en suspension",
+     "milieu": "Floréclat déployé flottant devant une trouée lumineuse",
+     "bas": "rochers et pierres au sol"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "marron",
+     "gauche": "gris",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "gris",
+      "marron",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "contre-jour",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "flotte",
+    "emotion": "neutre",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Floréclat",
+     "cristal",
+     "pétales",
+     "grotte",
+     "éclats",
+     "lévitation",
+     "rocher"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 969,
    "paire": null
   },
@@ -10968,7 +11095,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": "ex",
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "désert montagne roche",
+    "lieu": "champ de bataille rocheux",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et large bol rituel sur la tête de Dinglu",
+     "milieu": "tête et corps massif de Dinglu créant une onde de choc",
+     "bas": "vortex de poussière, traînées d'énergie et éclats de pierre"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "turquoise",
+      "gris",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque",
+    "emotion": "puissant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Dinglu",
+     "onde de choc",
+     "roche",
+     "poussière",
+     "vortex",
+     "urne",
+     "force",
+     "puissance"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 1003,
    "paire": null
   },
@@ -10993,7 +11184,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt marais marécage",
+    "lieu": "sentier boueux en sous-bois",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cime des arbres et rayons de soleil filtrant",
+     "milieu": "Axoloto de Paldea courant joyeusement dans la boue",
+     "bas": "sol boueux avec quelques feuilles vertes"
+    },
+    "bords": {
+     "haut": "beige",
+     "bas": "marron",
+     "gauche": "vert",
+     "droite": "marron"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "beige",
+      "rose"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "peinture douce",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "court",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "brume",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Axoloto de Paldea",
+     "boue",
+     "forêt",
+     "sous-bois",
+     "rayons de lumière",
+     "mignon",
+     "nature"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 194,
    "paire": null
   },

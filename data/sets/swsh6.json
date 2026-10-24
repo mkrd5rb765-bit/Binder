@@ -26,7 +26,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": "autre",
+     "texte_charge": false
+    },
+    "univers": "forêt luxuriante",
+    "lieu": "sur un tronc d'arbre",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel à travers les arbres",
+     "milieu": "Aspicot sur son tronc",
+     "bas": "sol de la forêt"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "vert",
+     "gauche": "marron",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "rose",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "grimpe",
+    "emotion": "curieux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": "Aspicot explore paisiblement l'écorce d'un grand arbre dans les bois.",
+    "tags": [
+     "insecte",
+     "larve",
+     "forêt",
+     "arbre",
+     "bois",
+     "feuillage",
+     "mignon"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 13,
    "paire": null
   },
@@ -51,7 +114,71 @@
    "stade": "Niveau 1",
    "evolue_de": "Aspicot",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt sombre",
+    "lieu": "tunnel végétal",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Le cocon doré de Coconfort au centre avec des yeux noirs triangulaires",
+     "milieu": "Un tourbillon d'énergie rouge et jaune et des parois de bois sombre",
+     "bas": "Le bas du cocon et des traînées d'énergie lumineuse"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "noir",
+     "gauche": "marron",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "marron",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "se durcit",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Coconfort se prépare à évoluer en accumulant de l'énergie.",
+    "tags": [
+     "cocon",
+     "jaune",
+     "rouge",
+     "énergie",
+     "bois",
+     "tourbillon",
+     "combat",
+     "insecte"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 13,
    "paire": null
   },
@@ -76,7 +203,71 @@
    "stade": "Niveau 2",
    "evolue_de": "Coconfort",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt sombre",
+    "lieu": "bois caverneux",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Dardargnan volant avec ses dards pointés en avant",
+     "milieu": "Des éclairs d'énergie rouge et des traînées de vitesse",
+     "bas": "Un fond rocheux et boisé sombre"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "rouge",
+      "argent",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "attaque en piqué",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Dardargnan fonce sur son adversaire tous dards dehors.",
+    "tags": [
+     "dardargnan",
+     "insecte",
+     "dard",
+     "attaque",
+     "vitesse",
+     "rouge",
+     "jaune",
+     "forêt"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 13,
    "paire": null
   },
@@ -101,7 +292,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "jardin fleuri",
+    "lieu": "sous la neige",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Ciel clair et branches d'arbres enneigées",
+     "milieu": "Coxy souriant au centre entouré de fleurs roses et de neige",
+     "bas": "Sol enneigé et tiges de fleurs"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "blanc",
+     "gauche": "rose",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "jaune",
+      "rose",
+      "blanc"
+     ],
+     "temperature": "douce"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "sourit",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "neige",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": "Coxy profite d'une belle journée d'hiver au milieu des fleurs givrées.",
+    "tags": [
+     "coxy",
+     "coccinelle",
+     "neige",
+     "fleurs",
+     "hiver",
+     "rouge",
+     "rose",
+     "joyeux"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 165,
    "paire": null
   },
@@ -126,7 +381,71 @@
    "stade": "Niveau 1",
    "evolue_de": "Coxy",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ciel nocturne",
+    "lieu": "nuit étoilée",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "Ciel bleu nuit constellé d'étoiles scintillantes",
+     "milieu": "Coxyclaque en plein vol horizontal au centre avec ses ailes déployées",
+     "bas": "Feuillage vert sombre et fleurs blanches"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "vert",
+     "gauche": "bleu",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "serein",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Coxyclaque s'envole dans la nuit en répandant sa poudre scintillante.",
+    "tags": [
+     "coxyclaque",
+     "vol",
+     "nuit",
+     "étoiles",
+     "bleu",
+     "rouge",
+     "scintillant",
+     "insecte"
+    ],
+    "le": "2026-10-24",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 165,
    "paire": null
   },
