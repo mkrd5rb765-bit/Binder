@@ -26,7 +26,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ville marché rue",
+    "lieu": "rue pavée en ville",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "façades de bâtiments et tour de guet",
+     "milieu": "charrette en bois chargée de tonneaux et légume",
+     "bas": "trois Chamallot attelés et pavés au sol"
+    },
+    "bords": {
+     "haut": "autre",
+     "bas": "autre",
+     "gauche": "autre",
+     "droite": "autre"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "orange",
+      "beige",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "tirent une charrette",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Les Chamallot de la Team Magma transportent des vivres à travers les rues de la ville.",
+    "tags": [
+     "chamallot",
+     "team magma",
+     "charrette",
+     "ville",
+     "tonneaux",
+     "marché",
+     "transport",
+     "travail"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 322,
    "paire": null
   },
@@ -51,7 +115,76 @@
    "stade": "Niveau 1",
    "evolue_de": "Chamallot de la Team Magma",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "base entrepôt feu",
+    "lieu": "bâtiment industriel en feu",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "structure métallique et plafond de l'entrepôt",
+     "milieu": "Camérupt en fuite monté par un sbire",
+     "bas": "un sbire de la Team Magma courant à côté"
+    },
+    "bords": {
+     "haut": "autre",
+     "bas": "autre",
+     "gauche": "autre",
+     "droite": "autre"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "marron",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "droite"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "s'enfuient en courant",
+    "emotion": "intense",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Les membres de la Team Magma s'échappent d'urgence d'une base en proie aux flammes.",
+    "tags": [
+     "camérupt",
+     "team magma",
+     "fuite",
+     "feu",
+     "explosion",
+     "sbire",
+     "urgence",
+     "action"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 322,
    "paire": null
   },
@@ -76,7 +209,76 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "bleue",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "bâtiment en feu",
+    "lieu": "intérieur en flammes",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "bâtiment en feu et sbire de la Team Aqua",
+     "milieu": "Obalie projetant des jets d'eau",
+     "bas": "sol en bois mouillé et éclaboussures"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "bleu",
+     "droite": "orange"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "orange",
+      "marron",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "éteint un incendie",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Des Obalie de la Team Aqua s'unissent pour éteindre un incendie ravageant un bâtiment.",
+    "tags": [
+     "obalie",
+     "team aqua",
+     "eau",
+     "feu",
+     "flammes",
+     "incendie",
+     "attaque",
+     "action"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 363,
    "paire": null
   },
@@ -101,7 +303,75 @@
    "stade": "Niveau 1",
    "evolue_de": "Obalie de la Team Aqua",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "bleue",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "port enneigé, glace",
+    "lieu": "zone portuaire enneigée",
+    "interieur": false,
+    "milieu": "neige",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel glacé, conteneurs et blizzard",
+     "milieu": "Phogleur glissant avec un membre de la Team Aqua",
+     "bas": "piste de glace"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "blanc",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "glisse sur glace",
+    "emotion": "enthousiaste",
+    "moment": "jour",
+    "meteo": "neige",
+    "saison": "hiver",
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Phogleur crée une piste gelée pour aider son dresseur de la Team Aqua à avancer rapidement.",
+    "tags": [
+     "phogleur",
+     "team aqua",
+     "glace",
+     "neige",
+     "blizzard",
+     "port",
+     "glissade",
+     "hiver"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 363,
    "paire": null
   },
@@ -126,7 +396,75 @@
    "stade": "Niveau 2",
    "evolue_de": "Phogleur de la Team Aqua",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "bleue",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "entrepôt intérieur, laboratoire",
+    "lieu": "salle d'un bâtiment métallique",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "plafond et structures industrielles",
+     "milieu": "Kaimorse rugissant et sbire de la Team Aqua",
+     "bas": "sol recouvert de gel"
+    },
+    "bords": {
+     "haut": "blanc",
+     "bas": "bleu",
+     "gauche": "blanc",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "rugit et attaque",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Kaimorse déchaîne un vent glacial à l'intérieur du bâtiment pour figer ses opposants.",
+    "tags": [
+     "kaimorse",
+     "team aqua",
+     "glace",
+     "blizzard",
+     "attaque",
+     "froid",
+     "intérieur",
+     "combat"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 363,
    "paire": null
   },
@@ -243,7 +581,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "autre",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ruelle sombre, ville",
+    "lieu": "ruelle urbaine nocturne",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "façades de bâtiments et conduit",
+     "milieu": "Tadmorv glissant le long d'un mur et membres de la Team Magma au loin",
+     "bas": "pavés de la ruelle"
+    },
+    "bords": {
+     "haut": "violet",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "marron"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "marron",
+      "rouge"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "nuit",
+     "direction": "droite"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "s'infiltre discrètement",
+    "emotion": "rusé",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "autre"
+     }
+    ],
+    "histoire": "Tadmorv s'infiltre dans l'ombre d'une ruelle pour espionner des membres de la Team Magma rivale.",
+    "tags": [
+     "tadmorv",
+     "team aqua",
+     "team magma",
+     "ruelle",
+     "ville",
+     "nuit",
+     "infiltration",
+     "espionnage"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 88,
    "paire": null
   },
@@ -268,7 +674,75 @@
    "stade": "Niveau 1",
    "evolue_de": "Tadmorv de la Team Aqua",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "entrepôt sombre usine",
+    "lieu": "entrepôt désaffecté",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fenêtres à carreaux et mur de briques",
+     "milieu": "Grotadmorv violet massif surplombant la scène",
+     "bas": "sbire de la Team Magma au sol étalé"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "gris",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "écrase un ennemi",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Grotadmorv de la Team Aqua immobilise un sbire de la Team Magma piégé dans son corps visqueux.",
+    "tags": [
+     "Grotadmorv",
+     "Team Aqua",
+     "Team Magma",
+     "entrepôt",
+     "combat",
+     "visqueux",
+     "violet",
+     "briques"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 88,
    "paire": null
   },
@@ -293,7 +767,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "base secrète laboratoire",
+    "lieu": "base de la Team Aqua",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "fond bleu et effets de vitesse",
+     "milieu": "Séviper enroulé prêt à frapper",
+     "bas": "sol métallique et sbire Aqua au second plan"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "gris",
+     "gauche": "noir",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "noir",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "néon",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque avec puissance",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Séviper lance une attaque dévastatrice sur ordre d'un membre de la Team Aqua.",
+    "tags": [
+     "Séviper",
+     "Team Aqua",
+     "serpent",
+     "attaque",
+     "crocs",
+     "mouvement",
+     "bleu",
+     "combat"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 336,
    "paire": 335
   },
@@ -318,7 +860,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "ruelle nocturne clôture",
+    "lieu": "près d'un bâtiment",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "lueur rougeoyante et ombre",
+     "milieu": "Balbuto lévitant au premier plan",
+     "bas": "sbire Aqua surpris derrière la clôture"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "marron",
+     "gauche": "rouge",
+     "droite": "bleu"
+    },
+    "horizon": "bas",
+    "palette": {
+     "dominante": "rouge",
+     "secondaires": [
+      "orange",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "gauche"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "lévite en alerte",
+    "emotion": "surpris",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Balbuto de la Team Magma surprend un membre de la Team Aqua qui s'infiltrait derrière une clôture.",
+    "tags": [
+     "Balbuto",
+     "Team Magma",
+     "Team Aqua",
+     "nuit",
+     "infiltration",
+     "lévitation",
+     "rouge",
+     "clôture"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 343,
    "paire": null
   },
@@ -343,7 +953,79 @@
    "stade": "Niveau 1",
    "evolue_de": "Balbuto de la Team Magma",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": true
+    },
+    "univers": "base militaire couloir",
+    "lieu": "couloir industriel fortifié",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "plafond métallique et structures",
+     "milieu": "Kaorine projetant un rayon lumineux",
+     "bas": "sbires de la Team Magma au premier plan"
+    },
+    "bords": {
+     "haut": "orange",
+     "bas": "marron",
+     "gauche": "orange",
+     "droite": "noir"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "rouge",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "droite"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "tire un rayon",
+    "emotion": "concentré",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     },
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Kaorine tire un puissant rayon d'énergie pour défendre la base aux côtés des sbires de la Team Magma.",
+    "tags": [
+     "Kaorine",
+     "Team Magma",
+     "laser",
+     "rayon",
+     "énergie",
+     "base",
+     "combat",
+     "orange"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 343,
    "paire": null
   },
@@ -368,7 +1050,75 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": "autre",
+     "texte_charge": false
+    },
+    "univers": "chantier naval port d'attache",
+    "lieu": "quai d'un port",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel rougeatre et grue avec sbires de la Team Magma",
+     "milieu": "sous-marin bleu pris d'assaut par une nuée de Galekid",
+     "bas": "nombreux Galekid rongeant la coque métallique"
+    },
+    "bords": {
+     "haut": "rouge",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "rongent un sous-marin",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Les Galekid de la Team Magma dévorent le sous-marin de la Team Aqua sous le regard de leurs dresseurs.",
+    "tags": [
+     "Galekid",
+     "Team Magma",
+     "sous-marin",
+     "métal",
+     "grue",
+     "attaque",
+     "chantier naval",
+     "groupe"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 304,
    "paire": null
   },
@@ -393,7 +1143,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Galekid de la Team Magma",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": "autre",
+     "texte_charge": false
+    },
+    "univers": "galerie souterraine bétonnée",
+    "lieu": "tunnel en construction",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "profondeurs",
+    "zones": {
+     "haut": "plafond en béton fissuré et éclairages",
+     "milieu": "Galegon défonçant les structures métalliques",
+     "bas": "sol couvert de débris et barricades de chantier"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "marron",
+     "gauche": "orange",
+     "droite": "noir"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "orange",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "charge à travers",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Galegon",
+     "Team Magma",
+     "béton",
+     "charge",
+     "destruction",
+     "tunnel",
+     "chantier",
+     "fissures"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 304,
    "paire": null
   },
@@ -418,7 +1231,75 @@
    "stade": "Niveau 2",
    "evolue_de": "Galegon de la Team Magma",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": "autre",
+     "texte_charge": false
+    },
+    "univers": "bâtiment en destruction",
+    "lieu": "intérieur d'un édifice",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Galeking chevauché par une sbire de la Team Magma",
+     "milieu": "murs effondrés et débris projetés",
+     "bas": "personnes en fuite et mobilier brisé"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "marron",
+     "gauche": "beige",
+     "droite": "marron"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "beige",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "détruit l'édifice",
+    "emotion": "chaotique",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Galeking et sa dresseuse de la Team Magma s'introduisent brutalement dans un bâtiment en brisant les murs.",
+    "tags": [
+     "Galeking",
+     "Team Magma",
+     "destruction",
+     "chaos",
+     "sbire",
+     "meubles",
+     "débris",
+     "attaque"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 304,
    "paire": null
   },
@@ -536,7 +1417,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": "autre",
+     "texte_charge": false
+    },
+    "univers": "base militaire côtière",
+    "lieu": "enceinte grillagée du port",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel dégagé et sommet d'un grillage avec panneau Team Aqua",
+     "milieu": "Medhyèna au premier plan et véhicule bleu en arrière-plan",
+     "bas": "herbe folle et sol terreux"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "vert",
+     "gauche": "gris",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "gris",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "guette la zone",
+    "emotion": "attentif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Medhyèna",
+     "Team Aqua",
+     "grillage",
+     "panneau",
+     "camion",
+     "garde",
+     "surveillance",
+     "port"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 261,
    "paire": null
   },
@@ -561,7 +1505,80 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "repère secrètement infiltré",
+    "lieu": "bâtiment en bois",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Poutres en bois et fenêtre d'où regarde un sbire Team Aqua",
+     "milieu": "Sbire de la Team Magma caressant la tête de Medhyèna",
+     "bas": "Medhyèna allongé sur le sol près de câbles"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "gris",
+     "gauche": "rouge",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "rouge",
+      "bleu",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "nuit",
+     "direction": "droite"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "repose",
+    "emotion": "attentif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     },
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": "Pendant qu'un sbire de la Team Magma réconforte son Medhyèna, une sbire de la Team Aqua les observe en discrétion depuis la fenêtre.",
+    "tags": [
+     "Medhyèna",
+     "Team Magma",
+     "Team Aqua",
+     "infiltration",
+     "caresse",
+     "câbles",
+     "ombre",
+     "bois"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 261,
    "paire": null
   },
@@ -586,7 +1603,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Medhyèna de la Team Aqua",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "rochers sous la nuit",
+    "lieu": "terrain rocheux nocturne",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Ciel nocturne très sombre et silhouettes de structures",
+     "milieu": "Meute de Grahyèna en pleine course agressive",
+     "bas": "Sol rocheux teinté de violet"
+    },
+    "bords": {
+     "haut": "noir",
+     "bas": "violet",
+     "gauche": "violet",
+     "droite": "violet"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "noir",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "nuit",
+     "direction": "gauche"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "court",
+    "emotion": "agressif",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Grahyèna",
+     "Team Aqua",
+     "meute",
+     "nuit",
+     "course",
+     "rochers",
+     "violet",
+     "attaque"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 261,
    "paire": null
   },
@@ -611,7 +1691,76 @@
    "stade": "Niveau 1",
    "evolue_de": "Medhyèna de la Team Magma",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "canyon rocheux aride",
+    "lieu": "chemin de montagne",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "Falaises rocheuses et ciel clair",
+     "milieu": "Grahyèna menaçant guidé par un sbire Team Magma",
+     "bas": "Sol poussiéreux de montagne"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "beige",
+     "gauche": "beige",
+     "droite": "beige"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "beige",
+     "secondaires": [
+      "rouge",
+      "marron",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "marche",
+    "emotion": "menaçant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "Grahyèna",
+     "Team Magma",
+     "canyon",
+     "montagne",
+     "sbire",
+     "rochers",
+     "patrouille",
+     "desert"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 261,
    "paire": null
   },
@@ -636,7 +1785,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "bassin aquatique sous-marin",
+    "lieu": "bassin de la Team Aqua",
+    "interieur": true,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "Grille métallique au fond du bassin et tourbillons",
+     "milieu": "Deux Carvanha nageant dans des remous d'eau puissants",
+     "bas": "Profondeurs de l'eau avec bulles"
+    },
+    "bords": {
+     "haut": "turquoise",
+     "bas": "bleu",
+     "gauche": "turquoise",
+     "droite": "turquoise"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "bleu",
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "nage",
+    "emotion": "féroce",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Carvanha",
+     "Team Aqua",
+     "eau",
+     "tourbillon",
+     "bassin",
+     "nage",
+     "bulles",
+     "poisson"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 318,
    "paire": null
   },
@@ -661,7 +1874,76 @@
    "stade": "Niveau 1",
    "evolue_de": "Carvanha de la Team Aqua",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "océan base aquatique",
+    "lieu": "eau agitée près d'une base",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "éclaboussures et ciel sombre",
+     "milieu": "Sharpedo bondissant hors de l'eau",
+     "bas": "sbire de la Team Aqua et vagues"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "gris",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "rouge",
+      "noir"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque bondit",
+    "emotion": "agressif",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "sharpedo",
+     "team aqua",
+     "requin",
+     "eau",
+     "vagues",
+     "éclaboussures",
+     "sbire",
+     "attaque"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 318,
    "paire": null
   },
@@ -686,7 +1968,76 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "argent",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "base militaire repaire",
+    "lieu": "repaire de la Team Magma",
+    "interieur": true,
+    "milieu": "intérieur",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "spots et structures métalliques",
+     "milieu": "Mangriff et membres de la Team Magma",
+     "bas": "rebord en béton"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "rouge",
+      "noir",
+      "beige"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "néon",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "pose menaçante",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [
+     {
+      "nom": "inconnu",
+      "role": "dresseur"
+     }
+    ],
+    "histoire": null,
+    "tags": [
+     "mangriff",
+     "team magma",
+     "griffes",
+     "base",
+     "sbires",
+     "métal",
+     "équipe",
+     "menaçant"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.6-flash"
+   },
    "famille": 335,
    "paire": 336
   },

@@ -26,7 +26,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "prairie ensoleillée",
+    "lieu": "herbes hautes d'une prairie",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et soleil voilé",
+     "milieu": "Chenipan rampant dans l'herbe",
+     "zones_bas": "herbes vertes"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "rampe",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Chenipan explore la prairie verdoyante à la recherche de feuilles pour grandir.",
+    "tags": [
+     "Chenipan",
+     "insecte",
+     "chenille",
+     "herbe",
+     "prairie",
+     "soleil",
+     "vert",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 10,
    "paire": null
   },
@@ -51,7 +114,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Chenipan",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt ombragée",
+    "lieu": "tronc d'arbre dans les bois",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage et branches d'arbres",
+     "milieu": "Chrysacier collé au tronc",
+     "zones_bas": "sol de la forêt"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "peinture texturée",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "attend",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": null,
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Chrysacier attend patiemment sur l'écorce de l'arbre le moment de sa métamorphose.",
+    "tags": [
+     "Chrysacier",
+     "cocon",
+     "arbre",
+     "forêt",
+     "tronc",
+     "vert",
+     "feuillage",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 10,
    "paire": null
   },
@@ -76,7 +202,69 @@
    "stade": "Niveau 2",
    "evolue_de": "Chrysacier",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "lumière de la forêt",
+    "lieu": "clairière lumineuse",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "arrière-plan lumineux et feuillages",
+     "milieu": "Papilusion en vol",
+     "zones_bas": "lumière diffuse"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "beige",
+     "secondaires": [
+      "violet",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "gros plan",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "gracieux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Papilusion déploie ses ailes pour son premier vol majestueux à travers les bois.",
+    "tags": [
+     "Papilusion",
+     "papillon",
+     "ailes",
+     "vol",
+     "lumière",
+     "clairière",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 10,
    "paire": null
   },
@@ -101,7 +289,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "lisière de forêt",
+    "lieu": "suspendu à une branche d'arbre",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "branche d'arbre et ciel clair",
+     "milieu": "Pomdepik suspendu",
+     "zones_bas": "prairie et arbres au loin"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "marron"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "pend",
+    "emotion": "neutre",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Pomdepik reste accroché à sa branche, observant discrètement les environs.",
+    "tags": [
+     "Pomdepik",
+     "plante",
+     "branche",
+     "arbre",
+     "forêt",
+     "bleu",
+     "vert",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 204,
    "paire": null
   },
@@ -126,7 +377,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt verdoyante",
+    "lieu": "dans les branches d'un arbre",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "feuillage dense et branches",
+     "milieu": "Grainipiot suspendu",
+     "bas": "tronc d'arbre et feuillage"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "beige"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "se suspend",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": null,
+    "saison": "été",
+    "personnages": [],
+    "histoire": "Grainipiot se prépare à évoluer en explorant la canopée.",
+    "tags": [
+     "Grainipiot",
+     "gland",
+     "arbre",
+     "feuilles",
+     "branches",
+     "forêt",
+     "vert",
+     "suspendu"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 273,
    "paire": null
   },
@@ -151,7 +465,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Grainipiot",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt rivière",
+    "lieu": "cours d'eau en forêt",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "arbres flous en arrière-plan",
+     "milieu": "Pifeuil courant sur l'eau",
+     "bas": "éclaboussures et rivière"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "gris"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "gauche"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "court",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": "été",
+    "personnages": [],
+    "histoire": "Pifeuil court à travers la rivière pour chasser dans la forêt.",
+    "tags": [
+     "Pifeuil",
+     "rivière",
+     "eau",
+     "éclaboussures",
+     "forêt",
+     "course",
+     "marron",
+     "feuille"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 273,
    "paire": null
   },
@@ -176,7 +553,70 @@
    "stade": "Niveau 2",
    "evolue_de": "Pifeuil",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt dense",
+    "lieu": "canopée de la forêt",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel et feuillage clair",
+     "milieu": "Tengalice en plein vol",
+     "bas": "arbres et végétation sombre"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "contre-jour",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "menaçant",
+    "moment": "jour",
+    "meteo": null,
+    "saison": "été",
+    "personnages": [],
+    "histoire": "Tengalice veille sur son territoire boisé depuis les airs.",
+    "tags": [
+     "Tengalice",
+     "vol",
+     "forêt",
+     "arbres",
+     "gardien",
+     "feuillage",
+     "vert",
+     "menaçant"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 273,
    "paire": null
   },
@@ -201,7 +641,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "champ fleuri",
+    "lieu": "prairie colorée sous le soleil",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et nuages blancs",
+     "milieu": "Rosélia au milieu des fleurs",
+     "bas": "tapis de fleurs multicolores"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "rouge",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "présente ses fleurs",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Rosélia profite d'une journée ensoleillée au milieu des fleurs printanières.",
+    "tags": [
+     "Rosélia",
+     "fleurs",
+     "prairie",
+     "roses",
+     "ciel",
+     "nuages",
+     "printemps",
+     "joyeux"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 315,
    "paire": null
   },
@@ -226,7 +730,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Rosélia",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt verdoyante",
+    "lieu": "lisière de forêt",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et feuillage d'arbres",
+     "milieu": "Roserade posant avec ses fleurs rouges et bleues",
+     "bas": "herbes hautes et sombres"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "pose",
+    "emotion": "confiant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Roserade",
+     "forêt",
+     "fleurs",
+     "feuillage",
+     "herbe",
+     "plante",
+     "vert",
+     "pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 315,
    "paire": null
   },
@@ -251,7 +818,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne rocailleuse",
+    "lieu": "flanc de montagne",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu nuageux",
+     "milieu": "Maracachi dansant au milieu des rochers",
+     "bas": "rochers et sol pierreux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rose",
+      "jaune",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "danse",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Maracachi",
+     "cactus",
+     "montagne",
+     "rochers",
+     "fleurs roses",
+     "danse",
+     "ciel",
+     "pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 556,
    "paire": null
   },
@@ -539,7 +1170,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne enneigée",
+    "lieu": "sommet enneigé",
+    "interieur": false,
+    "milieu": "neige",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel clair avec effet de vitesse",
+     "milieu": "Ponyta sur un pic rocheux enneigé",
+     "bas": "montagnes et neige"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "blanc",
+     "secondaires": [
+      "orange",
+      "bleu"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "observe",
+    "emotion": "alerte",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Ponyta",
+     "feu",
+     "neige",
+     "montagne",
+     "flammes",
+     "hiver",
+     "blanc",
+     "pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 77,
    "paire": null
   },
@@ -564,7 +1258,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Ponyta",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne rocailleuse",
+    "lieu": "sentier de montagne",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu avec reflets lumineux",
+     "milieu": "Galopa cabré avec une crinière de feu",
+     "bas": "rochers et sol"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "bleu",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "se cabre",
+    "emotion": "fier",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Galopa",
+     "feu",
+     "cabré",
+     "montagne",
+     "flammes",
+     "crinière",
+     "ciel",
+     "pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 77,
    "paire": null
   },
@@ -589,7 +1346,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne volcanique",
+    "lieu": "flanc de volcan rocheux",
+    "interieur": false,
+    "milieu": "volcan",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et nuages de fumée",
+     "milieu": "Chartor crachant de la fumée par les narines",
+     "bas": "sol rocheux et pente de montagne"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "gris",
+      "orange",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "crache de la fumée",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Chartor",
+     "tortue",
+     "feu",
+     "fumée",
+     "rochers",
+     "ciel",
+     "volcan"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 324,
    "paire": null
   },
@@ -614,7 +1434,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Passerouge",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne ensoleillée",
+    "lieu": "vallée montagneuse",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu et sommets enneigés",
+     "milieu": "Braisillon en vol avec des étincelles",
+     "bas": "rivière et versants rocheux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "vole en lâchant des étincelles",
+    "emotion": "dynamique",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Braisillon",
+     "oiseau",
+     "feu",
+     "vol",
+     "montagnes",
+     "rivière",
+     "ciel"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 661,
    "paire": null
   },
@@ -639,7 +1522,68 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "savane aride",
+    "lieu": "herbes hautes de la savane",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "buissons et hautes herbes sèches",
+     "milieu": "Hélionceau assis sur le sol",
+     "bas": "sol poussiéreux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "beige",
+     "secondaires": [
+      "marron",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "assis",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Hélionceau",
+     "lion",
+     "feu",
+     "savane",
+     "herbes",
+     "assis"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 667,
    "paire": null
   },
@@ -664,7 +1608,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "prairie montagneuse",
+    "lieu": "colline verdoyante avec montagnes au fond",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu, nuages et montagnes",
+     "milieu": "Hélionceau courant dans l'herbe",
+     "bas": "herbes hautes verdoyantes"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "marron",
+      "rouge"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "court",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Hélionceau",
+     "lion",
+     "feu",
+     "course",
+     "prairie",
+     "montagnes",
+     "herbe"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 667,
    "paire": null
   },
@@ -689,7 +1696,71 @@
    "stade": "Niveau 1",
    "evolue_de": "Hélionceau",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "savane africaine",
+    "lieu": "savane sèche sous un ciel nuageux",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu parsemé de nuages blancs",
+     "milieu": "Némélios debout dans la savane avec des arbres au loin",
+     "fond": "horizon dégagé avec des acacias"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "jaune",
+      "orange",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "grogne fièrement",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "lion",
+     "crinière",
+     "feu",
+     "savane",
+     "fauve",
+     "royal",
+     "herbe",
+     "ciel"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 667,
    "paire": null
   },
@@ -714,7 +1785,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fonds marins",
+    "lieu": "eau profonde sous-marine",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "surface de l'eau lumineuse",
+     "milieu": "Qwilfish gonflé au centre",
+     "bas": "fonds marins sombres"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "turquoise",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "flotte",
+    "emotion": "méfiant",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "poisson",
+     "piquant",
+     "globe",
+     "eau",
+     "bleu",
+     "bulles",
+     "sous-marin"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 211,
    "paire": null
   },
@@ -739,7 +1872,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fond de lac",
+    "lieu": "rivière ou lac aux eaux calmes",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "surface claire avec silhouettes de poissons",
+     "milieu": "Barpau entouré d'algues",
+     "bas": "fond rocailleux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "marron",
+      "beige"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "nage",
+    "emotion": "triste",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Barpau cherche un endroit calme avant de se transformer en Milobellus.",
+    "tags": [
+     "poisson",
+     "algues",
+     "lac",
+     "eau",
+     "cailloux",
+     "sous-marin",
+     "triste"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 349,
    "paire": null
   },
@@ -764,7 +1960,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Barpau",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fonds marins clairs",
+    "lieu": "eau limpide et ensoleillée",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "surface de l'eau avec rayons de soleil",
+     "milieu": "Milobellus nageant gracieusement",
+     "bas": "racines et végétaux sous-marins"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rose",
+      "beige",
+      "turquoise"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "nage élégamment",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Le majestueux Milobellus évolue après avoir été un simple Barpau.",
+    "tags": [
+     "serpent de mer",
+     "gracieux",
+     "eau",
+     "rayons de soleil",
+     "rose",
+     "magnifique",
+     "bulles"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 349,
    "paire": null
   },
@@ -789,7 +2048,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "banquise polaire",
+    "lieu": "rivage gelé avec des blocs de glace",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "ciel clair et reflets glacés",
+     "milieu": "Obalie nageant dans l'eau glacée",
+     "bas": "morceaux de banquise flottants"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "beige"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "nage",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": "Obalie nage paisiblement près de la banquise avant de grandir.",
+    "tags": [
+     "Obalie",
+     "eau",
+     "glACE",
+     "banquise",
+     "bleu",
+     "neige",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 363,
    "paire": null
   },
@@ -814,7 +2135,68 @@
    "stade": "Niveau 1",
    "evolue_de": "Obalie",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "plage côtière",
+    "lieu": "rivage sablonneux sous un ciel nuageux",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu avec des nuages blancs",
+     "milieu": "Phogleur sur la plage",
+     "bas": "vagues s'échouant sur le sable"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "beige",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "plate",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "crie",
+    "emotion": "expressif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Phogleur pousse un cri sur la plage en explorant son environnement.",
+    "tags": [
+     "Phogleur",
+     "plage",
+     "sable",
+     "eau",
+     "ciel",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 363,
    "paire": null
   },
@@ -839,7 +2221,69 @@
    "stade": "Niveau 2",
    "evolue_de": "Phogleur",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "tempête de glace",
+    "lieu": "zone polaire enneigée",
+    "interieur": false,
+    "milieu": "neige",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "éclairs et éclats de givre",
+     "milieu": "Kaimorse rugissant au centre",
+     "bas": "sol gelé et brisé"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "face",
+    "action": "attaque",
+    "emotion": "agressif",
+    "moment": "jour",
+    "meteo": "neige",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": "Kaimorse libère toute sa puissance en brisant la glace autour de lui.",
+    "tags": [
+     "Kaimorse",
+     "glace",
+     "attaque",
+     "puissance",
+     "bleu",
+     "froid",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 363,
    "paire": null
   },
@@ -864,7 +2308,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fonds marins",
+    "lieu": "récif corallien lumineux",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "végétation aquatique et reflets",
+     "milieu": "Lovdisc rose en suspension",
+     "bas": "fonds marins clairs"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "vert",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "tendre",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Lovdisc nage paisiblement dans les eaux chaudes à la recherche d'amour.",
+    "tags": [
+     "Lovdisc",
+     "cœur",
+     "rose",
+     "eau",
+     "mer",
+     "poisson",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 370,
    "paire": null
   },
@@ -889,7 +2395,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "bord de mer tropical",
+    "lieu": "océan avec île au fond",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "ciel bleu avec des nuages blancs et lointains",
+     "milieu": "horizon marin avec une terre lointaine et Mustébouée",
+     "bas": "eau claire et turquoise avec des reflets"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "orange",
+      "blanc",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "nage",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mustébouée",
+     "eau",
+     "bouée",
+     "nage",
+     "océan",
+     "ciel",
+     "îles",
+     "joie"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 418,
    "paire": null
   },
@@ -914,7 +2484,71 @@
    "stade": "Niveau 1",
    "evolue_de": "Mustébouée",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "bord de mer tropical",
+    "lieu": "eau peu profonde près d'une île",
+    "interieur": false,
+    "milieu": "surface de l'eau",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "ciel dégagé et île avec des palmiers",
+     "milieu": "ligne de flottaison coupant le corps de Mustéflott",
+     "bas": "fonds marins bleus avec des reflets lumineux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "orange",
+      "marron",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "nage",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mustéflott",
+     "eau",
+     "sous-marin",
+     "nage",
+     "palmiers",
+     "reflets",
+     "océan",
+     "vague"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 418,
    "paire": null
   },
@@ -939,7 +2573,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "banquise polaire",
+    "lieu": "glACE flottante sur l'océan glacial",
+    "interieur": false,
+    "milieu": "neige",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel pâle et banquise lointaine à l'horizon",
+     "milieu": "étendue d'eau glacée avec des icebergs",
+     "bas": "bloc de glace au premier plan portant Grelaçon"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "gris",
+      "jaune"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "pastel",
+    "lumiere": {
+     "type": "plate",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "attend",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": "neige",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Grelaçon",
+     "glace",
+     "banquise",
+     "pôle",
+     "neige",
+     "froid",
+     "hiver",
+     "iceberg"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 712,
    "paire": null
   },
@@ -964,7 +2662,71 @@
    "stade": "Niveau 1",
    "evolue_de": "Grelaçon",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "banquise polaire",
+    "lieu": "étendue glacée et enneigée",
+    "interieur": false,
+    "milieu": "neige",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "horizon polaire brumeux",
+     "milieu": "sol glacé et Séracrawl en mouvement",
+     "bas": "neige texturée au premier plan"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "blanc",
+      "gris",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "marche",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "brume",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Séracrawl",
+     "glace",
+     "neige",
+     "montagne",
+     "froid",
+     "hiver",
+     "iceberg",
+     "marche"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 712,
    "paire": null
   },
@@ -989,7 +2751,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "colline herbeuse ciel",
+    "lieu": "pente herbeuse en plein air",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et nuages blancs",
+     "milieu": "Lixy en plein saut",
+     "bas": "herbe verte et talus"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "court",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Lixy court joyeux dans l'herbe avant de grandir pour devenir Luxio.",
+    "tags": [
+     "Lixy",
+     "Pokémon",
+     "saut",
+     "herbe",
+     "ciel",
+     "bleu",
+     "jaune",
+     "électricité",
+     "plein air"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 403,
    "paire": null
   },
@@ -1014,7 +2840,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Lixy",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "colline herbeuse ciel",
+    "lieu": "prairie ouverte",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et nuages",
+     "milieu": "Luxio debout dans l'herbe",
+     "bas": "herbes hautes"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "observe",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Luxio surveille les environs avec attention, prêt à évoluer en Luxray.",
+    "tags": [
+     "Luxio",
+     "Pokémon",
+     "observation",
+     "herbe",
+     "ciel",
+     "bleu",
+     "jaune",
+     "électricité"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 403,
    "paire": null
   },
@@ -1039,7 +2928,70 @@
    "stade": "Niveau 2",
    "evolue_de": "Luxio",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "plaine orageuse ciel",
+    "lieu": "champ dégagé avec éclairs",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel chargé d'énergie",
+     "milieu": "Luxray en pleine attaque avec éclairs",
+     "bas": "herbe verte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "attaque",
+    "emotion": "féroce",
+    "moment": "jour",
+    "meteo": "orage",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Luxray déploie toute sa puissance électrique pour terrasser ses adversaires.",
+    "tags": [
+     "Luxray",
+     "Pokémon",
+     "attaque",
+     "éclairs",
+     "électricité",
+     "bleu",
+     "jaune",
+     "puissance"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 403,
    "paire": null
   },
@@ -1152,7 +3104,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ruines désertiques temple",
+    "lieu": "vestiges antiques dans le sable",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel rouge et ruines lointaines",
+     "milieu": "Galvaran posé sur le sol",
+     "bas": "rochers et sol sableux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "jaune",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "attend",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Galvaran profite de la chaleur du soleil au milieu de ruines anciennes.",
+    "tags": [
+     "Galvaran",
+     "Pokémon",
+     "désert",
+     "ruines",
+     "sable",
+     "jaune",
+     "marron",
+     "soleil"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 694,
    "paire": null
   },
@@ -1177,7 +3192,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Galvaran",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "désert ruines anciennes",
+    "lieu": "désert rocheux avec des vestiges de colonnes",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel dégagé et montagnes lointaines",
+     "milieu": "Iguolta au centre avec des ruines de colonnes",
+     "bas": "sol rocailleux et débris de pierres"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "orange",
+      "marron",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "gauche"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "pose dynamique",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Iguolta",
+     "désert",
+     "ruines",
+     "colonnes",
+     "sable",
+     "pierres",
+     "colerette"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 694,
    "paire": null
   },
@@ -1202,7 +3280,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt sombre",
+    "lieu": "sous-bois dense et ténébreux",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "arbres sombres et feuillage",
+     "milieu": "Skelénox flottant près d'un tronc",
+     "bas": "sol forestier sombre"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "noir",
+      "gris",
+      "rose"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte furtivement",
+    "emotion": "mystérieux",
+    "moment": "nuit",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Skelénox erre dans les bois sombres à la recherche de proies.",
+    "tags": [
+     "Skelénox",
+     "forêt",
+     "fantôme",
+     "arbres",
+     "obscurité",
+     "yeux rouges",
+     "nuit"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 355,
    "paire": null
   },
@@ -1227,7 +3368,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Skelénox",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte mystérieuse",
+    "lieu": "intérieur rocheux sombre",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "parois rocheuses sombres",
+     "milieu": "Téraclope au centre",
+     "bas": "sol de la caverne"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "bleu",
+      "gris",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "magique",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "tend la main",
+    "emotion": "menaçant",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Téraclope",
+     "grotte",
+     "caverne",
+     "fantôme",
+     "œil unique",
+     "sombre",
+     "mystère"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 355,
    "paire": null
   },
@@ -1252,7 +3456,70 @@
    "stade": "Niveau 2",
    "evolue_de": "Téraclope",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt mystique",
+    "lieu": "clairière boisée",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "canopée et arbres",
+     "milieu": "Noctunoir tendant le bras avec un effet lumineux",
+     "bas": "sol forestier"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "gris",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "droite"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "attaque d'énergie",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Noctunoir utilise ses pouvoirs pour manipuler les esprits dans la forêt.",
+    "tags": [
+     "Noctunoir",
+     "forêt",
+     "fantôme",
+     "énergie",
+     "magie",
+     "arbres",
+     "ombre"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 355,
    "paire": null
   },
@@ -1364,7 +3631,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt verdoyante",
+    "lieu": "sous-bois ombragé",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "grands arbres de la forêt",
+     "milieu": "Psystigri debout dans l'herbe",
+     "bas": "sol herbeux et moussu"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "observe",
+    "emotion": "curieux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Psystigri",
+     "forêt",
+     "arbres",
+     "herbe",
+     "feuillage",
+     "Pokémon",
+     "psy",
+     "nature"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 677,
    "paire": null
   },
@@ -1389,7 +3719,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Psystigri",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt lumineuse",
+    "lieu": "sous-bois ensoleillé",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cime des arbres clairs",
+     "milieu": "Mistigrix posant avec élégance",
+     "bas": "herbe verte et tronc d'arbre"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "pose",
+    "emotion": "sérieux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Il lève les oreilles et déchaîne un pouvoir psychique capable de réduire en miettes un camion de 10t.",
+    "tags": [
+     "Mistigrix",
+     "forêt",
+     "arbres",
+     "bleu",
+     "blanc",
+     "Pokémon",
+     "psy",
+     "évolution"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 677,
    "paire": null
   },
@@ -1414,7 +3807,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fond marin",
+    "lieu": "forêt d'algues sous-marines",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "surface de l'eau et algues hautes",
+     "milieu": "Venalgue flottant parmi les algues",
+     "bas": "fond marin sombre et algues rouges"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "turquoise",
+     "secondaires": [
+      "vert",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "méfiant",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Il se cache parmi les algues en décomposition pour mieux approcher ses proies, qu'il achève en les aspergeant de poison.",
+    "tags": [
+     "Venalgue",
+     "océan",
+     "algues",
+     "sous-marin",
+     "eau",
+     "Pokémon",
+     "poison",
+     "marron"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 690,
    "paire": null
   },
@@ -1439,7 +3895,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "plaine rocheuse",
+    "lieu": "sol de plaine avec rayons",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu avec rayons lumineux et éclats",
+     "milieu": "Racaillou hurlant les poings levés",
+     "bas": "sol sablonneux et herbeux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "beige",
+      "gris"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "crie",
+    "emotion": "énergique",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Il vit dans les plaines ou les montagnes. On le confond souvent avec un petit caillou.",
+    "tags": [
+     "Racaillou",
+     "rocher",
+     "ciel",
+     "rayons",
+     "plaine",
+     "Pokémon",
+     "roche",
+     "combat"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 74,
    "paire": null
   },
@@ -1464,7 +3983,69 @@
    "stade": "Niveau 1",
    "evolue_de": "Racaillou",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "pente rocheuse escarpée",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel clair et rocher",
+     "milieu": "le Pokémon Gravalanch sur la pente",
+     "bas": "végétation et cailloux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "gris"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "dévale la pente",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "rocher",
+     "montagne",
+     "pente",
+     "plante",
+     "sol",
+     "cailloux",
+     "griffes"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 74,
    "paire": null
   },
@@ -1489,7 +4070,69 @@
    "stade": "Niveau 2",
    "evolue_de": "Gravalanch",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "canyon montagneux",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu et débris rocheux en lévitation",
+     "milieu": "le Pokémon Grolem en action d'explosion",
+     "bas": "parois rocheuses et montagnes"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "marron",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "feu",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "explose",
+    "emotion": "puissant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "explosion",
+     "pierres",
+     "feu",
+     "canyon",
+     "ciel",
+     "puissance",
+     "rocher"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 74,
    "paire": null
   },
@@ -1514,7 +4157,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fonds marins",
+    "lieu": "récif sous-marin",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "surface de l'eau et rocher",
+     "milieu": "le Pokémon Opermine ancré",
+     "bas": "fonds marins et algues"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "marron",
+      "vert"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "observe",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "eau",
+     "océan",
+     "algues",
+     "rocher",
+     "sous-marin",
+     "rayons",
+     "bivalve"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 688,
    "paire": null
   },
@@ -1539,7 +4244,69 @@
    "stade": "Niveau 1",
    "evolue_de": "Opermine",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "vagues de mer",
+    "lieu": "rivage rocheux avec embruns",
+    "interieur": false,
+    "milieu": "rivage",
+    "profondeur": "surface",
+    "zones": {
+     "haut": "ciel et éclaboussures d'eau",
+     "milieu": "le Pokémon Golgopathe sur un rocher",
+     "bas": "rocher et écume"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "marron",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "pose",
+    "emotion": "combatif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "vagues",
+     "eau",
+     "écume",
+     "rocher",
+     "ciel",
+     "bras multiples",
+     "océan"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 688,
    "paire": null
   },
@@ -1564,7 +4331,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt tropicale",
+    "lieu": "branche d'arbre dans une forêt dense",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage vert et ciel clair",
+     "milieu": "Farfuret en équilibre sur une branche",
+     "bas": "grosse branche en bois"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "bleu",
+      "rouge"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "en équilibre",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Farfuret",
+     "forêt",
+     "branche",
+     "feuillage",
+     "griffes",
+     "Pokémon",
+     "arbre",
+     "nature"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 215,
    "paire": null
   },
@@ -1589,7 +4420,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "canyon rocheux sous un ciel nuageux",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel nuageux et montagnes",
+     "milieu": "Farfuret marchant sur les rochers",
+     "bas": "sol rocheux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "bleu",
+      "gris",
+      "rouge"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "marche",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "nuageux",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Farfuret",
+     "montagne",
+     "rochers",
+     "canyon",
+     "ciel",
+     "Pokémon",
+     "marche",
+     "falaises"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 215,
    "paire": null
   },
@@ -1614,7 +4509,71 @@
    "stade": "Niveau 1",
    "evolue_de": "Farfuret",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt d'automne",
+    "lieu": "bois aux arbres bruns",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "cimes des arbres",
+     "milieu": "Dimoret montrant ses griffes",
+     "bas": "herbe et sol de la forêt"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "vert",
+      "rouge",
+      "bleu"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "plate",
+     "direction": "face"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "attaque",
+    "emotion": "menaçant",
+    "moment": "jour",
+    "meteo": null,
+    "saison": "automne",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Dimoret",
+     "forêt",
+     "arbres",
+     "griffes",
+     "automne",
+     "Pokémon",
+     "combat",
+     "feuillage"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 215,
    "paire": null
   },
@@ -1639,7 +4598,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "pentes rocheuses sous le ciel bleu",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et montagnes lointaines",
+     "milieu": "Moufouette courant",
+     "bas": "rochers au premier plan"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "violet",
+      "gris",
+      "beige"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "court",
+    "emotion": "espiègle",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Moufouette",
+     "montagne",
+     "rochers",
+     "ciel",
+     "Pokémon",
+     "course",
+     "fourrure",
+     "violet"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 434,
    "paire": null
   },
@@ -1664,7 +4687,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "flanc de montagne rocailleux",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu avec des nuages blancs et sommets rocheux",
+     "milieu": "le Pokémon Moufouette en plein saut",
+     "bas": "sol rocheux et verdure"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "bleu",
+      "marron",
+      "jaune"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "saute",
+    "emotion": "dynamique",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Moufouette",
+     "Pokémon",
+     "violet",
+     "rochers",
+     "ciel",
+     "saut",
+     "griffes"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 434,
    "paire": null
   },
@@ -1689,7 +4775,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Moufouette",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne rocheuse",
+    "lieu": "grotte ou canyon rocheux",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et nuages",
+     "milieu": "le Pokémon Moufflair sur les rochers",
+     "bas": "amas de pierres"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "violet",
+     "secondaires": [
+      "marron",
+      "bleu",
+      "gris"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "se tient debout",
+    "emotion": "menaçant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Moufouette a évolué en Moufflair et domine son territoire rocheux.",
+    "tags": [
+     "Moufflair",
+     "Pokémon",
+     "violet",
+     "rochers",
+     "ciel",
+     "menaçant",
+     "griffes"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 434,
    "paire": null
   },
@@ -1714,7 +4863,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "désert aride",
+    "lieu": "canyon sablonneux",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel nuageux et formations rocheuses",
+     "milieu": "le Pokémon Mascaïman souriant",
+     "bas": "sol de sable et poussière"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "beige",
+      "orange",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "sourit",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Mascaïman",
+     "Pokémon",
+     "désert",
+     "sable",
+     "rochers",
+     "sourire",
+     "croco"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 551,
    "paire": null
   },
@@ -1739,7 +4951,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Mascaïman",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "désert aride",
+    "lieu": "canyon sablonneux",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel clair et pics rocheux",
+     "milieu": "le Pokémon Escroco les bras croisés",
+     "bas": "sol désertique"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "beige",
+      "orange",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "croise les bras",
+    "emotion": "fier",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Mascaïman a grandi et est devenu un Escroco sûr de lui dans le désert.",
+    "tags": [
+     "Escroco",
+     "Pokémon",
+     "désert",
+     "sable",
+     "lunettes",
+     "fier",
+     "croco"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 551,
    "paire": null
   },
@@ -1764,7 +5039,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "sol rocheux arène",
+    "lieu": "sol de terre battue et rochers",
+    "interieur": false,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel ou fond neutre avec des lignes d'effet jaunes",
+     "milieu": "le Pokémon Baggiguane en plein mouvement avec des traînées d'énergie jaune",
+     "bas": "sol poussiéreux fissuré"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "marron",
+      "blanc",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "combat, esquive",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Baggiguane",
+     "Pokémon",
+     "jaune",
+     "combat",
+     "vitesse",
+     "poussière",
+     "énergie"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 559,
    "paire": null
   },
@@ -1789,7 +5127,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Baggiguane",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "sol rocheux montagneux",
+    "lieu": "amas de rochers en projection",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel clair et éclats lumineux",
+     "milieu": "Baggaïd en déséquilibre projeté au milieu de rochers qui volent",
+     "bas": "poussière et sol rocailleux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "rouge",
+      "bleu",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "arrière"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "gauche",
+    "action": "propulsé, chute",
+    "emotion": "intense",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Baggaïd",
+     "rochers",
+     "projection",
+     "ciel",
+     "combat",
+     "poussière",
+     "action"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 559,
    "paire": null
   },
@@ -1814,7 +5215,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Pomdepik",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt dense feuillue",
+    "lieu": "tronc d'arbre dans la verdure",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage vert luxuriant",
+     "milieu": "Foretress accroché à un gros tronc d'arbre",
+     "bas": "écorce de l'arbre et ombre"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "gris",
+      "rouge",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "surveille, fixe",
+    "emotion": "vigilant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "été",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Foretress",
+     "arbre",
+     "feuillage",
+     "métal",
+     "coquille",
+     "forêt",
+     "verdure"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 204,
    "paire": null
   },
@@ -1839,7 +5303,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne herbeuse aride",
+    "lieu": "chemin de montagne rocailleux",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et montagnes lointaines enneigées",
+     "milieu": "Fermite géant marchant sur le sentier",
+     "bas": "herbes sèches et sol pierreux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "bleu",
+      "marron",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "plate",
+     "direction": "haut"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "marche, explore",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Fermite",
+     "insecte",
+     "montagne",
+     "neige",
+     "sentier",
+     "roches",
+     "ciel bleu"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 632,
    "paire": null
   },
@@ -1864,7 +5391,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "prairie ensoleillée",
+    "lieu": "champ fleuri de montagne",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu et montagnes",
+     "milieu": "Flabébé volant sur une fleur rouge",
+     "bas": "fleurs blanches et bleues"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Flabébé",
+     "fleur",
+     "prairie",
+     "montagnes",
+     "ciel",
+     "fleurs sauvages",
+     "3D"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 669,
    "paire": null
   },
@@ -1889,7 +5479,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt verdoyante",
+    "lieu": "sous-bois lumineux",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "arbres et feuillage dense",
+     "milieu": "Flabébé volant sur sa fleur rouge",
+     "bas": "sol tapissé de fleurs jaunes"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "jaune",
+      "rouge"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "serein",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Flabébé",
+     "forêt",
+     "fleur rouge",
+     "arbres",
+     "feuillage",
+     "lumière",
+     "3D"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 669,
    "paire": null
   },
@@ -1914,7 +5566,69 @@
    "stade": "Niveau 1",
    "evolue_de": "Flabébé",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "jardin fleuri",
+    "lieu": "allée de fleurs",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu et feuillage",
+     "milieu": "Floette tenant sa fleur",
+     "bas": "sentier et massifs fleuris"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "blanc",
+      "vert"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "vole",
+    "emotion": "heureux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Floette",
+     "fleurs",
+     "jardin",
+     "sentier",
+     "roses",
+     "printemps",
+     "3D"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 669,
    "paire": null
   },
@@ -1939,7 +5653,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Flabébé",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "jardin fleuri",
+    "lieu": "massif de fleurs géantes",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "pétales de fleur géante en arrière-plan",
+     "milieu": "Floette tenant sa fleur rouge",
+     "bas": "fleurs colorées au sol"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rouge",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte",
+    "emotion": "content",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Floette",
+     "fleurs",
+     "jardin",
+     "pétales",
+     "macro",
+     "printemps",
+     "3D"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 669,
    "paire": null
   },
@@ -1964,7 +5741,70 @@
    "stade": "Niveau 2",
    "evolue_de": "Floette",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "jardin magique lumineux",
+    "lieu": "clairière fleurie féerique",
+    "interieur": false,
+    "milieu": "jardin",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel lumineux et étincelles dorées",
+     "milieu": "le Pokémon Florges posé sur de grandes feuilles vertes avec une chevelure florale rose",
+     "bas": "sol lumineux et reflets étincelants"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "vert",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "flotte, pose",
+    "emotion": "gracieuse",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "fleurs",
+     "magie",
+     "lumière",
+     "étincelles",
+     "feuilles",
+     "rose",
+     "féerique"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 669,
    "paire": null
   },
@@ -1989,7 +5829,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt verdoyante luxuriante",
+    "lieu": "sous-bois ombragé",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage dense et rayons de soleil filtrés à travers les arbres",
+     "milieu": "le Pokémon Fluvetin flottant au premier plan",
+     "bas": "végétation dense et feuillages verts"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "rose",
+      "blanc",
+      "rouge"
+     ],
+     "temperature": "fraîche"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "flotte, observe",
+    "emotion": "curieuse",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "forêt",
+     "arbres",
+     "feuillage",
+     "rayons",
+     "parfum",
+     "rose",
+     "vert"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 682,
    "paire": null
   },
@@ -2014,7 +5917,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte rocheuse sombre",
+    "lieu": "cavité souterraine sablonneuse",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "parois rocheuses de la grotte et anfractuosités",
+     "milieu": "le Pokémon Strassie en lévitation avec ses cristaux brillants",
+     "bas": "sol de sable et de roches"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "gris",
+      "bleu",
+      "blanc"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "sombre",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "lévite, brille",
+    "emotion": "sereine",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "grotte",
+     "rocher",
+     "cristal",
+     "souterrain",
+     "sable",
+     "joyau",
+     "pierre"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 703,
    "paire": null
   },
@@ -2127,7 +6093,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte rocheuse mouvementée",
+    "lieu": "caverne étroite en plein combat",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "parois rocheuses de la caverne",
+     "milieu": "le Pokémon Drakkarmin en plein mouvement d'attaque avec des traînées blanches et des projections de roches",
+     "bas": "sol rocheux jonché de débris"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "rouge",
+      "marron",
+      "gris"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "gros plan",
+    "densite": "chargée",
+    "orientation": "droite",
+    "action": "attaque, griffe",
+    "emotion": "agressive",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "dragon",
+     "combat",
+     "griffes",
+     "rochers",
+     "caverne",
+     "projection",
+     "action"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 621,
    "paire": null
   },
@@ -2152,7 +6181,68 @@
    "stade": "Niveau 1",
    "evolue_de": "Venalgue",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "fonds marins sombres",
+    "lieu": "abysses sous-marines",
+    "interieur": false,
+    "milieu": "sous-marin",
+    "profondeur": "sous l'eau",
+    "zones": {
+     "haut": "lumière filtrant de la surface et silhouette du Pokémon",
+     "milieu": "Kravarech nageant au centre",
+     "bas": "fonds marins sombres et rocheux"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "violet",
+      "marron"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "nage",
+    "emotion": "menaçant",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Kravarech patrouille dans les profondeurs sombres de l'océan, prêt à défendre son territoire.",
+    "tags": [
+     "Kravarech",
+     "eau",
+     "océan",
+     "sous-marin",
+     "rayons",
+     "profond"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 690,
    "paire": null
   },
@@ -2177,7 +6267,68 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt humide et moussue",
+    "lieu": "sous-bois ombragé",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "feuillage flou et branches",
+     "milieu": "Mucuscule sur le sol moussu",
+     "bas": "mousse et petites plantes vertes"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "violet",
+      "marron"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "gros plan",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "avance",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Mucuscule explore le sol humide d'une forêt luxuriante à la recherche d'humidité.",
+    "tags": [
+     "Mucuscule",
+     "forêt",
+     "mousse",
+     "sol",
+     "humide",
+     "plante"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 704,
    "paire": null
   },
@@ -2202,7 +6353,68 @@
    "stade": "Niveau 1",
    "evolue_de": "Mucuscule",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt tropicale dense",
+    "lieu": "tronc d'arbre moussu",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "grands arbres et feuillage",
+     "milieu": "Colimucus souriant sur un tronc",
+     "bas": "sol forestier"
+    },
+    "bords": {
+     "haut": "vert",
+     "bas": "marron",
+     "gauche": "marron",
+     "droite": "vert"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "violet"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "sourit",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Colimucus se prélasse joyeusement sur un vieux tronc d'arbre au cœur de la forêt.",
+    "tags": [
+     "Colimucus",
+     "forêt",
+     "arbre",
+     "tronc",
+     "mousse",
+     "sourire"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 704,
    "paire": null
   },
@@ -2227,7 +6439,68 @@
    "stade": "Niveau 2",
    "evolue_de": "Colimucus",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "espace abstrait magique",
+    "lieu": "dimension lumineuse",
+    "interieur": true,
+    "milieu": "abstrait",
+    "profondeur": "aucune",
+    "zones": {
+     "haut": "lignes lumineuses dorées",
+     "milieu": "Muplodocus en mouvement",
+     "bas": "vagues d'énergie lumineuse"
+    },
+    "bords": {
+     "haut": "jaune",
+     "bas": "jaune",
+     "gauche": "jaune",
+     "droite": "jaune"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "jaune",
+     "secondaires": [
+      "violet",
+      "blanc"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "arrière"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "attaque",
+    "emotion": "énergique",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Muplodocus libère une puissante décharge d'énergie mystique dans une lueur dorée.",
+    "tags": [
+     "Muplodocus",
+     "magie",
+     "énergie",
+     "lumière",
+     "doré",
+     "puissance"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 704,
    "paire": null
   },
@@ -2252,7 +6525,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "forêt lumineuse",
+    "lieu": "branche d'arbre en forêt",
+    "interieur": false,
+    "milieu": "forêt",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "feuillage lumineux",
+     "milieu": "roucool posé sur une branche",
+     "bas": "fond flou de forêt"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "se repose",
+    "emotion": "calme",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Roucool se repose paisiblement sur sa branche avant de prendre son envol pour explorer les environs.",
+    "tags": [
+     "roucool",
+     "oiseau",
+     "branche",
+     "feuillage",
+     "forêt",
+     "nature",
+     "lumineux"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 16,
    "paire": null
   },
@@ -2277,7 +6612,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Roucool",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne ensoleillée",
+    "lieu": "ciel au-dessus des montagnes",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu et nuages",
+     "milieu": "roucoups en vol",
+     "bas": "montagnes enneigées et prairie"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "marron",
+      "vert",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "vole",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Ayant évolué, Roucoups survole les sommets enneigés avec assurance à la recherche de nouvelles terres.",
+    "tags": [
+     "roucoups",
+     "vol",
+     "ciel",
+     "montagnes",
+     "neige",
+     "oiseau",
+     "majestueux"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 16,
    "paire": null
   },
@@ -2302,7 +6700,69 @@
    "stade": "Niveau 2",
    "evolue_de": "Roucoups",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "canyon rocheux",
+    "lieu": "vallée montagneuse",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "parois rocheuses",
+     "milieu": "roucarnage en vol plané",
+     "bas": "sol rocheux"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "gris",
+     "secondaires": [
+      "marron",
+      "jaune"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "face"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "plane",
+    "emotion": "vigilant",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Roucarnage règne en maître sur les cieux et surveille son territoire du haut des falaises.",
+    "tags": [
+     "roucarnage",
+     "vol",
+     "falaises",
+     "rochers",
+     "oiseau",
+     "puissant",
+     "ciel"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 16,
    "paire": null
   },
@@ -2502,7 +6962,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "prairie verdoyante",
+    "lieu": "herbe haute",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "herbe verte lumineuse",
+     "milieu": "ronflex endormi sur le dos",
+     "bas": "herbe verte"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "beige"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "dort",
+    "emotion": "paisible",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Après un copieux repas, Ronflex profite d'une sieste bien méritée au milieu de la prairie.",
+    "tags": [
+     "ronflex",
+     "sommeil",
+     "dort",
+     "herbe",
+     "prairie",
+     "verdure",
+     "paisible"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 446,
    "paire": null
   },
@@ -2527,7 +7049,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne paysage dégagé",
+    "lieu": "rocher en hauteur",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu avec des nuages et des étoiles scintillantes",
+     "milieu": "chaîne de montagnes rocheuses",
+     "bas": "rocher central sur lequel se tient Fouinette"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "bleu",
+      "blanc",
+      "beige"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "dorée",
+     "direction": "haut"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "face",
+    "action": "guette",
+    "emotion": "attentif",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": "Fouinette monte la garde au sommet d'un rocher pour surveiller les environs.",
+    "tags": [
+     "Fouinette",
+     "rocher",
+     "montagne",
+     "ciel",
+     "nuages",
+     "veille",
+     "Pokémon",
+     "nature"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 161,
    "paire": null
   },
@@ -2552,7 +7138,69 @@
    "stade": "Niveau 1",
    "evolue_de": "Fouinette",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "grotte souterraine",
+    "lieu": "tunnel rocheux",
+    "interieur": true,
+    "milieu": "grotte",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "paroi rocheuse sombre",
+     "milieu": "Fouinard en mouvement dans le tunnel",
+     "bas": "sol et parois de la grotte avec des projections de terre"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "marron",
+     "secondaires": [
+      "beige",
+      "noir"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "moyen",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "creuse",
+    "emotion": "déterminé",
+    "moment": "indéfini",
+    "meteo": null,
+    "saison": null,
+    "personnages": [],
+    "histoire": "Fouinard creuse activement dans les profondeurs de la terre à la recherche de trésors.",
+    "tags": [
+     "Fouinard",
+     "grotte",
+     "tunnel",
+     "rocher",
+     "terre",
+     "creuse",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 161,
    "paire": null
   },
@@ -2577,7 +7225,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne fleurie",
+    "lieu": "chemin rocheux",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et sommets rocheux",
+     "milieu": "Écrémeuh souriante au milieu des rochers",
+     "bas": "fleurs jaunes et rochers moussus"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "rose",
+     "secondaires": [
+      "gris",
+      "jaune",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "anime",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "marche",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Écrémeuh se promène paisiblement dans un paysage montagneux parsemé de fleurs.",
+    "tags": [
+     "Écrémeuh",
+     "montagne",
+     "fleurs",
+     "rochers",
+     "prairie",
+     "sourire",
+     "Pokémon"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 241,
    "paire": null
   },
@@ -2602,7 +7313,71 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "prairie arc-en-ciel",
+    "lieu": "champ fleuri",
+    "interieur": false,
+    "milieu": "prairie",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu avec nuages blancs",
+     "milieu": "arc-en-ciel, collines vertes et arbres",
+     "bas": "Laporeille sautillant dans un champ de fleurs"
+    },
+    "bords": {
+     "haut": "gris",
+     "bas": "gris",
+     "gauche": "gris",
+     "droite": "gris"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "bleu",
+      "jaune",
+      "marron"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "dessin plat",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "épurée",
+    "orientation": "gauche",
+    "action": "saute",
+    "emotion": "joueur",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "printemps",
+    "personnages": [],
+    "histoire": "Laporeille bondit joyeusement dans une prairie verdoyante sous un magnifique arc-en-ciel.",
+    "tags": [
+     "Laporeille",
+     "prairie",
+     "arc-en-ciel",
+     "fleurs",
+     "collines",
+     "ciel",
+     "Pokémon",
+     "printemps"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 427,
    "paire": null
   },
@@ -2627,7 +7402,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Laporeille",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ciel et feuillage",
+    "lieu": "ciel ensoleillé",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu avec des bulles scintillantes et un nuage vaporeux",
+     "milieu": "Lockpin en plein saut avec des bulles d'eau",
+     "bas": "feuillage vert et sombre"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "aucun",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "marron",
+      "jaune",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "rayons",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "gauche",
+    "action": "saute",
+    "emotion": "joyeux",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Lockpin",
+     "Pokémon",
+     "saut",
+     "ciel",
+     "bulles",
+     "nuage",
+     "feuillage"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 427,
    "paire": null
   },
@@ -2652,7 +7490,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagne et ciel",
+    "lieu": "ciel au-dessus des montagnes",
+    "interieur": false,
+    "milieu": "ciel",
+    "profondeur": "en hauteur",
+    "zones": {
+     "haut": "ciel bleu avec des nuages blancs",
+     "milieu": "Passerouge en vol plané",
+     "bas": "montagnes verdoyantes et rocheuses"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "orange",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan large",
+    "densite": "épurée",
+    "orientation": "droite",
+    "action": "vole",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Passerouge",
+     "Pokémon",
+     "vol",
+     "montagne",
+     "ciel",
+     "nuages",
+     "oiseau"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 661,
    "paire": null
   },
@@ -2677,7 +7578,70 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "majoritaire",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "montagneux",
+    "lieu": "chemin de montagne",
+    "interieur": false,
+    "milieu": "montagne",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel bleu et nuageux",
+     "milieu": "Couafarel courant sur un sentier en pente",
+     "bas": "rochers et végétation luxuriante"
+    },
+    "bords": {
+     "haut": "argent",
+     "bas": "argent",
+     "gauche": "argent",
+     "droite": "argent"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "rouge",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "court",
+    "emotion": "énergique",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Couafarel",
+     "Pokémon",
+     "course",
+     "montagne",
+     "sentier",
+     "rochers",
+     "ciel"
+    ],
+    "le": "2026-10-29",
+    "modele": "gemini-3.5-flash-lite"
+   },
    "famille": 676,
    "paire": null
   },
