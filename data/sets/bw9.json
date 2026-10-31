@@ -738,7 +738,69 @@
    "stade": "Base",
    "evolue_de": null,
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "désert montagne cristaux",
+    "lieu": "chemin rocailleux bordé de cristaux",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "sol sableux et pics de cristaux bleus",
+     "milieu": "Cacnea bondissant les bras levés",
+     "bas": "pente caillouteuse et éclats cristallins"
+    },
+    "bords": {
+     "haut": "marron",
+     "bas": "marron",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "marron",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "peinture texturée",
+    "rendu": "net",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "saute",
+    "emotion": "étonné",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Cacnea",
+     "cactus",
+     "cristaux",
+     "glace",
+     "épines",
+     "chemin",
+     "désert"
+    ],
+    "le": "2026-10-31",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 331,
    "paire": null
   },
@@ -763,7 +825,69 @@
    "stade": "Niveau 1",
    "evolue_de": "Cacnea",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "jaune",
+    "habillage": {
+     "bandeau": null,
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "désert oasis brume",
+    "lieu": "désert aride près d'un point d'eau",
+    "interieur": false,
+    "milieu": "désert",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel beige brumeux et horizon lointain",
+     "milieu": "Cacturne ajustant son chapeau au bord de l'eau",
+     "bas": "végétation épineuse et sol sablonneux"
+    },
+    "bords": {
+     "haut": "beige",
+     "bas": "vert",
+     "gauche": "vert",
+     "droite": "vert"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "vert",
+     "secondaires": [
+      "beige",
+      "bleu"
+     ],
+     "temperature": "neutre"
+    },
+    "luminosite": "clair",
+    "saturation": "douce",
+    "lumiere": {
+     "type": "douce",
+     "direction": "diffuse"
+    },
+    "style": "peinture douce",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "marche",
+    "emotion": "mystérieux",
+    "moment": "jour",
+    "meteo": "brume",
+    "saison": null,
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Cacturne",
+     "désert",
+     "oasis",
+     "épouvantail",
+     "buissons",
+     "sable",
+     "chapeau"
+    ],
+    "le": "2026-10-31",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 331,
    "paire": null
   },
@@ -788,7 +912,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Évoli",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "bleue",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "ville gelée ruines",
+    "lieu": "bâtiments urbains recouverts de glace",
+    "interieur": false,
+    "milieu": "ville",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "immeubles gelés sous un ciel bleu",
+     "milieu": "Phyllali bondissant avec vivacité",
+     "bas": "sol pavé glacé et scintillant"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "milieu",
+    "palette": {
+     "dominante": "bleu",
+     "secondaires": [
+      "vert",
+      "blanc"
+     ],
+     "temperature": "froide"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "magique",
+     "direction": "diffuse"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "droite",
+    "action": "saute",
+    "emotion": "déterminé",
+    "moment": "jour",
+    "meteo": "ensoleillé",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Phyllali",
+     "glace",
+     "Team Plasma",
+     "scintillement",
+     "feuilles",
+     "ville",
+     "gel",
+     "action"
+    ],
+    "le": "2026-10-31",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 133,
    "paire": null
   },
@@ -813,7 +1000,70 @@
    "stade": "Niveau 1",
    "evolue_de": "Évoli",
    "priorite": 1,
-   "analyse": null,
+   "analyse": {
+    "part_illustration": "cadre",
+    "bordure": "bleue",
+    "habillage": {
+     "bandeau": "autre",
+     "logo": null,
+     "texte_charge": false
+    },
+    "univers": "piste gelée aéroport",
+    "lieu": "piste d'aviation couverte de glace",
+    "interieur": false,
+    "milieu": "neige",
+    "profondeur": "sol",
+    "zones": {
+     "haut": "ciel nuageux et carcasse d'avion gelée",
+     "milieu": "Pyroli chargeant à toute vitesse",
+     "bas": "sol verglacé et traînées de givre"
+    },
+    "bords": {
+     "haut": "bleu",
+     "bas": "bleu",
+     "gauche": "bleu",
+     "droite": "bleu"
+    },
+    "horizon": "haut",
+    "palette": {
+     "dominante": "orange",
+     "secondaires": [
+      "bleu",
+      "jaune"
+     ],
+     "temperature": "chaude"
+    },
+    "luminosite": "clair",
+    "saturation": "vive",
+    "lumiere": {
+     "type": "douce",
+     "direction": "haut"
+    },
+    "style": "3D",
+    "rendu": "flou d'arrière-plan",
+    "cadrage": "plan moyen",
+    "densite": "moyenne",
+    "orientation": "face",
+    "action": "court",
+    "emotion": "combatif",
+    "moment": "jour",
+    "meteo": "nuageux",
+    "saison": "hiver",
+    "personnages": [],
+    "histoire": null,
+    "tags": [
+     "Pyroli",
+     "glace",
+     "feu",
+     "avion",
+     "piste",
+     "Team Plasma",
+     "course",
+     "neige"
+    ],
+    "le": "2026-10-31",
+    "modele": "gemini-3.8-flash"
+   },
    "famille": 133,
    "paire": null
   },
